@@ -1,4 +1,4 @@
-{ ... }:
+{ userSettings, ... }:
 
 {
   services.hyprpaper = {
@@ -8,9 +8,9 @@
       ipc = "on";
       splash = "false";
 
-      preload = [ "~/.dotfiles/themes/wallpaper" ];
+      preload = [ "${userSettings.flakeDir}/themes/wallpaper" ];
 
-      wallpaper = [ " , ~/.dotfiles/themes/wallpaper" ];
+      wallpaper = [ " , ${userSettings.flakeDir}/themes/wallpaper" ];
     };
   };
 }

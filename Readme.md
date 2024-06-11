@@ -4,7 +4,7 @@
 > I just made this configuration public, if there is any personal information left in it, please contact me so I can remove it.
 
 > [!WARNING]
-> Currently this config needs to be located inside '$HOME/.dotfiles/' for everything to work.
+> Currently this config needs to be located inside '$HOME/FineOS/' for everything to work.
 > Most stuff should be fine, but some things will break when you store it somewhere else.
 
 This is my nixos configuration for my personal machine and laptop. This project is worked on just for my personal use, so everything about it is very opinionated and with no guarantees to work on other systems. 

@@ -5,7 +5,7 @@
   username = "lorenz";
   name = "Lorenz Feiner";
   email = "lorenzfeiner@proton.me";
-  flakeDir = "/home/lorenz/.dotfiles";       # the directory where the flake and configs are stored
+  flakeDir = "/home/lorenz/FineOS";       # the directory where the flake and configs are stored
 
   # ---- Theming ---- #
 

@@ -2,7 +2,7 @@
 
 # Change color theme
 
-theme_dir="$HOME/.dotfiles/wal/colorschemes/"
+theme_dir="$HOME/FineOS/wal/colorschemes/"
 
 printf "Themes: \n$(ls $theme_dir)\n"
 

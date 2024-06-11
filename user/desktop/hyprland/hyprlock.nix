@@ -35,7 +35,7 @@ in
       # BACKGROUND
       background = [
         {
-          path = "/home/${userSettings.username}/.dotfiles/themes/wallpaper";
+          path = "${userSettings.flakeDir}/themes/wallpaper";
           blur_passes = 3;
           blur_size = 8;
           noise = 0.0117;

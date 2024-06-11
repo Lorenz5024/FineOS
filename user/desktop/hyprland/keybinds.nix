@@ -6,7 +6,7 @@
     "$mod" = "SUPER";
     "$terminal" = "kitty";
     "$fileManager" = "thunar";
-    "$rofiScripts" = "~/.dotfiles/user/app/rofi/scripts";
+    "$rofiScripts" = "~/${userSettings.flakeDir}/user/app/rofi/scripts";
 
     bind = [
       # Edit dotfiles
