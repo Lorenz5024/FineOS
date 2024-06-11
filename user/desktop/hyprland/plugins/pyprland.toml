@@ -1,0 +1,40 @@
+[pyprland]
+plugins = [
+  "scratchpads",
+  "expose",
+]
+
+[scratchpads.term]
+animation = ""
+command = "kitty --class kitty-scratchpad"
+class = "kitty-scratchpad"
+size = "40% 40%"
+position = "30% 30%"
+
+[scratchpads.bitwarden]
+animation = ""
+command = "bitwarden"
+class = "bitwarden-scratchpad"
+size = "50% 50%"
+position = "25% 25%"
+lazy = "true"
+
+[scratchpads.yazi]
+animation = ""
+command = "kitty --class yazi-scratchpad -e yazi"
+class = "yazi"
+size = "60% 60%"
+position = "20% 20%"
+lazy = "true"
+
+[scratchpads.thunar]
+animation = ""
+command = "thunar --class thunar-scratchpad"
+size = "60% 60%"
+position = "20% 20%"
+lazy = "true"
+
+[scratchpads.audio]
+animation = ""
+command = "pavucontrol -t 3"
+lazy = "false"

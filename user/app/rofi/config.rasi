@@ -1,0 +1,12 @@
+configuration{
+    icon-theme: "Tela";
+    show-icons: true;
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "Apps:";
+}
+
+@theme "~/.dotfiles/user/app/rofi/themes/catppuccin-mocha.rasi"
