@@ -74,6 +74,7 @@
 
             home-manager.extraSpecialArgs = {
               inherit userSettings;
+              inherit ags;
             };
           }
 
