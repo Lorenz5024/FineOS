@@ -62,4 +62,10 @@ main() {
     mpv $ARGS --title="radio-mpv" $URL
 }
 
+# Check if rofi is already running
+if pidof rofi > /dev/null; then
+  pkill rofi
+  exit 0
+fi
+
 pkill -f radio-mpv || main
