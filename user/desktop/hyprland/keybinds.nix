@@ -6,7 +6,7 @@
     "$mod" = "SUPER";
     "$terminal" = "kitty";
     "$fileManager" = "thunar";
-    "$rofiScripts" = "~/${userSettings.flakeDir}/user/app/rofi/scripts";
+    "$rofiScripts" = "${userSettings.flakeDir}/user/app/rofi/scripts";
 
     bind = [
       # Edit dotfiles
@@ -41,8 +41,9 @@
 
       # rofi 
       "$mod, SPACE, exec, pkill rofi || rofi -show drun"	# App launcher
-      "$mod, M, exec, pkill rofi || $rofiScripts/rofi-beats.sh"	# Music
+      "$mod, M, exec, $rofiScripts/rofi-beats.sh"	# Music
       "$mod, V, exec, pkill rofi || cliphist list | rofi -dmenu | cliphist decode | wl-copy" # Text only clipboard
+      "$mod, W, exec, $rofiScripts/wallpaper-select.sh"
 
       # clear clipboard 
       "$mod_ALT, V, exec, cliphist wipe"
