@@ -11,6 +11,7 @@
       "float, class:^(feishin)$"
       "float, class:^(pavucontrol)$"
       "float, class:^(yazi-scratchpad)$"
+      "float, class:^(org.speedcrunch)$"
 
       # centered windows 
       "center, class:^(pavucontrol)$"
