@@ -42,6 +42,7 @@ main() {
     RANDOM_PIC="${PICS[$((RANDOM % ${#PICS[@]}))]}"
     hyprctl hyprpaper preload "${RANDOM_PIC}"
     hyprctl hyprpaper wallpaper ",${RANDOM_PIC}"
+    cp ${RANDOM_PIC} /home/lorenz/FineOS/themes/wallpaper
     exit 0
   fi
 
@@ -59,6 +60,7 @@ main() {
     echo "${PICS[$pic_index]}"
     hyprctl hyprpaper preload "${PICS[$pic_index]}"
     hyprctl hyprpaper wallpaper ",${PICS[$pic_index]}"
+    cp ${PICS[$pic_index]} /home/lorenz/FineOS/themes/wallpaper
   else
     echo "Image not found."
     exit 1
