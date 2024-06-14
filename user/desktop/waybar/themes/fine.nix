@@ -19,6 +19,13 @@ let
   color15 = "#${config.lib.stylix.colors.base0F}";
 in
 {
+
+  wayland.windowManager.hyprland.settings = {
+    layerrule = [
+      "blur, waybar"
+    ];
+  };
+
   programs.waybar.settings.mainBar = {
     modules-left = [
       "clock"
@@ -125,35 +132,33 @@ in
     }
 
     #workspaces {
-      background: @main;
-      padding-left: 8px;
-      padding-right: 8px;
+      font-size: 30px;
+      background-color: @alternate;
     }
 
     #workspaces button {
+      color: @active-workspace;
+    }
+
+    #workspaces button.empty {
       color: @text;
-      background: @alternate;
-      padding-left: 4px;
-      padding-right: 4px;
-      padding-top: 0px;
-      padding-bottom: 0px;
+    }
+
+    #workspaces button.active {
+      color: @background;
+      background: @active-workspace;
+    } 
+
+    #workspaces button:hover {
+      background: @border;
       animation: gradient_f 20s ease-in infinite;
       transition: all 0.2s; 
     }
 
-    #workspaces button:hover {
+    #workspaces button.active:hover {
       border-radius: 30px;
-      background: @red;
+      background: @active-workspace;
     }
-
-    #workspaces button.persistent {
-      border-radius: 30px;
-    }
-
-    #workspaces button.active {
-      color: @workspaces;
-      border-radius: 100%;
-    } 
 
     #idle_inhibitor {
       background: @main;
