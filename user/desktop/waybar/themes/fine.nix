@@ -58,18 +58,17 @@ in
     @define-color backlight         ${color15};
     @define-color battery           ${color12};
     @define-color power             ${color8};
+    @define-color background        #${config.lib.stylix.colors.base00};
 
     * {
-	border-radius: 100%;
 	font-family: "JetBrainsMono Nerd Font";
 	font-size: 14px;
 	font-weight: bold;
-	border-radius: 7px;
         color: @text;
       } 
 
     window#waybar {
-      background: transparent;
+      background: @background;
     }
 
     .modules-left, .modules-center, .modules-right {
@@ -87,28 +86,24 @@ in
     }
 
     #clock {
-      background: @main;
       color: @text;
       padding-left: 8px;
       padding-right: 8px;
     }
 
     #backlight {
-      background: @main;
       color: @text;
       padding-left: 8px;
       padding-right: 8px;
     }
 
     #battery {
-      background: @main;
       color: @text;
       padding-left: 8px;
       padding-right: 8px;
     }
 
     #pulseaudio {
-      background: @main;
       padding-left: 8px;
       padding-right: 8px;
       padding-top: 4px;
@@ -117,7 +112,6 @@ in
     }
 
     #tray {
-      background: @main;
       padding-left: 8px;
       padding-right: 8px;
       padding-top: 4px;
@@ -125,20 +119,16 @@ in
     }
 
     #custom-power {
-      background: @main;
       padding-left: 4px;
       padding-right: 4px;
       color: @text;
     }
 
     #workspaces {
+      color: @workspaces;
       font-size: 30px;
-      background-color: @alternate;
     }
 
-    #workspaces button {
-      color: @active-workspace;
-    }
 
     #workspaces button.empty {
       color: @text;
@@ -146,7 +136,7 @@ in
 
     #workspaces button.active {
       color: @background;
-      background: @active-workspace;
+      background: @workspaces
     } 
 
     #workspaces button:hover {
@@ -156,12 +146,10 @@ in
     }
 
     #workspaces button.active:hover {
-      border-radius: 30px;
-      background: @active-workspace;
     }
 
     #idle_inhibitor {
-      background: @main;
+      background: @background;
       color: @text;
       font-size: 20px;
       padding-left: 8px;
