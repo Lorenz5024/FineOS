@@ -20,7 +20,7 @@
 
   # Choose one from the waybar/themes folder
   # Not all themes might look good with dark and light colors
-  waybarStyle = "colorful";         
+  waybarStyle = "fine";         
 }
 
 
