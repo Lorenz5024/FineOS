@@ -1,22 +1,10 @@
 { config, ... }:
 
 let
-  color0 = "#${config.lib.stylix.colors.base00}";
-  color1 = "#${config.lib.stylix.colors.base01}";
-  color2 = "#${config.lib.stylix.colors.base02}";
-  color3 = "#${config.lib.stylix.colors.base03}";
-  color4 = "#${config.lib.stylix.colors.base04}";
-  color5 = "#${config.lib.stylix.colors.base05}";
-  color6 = "#${config.lib.stylix.colors.base06}";
-  color7 = "#${config.lib.stylix.colors.base07}";
-  color8 = "#${config.lib.stylix.colors.base08}";
-  color9 = "#${config.lib.stylix.colors.base09}";
-  color10 = "#${config.lib.stylix.colors.base0A}";
-  color11 = "#${config.lib.stylix.colors.base0B}";
-  color12 = "#${config.lib.stylix.colors.base0C}";
-  color13 = "#${config.lib.stylix.colors.base0D}";
-  color14 = "#${config.lib.stylix.colors.base0E}";
-  color15 = "#${config.lib.stylix.colors.base0F}";
+  module-border = ''
+    border: 2px solid @module-border; 
+    border-radius: 8px; 
+    margin: 0.3em; '';
 in
 {
 
@@ -28,52 +16,59 @@ in
 
   programs.waybar.settings.mainBar = {
     modules-left = [
-      "clock"
-      "tray"
+      "custom/icon"
+      "hyprland/workspaces#icons"
+      "hyprland/window"
     ];
 
     modules-center = [
-      "hyprland/workspaces#numbers"
+      "mpris"
     ];
 
     modules-right = [
-      "group/system"
+      "tray"
       "idle_inhibitor"
       "pulseaudio"
       "group/laptop"
-      "custom/power"
+      "hyprland/language"
+      "clock"
     ];
   };
 
   programs.waybar.style = ''
 
-    @define-color main              ${color13};
-    @define-color text              ${color6};
+    @define-color main                    #${config.lib.stylix.colors.base00};
+    @define-color text                    #${config.lib.stylix.colors.base06};
+    @define-color module-border           #${config.lib.stylix.colors.base04};
+    @define-color workspaces-background   #${config.lib.stylix.colors.base02};
+    @define-color workspaces-active       #${config.lib.stylix.colors.base0B};
+    @define-color workspaces-empty        #${config.lib.stylix.colors.base04};
+    @define-color workspaces-visible      #${config.lib.stylix.colors.base0D};
+    @define-color window-text             #${config.lib.stylix.colors.base09};
+    @define-color language                #${config.lib.stylix.colors.base0A};
+    @define-color volume                  #${config.lib.stylix.colors.base0B};
+    @define-color clock                   #${config.lib.stylix.colors.base0E};
 
-    @define-color alternate         ${color2};
-    @define-color border            ${color13};
-    @define-color workspaces        ${color9};
-    @define-color idle-inhibitor    ${color14};
-    @define-color volume            ${color11};
-    @define-color backlight         ${color15};
-    @define-color battery           ${color12};
-    @define-color power             ${color8};
-    @define-color background        #${config.lib.stylix.colors.base00};
+
 
     * {
 	font-family: "JetBrainsMono Nerd Font";
 	font-size: 14px;
 	font-weight: bold;
-        color: @text;
       } 
 
     window#waybar {
-      background: @background;
+      background: rgba(30, 30, 46, 0.7);
     }
 
-    .modules-left, .modules-center, .modules-right {
-      color: @text;
-      padding: 6px 6px 8px 6px;
+    #custom-icon {
+      font-size: 22px;
+      color: #89b4fa;
+      padding: 0.3em;
+    }
+
+    #group-hardware {
+      ${module-border}
     }
 
     #temperature,
@@ -86,9 +81,11 @@ in
     }
 
     #clock {
-      color: @text;
+      color: @clock;
       padding-left: 8px;
       padding-right: 8px;
+
+      ${module-border}
     }
 
     #backlight {
@@ -104,11 +101,13 @@ in
     }
 
     #pulseaudio {
+      ${module-border}
+
       padding-left: 8px;
       padding-right: 8px;
       padding-top: 4px;
       padding-bottom: 4px;
-      color: @text;
+      color: @volume;
     }
 
     #tray {
@@ -124,32 +123,45 @@ in
       color: @text;
     }
 
+    /* Hyprland */
+
     #workspaces {
-      color: @workspaces;
-      font-size: 30px;
+      background: @workspaces-background;
+
+      ${module-border};
     }
 
+    #workspaces button {
+      padding: 0em;
+    }      
 
     #workspaces button.empty {
-      color: @text;
+      color: @workspaces-empty;
+    }
+
+    #workspaces button.visible {
+      color: @workspaces-visible;
     }
 
     #workspaces button.active {
-      color: @background;
-      background: @workspaces
+      color: @workspaces-active;
     } 
 
-    #workspaces button:hover {
-      background: @border;
-      animation: gradient_f 20s ease-in infinite;
-      transition: all 0.2s; 
+    #window {
+      color: @window-text;
+      padding-left: 1em;
+      padding-right: 1em;
     }
 
-    #workspaces button.active:hover {
+    #language {
+      color: @language;
+      ${module-border};
+
+      padding: 0em 0.5em 0em 0.5em;
     }
 
     #idle_inhibitor {
-      background: @background;
+      ${module-border}
       color: @text;
       font-size: 20px;
       padding-left: 8px;
