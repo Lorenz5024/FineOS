@@ -27,6 +27,8 @@
       gaps_out = 8;
 
       "col.active_border" =  lib.mkForce "rgb(${config.lib.stylix.colors.base0E})";
+
+      cursor_inactive_timeout = 5;
     };
 
     decoration = {
@@ -34,8 +36,10 @@
 
       blur = {
         enabled = true;
-        size = 8;
+        size = 6;
         passes = 3;
+
+        ignore_opacity = true;
       };
     };
 
