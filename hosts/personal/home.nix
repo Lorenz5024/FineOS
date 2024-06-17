@@ -34,7 +34,7 @@
   # Set up monitors for hyprland
   wayland.windowManager.hyprland.settings = {
     monitor = [
-      "DP-1, 2560x1440@144, 2560x0, 1"
+      "DP-1, 2560x1440@144, 2560x0, 1, vrr, 1"
       #"HDMI-A-1, 3840x2160@60, 0x0, 1"
       "DP-2, 2560x1440@75, 0x0, 1"
       ", preferred, auto, 1, mirror, DP-1"
