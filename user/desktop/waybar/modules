@@ -1,5 +1,5 @@
 {
-// HYPRLAND WORKSPACES. CHOOSE as desired and place on waybar configs
+// HYPRLAND 
 "hyprland/workspaces#icons": {
     "format": "{name}",
     "format": " {name} {icon} ",
@@ -7,19 +7,23 @@
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "all-outputs": false,
+    "all-outputs": true,
     "sort-by-number": true,
     "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "󰠮",
-      "4": "󰙯;",
-      "5": "",
-      "6": "󰈚",
-      "7": "",
-      "8": "󰉋",
-      "9": "",
-      "10": "󰎄",
+      "1": "󰈹 ",
+      "2": " ",
+      "3": "󰠮 ",
+      "4": "󰙯 ",
+      "5": "󰎄 ",
+      "6": "󰈚 ",
+      "7": " ",
+      "8": "󰉋 ",
+      "9": " ",
+      "10": "",
+      "default": "󰺕 ",
+    },
+    "persistent-workspaces": {
+      "*": [ 1, 2, 3, 4, 5 ],
     },
     "ignore-workspaces": [
       "*scratch*",
@@ -33,11 +37,36 @@
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "all-outputs": false,
+    "all-outputs": true,
     "sort-by-number": true,
     "ignore-workspaces": [
       "*scratch*",
     ],
+},
+
+"hyprland/window": {
+    "format": "{title}",
+    "max-length": 40,
+    "separate-outputs": false,  //Seperate window for each workspace
+    "offscreen-css" : true,
+    "offscreen-css-text": "(inactive)",
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "󰈹 $1",
+      "(.*) - zsh": "  [$1]",
+      "(.*) - kitty": "  [$1]",
+    },
+},
+
+"hyprland/language": {
+  "format": "{}",
+  "format-en": "en",
+  "format-de": "de",
+},
+
+// DISTRO ICON 
+"custom/icon": {
+  "format": " ",
+  "on-click": "pkill rofi || rofi -show drun"
 },
 
 // POWER MENU 
@@ -57,6 +86,35 @@
       "backlight",
       "battery",
       ]	
+},
+
+// MEDIA PLAYER
+"mpris": {
+	"interval": 1,
+	"format": "{player_icon}  {title} - {artist}",
+	"format-paused": "{status_icon} {title} - {artist}",
+	"on-click-middle": "playerctl play-pause",
+	"on-click": "playerctl previous",
+	"on-click-right": "playerctl next",
+	"scroll-step": 5.0,
+	"smooth-scrolling-threshold": 1,
+	"player-icons": {
+		"chromium": "",
+		"default": "",
+		"firefox": "",
+		"kdeconnect": "",
+		"mopidy": "",
+		"mpv": "󰐹",
+		"spotify": "",
+		"vlc": "󰕼",
+	},
+	"status-icons": {
+		"paused": "󰐎",
+		"playing": "",
+		"stopped": "",
+	},
+	// "ignored-players": ["firefox"]
+	"max-length": 50,
 },
   
 "backlight": {
@@ -162,19 +220,6 @@
     "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)",
 },
     
-"hyprland/window": {
-    "format": "{}",
-    "max-length": 40,
-    "separate-outputs": false,  //Seperate window for each workspace
-    "offscreen-css" : true,
-    "offscreen-css-text": "(inactive)",
-     "rewrite": {
-          "(.*) — Mozilla Firefox": " $1",
-          "(.*) - fish": "> [$1]",
-      "(.*) - zsh": "> [$1]",
-      "(.*) - kitty": "> [$1]",
-    },
-},
   
 "idle_inhibitor": {
     "format": "{icon}",
