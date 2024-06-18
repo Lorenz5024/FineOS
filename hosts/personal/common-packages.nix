@@ -18,9 +18,10 @@
     drawio
 
     # Internet
-    discord
     firefox
+    brave
     tor-browser
+    discord
     protonmail-desktop
     nextcloud-client
 
