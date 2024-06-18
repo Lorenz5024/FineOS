@@ -3,6 +3,7 @@
 {
   imports = [
     ./themes/theme-main.nix
+    ./themes/theme-wallpaperpicker.nix
   ];
 
   home.file = {
