@@ -197,7 +197,7 @@
      
 "clock": {
     "interval": 1,
-    "format": " {:%a %d.%m.%y, %H:%M}",
+    "format": "  {:%a %d.%m.%y, %H:%M}",
 },
    
 "cpu": {
