@@ -7,6 +7,7 @@
     "$terminal" = "kitty";
     "$fileManager" = "thunar";
     "$rofiScripts" = "${userSettings.flakeDir}/user/app/rofi/scripts";
+    "$scriptsDir" = "${userSettings.flakeDir}/user/desktop/hyprland/scripts";
 
     bind = [
       # Edit dotfiles
@@ -47,6 +48,9 @@
 
       # clear clipboard 
       "$mod_ALT, V, exec, cliphist wipe"
+
+      # take screenshot
+      "CTRL_ALT, S, exec, $scriptsDir/screenshot-region.sh"
 
       # scratchpads
       "$mod_CTRL, RETURN, exec, pypr toggle term"
