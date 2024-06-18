@@ -19,7 +19,6 @@
 
     # Internet
     discord
-    brave
     firefox
     tor-browser
     protonmail-desktop
