@@ -3,19 +3,11 @@
 
 /* ---- Configuration ---- */
 configuration {
-    modi:                  "drun,run,filebrowser";
     font:                  "Fira Code SemiBold 12";
     show-icons:            true;
-    display-dmenu:          "";
-    display-run:           "";
-    display-filebrowser:   "";
-    display-window:        "";
-    drun-display-format:   "{name}";
     hover-select:          true;
     me-select-entry:       "MouseSecondary";
     me-accept-entry:       "MousePrimary";
-    window-format:         "{w} · {c} · {t}";
-	dpi:					1;
     
 }
 
