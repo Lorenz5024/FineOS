@@ -17,7 +17,7 @@
     window {
       background-color: @background;
       width:		      100%;
-      height:                 25em;
+      height:                 27em;
       x-offset:               0px;
       y-offset:               0px;
       spacing:                0px;
@@ -61,8 +61,8 @@
     }
 
     prompt {
-      font: "JetBrainsMono Nerd Font 18";
-      margin: 0.2em 1em 0.2em 1em;
+      background-color: @prompt-background;
+      font: "JetBrainsMono Nerd Font 16";
       padding: 6px 16px;
       border-radius: 10px 0px 0px 10px;
       vertical-align: 0.5;
@@ -77,18 +77,20 @@
         padding:                8px;
         border-radius:          10px;
         border-color:           @foreground;
-        children:               [ "entry" ];
+        children:               [ prompt, entry ];
         border:                 1px;
         border-color:           @active-background;
     }
 
     entry {
-        enabled:                true;
-        text-color:             @text;
-        cursor:                 text;
-        placeholder:            "Choose Wallpaper";
-        placeholder-color:      inherit;
-        background-color:	transparent;
+      font: "JetBrainsMono Nerd Font 16";
+      enabled:                true;
+      text-color:             @text;
+      cursor:                 text;
+      placeholder:            "Choose Wallpaper";
+      placeholder-color:      inherit;
+      background-color:	transparent;
+      vertical-align:         0.5;
     }
 
     /* ---- Listview ---- */
@@ -131,7 +133,7 @@
     }
 
     element-text {
-        font:                 "Fira Code SemiBold 8";
+        font:                 "Fira Code SemiBold 12";
         text-color:           inherit;
         cursor:               inherit;
         horizontal-align:     0.5;
