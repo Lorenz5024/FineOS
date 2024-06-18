@@ -49,6 +49,7 @@ in
     @define-color volume                  #${config.lib.stylix.colors.base0B};
     @define-color clock                   #${config.lib.stylix.colors.base0F};
     @define-color idle_inhibitor          #${config.lib.stylix.colors.base0E};
+    @define-color battery                 #${config.lib.stylix.colors.base0C};
 
 
 
@@ -96,7 +97,7 @@ in
     }
 
     #battery {
-      color: @text;
+      color: @battery;
       padding-left: 8px;
       padding-right: 8px;
     }
