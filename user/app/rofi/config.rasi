@@ -8,4 +8,4 @@ configuration{
     display-drun: "Apps:";
 }
 
-@theme "~/FineOS/user/app/rofi/themes/catppuccin-mocha.rasi"
+@theme "theme-main.rasi"

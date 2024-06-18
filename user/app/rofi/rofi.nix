@@ -1,9 +1,11 @@
 { ... }:
 
 {
+  imports = [
+    ./themes/theme-main.nix
+  ];
+
   home.file = {
     ".config/rofi/config.rasi".source = ./config.rasi;
-    ".config/rofi/themes/".source = ./themes;
-
   };
 }
