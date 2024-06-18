@@ -47,7 +47,8 @@ in
     @define-color window-text             #${config.lib.stylix.colors.base09};
     @define-color language                #${config.lib.stylix.colors.base0A};
     @define-color volume                  #${config.lib.stylix.colors.base0B};
-    @define-color clock                   #${config.lib.stylix.colors.base0E};
+    @define-color clock                   #${config.lib.stylix.colors.base0F};
+    @define-color idle_inhibitor          #${config.lib.stylix.colors.base0E};
 
 
 
@@ -111,10 +112,10 @@ in
     }
 
     #tray {
+      background: @workspaces-background;
+      ${module-border}
       padding-left: 8px;
       padding-right: 8px;
-      padding-top: 4px;
-      padding-bottom: 4px;
     }
 
     #custom-power {
@@ -162,10 +163,9 @@ in
 
     #idle_inhibitor {
       ${module-border}
-      color: @text;
-      font-size: 20px;
+      color: @idle_inhibitor;
       padding-left: 8px;
-      padding-right: 5px;
+      padding-right: 8px;
     }
 
     #laptop {
