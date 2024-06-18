@@ -12,10 +12,12 @@
       "float, class:^(pavucontrol)$"
       "float, class:^(yazi-scratchpad)$"
       "float, class:^(org.speedcrunch)$"
+      "float, class:^(.blueman-manager-wrapped)$"
 
       # centered windows 
       "center, class:^(pavucontrol)$"
       "center, class:^(yazi)$"
+      "center, class:^(.blueman-manager-wrapped)$"
 
       # sizes
       "size 50% 50%, class:^(yazi)$"
