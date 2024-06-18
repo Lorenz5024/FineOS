@@ -48,6 +48,7 @@
             home-manager.users.${userSettingsPC.username} = import ./hosts/personal/home.nix;
 
             home-manager.extraSpecialArgs = {
+              systemSettings = systemSettingsPC;
               userSettings = userSettingsPC;
               inherit ags;
             };
