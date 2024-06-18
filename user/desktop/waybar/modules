@@ -58,7 +58,7 @@
 },
 
 "hyprland/language": {
-  "format": "{}",
+  "format": "  {}",
   "format-en": "en",
   "format-de": "de",
 },
@@ -99,10 +99,9 @@
 	"scroll-step": 5.0,
 	"smooth-scrolling-threshold": 1,
 	"player-icons": {
-		"chromium": "",
-		"default": "",
-		"firefox": "",
-		"kdeconnect": "",
+		"chromium": " ",
+		"default": " ",
+		"firefox": "󰈹 ",
 		"mopidy": "",
 		"mpv": "󰐹",
 		"spotify": "",
