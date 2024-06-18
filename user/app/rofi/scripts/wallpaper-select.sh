@@ -10,7 +10,7 @@ RANDOM_PIC="${PICS[$((RANDOM % ${#PICS[@]}))]}"
 RANDOM_PIC_NAME=". random"
 
 # Rofi command
-rofi_command="rofi -i -show -dmenu -config ~/FineOS/user/app/rofi/config-wallpaper.rasi"
+rofi_command="rofi -i -show -dmenu -config ~/FineOS/user/app/rofi/config-wallpaper.rasi -window-title Wallpaper:"
 
 
 # Sorting Wallpapers
