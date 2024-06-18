@@ -92,7 +92,7 @@
 "mpris": {
 	"interval": 1,
 	"format": "{player_icon}  {title} - {artist}",
-	"format-paused": "{status_icon} {title} - {artist}",
+	"format-paused": "{status_icon}  {title} - {artist}",
 	"on-click-middle": "playerctl play-pause",
 	"on-click": "playerctl previous",
 	"on-click-right": "playerctl next",
@@ -106,6 +106,7 @@
 		"mpv": "󰐹",
 		"spotify": "",
 		"vlc": "󰕼",
+		"Feishin": "",
 	},
 	"status-icons": {
 		"paused": "󰐎",
@@ -228,6 +229,7 @@
     },
     "tooltip-format-activated": "Idle-inhibitor: activated",
     "tooltip-format-deactivated": "Idle-inhibitor: deactivated",
+    "start-activated": true,
 },
     
 "memory": {
