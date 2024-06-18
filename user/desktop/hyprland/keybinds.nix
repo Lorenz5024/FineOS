@@ -135,6 +135,10 @@
     "$mod_CTRL, K, resizeactive, 0 -30"
     "$mod_CTRL, J, resizeactive, 0 30"
 
+    # Move between workspaces 
+    "$mod_ALT, H, movetoworkspace, -1"
+    "$mod_ALT, L, movetoworkspace, +1"
+
     ];
 
   };
