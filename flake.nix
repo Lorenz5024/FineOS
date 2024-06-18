@@ -19,8 +19,12 @@
 
   outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, ags, ... }:
     let
-      systemSettings = import ./systemSettings.nix;
-      userSettings = import ./userSettings.nix;
+      systemSettingsPC = import ./hosts/personal/systemSettings.nix;
+      userSettingsPC = import ./hosts/personal/userSettings.nix;
+
+      systemSettingsLaptop = import ./hosts/laptop/systemSettings.nix;
+      userSettingsLaptop = import ./hosts/laptop/userSettings.nix;
+
       lib = nixpkgs.lib;
     in 
     {
@@ -28,8 +32,8 @@
         system = "x86_64-linux";
 
         specialArgs = {
-          inherit systemSettings;
-          inherit userSettings;
+          systemSettings = systemSettingsPC;
+          userSettings = userSettingsPC;
         };
 
         modules = [ 
@@ -41,10 +45,10 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.${userSettings.username} = import ./hosts/personal/home.nix;
+            home-manager.users.${userSettingsPC.username} = import ./hosts/personal/home.nix;
 
             home-manager.extraSpecialArgs = {
-              inherit userSettings;
+              userSettings = userSettingsPC;
               inherit ags;
             };
           }
@@ -57,8 +61,8 @@
         system = "x86_64-linux";
 
         specialArgs = {
-          inherit systemSettings;
-          inherit userSettings;
+          systemSettings = systemSettingsLaptop;
+          userSettings = userSettingsLaptop;
         };
 
         modules = [ 
@@ -70,10 +74,11 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.${userSettings.username} = import ./hosts/laptop/home.nix;
+            home-manager.users.${userSettingsLaptop.username} = import ./hosts/laptop/home.nix;
 
             home-manager.extraSpecialArgs = {
-              inherit userSettings;
+              systemSettings = systemSettingsLaptop;
+              userSettings = userSettingsLaptop;
               inherit ags;
             };
           }
