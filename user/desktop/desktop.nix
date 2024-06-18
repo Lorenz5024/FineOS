@@ -27,6 +27,8 @@
     polkit-kde-agent                	# authentication agent
     pyprland				# hyprland plugins
     kitty				# terminal emulator
+    slurp                               # select region of screen for screenshots
+    grim                                # grab image for screenshot
   ];
 
 }
