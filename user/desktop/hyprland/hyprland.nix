@@ -65,6 +65,7 @@
       "swaync"
       "thunar --daemon"
       "nm-applet"
+      "blueman-applet"
       "pypr"
       "wl-paste --type text --watch cliphist store"
       "wl-paste --type image --watch cliphist store"
