@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, systemSettings, ... }:
 
 let
   module-border = ''
@@ -28,7 +28,7 @@ in
     modules-right = [
       "tray"
       "idle_inhibitor"
-      "group/laptop"
+      "${if systemSettings.isLaptop then "group/laptop" else ""}"
       "pulseaudio"
       "hyprland/language"
       "clock"
