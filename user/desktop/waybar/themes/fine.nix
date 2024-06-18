@@ -28,8 +28,8 @@ in
     modules-right = [
       "tray"
       "idle_inhibitor"
-      "pulseaudio"
       "group/laptop"
+      "pulseaudio"
       "hyprland/language"
       "clock"
     ];
@@ -166,6 +166,10 @@ in
       font-size: 20px;
       padding-left: 8px;
       padding-right: 5px;
+    }
+
+    #laptop {
+      ${module-border}
     }
   '';
 }
