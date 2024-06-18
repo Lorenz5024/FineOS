@@ -10,8 +10,8 @@
     "all-outputs": true,
     "sort-by-number": true,
     "format-icons": {
-      "1": "󰈹 ",
-      "2": " ",
+      "1": " ",
+      "2": "󰈹 ",
       "3": "󰠮 ",
       "4": "󰙯 ",
       "5": "󰎄 ",
