@@ -1,4 +1,4 @@
-{ pkgs, lib, systemSettings, userSettings, ... }:
+{ pkgs, lib, hyprland, systemSettings, userSettings, ... }:
 
 {
   imports = [ 
@@ -22,7 +22,15 @@
   };
 
   # Hyprland
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    package = hyprland.packages.${pkgs.system}.hyprland;
+  };
+
+  nix.settings = {
+    substituters = ["https://hyprland.cachix.org"];
+    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+  };
 
   # Added because steam could not set new storage locations
   xdg.portal = {
