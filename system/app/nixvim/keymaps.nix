@@ -142,6 +142,10 @@
         mode = "n";
         action = "<cmd>ToggleTerm<CR>";
       }
-
+      {
+        key = "<esc><esc>";
+        mode = "t";
+        action = "<cmd>ToggleTerm<CR>";
+      }
   ];
 }
