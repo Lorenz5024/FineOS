@@ -7,10 +7,32 @@
   email = "lorenzfeiner@proton.me";
   flakeDir = "/home/lorenz/FineOS";       # the directory where the flake and configs are stored
 
+  # ---- Default Applications ---- #
+
+  # You may need to look through the configuration to figure out if an application 
+  # you want to set here is installed, and install it yourself if it isn't.
+  # Stuff will break if you use something not installed or spell it incorrectly.
+  # Spell it like you would when starting it from the terminal.
+
+  # Text editor 
+  editor = "nvim";
+
+  # Web browser 
+  browser = "firefox";
+
+  # Terminal
+  terminal = "kitty";
+
+  # File manager
+  fileManager = "thunar";
+
+  # Music player (launched from keybind)
+  musicPlayer = "feishin";
+
   # ---- Theming ---- #
 
-  # Run 'nh home switch' to apply the theme after change. (In some cases 'nh os switch' might be needed too)
-  # If stylix ever implements a way to reapply colors without a rebuild, let me know
+  # Run 'nh os switch' to apply the theme after change.
+  # If stylix ever implements a way to reapply colors without a rebuild, let me know.
 
   # Theme used throughout system, choose one from  the themes folder
   theme = "catppuccin-mocha";   
@@ -21,6 +43,7 @@
   # Choose one from the waybar/themes folder
   # Not all themes might look good with dark and light colors
   waybarStyle = "fine";         
+
 }
 
 
