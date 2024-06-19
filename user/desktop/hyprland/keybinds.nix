@@ -125,24 +125,27 @@
     # ------------------------------
 
     binde = [
-    # Media control
-    ", xf86audioraisevolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
-    ", xf86audiolowervolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
+      # Media control
+      ", xf86audioraisevolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
+      ", xf86audiolowervolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
 
-    # Laptop brightness
-    ", xf86MonBrightnessDown, exec, brightnessctl set 5%-"
-    ", xf86MonBrightnessUp, exec, brightnessctl set +5%"
+      # Laptop brightness
+      ", xf86MonBrightnessDown, exec, brightnessctl set 5%-"
+      ", xf86MonBrightnessUp, exec, brightnessctl set +5%"
 
-    # Resize windows
-    "$mod_CTRL, H, resizeactive, -30 0"
-    "$mod_CTRL, L, resizeactive, 30 0"
-    "$mod_CTRL, K, resizeactive, 0 -30"
-    "$mod_CTRL, J, resizeactive, 0 30"
+      # Resize windows
+      "$mod_CTRL, H, resizeactive, -30 0"
+      "$mod_CTRL, L, resizeactive, 30 0"
+      "$mod_CTRL, K, resizeactive, 0 -30"
+      "$mod_CTRL, J, resizeactive, 0 30"
 
-    # Move between workspaces 
-    "$mod_ALT, H, workspace, -1"
-    "$mod_ALT, L, workspace, +1"
+      # Move between workspaces 
+      "$mod_ALT, H, workspace, -1"
+      "$mod_ALT, L, workspace, +1"
 
+      # Move windows between workspaces 
+      "$mod_ALT_SHIFT, H, movetoworkspace, -1"
+      "$mod_ALT_SHIFT, L, movetoworkspace, +1"
     ];
 
   };
