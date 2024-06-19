@@ -136,5 +136,12 @@
         action = "<cmd>LazyGit<CR>";
       }
 
+      # Toggleterm
+      {
+        key = "<leader>th";
+        mode = "n";
+        action = "<cmd>ToggleTerm<CR>";
+      }
+
   ];
 }
