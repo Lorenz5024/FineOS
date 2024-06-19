@@ -5,6 +5,7 @@
 
     "$mod"          = "SUPER";
     "$terminal"     = userSettings.terminal;
+    "$editor"       = userSettings.editor;
     "$fileManager"  = userSettings.fileManager;
     "$musicPlayer"  = userSettings.musicPlayer;
     "$browser"      = userSettings.browser;
@@ -13,7 +14,7 @@
 
     bind = [
       # Edit dotfiles
-      "$mod_CTRL, SPACE, exec, $terminal -d ${userSettings.flakeDir} -e nvim"
+      "$mod_CTRL, SPACE, exec, $terminal -d ${userSettings.flakeDir} -e $editor"
 
       # Compositor commands
       "$mod_CTRL_ALT, Q, exec, pkill Hyprland"
