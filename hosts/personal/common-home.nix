@@ -39,7 +39,8 @@
   ]; 
 
   home.sessionVariables = {
-    EDITOR = "nvim";
+    EDITOR = userSettings.editor;
+    BROWSER = userSettings.browser;
   };
 
   services = {
