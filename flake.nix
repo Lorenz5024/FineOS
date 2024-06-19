@@ -67,7 +67,7 @@
       nixosConfigurations."fineos-laptop" =
       let 
         systemSettings = import ./hosts/laptop/systemSettings.nix;
-        userSettings = import ./hosts/laptop/userSettings.nix;
+        userSettings = import ./hosts/personal/userSettings.nix;
       in 
       lib.nixosSystem {
         system = "x86_64-linux";
