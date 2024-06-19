@@ -4,20 +4,26 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nixvim = {
       url = "github:nix-community/nixvim";
       # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     stylix.url = "github:danth/stylix";
+
     ags.url = "github:Aylur/ags";
+
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, ags, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, ags, hyprland, ... }:
     let
       systemSettingsPC = import ./hosts/personal/systemSettings.nix;
       userSettingsPC = import ./hosts/personal/userSettings.nix;
@@ -32,6 +38,7 @@
         system = "x86_64-linux";
 
         specialArgs = {
+          inherit hyprland;
           systemSettings = systemSettingsPC;
           userSettings = userSettingsPC;
         };
@@ -62,6 +69,7 @@
         system = "x86_64-linux";
 
         specialArgs = {
+          inherit hyprland;
           systemSettings = systemSettingsLaptop;
           userSettings = userSettingsLaptop;
         };
