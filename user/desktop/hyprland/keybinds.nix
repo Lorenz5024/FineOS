@@ -3,11 +3,13 @@
 {
   wayland.windowManager.hyprland.settings = {
 
-    "$mod" = "SUPER";
-    "$terminal" = "kitty";
-    "$fileManager" = "thunar";
-    "$rofiScripts" = "${userSettings.flakeDir}/user/app/rofi/scripts";
-    "$scriptsDir" = "${userSettings.flakeDir}/user/desktop/hyprland/scripts";
+    "$mod"          = "SUPER";
+    "$terminal"     = userSettings.terminal;
+    "$fileManager"  = userSettings.fileManager;
+    "$musicPlayer"  = userSettings.musicPlayer;
+    "$browser"      = userSettings.browser;
+    "$rofiScripts"  = userSettings.flakeDir + "/user/app/rofi/scripts";
+    "$scriptsDir"   = userSettings.flakeDir + "/user/desktop/hyprland/scripts";
 
     bind = [
       # Edit dotfiles
@@ -39,10 +41,12 @@
       "$mod, RETURN, exec, $terminal"
       "$mod, T, exec, $fileManager"
       "$mod, Y, exec, $terminal --class yazi -e yazi "
+      "$mod, M, exec, $musicPlayer"
+      "$mod, B, exec, $browser"
 
       # rofi 
       "$mod, SPACE, exec, pkill rofi || rofi -show drun"	# App launcher
-      "$mod, M, exec, $rofiScripts/rofi-beats.sh"	# Music
+      "$mod_ALT, M, exec, $rofiScripts/rofi-beats.sh"	# Music
       "$mod, V, exec, pkill rofi || cliphist list | rofi -dmenu -window-title Clipboard | cliphist decode | wl-copy" # Text only clipboard
       "$mod, W, exec, $rofiScripts/wallpaper-select.sh"
 
