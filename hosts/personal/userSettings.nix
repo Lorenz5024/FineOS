@@ -26,7 +26,7 @@
   # File manager
   fileManager = "thunar";
 
-  # Music player (launched from keybind)
+  # Music player (launched from keybind, not for opening sound files)
   musicPlayer = "feishin";
 
   # ---- Theming ---- #
