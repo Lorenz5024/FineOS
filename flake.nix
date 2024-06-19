@@ -25,22 +25,21 @@
 
   outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, ags, hyprland, ... }:
     let
-      systemSettingsPC = import ./hosts/personal/systemSettings.nix;
-      userSettingsPC = import ./hosts/personal/userSettings.nix;
-
-      systemSettingsLaptop = import ./hosts/laptop/systemSettings.nix;
-      userSettingsLaptop = import ./hosts/laptop/userSettings.nix;
-
       lib = nixpkgs.lib;
     in 
     {
-      nixosConfigurations."fineos" = lib.nixosSystem {
+      nixosConfigurations."fineos" = 
+      let 
+        systemSettings = import ./hosts/personal/systemSettings.nix;
+        userSettings = import ./hosts/personal/userSettings.nix;
+      in 
+      lib.nixosSystem {
         system = "x86_64-linux";
 
         specialArgs = {
           inherit hyprland;
-          systemSettings = systemSettingsPC;
-          userSettings = userSettingsPC;
+          inherit systemSettings;
+          inherit userSettings;
         };
 
         modules = [ 
@@ -52,11 +51,11 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.${userSettingsPC.username} = import ./hosts/personal/home.nix;
+            home-manager.users.${userSettings.username} = import ./hosts/personal/home.nix;
 
             home-manager.extraSpecialArgs = {
-              systemSettings = systemSettingsPC;
-              userSettings = userSettingsPC;
+              inherit systemSettings;
+              inherit userSettings;
               inherit ags;
             };
           }
@@ -65,13 +64,18 @@
 
       };
         
-      nixosConfigurations."fineos-laptop" = lib.nixosSystem {
+      nixosConfigurations."fineos-laptop" =
+      let 
+        systemSettings = import ./hosts/laptop/systemSettings.nix;
+        userSettings = import ./hosts/laptop/userSettings.nix;
+      in 
+      lib.nixosSystem {
         system = "x86_64-linux";
 
         specialArgs = {
           inherit hyprland;
-          systemSettings = systemSettingsLaptop;
-          userSettings = userSettingsLaptop;
+          inherit systemSettings;
+          inherit userSettings;
         };
 
         modules = [ 
@@ -83,11 +87,11 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.${userSettingsLaptop.username} = import ./hosts/laptop/home.nix;
+            home-manager.users.${userSettings.username} = import ./hosts/laptop/home.nix;
 
             home-manager.extraSpecialArgs = {
-              systemSettings = systemSettingsLaptop;
-              userSettings = userSettingsLaptop;
+              inherit systemSettings;
+              inherit userSettings;
               inherit ags;
             };
           }
