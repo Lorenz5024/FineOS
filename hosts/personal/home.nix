@@ -1,35 +1,10 @@
-{ userSettings, ... }:
+{ ... }:
 
 {
   imports = [ 
-    ./common-packages.nix
+    ./common-home.nix
     ./packages.nix 
-    ./../../user/desktop/desktop.nix
-
-    ./../../user/app/kitty/kitty.nix 
-    ./../../user/app/yazi/yazi.nix
-    ./../../user/app/zathura/zathura.nix
-    ./../../user/app/lazygit/lazygit.nix
-    ./../../user/app/vscode/vscode.nix
-    ./../../user/app/rofi/rofi.nix
-    ./../../user/app/nextcloud/nextcloud.nix
-
-    ./../../user/shell/zsh/zsh.nix 
-
-    ./../../user/style/stylix.nix
   ];
-
-  home.username = userSettings.username;
-  home.homeDirectory = "/home/"+userSettings.username;
-
-  programs.git = {
-    enable = true;
-    userName = userSettings.name;
-    userEmail = userSettings.email;
-    extraConfig = {
-      init.defaultBranch = "main";
-    };
-  };
 
   # Set up monitors for hyprland
   wayland.windowManager.hyprland.settings = {
@@ -49,28 +24,4 @@
       "NVD_BACKEND,direct"
     ];
   };
-
-  nixpkgs.config.allowUnfree = true;
-
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-24.8.6"
-    "electron-25.9.0"
-  ]; 
-
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
-
-  services = {
-    kdeconnect = {
-      enable = true;
-      indicator = true;
-    };
-  };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
-
-  # !!! Check the documentation on this before changing !!!
-  home.stateVersion = "23.11";
 }
