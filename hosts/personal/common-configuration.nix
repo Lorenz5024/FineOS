@@ -114,8 +114,9 @@
     home-manager
   ];
 
+  # Fonts
   fonts.packages = with pkgs; [
-    nerdfonts
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
   # This value determines the NixOS release from which the default
