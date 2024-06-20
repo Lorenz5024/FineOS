@@ -58,19 +58,10 @@
 	mode = "n";
 	action = "<cmd>bdelete<CR>";
       }
-
-      # Telescope
       {
-        action = "<cmd>Telescope live_grep<CR>";	# Search all
-        key = "<leader>fa";
-      }
-      {
-        action = "<cmd>Telescope find_files<CR>";	# Search files
-	key = "<leader>ff";
-      }
-      {
-        action = "<cmd>Telescope buffers<CR>";		# Search buffers
-	key = "<leader>fb";
+        key = "<tab>";                  # Jump between last 2 active buffers
+        mode = "n";
+        action = "<cmd>b#<CR>";
       }
 
       # For moving in insert mode
@@ -107,26 +98,9 @@
 
       # NvimTree 
       {
-	key = "<leader>t";		# Toggle tree
+	key = "<leader>e";		# Toggle tree 
 	mode = "n";
-	action = "<cmd>NvimTreeClose<CR>";
-      }
-      {
-	key = "<leader>e";		# Focus tree 
-	mode = "n";
-	action = "<cmd>NvimTreeFocus<CR>";
-      }
-
-      # Bufferline
-      {
-	key = "<tab>";			# Move to previous buffer
-	mode = "n";
-	action = "<cmd>BufferLineCycleNext<CR>";
-      }
-      {
-	key = "<S-tab>";		# Move to next buffer
-	mode = "n";
-	action = "<cmd>BufferLineCyclePrev<CR>";
+	action = "<cmd>NvimTreeToggle<CR>";
       }
 
       # Lazygit
