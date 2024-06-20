@@ -10,7 +10,7 @@
     ./plugins/lualine.nix
     ./plugins/nvim-tree.nix
     ./plugins/alpha.nix
-    ./plugins/conform.nix
+    ./plugins/conform-nvim.nix
     ./plugins/barbecue.nix
   ];
 
