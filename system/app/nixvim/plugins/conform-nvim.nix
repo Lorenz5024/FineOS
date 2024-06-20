@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  programs.nixvim.plugins.conform = {
+  programs.nixvim.plugins.conform-nvim = {
     enable = true;
 
     formattersByFt = {
