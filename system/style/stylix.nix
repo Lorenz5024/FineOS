@@ -5,6 +5,7 @@ let
 in
 {
   stylix = {
+    enable = true;
     autoEnable = true;
     image = ./../../themes/wallpaper;
     base16Scheme = ./. + themePath;
