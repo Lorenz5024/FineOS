@@ -138,12 +138,12 @@
 
       # Toggleterm
       {
-        key = "<leader>th";
+        key = "<M-t>";
         mode = "n";
         action = "<cmd>ToggleTerm<CR>";
       }
       {
-        key = "<esc><esc>";
+        key = "<M-t>";
         mode = "t";
         action = "<cmd>ToggleTerm<CR>";
       }
