@@ -37,6 +37,7 @@
     # Shell
     zoxide    # cd with extra features
     tlrc      # simplified man pages
+    pcre16    # grep with more functionality
 
     #Development
     android-tools
