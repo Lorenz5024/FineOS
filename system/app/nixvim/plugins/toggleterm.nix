@@ -9,7 +9,7 @@
       float_opts = {
         border = "curved";
       };
-      open_mapping = "[[<C-t>]]";
+      open_mapping = "[[<M-t>]]";
     };
   };
 }
