@@ -1,7 +1,6 @@
 {
 // HYPRLAND 
 "hyprland/workspaces#icons": {
-    "format": "{name}",
     "format": " {name} {icon} ",
     "show-special": false,
     "on-click": "activate",
@@ -27,7 +26,6 @@
 },
 
 "hyprland/workspaces#numbers": {
-    "format": "{name}",
     "format": " {name} ",
     "show-special": false,
     "on-click": "activate",
@@ -41,15 +39,14 @@
 },
 
 "hyprland/window": {
-    "format": "{title}",
+    "format": "{class} - {title}",
     "max-length": 40,
     "separate-outputs": false,  //Seperate window for each workspace
     "offscreen-css" : true,
     "offscreen-css-text": "(inactive)",
     "rewrite": {
-      "(.*) — Mozilla Firefox": "󰈹 $1",
-      "(.*) - zsh": "  [$1]",
-      "(.*) - kitty": "  [$1]",
+      "firefox - (.*)": "󰈹 $1",
+      "kitty - (.*)": "> $1",
     },
 },
 
