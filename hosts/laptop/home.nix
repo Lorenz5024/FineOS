@@ -16,6 +16,7 @@
 
       # just laptop
       "eDP-1, 2256x1504, 0x0, 1.333333"
+      ", disable"
     ];
   };
 }
