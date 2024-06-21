@@ -28,8 +28,9 @@
 
       "col.active_border" =  lib.mkForce "rgb(${config.lib.stylix.colors.base0E})";
 
-      cursor_inactive_timeout = 5;
     };
+
+    cursor.inactive_timeout = 5;
 
     decoration = {
       rounding = 8;
