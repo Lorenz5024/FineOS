@@ -1,4 +1,4 @@
-#!/bin/sh 
+#!/usr/bin/env sh
 
 # Check if screenshot directory exists
 if [ ! -d ~/Pictures/screenshot ]

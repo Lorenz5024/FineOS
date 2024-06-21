@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 # Rofi command
 rofi_command="rofi -i -show -dmenu -window-title Sound-Output:"

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */ 
 
 # WALLPAPERS PATH
