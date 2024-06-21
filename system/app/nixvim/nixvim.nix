@@ -12,6 +12,7 @@
     ./plugins/alpha.nix
     ./plugins/conform-nvim.nix
     ./plugins/barbecue.nix
+    ./plugins/toggleterm.nix
   ];
 
   programs.nixvim = {
@@ -40,7 +41,6 @@
       markdown-preview.enable = true;
       nix.enable = true;
       lazygit.enable = true;
-      toggleterm.enable = true;
       auto-save.enable = true;
     };
   };
