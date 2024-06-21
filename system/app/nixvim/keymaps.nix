@@ -109,17 +109,5 @@
         mode = "n";
         action = "<cmd>LazyGit<CR>";
       }
-
-      # Toggleterm
-      {
-        key = "<M-t>";
-        mode = "n";
-        action = "<cmd>ToggleTerm<CR>";
-      }
-      {
-        key = "<M-t>";
-        mode = "t";
-        action = "<cmd>ToggleTerm<CR>";
-      }
   ];
 }
