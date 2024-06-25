@@ -49,7 +49,6 @@
           stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${userSettings.username} = import ./hosts/personal/home.nix;
 
@@ -85,7 +84,6 @@
           stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${userSettings.username} = import ./hosts/laptop/home.nix;
 
