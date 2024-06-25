@@ -35,7 +35,7 @@ in
     ];
   };
 
-  programs.waybar.style = ''
+  programs.waybar.style = /*css*/ ''
 
     @define-color main                    #${config.lib.stylix.colors.base00};
     @define-color text                    #${config.lib.stylix.colors.base06};
