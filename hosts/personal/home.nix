@@ -13,6 +13,7 @@
       "DP-2, 2560x1440@75, -2560x0, 1"
       #"HDMI-A-1, 3840x2160@60, -642x-2160, 1, bitdepth, 10, vrr, 2"
       "HDMI-A-1, disable"
+      ", disable"
     ];
 
     env = [
