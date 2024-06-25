@@ -42,6 +42,7 @@
       nix.enable = true;
       lazygit.enable = true;
       auto-save.enable = true;
+      autoclose.enable = true;
     };
   };
 
