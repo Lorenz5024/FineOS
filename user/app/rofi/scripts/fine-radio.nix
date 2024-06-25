@@ -2,13 +2,13 @@
 
 {
   home.packages = [
-    pkgs.rofi-beats
+    pkgs.fine-radio
   ];
 
   nixpkgs.overlays = [
     (self: super: {
       rofi-beats = pkgs.writeShellApplication {
-        name = "rofi-beats";
+        name = "fine-radio";
 
         text = ''
           # add more args here according to preference

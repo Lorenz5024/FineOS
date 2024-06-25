@@ -2,13 +2,13 @@
 
 {
   home.packages = [
-    pkgs.rofi-wallpaper
+    pkgs.fine-wallpaper
   ];
 
   nixpkgs.overlays = [
     (self: super: {
       rofi-wallpaper = pkgs.writeShellApplication {
-        name = "rofi-wallpaper";
+        name = "fine-wallpaper";
 
         text = ''
           # WALLPAPERS PATH
