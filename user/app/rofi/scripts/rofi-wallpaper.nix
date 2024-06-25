@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, userSettings, ... }:
 
 {
   home.packages = [
@@ -12,13 +12,13 @@
 
         text = ''
           # WALLPAPERS PATH
-          wallDIR="$HOME/Pictures/wallpapers"
+          wallDIR=${userSettings.wallpaperDir}
 
           # Retrieve image files
           PICS=$(find "''${wallDIR}" -type f \( -iname \*.jpg -o -iname \*.png \))
 
           # Rofi command
-          rofi_command="rofi -i -show -dmenu -config ~/FineOS/user/app/rofi/config-wallpaper.rasi -window-title Wallpaper:"
+          rofi_command="rofi -i -show -dmenu -config ${userSettings.flakeDir}/user/app/rofi/config-wallpaper.rasi -window-title Wallpaper:"
 
           # Sorting Wallpapers
           menu() {
