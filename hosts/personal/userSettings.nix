@@ -6,6 +6,7 @@
   name = "Lorenz Feiner";
   email = "lorenzfeiner@proton.me";
   flakeDir = "/home/lorenz/FineOS";       # the directory where the flake and configs are stored
+  wallpaperDir = "/home/lorenz/Pictures/wallpapers";
 
   # ---- Default Applications ---- #
 
