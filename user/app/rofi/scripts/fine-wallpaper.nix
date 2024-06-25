@@ -7,7 +7,7 @@
 
   nixpkgs.overlays = [
     (self: super: {
-      rofi-wallpaper = pkgs.writeShellApplication {
+      fine-wallpaper = pkgs.writeShellApplication {
         name = "fine-wallpaper";
 
         text = ''

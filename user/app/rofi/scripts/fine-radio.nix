@@ -7,7 +7,7 @@
 
   nixpkgs.overlays = [
     (self: super: {
-      rofi-beats = pkgs.writeShellApplication {
+      fine-radio = pkgs.writeShellApplication {
         name = "fine-radio";
 
         text = ''
