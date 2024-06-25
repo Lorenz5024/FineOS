@@ -48,9 +48,9 @@
 
       # rofi 
       "$mod, SPACE, exec, pkill rofi || rofi -show drun"	# App launcher
-      "$mod, R, exec, rofi-beats"	# Music
+      "$mod, R, exec, fine-radio"	# Music
       "$mod, V, exec, pkill rofi || cliphist list | rofi -dmenu -window-title Clipboard | cliphist decode | wl-copy" # Text only clipboard
-      "$mod, W, exec, rofi-wallpaper"
+      "$mod, W, exec, fine-wallpaper"
 
       # clear clipboard 
       "$mod_ALT, V, exec, cliphist wipe"
