@@ -1,7 +1,8 @@
-{ userSettings, ... }:
+{ lib, userSettings, ... }:
 
 {
-  wayland.windowManager.hyprland.settings = {
+  wayland.windowManager.hyprland.settings = 
+  {
 
     "$mod"          = "SUPER";
     "$terminal"     = userSettings.terminal;
@@ -47,9 +48,9 @@
 
       # rofi 
       "$mod, SPACE, exec, pkill rofi || rofi -show drun"	# App launcher
-      "$mod_ALT, M, exec, $rofiScripts/rofi-beats.sh"	# Music
+      "$mod, R, exec, rofi-beats"	# Music
       "$mod, V, exec, pkill rofi || cliphist list | rofi -dmenu -window-title Clipboard | cliphist decode | wl-copy" # Text only clipboard
-      "$mod, W, exec, $rofiScripts/wallpaper-select.sh"
+      "$mod, W, exec, rofi-wallpaper"
 
       # clear clipboard 
       "$mod_ALT, V, exec, cliphist wipe"
