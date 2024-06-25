@@ -5,8 +5,8 @@
     ./themes/theme-main.nix
     ./themes/theme-wallpaperpicker.nix
 
-    ./scripts/rofi-beats.nix
-    ./scripts/rofi-wallpaper.nix
+    ./scripts/fine-radio.nix
+    ./scripts/fine-wallpaper.nix
   ];
 
   home.file = {
