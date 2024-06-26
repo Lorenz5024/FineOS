@@ -41,8 +41,8 @@ in
       "group/hiddentray"
       "hyprland/language"
       "idle_inhibitor"
-      "${if systemSettings.isLaptop then "group/laptop" else ""}"
       "pulseaudio"
+      "${if systemSettings.isLaptop then "group/laptop" else ""}"
       "clock"
     ];
   };
