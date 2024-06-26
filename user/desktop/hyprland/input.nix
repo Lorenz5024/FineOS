@@ -25,6 +25,7 @@
       workspace_swipe_distance = 400;
       workspace_swipe_min_speed_to_force = 5;
       workspace_swipe_cancel_ratio = 0.5;
+      workspace_swipe_use_r = true;
     };
   };
 }
