@@ -45,6 +45,18 @@
   # Not all themes might look good with dark and light colors
   waybarStyle = "fine";         
 
+
+
+  # ---- Nextcloud ---- #
+
+  # Install nextcloud-client and add a bookmark in gtk filemanagers when set to true
+  useNextcloud = true;
+
+  # Your nextcloud instance address (example: 'yournextcloud.com', without https etc.)
+  nextcloudURL = "lorenzf.xyz";
+
+  # Your nextcloud username 
+  nextcloudUsername = "lorenz";
 }
 
 
