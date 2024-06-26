@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, userSettings, ... }:
 
 {
   home.packages = with pkgs; [
@@ -23,7 +23,6 @@
     tor-browser
     discord
     protonmail-desktop
-    nextcloud-client
 
     # Media
     mpv
