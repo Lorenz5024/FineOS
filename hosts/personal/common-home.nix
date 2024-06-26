@@ -12,12 +12,11 @@
     ./../../user/app/lazygit/lazygit.nix
     ./../../user/app/vscode/vscode.nix
     ./../../user/app/rofi/rofi.nix
-    ./../../user/app/nextcloud/nextcloud.nix
 
     ./../../user/shell/zsh/zsh.nix 
 
     ./../../user/style/stylix.nix
-  ];
+  ] ++ (if userSettings.useNextcloud then [./../../user/app/nextcloud/nextcloud.nix] else []);
 
   home.username = userSettings.username;
   home.homeDirectory = "/home/"+userSettings.username;
