@@ -313,6 +313,23 @@
     "spacing": 8,
     "show-passive-items": true,
 },
+
+"group/hiddentray": {
+    "orientation": "inherit",
+    "drawer": {
+	"transition-duration": 200,
+	"transition-left-to-right": false,
+    },
+    "modules": [ 
+	"custom/trayindicator",
+	"tray",
+    ],
+},
+
+"custom/trayindicator": {
+    "format": "",
+    "tooltip": false,
+},
       
 "wireplumber": {
     "format": "{icon} {volume} %",
