@@ -4,7 +4,19 @@ let
   module-border = ''
     border: 2px solid @module-border; 
     border-radius: 8px; 
-    margin: 0.3em; '';
+    margin: 0.3em; 
+    '';
+  module-hover = ''
+    border-radius: 8px;
+    background: @hover;
+    '';
+  module-margin = ''
+    margin: 0.3em;
+    '';
+  module-padding-lr = ''
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    '';
 in
 {
 
@@ -26,11 +38,11 @@ in
     ];
 
     modules-right = [
-      "tray"
+      "group/hiddentray"
+      "hyprland/language"
       "idle_inhibitor"
       "${if systemSettings.isLaptop then "group/laptop" else ""}"
       "pulseaudio"
-      "hyprland/language"
       "clock"
     ];
   };
@@ -46,12 +58,12 @@ in
     @define-color workspaces-visible      #${config.lib.stylix.colors.base0D};
     @define-color window-text             #${config.lib.stylix.colors.base09};
     @define-color language                #${config.lib.stylix.colors.base0A};
-    @define-color volume                  #${config.lib.stylix.colors.base0B};
+    @define-color pulseaudio              #${config.lib.stylix.colors.base0B};
     @define-color clock                   #${config.lib.stylix.colors.base0F};
     @define-color idle_inhibitor          #${config.lib.stylix.colors.base0E};
     @define-color battery                 #${config.lib.stylix.colors.base0C};
-
-
+    @define-color hover                   #${config.lib.stylix.colors.base03};
+    @define-color trayindicator           #${config.lib.stylix.colors.base07};
 
     * {
 	font-family: "JetBrainsMono Nerd Font";
@@ -67,6 +79,17 @@ in
       font-size: 22px;
       color: #89b4fa;
       padding: 0.3em;
+    }
+
+    #custom-trayindicator {
+      ${module-margin}
+      color: @trayindicator;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+
+    #custom-trayindicator:hover {
+      ${module-hover}
     }
 
     #group-hardware {
@@ -86,30 +109,40 @@ in
       color: @clock;
       padding-left: 8px;
       padding-right: 8px;
+      ${module-margin}
+    }
 
-      ${module-border}
+    #clock:hover {
+      ${module-margin}
+      ${module-hover}
     }
 
     #backlight {
+      ${module-margin}
       color: @text;
       padding-left: 8px;
       padding-right: 8px;
     }
 
     #battery {
+      ${module-margin}
       color: @battery;
       padding-left: 8px;
       padding-right: 8px;
     }
 
     #pulseaudio {
-      ${module-border}
-
+      ${module-margin}
       padding-left: 8px;
       padding-right: 8px;
       padding-top: 4px;
       padding-bottom: 4px;
-      color: @volume;
+      color: @pulseaudio;
+    }
+
+    #pulseaudio:hover {
+      ${module-margin}
+      ${module-hover}
     }
 
     #tray {
@@ -156,21 +189,21 @@ in
     }
 
     #language {
+      ${module-margin}
       color: @language;
-      ${module-border};
-
       padding: 0em 0.5em 0em 0.5em;
     }
 
     #idle_inhibitor {
-      ${module-border}
+      ${module-margin}
       color: @idle_inhibitor;
       padding-left: 8px;
       padding-right: 8px;
     }
 
-    #laptop {
-      ${module-border}
+    #idle_inhibitor:hover {
+      ${module-margin}
+      ${module-hover}
     }
   '';
 }
