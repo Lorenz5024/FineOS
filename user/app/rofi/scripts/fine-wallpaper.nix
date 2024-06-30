@@ -23,8 +23,7 @@
           # Sorting Wallpapers
           menu() {
             for pic_path in $PICS; do
-              pic_name=$(basename "$pic_path")
-              printf "%s\n" "$pic_name"
+              printf "%s\n" "$pic_path"
             done
           }
 
@@ -37,12 +36,12 @@
               exit 0
             fi
 
-            picture=$(echo "$PICS" | grep "$choice")
+            #picture=$(echo "$PICS" | grep "$choice")
 
-            if [[ -f $picture ]]; then
-              hyprctl hyprpaper preload "$picture"
-              hyprctl hyprpaper wallpaper ",$picture"
-              cp "$picture" /home/lorenz/FineOS/themes/wallpaper
+            if [[ -f $choice ]]; then
+              hyprctl hyprpaper preload "$choice"
+              hyprctl hyprpaper wallpaper ",$choice"
+              cp "$choice" /home/lorenz/FineOS/themes/wallpaper
             else
               echo "Image not found."
               exit 1
