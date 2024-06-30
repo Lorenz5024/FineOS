@@ -192,6 +192,7 @@
 "clock": {
     "interval": 1,
     "format": "  {:%H:%M %a %d.%m.%y }",
+    "on-click": "gnome-calendar",
 },
    
 "cpu": {
