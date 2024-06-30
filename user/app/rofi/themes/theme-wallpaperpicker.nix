@@ -1,7 +1,7 @@
 { config, ... }:
 
 {
-  home.file.".config/rofi/themes/theme-wallpaperpicker.rasi".text = ''
+  home.file.".config/rofi/themes/theme-wallpaperpicker.rasi".text = /*rasi*/''
     *{
       background:         #${config.lib.stylix.colors.base00}B3;
       text:               #${config.lib.stylix.colors.base05};
@@ -95,7 +95,7 @@
 
     /* ---- Listview ---- */
     listview {
-            enabled:				true;
+            enabled:	            true;
             columns:                1;
             lines:		    10;
             spacing:                4px;
@@ -127,9 +127,7 @@
     }
 
     element-icon {
-        text-color:            inherit;
         size:                  20em;
-        cursor:                inherit;
     }
 
     element-text {
