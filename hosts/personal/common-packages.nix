@@ -1,4 +1,4 @@
-{ pkgs, userSettings, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -16,6 +16,7 @@
     obsidian
     speedcrunch     # calculator
     drawio
+    iotas           # notes
 
     # Internet
     firefox
