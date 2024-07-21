@@ -33,10 +33,6 @@ in
       "hyprland/window"
     ];
 
-    modules-center = [
-      "mpris"
-    ];
-
     modules-right = [
       "group/hiddentray"
       "hyprland/language"
