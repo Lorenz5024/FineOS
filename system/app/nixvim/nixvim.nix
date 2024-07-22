@@ -8,11 +8,11 @@
     ./plugins/cmp.nix
     ./plugins/lsp.nix
     ./plugins/lualine.nix
-    ./plugins/nvim-tree.nix
     ./plugins/alpha.nix
     ./plugins/conform-nvim.nix
     ./plugins/barbecue.nix
     ./plugins/toggleterm.nix
+    ./plugins/neo-tree.nix
   ];
 
   programs.nixvim = {
