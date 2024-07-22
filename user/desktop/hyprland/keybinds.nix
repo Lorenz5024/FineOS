@@ -146,13 +146,13 @@
       "$mod_CTRL, K, resizeactive, 0 -30"
       "$mod_CTRL, J, resizeactive, 0 30"
 
-      # Move between workspaces 
-      "$mod_ALT, H, workspace, -1"
-      "$mod_ALT, L, workspace, +1"
+      # Move between workspaces on current monitor
+      "$mod_ALT, H, workspace, m-1"
+      "$mod_ALT, L, workspace, m+1"
 
-      # Move windows between workspaces 
-      "$mod_ALT_SHIFT, H, movetoworkspace, -1"
-      "$mod_ALT_SHIFT, L, movetoworkspace, +1"
+      # Move windows between workspaces on current monitor
+      "$mod_ALT_SHIFT, H, movetoworkspace, m-1"
+      "$mod_ALT_SHIFT, L, movetoworkspace, m+1"
     ];
 
   };
