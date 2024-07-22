@@ -49,7 +49,7 @@
     };
 
     dwindle = {
-      force_split = 2;
+      force_split = 2;      # 0 -> split follows mouse, 1 -> split to left, 2 -> split to right
       preserve_split = true;
     };
 
