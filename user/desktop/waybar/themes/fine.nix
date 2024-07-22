@@ -1,9 +1,10 @@
 { config, systemSettings, ... }:
 
 let
+  module-border-radius = "8px";
   module-border = ''
     border: 2px solid @module-border; 
-    border-radius: 8px; 
+    border-radius: ${module-border-radius}; 
     margin: 0.3em; 
     '';
   module-hover = ''
@@ -29,6 +30,7 @@ in
   programs.waybar.settings.mainBar = {
     modules-left = [
       "custom/icon"
+      "clock"
       "hyprland/workspaces#icons"
       "hyprland/window"
     ];
@@ -38,12 +40,11 @@ in
     ];
 
     modules-right = [
-      "group/hiddentray"
+      "tray"
       "hyprland/language"
       "idle_inhibitor"
       "pulseaudio"
       "${if systemSettings.isLaptop then "group/laptop" else ""}"
-      "clock"
     ];
   };
 
@@ -59,8 +60,8 @@ in
     @define-color window-text             #${config.lib.stylix.colors.base09};
     @define-color language                #${config.lib.stylix.colors.base0A};
     @define-color pulseaudio              #${config.lib.stylix.colors.base0B};
-    @define-color clock                   #${config.lib.stylix.colors.base0F};
-    @define-color idle_inhibitor          #${config.lib.stylix.colors.base0E};
+    @define-color clock                   #${config.lib.stylix.colors.base0E};
+    @define-color idle_inhibitor          #${config.lib.stylix.colors.base08};
     @define-color battery                 #${config.lib.stylix.colors.base0C};
     @define-color hover                   #${config.lib.stylix.colors.base03};
     @define-color trayindicator           #${config.lib.stylix.colors.base07};
@@ -147,7 +148,7 @@ in
 
     #tray {
       background: @workspaces-background;
-      ${module-border}
+      border-radius: 
       padding-left: 8px;
       padding-right: 8px;
     }
