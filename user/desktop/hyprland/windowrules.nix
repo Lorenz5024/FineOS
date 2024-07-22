@@ -8,13 +8,17 @@
       "tag +music, class:^(feishin)$"
       "tag +gaming, class:^(steam)$"
       "tag +gaming, class:^(heroic)$"
+      "tag +utility, class:^(org.gnome.World.Iotas)"
+      "tag +utility, class:^(org.speedcrunch)"
 
       # open on specific workspaces
       "workspace 4 silent, tag:chat"
-      "workspace 5 silent, tag:music"
+      "workspace 5, tag:music"
       "workspace 6 silent, tag:gaming"
 
       # floating windows
+      "float, tag:utility"
+
       "float, class:^(com.nextcloud.desktopclient.nextcloud)$"
       "float, class:^(Bitwarden)$"
       "float, class:^(wlogout)$"
