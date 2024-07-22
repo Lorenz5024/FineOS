@@ -45,7 +45,7 @@
     "offscreen-css" : true,
     "offscreen-css-text": "(inactive)",
     "rewrite": {
-      "firefox - (.*)": "󰈹 $1",
+      "firefox - (.*)": "󰈹 Firefox",
       "kitty - (.*)": "> $1",
     },
 },
@@ -106,7 +106,7 @@
 		"playing": "",
 		"stopped": "",
 	},
-	// "ignored-players": ["firefox"]
+	"ignored-players": ["firefox"],
 	"max-length": 50,
 },
   
