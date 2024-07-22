@@ -18,7 +18,7 @@
       "$mod_CTRL, SPACE, exec, $terminal -d ${userSettings.flakeDir} -e $editor"
 
       # Compositor commands
-      "$mod_CTRL_ALT, Q, exec, pkill Hyprland"
+      "$mod_CTRL_ALT, F4, exec, pkill Hyprland"
       "$mod, Q, killactive,"
       "$mod, F, fullscreen,"
       "$mod_CTRL, F, togglefloating"
@@ -59,9 +59,10 @@
       "CTRL_ALT, S, exec, $scriptsDir/screenshot-region.sh"
 
       # scratchpads
-      "$mod_CTRL, RETURN, exec, pypr toggle term"
-      "$mod_CTRL, Y, exec, pypr toggle yazi"
-      "$mod_CTRL, S, exec, pypr toggle audio"
+      "$mod_CTRL_ALT, RETURN, exec, pypr toggle term"
+      "$mod_CTRL_ALT, Y, exec, pypr toggle yazi"
+      "$mod_CTRL_ALT, S, exec, pypr toggle audio"
+      "$mod_CTRL_ALT, C, exec, pypr toggle calculator"
 
       # Move focus 
       "$mod, H, movefocus, l"
