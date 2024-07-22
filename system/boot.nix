@@ -8,7 +8,7 @@
     loader = {
       systemd-boot = { 
         enable = true;
-        configurationLimit = 8;
+        configurationLimit = 16;
       };
       efi.canTouchEfiVariables = true;
     };
