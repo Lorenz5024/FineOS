@@ -12,6 +12,7 @@
       "tag +utility, class:^(org.speedcrunch)"
 
       # open on specific workspaces
+      "workspace 3, class:^(obsidian)"
       "workspace 4 silent, tag:chat"
       "workspace 5, tag:music"
       "workspace 6 silent, tag:gaming"
