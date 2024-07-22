@@ -38,3 +38,8 @@ lazy = "true"
 animation = ""
 command = "pavucontrol -t 3"
 lazy = "false"
+
+[scratchpads.calculator]
+animation = ""
+command = "speedcrunch"
+lazy = "false"
