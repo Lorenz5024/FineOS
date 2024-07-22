@@ -96,11 +96,11 @@
 	mode = "i";
       }
 
-      # NvimTree 
+      # neo-tree 
       {
 	key = "<leader>e";		# Toggle tree 
 	mode = "n";
-	action = "<cmd>NvimTreeToggle<CR>";
+	action = "<cmd>Neotree reveal=true<CR>";
       }
 
       # Lazygit
