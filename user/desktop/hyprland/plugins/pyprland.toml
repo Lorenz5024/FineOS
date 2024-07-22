@@ -43,3 +43,9 @@ lazy = "false"
 animation = ""
 command = "speedcrunch"
 lazy = "false"
+
+[scratchpads.notes]
+animation = ""
+command = "iotas"
+lazy = "false"
+

@@ -63,6 +63,7 @@
       "$mod_CTRL_ALT, Y, exec, pypr toggle yazi"
       "$mod_CTRL_ALT, S, exec, pypr toggle audio"
       "$mod_CTRL_ALT, C, exec, pypr toggle calculator"
+      "$mod_CTRL_ALT, N, exec, pypr toggle notes"
 
       # Move focus 
       "$mod, H, movefocus, l"
