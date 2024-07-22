@@ -148,7 +148,7 @@ in
 
     #tray {
       background: @workspaces-background;
-      border-radius: ${module-border-radius}: 
+      border-radius: ${module-border-radius}; 
       padding-left: 8px;
       padding-right: 8px;
     }
