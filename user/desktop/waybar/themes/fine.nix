@@ -5,7 +5,7 @@ let
   module-border = ''
     border: 2px solid @module-border; 
     border-radius: ${module-border-radius}; 
-    margin: 0.3em; 
+    ${module-margin}; 
     '';
   module-hover = ''
     border-radius: 8px;
@@ -60,7 +60,7 @@ in
     @define-color window-text             #${config.lib.stylix.colors.base09};
     @define-color language                #${config.lib.stylix.colors.base0A};
     @define-color pulseaudio              #${config.lib.stylix.colors.base0B};
-    @define-color clock                   #${config.lib.stylix.colors.base0E};
+    @define-color clock                   #${config.lib.stylix.colors.base0F};
     @define-color idle_inhibitor          #${config.lib.stylix.colors.base08};
     @define-color battery                 #${config.lib.stylix.colors.base0C};
     @define-color hover                   #${config.lib.stylix.colors.base03};
@@ -151,6 +151,7 @@ in
       border-radius: ${module-border-radius}; 
       padding-left: 8px;
       padding-right: 8px;
+      ${module-margin}
     }
 
     #custom-power {
