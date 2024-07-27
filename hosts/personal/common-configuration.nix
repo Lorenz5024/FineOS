@@ -122,8 +122,6 @@
     home-manager
   ];
 
-  home-manager.backupFileExtension = "backup";
-
   # Fonts
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
