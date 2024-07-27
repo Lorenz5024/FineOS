@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, userSettings, ... }:
 
 {
   imports = [ 
@@ -29,5 +29,16 @@
     slurp                               # select region of screen for screenshots
     grim                                # grab image for screenshot
   ];
+
+  # create home directories
+  xdg.userDirs = {
+    enable = true;
+
+    documents = "/home/${userSettings.username}/Documents";
+    download = "/home/${userSettings.username}/Downloads";
+    music = "/home/${userSettings.username}/Music";
+    pictures = "/home/${userSettings.username}/Pictures";
+    videos = "/home/${userSettings.username}/Videos";
+  };
 
 }
