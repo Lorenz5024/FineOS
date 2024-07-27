@@ -29,6 +29,7 @@
       "float, class:^(yazi-scratchpad)$"
       "float, class:^(org.speedcrunch)$"
       "float, class:^(.blueman-manager-wrapped)$"
+      "float, class:^(discord)"
 
       # centered windows 
       "center, class:^(pavucontrol)$"
