@@ -53,7 +53,7 @@
   useNextcloud = true;
 
   # Your nextcloud instance address (example: 'yournextcloud.com', without https etc.)
-  nextcloudURL = "lorenzf.xyz";
+  nextcloudURL = "feiner.alpenstorage.at";
 
   # Your nextcloud username 
   nextcloudUsername = "lorenz";
