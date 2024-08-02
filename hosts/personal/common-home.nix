@@ -16,6 +16,8 @@
     ./../../user/shell/zsh/zsh.nix 
 
     ./../../user/style/stylix.nix
+
+    ./../../user/development/rust.nix
   ] ++ (if userSettings.useNextcloud then [./../../user/app/nextcloud/nextcloud.nix] else []);
 
   home.username = userSettings.username;
