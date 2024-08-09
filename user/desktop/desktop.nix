@@ -8,6 +8,7 @@
     ./network-manager-applet/network-manager-applet.nix
     ./gtk/gtk.nix
     ./clipboard/clipboard.nix
+    ./ags/ags.nix
   ];
 
   home.packages = with pkgs; [
