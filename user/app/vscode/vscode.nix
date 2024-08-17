@@ -18,6 +18,7 @@
       redhat.java
       vscodevim.vim
       arrterian.nix-env-selector
+      rust-lang.rust-analyzer
 
       catppuccin.catppuccin-vsc
       catppuccin.catppuccin-vsc-icons
