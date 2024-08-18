@@ -19,8 +19,8 @@
 
       # Compositor commands
       "$mod_CTRL_ALT, F4, exec, pkill Hyprland"
-      "$mod, Q, killactive,"
-      "$mod, F, fullscreen,"
+      "$mod, Q, killactive"
+      "$mod, F, fullscreen"
       "$mod_CTRL, F, togglefloating"
       "$mod, G, togglegroup"
       "$mod_CTRL, G, changegroupactive, f"
@@ -36,8 +36,8 @@
       "$mod, I, exec, wlogout"
 
       # Restart programs
-      "$mod_ALT, B, exec, pkill waybar; waybar &"		# waybar
-      "$mod_ALT, P, exec, pkill hyprpaper; hyprpaper &" 	# hyprpaper
+      "$mod_CTRL_ALT, B, exec, pkill waybar; waybar &"		# waybar
+      "$mod_CTRL_ALT, P, exec, pkill hyprpaper; hyprpaper &" 	# hyprpaper
 
       # Launchers
       "$mod, RETURN, exec, $terminal"
@@ -53,17 +53,17 @@
       "$mod, W, exec, fine-wallpaper"
 
       # clear clipboard 
-      "$mod_ALT, V, exec, cliphist wipe"
+      "$mod_CTRL_ALT, V, exec, cliphist wipe"
 
       # take screenshot
       "CTRL_ALT, S, exec, $scriptsDir/screenshot-region.sh"
 
       # scratchpads
-      "$mod_CTRL_ALT, RETURN, exec, pypr toggle term"
-      "$mod_CTRL_ALT, Y, exec, pypr toggle yazi"
-      "$mod_CTRL_ALT, S, exec, pypr toggle audio"
-      "$mod_CTRL_ALT, C, exec, pypr toggle calculator"
-      "$mod_CTRL_ALT, N, exec, pypr toggle notes"
+      "$mod_ALT, RETURN, exec, pypr toggle term"
+      "$mod_ALT, Y, exec, pypr toggle yazi"
+      "$mod_ALT, S, exec, pypr toggle audio"
+      "$mod_ALT, C, exec, pypr toggle calculator"
+      "$mod_ALT, N, exec, pypr toggle notes"
 
       # Move focus 
       "$mod, H, movefocus, l"
@@ -147,9 +147,6 @@
       "$mod_CTRL, K, resizeactive, 0 -30"
       "$mod_CTRL, J, resizeactive, 0 30"
 
-      # Move between workspaces on current monitor
-      "$mod_ALT, H, workspace, m-1"
-      "$mod_ALT, L, workspace, m+1"
 
       # Move windows between workspaces on current monitor
       "$mod_ALT_SHIFT, H, movetoworkspace, m-1"
