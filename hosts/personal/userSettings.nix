@@ -1,12 +1,12 @@
 # ----------------------- #
 # User Settings --------- #
 # ----------------------- #
-{
+rec {
   username = "lorenz";
   name = "Lorenz Feiner";
   email = "lorenzfeiner@proton.me";
-  flakeDir = "/home/lorenz/FineOS";       # the directory where the flake and configs are stored
-  wallpaperDir = "/home/lorenz/Pictures/wallpapers";
+  flakeDir = "/home/${username}/FineOS";       # the directory where the flake and configs are stored
+  wallpaperDir = "/home/${username}/Pictures/wallpapers";
 
   # ---- Default Applications ---- #
 
@@ -27,7 +27,7 @@
   # File manager
   fileManager = "thunar";
 
-  # Music player (launched from keybind, not for opening sound files)
+  # Music player
   musicPlayer = "feishin";
 
   # ---- Theming ---- #

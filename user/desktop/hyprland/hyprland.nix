@@ -63,7 +63,7 @@
     exec-once = [
       "waybar"
       "hyprpaper"
-      "hypridle"
+      # "hypridle"
       "swaync"
       "thunar --daemon"
       "nm-applet"
