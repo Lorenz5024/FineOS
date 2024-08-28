@@ -30,13 +30,12 @@ in
   programs.waybar.settings.mainBar = {
     modules-left = [
       "custom/icon"
-      "clock"
       "hyprland/workspaces#icons"
       "hyprland/window"
     ];
 
     modules-center = [
-      "mpris"
+      "clock"
     ];
 
     modules-right = [
