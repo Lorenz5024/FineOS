@@ -24,6 +24,7 @@
     tor-browser
     discord
     protonmail-desktop
+    qutebrowser
 
     # Media
     mpv
