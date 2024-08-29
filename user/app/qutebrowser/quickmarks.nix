@@ -1,0 +1,20 @@
+{ userSettings, ... }:
+
+{
+  programs.qutebrowser.quickmarks = {
+    nixpkgs = "https://search.nixos.org/packages";
+    homemanager-options = "https://search.nixos.org/packages";
+
+    hyprland = "https://wiki.hyprland.org/";
+    waybar = "https://github.com/Alexays/Waybar/wiki";
+    nixvim = "https://nix-community.github.io/nixvim/";
+    stylix = "https://danth.github.io/stylix/";
+
+    nextcloud = if userSettings.useNextcloud then userSettings.nextcloudURL else "https://nextcloud.com";
+    mail = "https://mail.proton.me/u/1/inbox";
+
+    youtube = "https://www.youtube.com/feed/subscriptions";
+
+
+  };
+}
