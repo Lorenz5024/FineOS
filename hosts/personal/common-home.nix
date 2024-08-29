@@ -12,6 +12,7 @@
     ./../../user/app/lazygit/lazygit.nix
     ./../../user/app/vscode/vscode.nix
     ./../../user/app/rofi/rofi.nix
+    ./../../user/app/qutebrowser/qutebrowser.nix
 
     ./../../user/shell/zsh/zsh.nix 
 
