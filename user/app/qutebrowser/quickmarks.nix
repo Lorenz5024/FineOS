@@ -3,7 +3,7 @@
 {
   programs.qutebrowser.quickmarks = {
     nixpkgs = "https://search.nixos.org/packages";
-    homemanager-options = "https://search.nixos.org/packages";
+    homemanager-options = "https://home-manager-options.extranix.com/?query=&release=master";
 
     hyprland = "https://wiki.hyprland.org/";
     waybar = "https://github.com/Alexays/Waybar/wiki";

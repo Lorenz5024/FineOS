@@ -1,6 +1,6 @@
 { lib, userSettings, ... }:
 
 {
-  programs.qutebrowser.settings = lib.mkForce {
+  programs.qutebrowser.settings = {
   };
 }
