@@ -16,7 +16,6 @@
     waybar				# status bar
     rofi-wayland
     xdg-desktop-portal-hyprland     	# screensharing and other stuff
-    hyprpaper                       	# wallpaper
     hypridle 			    	# idle daemon
     pavucontrol                     	# audio
     swaynotificationcenter          	# notifications
