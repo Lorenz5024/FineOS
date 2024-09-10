@@ -6,10 +6,10 @@
     servers = {
 
       # javascript / typescript
-      tsserver.enable = true;
+      # tsserver.enable = true;
 
       # java 
-      java-language-server.enable = true; # this server does not work in current version. It is a problem of the server itself 
+      # java-language-server.enable = true; # this server does not work in current version. It is a problem of the server itself 
 
       # lua
       lua-ls.enable = true;
