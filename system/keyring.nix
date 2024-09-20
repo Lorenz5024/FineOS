@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = [ pkgs.gnome.gnome-keyring ];
+  environment.systemPackages = [ pkgs.gnome-keyring ];
 
   services.gnome.gnome-keyring.enable = true;
 }

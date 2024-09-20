@@ -9,7 +9,7 @@
     # Packages configured with nix should not be put here.
 
     # Productivity
-    gnome.gnome-calendar
+    gnome-calendar
     
     # Office
     libreoffice-qt
