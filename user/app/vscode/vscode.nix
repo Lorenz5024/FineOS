@@ -11,6 +11,8 @@
       #"workbench.iconTheme" = "catppuccin-mocha";
       "redhat.telemetry.enabled" = false;
       "java.home" = "/run/current-system/sw/lib/openjdk";
+
+      "files.autoSave" = "on";
       
     };
 
@@ -19,6 +21,8 @@
       vscodevim.vim
       arrterian.nix-env-selector
       rust-lang.rust-analyzer
+      bbenoist.nix
+      cweijan.vscode-database-client2
 
       catppuccin.catppuccin-vsc
       catppuccin.catppuccin-vsc-icons
