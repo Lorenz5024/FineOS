@@ -10,7 +10,7 @@
       "<leader>o" = "buffers";
     };
     
-    defaults = {
+    settings.defaults = {
       mappings = {
         i = {
           "<esc>" = {

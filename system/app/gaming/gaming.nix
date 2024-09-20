@@ -1,7 +1,7 @@
 { pkgs, userSettings, ... }:
 
 {
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
   };
 

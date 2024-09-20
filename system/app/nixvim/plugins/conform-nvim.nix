@@ -4,7 +4,7 @@
   programs.nixvim.plugins.conform-nvim = {
     enable = true;
 
-    formattersByFt = {
+    settings.formattersByFt = {
       nix = [ "alejandra" ];
       javascript = [ [ "prettierd" "prettier" ] ];
       css = [ "stylelint" ];
