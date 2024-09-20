@@ -50,9 +50,6 @@
   # Enable experimental features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # docker
-  virtualisation.docker.enable = true;
-
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -102,7 +99,7 @@
   users.users.${userSettings.username} = {
     isNormalUser = true;
     description = userSettings.name;
-    extraGroups = [ "networkmanager" "wheel" "input" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "input" ];
     shell = pkgs.zsh;
   };
 

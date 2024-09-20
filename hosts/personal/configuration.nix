@@ -8,6 +8,7 @@
 
     ./../../system/app/gaming/gaming.nix
 
+    ./../../system/development/docker.nix
     ./../../system/development/mysql.nix
   ];
 
