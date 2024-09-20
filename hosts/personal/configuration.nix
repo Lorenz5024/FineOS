@@ -7,6 +7,8 @@
     ./common-configuration.nix
 
     ./../../system/app/gaming/gaming.nix
+
+    ./../../system/development/mysql.nix
   ];
 
   networking.hostName = "fineos"; # Define your hostname.
