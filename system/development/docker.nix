@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, userSettings, ... }:
 
 {
   virtualisation.docker.enable = true;
@@ -6,5 +6,7 @@
     docker-compose
   ];
 
-  extraGroups = [ "docker" ];
+  users.users.${userSettings.username} = {
+    extraGroups = [ "docker" ];
+  };
 }
