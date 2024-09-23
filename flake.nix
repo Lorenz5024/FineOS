@@ -21,9 +21,11 @@
     ags.url = "github:Aylur/ags";
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+
+    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, ags, hyprland, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, ags, hyprland, nixos-wsl, ... }:
     let
       lib = nixpkgs.lib;
     in 
@@ -98,6 +100,41 @@
 
         ];
 
+      };
+
+      nixosConfigurations."wsl" = 
+      let
+        userSettings = import ./hosts/personal/userSettings.nix;
+      in
+      lib.nixosSystem {
+        system = "x86_64-linux";
+
+        specialArgs = {
+          inherit userSettings;
+        };
+
+        modules = [
+          ./hosts/wsl/configuration.nix
+
+          nixos-wsl.nixosModules.default {
+            system.stateVersion = "24.05";
+            wsl.enable = true;
+          }
+
+          nixvim.nixosModules.nixvim
+          stylix.nixosModules.stylix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useUserPackages = true;
+            home-manager.users.${userSettings.username} = import ./hosts/wsl/home.nix;
+            home-manager.backupFileExtension = "backup";
+
+            home-manager.extraSpecialArgs = {
+              inherit userSettings;
+              inherit ags;
+            };
+          }
+        ];
       };
     };
 }
