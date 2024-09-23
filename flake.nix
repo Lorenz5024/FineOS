@@ -18,14 +18,14 @@
 
     stylix.url = "github:danth/stylix";
 
-    ags.url = "github:Aylur/ags";
+    # ags.url = "github:Aylur/ags";
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
   };
 
-  outputs = { nixpkgs, home-manager, nixvim, stylix, ags, hyprland, nixos-wsl, ... }:
+  outputs = { nixpkgs, home-manager, nixvim, stylix, hyprland, nixos-wsl, ... }:
     let
       lib = nixpkgs.lib;
     in 
@@ -58,7 +58,6 @@
             home-manager.extraSpecialArgs = {
               inherit systemSettings;
               inherit userSettings;
-              inherit ags;
             };
           }
 
@@ -94,7 +93,6 @@
             home-manager.extraSpecialArgs = {
               inherit systemSettings;
               inherit userSettings;
-              inherit ags;
             };
           }
 
@@ -133,7 +131,6 @@
 
             home-manager.extraSpecialArgs = {
               inherit userSettings;
-              inherit ags;
             };
           }
         ];
