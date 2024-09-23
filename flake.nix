@@ -105,12 +105,14 @@
       nixosConfigurations."wsl" = 
       let
         userSettings = import ./hosts/personal/userSettings.nix;
+        systemSettings = import ./hosts/personal/systemSettings.nix;
       in
       lib.nixosSystem {
         system = "x86_64-linux";
 
         specialArgs = {
           inherit userSettings;
+          inherit systemSettings;
         };
 
         modules = [
