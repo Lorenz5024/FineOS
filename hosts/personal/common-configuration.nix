@@ -1,7 +1,9 @@
-{ pkgs, lib, hyprland, systemSettings, userSettings, ... }:
+{ pkgs, lib, hyprland, userSettings, ... }:
 
 {
   imports = [ 
+    ./../minimal-config.nix
+
     ./../../system/boot.nix
     ./../../system/greetd.nix
     ./../../system/keyring.nix
@@ -47,12 +49,6 @@
     package = lib.mkForce pkgs.gnome3.gvfs;
   };
 
-  # Enable experimental features
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Enable networking
-  networking.networkmanager.enable = true;
-
   # Open ports in firewall
   networking.firewall = {
     enable = true;
@@ -66,30 +62,12 @@
     ];
   };
 
-  # Set your time zone.
-  time.timeZone = systemSettings.timezone;
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = systemSettings.locale;
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = systemSettings.locale;
-    LC_IDENTIFICATION = systemSettings.locale;
-    LC_MEASUREMENT = systemSettings.locale;
-    LC_MONETARY = systemSettings.locale;
-    LC_NAME = systemSettings.locale;
-    LC_NUMERIC = systemSettings.locale;
-    LC_PAPER = systemSettings.locale;
-    LC_TELEPHONE = systemSettings.locale;
-    LC_TIME = systemSettings.locale;
-  };
-
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "at";
+    layout = "en";
     variant = "";
   };
 
@@ -105,26 +83,11 @@
     shell = pkgs.zsh;
   };
 
-  # Allowe user for home manger
-  nix.settings.allowed-users = [ userSettings.username ];
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
   # Added for VS Code in Wayland
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     FLAKE = userSettings.flakeDir;
   };
-
-  environment.systemPackages = with pkgs; [
-    home-manager
-  ];
-
-  # Fonts
-  fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
