@@ -25,7 +25,7 @@
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, ags, hyprland, nixos-wsl, ... }:
+  outputs = { nixpkgs, home-manager, nixvim, stylix, ags, hyprland, nixos-wsl, ... }:
     let
       lib = nixpkgs.lib;
     in 
