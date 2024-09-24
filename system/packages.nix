@@ -1,3 +1,4 @@
+# This file is supposed to provide a minial set of packages which can be installed on every host
 { pkgs, ... }:
 
 {
@@ -13,5 +14,9 @@
     ripgrep
     nethogs
     btop 
+    zoxide
+    tlrc
+    bat
+    pcre16    # grep with more functionality
   ];
 }
