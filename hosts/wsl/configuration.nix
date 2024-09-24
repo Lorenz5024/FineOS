@@ -4,6 +4,7 @@
   imports = [
     ./../minimal-config.nix
 
+    ./../../system/packages.nix
     ./../../system/style/stylix.nix
     ./../../system/app/nixvim/nixvim.nix
   ];
