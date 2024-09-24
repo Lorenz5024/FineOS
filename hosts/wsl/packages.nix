@@ -7,5 +7,6 @@
     pcre16    # grep with more functionality
     bat       # better cat
     yazi				# tui file manager
+    ripgrep
   ];
 }
