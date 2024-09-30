@@ -12,7 +12,7 @@
       # java-language-server.enable = true; # this server does not work in current version. It is a problem of the server itself 
 
       # lua
-      lua-ls.enable = true;
+      # lua-ls.enable = true;
 
       # rust
       rust-analyzer = {
