@@ -15,22 +15,22 @@
     libreoffice-qt
     obsidian
     speedcrunch     # calculator
-    drawio
-    iotas           # notes
+    # drawio
+    # iotas           # notes
 
     # Internet
     firefox
     brave
     tor-browser
     discord
-    protonmail-desktop
+    # protonmail-desktop
 
     # Media
     mpv
     picard			# audio tagger
     yt-dlp			# cli youtube downloader
-    lollypop			# music player
-    jellycli			# cli jellyfin client
+    # lollypop			# music player
+    # jellycli			# cli jellyfin client
     feishin			# gui jellyfin client
     xfce.ristretto              # image viewer
 
@@ -41,9 +41,9 @@
     bat       # better cat
 
     #Development
-    android-tools
-    postman
-    jdk
+    # android-tools
+    # postman
+    # jdk
 
     # Other
     bitwarden
