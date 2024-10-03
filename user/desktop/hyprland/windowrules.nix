@@ -42,7 +42,6 @@
       # transparency/opacity
       "opacity 1 override 0.85 override, class:^(kitty)$"
       "opacity 1 override 0.85 override, class:^(kitty-scratchpad)$"
-
     ];
   };
 }
