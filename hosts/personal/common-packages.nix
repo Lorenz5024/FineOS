@@ -23,7 +23,7 @@
     brave
     tor-browser
     discord
-    # protonmail-desktop
+    qbittorrent
 
     # Media
     mpv
@@ -39,11 +39,6 @@
     tlrc      # simplified man pages
     pcre16    # grep with more functionality
     bat       # better cat
-
-    #Development
-    # android-tools
-    # postman
-    # jdk
 
     # Other
     bitwarden
