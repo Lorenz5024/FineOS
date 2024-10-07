@@ -34,6 +34,9 @@
     feishin			# gui jellyfin client
     xfce.ristretto              # image viewer
 
+    # Development
+    diesel-cli                  # diesel is a rust framework for connecting to databases
+
     # Shell
     zoxide    # cd with extra features
     tlrc      # simplified man pages
