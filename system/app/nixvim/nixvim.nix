@@ -43,6 +43,7 @@
       lazygit.enable = true;
       auto-save.enable = true;
       autoclose.enable = true;
+      web-devicons.enable = true;
     };
   };
 

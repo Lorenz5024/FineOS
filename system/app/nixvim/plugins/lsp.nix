@@ -15,7 +15,7 @@
       # lua-ls.enable = true;
 
       # rust
-      rust-analyzer = {
+      rust_analyzer = {
         enable = true;
         installCargo = true;
         installRustc = true;
