@@ -3,6 +3,7 @@
 {
   programs.nixvim.plugins.lsp = {
     enable = true;
+    inlayHints = true;
     servers = {
 
       # javascript / typescript
@@ -18,7 +19,7 @@
       rust_analyzer = {
         enable = true;
         installCargo = true;
-        installRustc = true;
+        # installRustc = true;
       };
 
       # css
