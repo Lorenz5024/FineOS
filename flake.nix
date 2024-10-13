@@ -23,9 +23,11 @@
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
 
-  outputs = { nixpkgs, home-manager, nixvim, stylix, hyprland, nixos-wsl, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, hyprland, nixos-wsl, ... }:
     let
       lib = nixpkgs.lib;
     in 
@@ -58,6 +60,7 @@
             home-manager.extraSpecialArgs = {
               inherit systemSettings;
               inherit userSettings;
+              inherit inputs;
             };
           }
 
@@ -93,6 +96,7 @@
             home-manager.extraSpecialArgs = {
               inherit systemSettings;
               inherit userSettings;
+              inherit inputs;
             };
           }
 
