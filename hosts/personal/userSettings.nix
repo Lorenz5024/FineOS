@@ -8,6 +8,8 @@ rec {
   flakeDir = "/home/${username}/FineOS";       # the directory where the flake and configs are stored
   wallpaperDir = "/home/${username}/Pictures/wallpapers";
 
+  gitUsername = "fineguy";
+
   # ---- Default Applications ---- #
 
   # You may need to look through the configuration to figure out if an application 
