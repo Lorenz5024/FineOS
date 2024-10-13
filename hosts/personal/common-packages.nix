@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, systemSettings, ... }:
 
 {
   home.packages = with pkgs; [
@@ -24,6 +24,7 @@
     tor-browser
     discord
     qbittorrent
+    inputs.zen-browser.packages."${systemSettings.system}".specific
 
     # Media
     mpv
