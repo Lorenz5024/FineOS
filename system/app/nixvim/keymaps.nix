@@ -98,7 +98,7 @@
 
       # neo-tree 
       {
-	key = "<leader>e";		# Toggle tree 
+	key = "<leader>t";		# Toggle tree 
 	mode = "n";
 	action = "<cmd>Neotree reveal=true<CR>";
       }
@@ -108,6 +108,13 @@
         key = "<leader>g";
         mode = "n";
         action = "<cmd>LazyGit<CR>";
+      }
+
+      # LSP
+      {
+        key = "<leader>e";
+        mode = "n";
+        action = ":lua vim.diagnostic.open_float(0, {scope=\"line\"})<CR>";
       }
   ];
 }
