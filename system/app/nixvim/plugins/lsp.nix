@@ -3,7 +3,7 @@
 {
   programs.nixvim.plugins.lsp = {
     enable = true;
-    inlayHints = true;
+    # inlayHints = true;
     servers = {
 
       # javascript / typescript
