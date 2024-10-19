@@ -24,7 +24,6 @@
     tor-browser
     discord
     qbittorrent
-    inputs.zen-browser.packages."${systemSettings.system}".specific
 
     # Media
     mpv
@@ -34,9 +33,6 @@
     # jellycli			# cli jellyfin client
     feishin			# gui jellyfin client
     xfce.ristretto              # image viewer
-
-    # Development
-    diesel-cli                  # diesel is a rust framework for connecting to databases
 
     # Shell
     zoxide    # cd with extra features
