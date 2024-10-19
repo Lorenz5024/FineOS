@@ -23,8 +23,6 @@
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
-
-    zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, hyprland, nixos-wsl, ... }:
