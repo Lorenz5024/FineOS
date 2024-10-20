@@ -2,5 +2,5 @@
 
 {
   programs.adb.enable = true;
-  user.users."${userSettings.userName}".extraGroups = [ "adbuser "];
+  users.users."${userSettings.username}".extraGroups = [ "adbuser "];
 }
