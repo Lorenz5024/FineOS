@@ -14,6 +14,8 @@
     ./../../system/style/stylix.nix
     ./../../system/app/thunar.nix
     ./../../system/app/nixvim/nixvim.nix
+    
+    ./../../system/development/android.nix
   ];
 
   # Garbage collection
