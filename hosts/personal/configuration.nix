@@ -3,7 +3,6 @@
 {
   imports = [ 
     ./hardware-configuration.nix
-
     ./common-configuration.nix
 
     ./../../system/app/gaming/gaming.nix
@@ -40,5 +39,6 @@
   environment.systemPackages = with pkgs; [
     nvidia-vaapi-driver
     egl-wayland
+    jetbrains-toolbox
   ];
 }
