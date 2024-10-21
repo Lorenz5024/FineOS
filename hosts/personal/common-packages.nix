@@ -24,6 +24,7 @@
     tor-browser
     discord
     qbittorrent
+    protonvpn-gui
 
     # Media
     mpv
