@@ -10,6 +10,7 @@
     ./../../system/development/docker.nix
     # ./../../system/development/mysql.nix
     ./../../system/development/postgresql.nix
+    ./../../system/development/java.nix
   ];
 
   networking.hostName = "fineos"; # Define your hostname.
