@@ -30,7 +30,10 @@
 
     };
 
-    cursor.inactive_timeout = 5;
+    cursor = {
+      inactive_timeout = 5;
+      no_hardware_cursors = true;   # added to fix cursor stuttering. may be removed in future updates
+    };
 
     decoration = {
       rounding = 8;
