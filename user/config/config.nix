@@ -2,6 +2,6 @@
 
 {
   home.file = {
-    ".ideavimrc" = ./.ideavimrc;
+    ".ideavimrc".source = ./.ideavimrc;
   };
 }
