@@ -10,7 +10,7 @@
     ./../../user/app/yazi/yazi.nix
     ./../../user/app/zathura/zathura.nix
     ./../../user/app/lazygit/lazygit.nix
-    ./../../user/app/vscode/vscode.nix
+    # ./../../user/app/vscode/vscode.nix
     ./../../user/app/rofi/rofi.nix
     ./../../user/app/qutebrowser/qutebrowser.nix
 
