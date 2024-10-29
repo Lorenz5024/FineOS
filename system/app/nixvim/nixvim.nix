@@ -13,6 +13,8 @@
     ./plugins/barbecue.nix
     ./plugins/toggleterm.nix
     ./plugins/neo-tree.nix
+    ./plugins/which-key.nix
+    ./plugins/obsidian.nix
   ];
 
   programs.nixvim = {
