@@ -13,18 +13,27 @@
 	mode = "n";
 	action = "<C-u>zz";
       }
-      
+
+      # CTRL-commands
+      {
+        key = "<C-a>";
+        mode = "n";
+        action = "gg<S-v>G";
+        options.desc = "select all";
+      }
 
       # Window management (or however this section should be called)
       {
-	key = "<leader>vs";		# Split vertically
+	key = "<leader>wsv";		# Split vertically
 	mode = "n";
 	action = "<cmd>vsplit<CR>";
+        options.desc = "split window vertically";
       }
       {
-	key = "<leader>hs";		# Split horizontally
+	key = "<leader>wsh";		# Split horizontally
 	mode = "n";
 	action = "<cmd>split<CR>";
+        options.desc = "split window horizontally";
       }
       {
 	key = "<C-h>";			# Move to window left, down, up, right
@@ -47,16 +56,44 @@
 	action = "<C-w>l";
       }
       {
-	key = "<leader>c";		# Close active window
+	key = "<leader>wc";		# Close active window
 	mode = "n";
 	action = "<C-w>c";
+        options.desc = "close active window";
+      }
+
+      # Telescope
+      {
+        key = "<leader>ff";
+        mode = "n";
+        action = "<cmd>Telescope find_files<CR>";
+        options.desc = "find files";
+      }
+      {
+        key = "<leader>ft";
+        mode = "n";
+        action = "<cmd>Telescope live_grep<CR>";
+        options.desc = "find text";
+      }
+      {
+        key = "<leader>fb";
+        mode = "n";
+        action = "<cmd>Telescope buffers<CR>";
+        options.desc = "find buffers";
+      }
+      {
+        key = "<leader>fm";
+        mode = "n";
+        action = "<cmd>Telescope marks<CR>";
+        options.desc = "find files";
       }
 
       # Buffers
       {
-	key = "<leader>x";		# Close active buffer
+	key = "<leader>bx";		# Close active buffer
 	mode = "n";
 	action = "<cmd>bdelete<CR>";
+        options.desc = "close current buffer";
       }
       {
         key = "<tab>";                  # Jump between last 2 active buffers
@@ -101,6 +138,7 @@
 	key = "<leader>t";		# Toggle tree 
 	mode = "n";
 	action = "<cmd>Neotree reveal=true<CR>";
+        options.desc = "toggle filetree";
       }
 
       # Lazygit
@@ -108,6 +146,7 @@
         key = "<leader>g";
         mode = "n";
         action = "<cmd>LazyGit<CR>";
+        options.desc = "open lazygit";
       }
 
       # LSP
@@ -115,6 +154,7 @@
         key = "<leader>e";
         mode = "n";
         action = ":lua vim.diagnostic.open_float(0, {scope=\"line\"})<CR>";
+        options.desc = "show lsp error message";
       }
   ];
 }
