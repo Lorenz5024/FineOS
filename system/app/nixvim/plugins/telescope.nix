@@ -7,7 +7,7 @@
     keymaps = {
       "<leader>fa" = "live_grep";
       "<leader>ff" = "find_files";
-      "<leader>o" = "buffers";
+      "<leader>fb" = "buffers";
     };
     
     settings.defaults = {
