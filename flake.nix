@@ -89,7 +89,7 @@
           {
             home-manager.useUserPackages = true;
             home-manager.users.${userSettings.username} = import ./hosts/laptop/home.nix;
-            home-manager.backupFileExtension = "backup";
+            home-manager.backupFileExtension = "hm-backup";
 
             home-manager.extraSpecialArgs = {
               inherit systemSettings;
