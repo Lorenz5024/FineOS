@@ -10,7 +10,8 @@
         nvim_cmp = true;
       };
 
-      new_notes_location = "current_dir";
+      notes_subdir = "notes";
+      new_notes_location = "notes_subdir";
       workspaces = [
         {
           name = "pathfinder";
