@@ -90,7 +90,7 @@
 
       # Buffers
       {
-	key = "<leader>bx";		# Close active buffer
+	key = "<leader>bc";		# Close active buffer
 	mode = "n";
 	action = "<cmd>bdelete<CR>";
         options.desc = "close current buffer";
@@ -155,6 +155,44 @@
         mode = "n";
         action = ":lua vim.diagnostic.open_float(0, {scope=\"line\"})<CR>";
         options.desc = "show lsp error message";
+      }
+
+      # Obsidian
+      {
+        key = "<leader>olff";
+        mode = "n";
+        action = "<cmd>ObsidianFollowLink<CR>";
+        options.desc = "follow obsidian link";
+      }
+      {
+        key = "<leader>olfh";
+        mode = "n";
+        action = "<cmd>ObsidianFollowLink hsplit<CR>";
+        options.desc = "open obsidian link horizontally";
+      }
+      {
+        key = "<leader>olfv";
+        mode = "n";
+        action = "<cmd>ObsidianFollowLink vsplit<CR>";
+        options.desc = "follow obsidian link vertically";
+      }
+      {
+        key = "<leader>oln";
+        mode = "n";
+        action = "<cmd>ObsidianLinkNew<CR>";
+        options.desc = "link new note to selection";
+      }
+      {
+        key = "<leader>off";
+        mode = "n";
+        action = "<cmd>ObsidianQuickSwitch<CR>";
+        options.desc = "search for obsidian note";
+      }
+      {
+        key = "<leader>oc";
+        mode = "n";
+        action = "<cmd>ObsidianToggleCheckbox<CR>";
+        options.desc = "toggle checkbox";
       }
   ];
 }

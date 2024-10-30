@@ -26,7 +26,6 @@
 },
 
 "hyprland/workspaces#numbers": {
-    "format": " {name}",
     "show-special": false,
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e+1",

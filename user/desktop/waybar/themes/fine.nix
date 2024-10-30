@@ -168,7 +168,10 @@ in
     }
 
     #workspaces button {
-      padding: 0em;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      padding-top: 0px;
+      padding-bottom: 0px;
     }      
 
     #workspaces button.empty {

@@ -31,6 +31,8 @@
       scrolloff = 10;		# number of lines to keep visible at top and bottom
 
       ignorecase = true;	# ignore case in search
+
+      conceallevel = 2;
     };
     
     plugins = {
