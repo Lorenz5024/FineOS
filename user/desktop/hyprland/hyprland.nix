@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports = [
@@ -64,10 +64,12 @@
     };
 
     exec-once = [
-      "waybar"
+      "waybar"        # disable if using hyprpanel
+      "swaync"        # disable if using hyprpanel
+      # "hyprpanel"   # disable if using waybar
+
       "hyprpaper"
       # "hypridle"
-      "swaync"
       "thunar --daemon"
       "nm-applet"
       "blueman-applet"
