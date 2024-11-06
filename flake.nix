@@ -23,18 +23,19 @@
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, hyprland, nixos-wsl, ... }:
     let
       lib = nixpkgs.lib;
+      systemSettings = import ./hosts/personal/systemSettings.nix;
+      userSettings = import ./hosts/personal/userSettings.nix;
+
     in 
     {
       nixosConfigurations."fineos" = 
-      let 
-        systemSettings = import ./hosts/personal/systemSettings.nix;
-        userSettings = import ./hosts/personal/userSettings.nix;
-      in 
       lib.nixosSystem {
         system = "x86_64-linux";
 
@@ -42,10 +43,13 @@
           inherit hyprland;
           inherit systemSettings;
           inherit userSettings;
+          inherit inputs;
         };
 
         modules = [ 
           ./hosts/personal/configuration.nix
+
+          {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
 
           nixvim.nixosModules.nixvim
           stylix.nixosModules.stylix
@@ -67,10 +71,6 @@
       };
         
       nixosConfigurations."fineos-laptop" =
-      let 
-        systemSettings = import ./hosts/laptop/systemSettings.nix;
-        userSettings = import ./hosts/personal/userSettings.nix;
-      in 
       lib.nixosSystem {
         system = "x86_64-linux";
 
