@@ -12,10 +12,9 @@
         component_separators.right = "";
       };
 
-      sections.lualine_c = [{
-        name = "filename";
-        path = 1;
-      }];
+      sections.lualine_c = [
+        "filename"
+      ];
     };
 
   };
