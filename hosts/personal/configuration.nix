@@ -41,5 +41,6 @@
     nvidia-vaapi-driver
     egl-wayland
     jetbrains-toolbox
+    hyprpanel
   ];
 }
