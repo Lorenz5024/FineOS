@@ -16,6 +16,10 @@
 
     youtube = "https://www.youtube.com/feed/subscriptions";
 
+    # University
+    tuwel = "https://tuwel.tuwien.ac.at/my/";
+    tiss = "https://tiss.tuwien.ac.at/education/favorites.xhtml?dswid=3748&dsrid=739";
+
 
   };
 }
