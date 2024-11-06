@@ -25,6 +25,9 @@
     options = "--delete-older-than 30d";
   };
 
+  # for dual booting
+  time.hardwareClockInLocalTime = true;
+
   # Hyprland
   programs.hyprland = {
     enable = true;
