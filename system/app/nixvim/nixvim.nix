@@ -48,6 +48,7 @@
       auto-save.enable = true;
       autoclose.enable = true;
       web-devicons.enable = true;
+      leap.enable = true;
     };
   };
 
