@@ -1,4 +1,4 @@
-{ pkgs, userSettings, ... }:
+{ pkgs, userSettings, lib, ... }:
 
 {
   imports = [
@@ -12,7 +12,10 @@
   wsl.defaultUser = userSettings.username;
 
   # enable zsh
-  programs.zsh.enable = true;
+  programs.zsh.enable = lib.mkForce true;
+
+  # disable obsidian.nvim 
+  programs.nixvim.plugins.obsidian.enable = lib.mkForce false;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${userSettings.username} = {
