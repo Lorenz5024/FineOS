@@ -9,13 +9,35 @@
     ./../../system/app/nixvim/nixvim.nix
   ];
 
-  wsl.defaultUser = userSettings.username;
+  wsl = {
+    defaultUser = userSettings.username;
+    nativeSystemd = true;
+  };
 
   # enable zsh
   programs.zsh.enable = lib.mkForce true;
 
   # disable obsidian.nvim 
   programs.nixvim.plugins.obsidian.enable = lib.mkForce false;
+
+  # fix sudo not working
+  security.sudo = {
+    enable = true;
+    extraRules = [
+      {
+        commands = [
+          {
+            command = "${pkgs.systemd}/bin/systemctl";
+            options = [ "NOPASSWD" ];
+          }
+        ];
+        groups = [ "wheel" ];
+      }
+    ];
+    extraConfig = ''
+      Defaults secure_path="${pkgs.coreutils}/bin:/run/current-system/sw/bin"
+    '';
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${userSettings.username} = {
