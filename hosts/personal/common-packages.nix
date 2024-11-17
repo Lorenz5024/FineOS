@@ -15,8 +15,9 @@
     libreoffice-qt
     obsidian
     speedcrunch     # calculator
-    # drawio
-    # iotas           # notes
+
+    # Development
+    postman
 
     # Internet
     firefox

@@ -16,6 +16,7 @@
     ./../../system/app/nixvim/nixvim.nix
     
     ./../../system/development/android.nix
+    ./../../system/development/rust.nix
   ];
 
   # Garbage collection
@@ -61,11 +62,12 @@
       { from = 1714; to = 1764; } # KDE Connect
       { from = 3306; to = 3306; }
       { from = 20000; to = 20000; } # University project
+      { from = 3000; to = 3000; } # Summit backend
     ];
     allowedUDPPortRanges = [
       { from = 1714; to = 1464; } # KDE Connect
       { from = 3306; to = 3306; }
-      { from = 20000; to = 20000; } # University project
+      { from = 3000; to = 3000; } # Summit backend
     ];
   };
 

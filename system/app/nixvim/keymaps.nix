@@ -24,18 +24,6 @@
 
       # Window management (or however this section should be called)
       {
-	key = "<leader>wsv";		# Split vertically
-	mode = "n";
-	action = "<cmd>vsplit<CR>";
-        options.desc = "split window vertically";
-      }
-      {
-	key = "<leader>wsh";		# Split horizontally
-	mode = "n";
-	action = "<cmd>split<CR>";
-        options.desc = "split window horizontally";
-      }
-      {
 	key = "<C-h>";			# Move to window left, down, up, right
 	mode = "n";
 	action = "<C-w>h";
