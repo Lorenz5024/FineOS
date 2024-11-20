@@ -15,6 +15,7 @@
     libreoffice-qt
     obsidian
     speedcrunch     # calculator
+    evince
 
     # Development
     postman
