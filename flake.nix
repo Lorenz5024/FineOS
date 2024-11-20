@@ -30,12 +30,13 @@
   outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, hyprland, nixos-wsl, ... }:
     let
       lib = nixpkgs.lib;
-      systemSettings = import ./hosts/personal/systemSettings.nix;
       userSettings = import ./hosts/personal/userSettings.nix;
-
     in 
     {
       nixosConfigurations."fineos" = 
+        let
+          systemSettings = import ./hosts/personal/systemSettings.nix;
+        in
       lib.nixosSystem {
         system = "x86_64-linux";
 
@@ -71,6 +72,9 @@
       };
         
       nixosConfigurations."fineos-laptop" =
+        let
+          systemSettings = import ./hosts/laptop/systemSettings.nix;
+        in
       lib.nixosSystem {
         system = "x86_64-linux";
 
