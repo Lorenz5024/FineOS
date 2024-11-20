@@ -1,8 +1,8 @@
 {  ... }:
 
 {
-  stylix = {
-    targets.waybar.enable = false;
-    targets.hyprlock.enable = false;
+  stylix.targets = {
+    waybar.enable = false;
+    hyprlock.enable = false;
   };
 }
