@@ -38,7 +38,7 @@ rec {
   # If stylix ever implements a way to reapply colors without a rebuild, let me know.
 
   # Theme used throughout system, choose one from  the themes folder
-  theme = "tokyo-night-dark";   
+  theme = "catppuccin-mocha";   
 
   # Change to light/dark depending on the theme you chose
   themePolarity = "dark";           
