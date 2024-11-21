@@ -1,6 +1,10 @@
 { ... }:
 
 {
+  imports = [
+    ./keymap.nix
+  ];
+
   programs.yazi.enableZshIntegration = true;
 
   programs.yazi = {
@@ -33,7 +37,7 @@
 
       opener = {
         view_pdf = [
-          { run = "zathura \"$@\""; orphan = true; }
+          { run = "evince \"$@\""; orphan = true; }
         ];
         edit = [
                 { run = "\${EDITOR:=vi} \"$@\""; desc = "$EDITOR"; block = true; for = "unix"; }
