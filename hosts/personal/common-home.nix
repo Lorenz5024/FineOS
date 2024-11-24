@@ -4,7 +4,7 @@
   imports = [ 
     ./common-packages.nix
 
-    ./../../user/desktop/desktop.nix
+    ./../../user/desktop/hyprland/desktop.nix
 
     ./../../user/app/kitty/kitty.nix 
     ./../../user/app/yazi/yazi.nix
