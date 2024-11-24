@@ -64,6 +64,8 @@
       "$mod_ALT, S, exec, pypr toggle audio"
       "$mod_ALT, C, exec, pypr toggle calculator"
       "$mod_ALT, N, exec, pypr toggle notes"
+      "$mod_ALT, T, exec, pypr toggle thunar"
+      "$mod_ALT, B, exec, pypr toggle bitwarden"
 
       # Move focus 
       "$mod, H, movefocus, l"

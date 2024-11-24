@@ -43,7 +43,7 @@ in
       "hyprland/language"
       "idle_inhibitor"
       "pulseaudio"
-      "${if systemSettings.isLaptop then "group/laptop" else ""}"
+      "${if systemSettings.isLaptop then "battery" else ""}"
     ];
   };
 

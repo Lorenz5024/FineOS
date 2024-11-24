@@ -40,7 +40,7 @@
 
       blur = {
         enabled = true;
-        size = 6;
+        size = 4;
         passes = 3;
 
         ignore_opacity = true;
