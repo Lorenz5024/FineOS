@@ -6,6 +6,9 @@ pkgs.writeShellScriptBin "fineos-rebuild" ''
 
   # Stage new and modified files
   git add .
+  
+  # Pull remote changes
+  git pull
 
   # Check for staged changes
 
