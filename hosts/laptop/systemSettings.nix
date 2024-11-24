@@ -9,4 +9,7 @@
 
   # Set to true/false depending on if the host is a laptop
   isLaptop = true;
+  
+  # The host, used for scripts
+  host = "fineos-laptop";
 }
