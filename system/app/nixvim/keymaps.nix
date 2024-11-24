@@ -182,5 +182,11 @@
         action = "<cmd>ObsidianToggleCheckbox<CR>";
         options.desc = "toggle checkbox";
       }
+      {
+        key = "<leader>ow";
+        mode = "n";
+        action = "<cmd>ObsidianWorkspace<CR>";
+        options.desc = "change workspace";
+      }
   ];
 }

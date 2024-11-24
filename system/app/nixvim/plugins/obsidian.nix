@@ -17,6 +17,10 @@
           name = "pathfinder";
           path = "~/Obsidian/pathfinder";
         }
+        {
+          name = "university";
+          path = "~/Obsidian/university";
+        }
       ];
     };
 
