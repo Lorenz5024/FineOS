@@ -8,3 +8,4 @@ fi
 
 # take screenshot
 grim -g "$(slurp)" ~/Pictures/screenshot/$(date +'%s_grim.png')
+# grim -g "$(slurp)" - | wl-copy

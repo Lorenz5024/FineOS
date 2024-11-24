@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    wl-clipboard-rs
+    wl-clipboard
     cliphist
     wl-clip-persist
   ];

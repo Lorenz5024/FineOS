@@ -45,6 +45,8 @@
     nethogs
     htop
     bat
+
+    (import ./../scripts/fineos-rebuild.nix { inherit pkgs; })
   ];
 
   # Fonts
