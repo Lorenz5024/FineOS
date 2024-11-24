@@ -10,8 +10,6 @@ pkgs.writeShellScriptBin "fineos-rebuild" ''
   # Pull remote changes
   git pull
 
-  # Check for staged changes
-
   # Attempt to build the system with nh
   if nh os switch; then
       echo "Build successful. Committing changes..."
