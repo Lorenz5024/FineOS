@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs }:
 
 pkgs.writeShellScriptBin "fineos-rebuild" ''
   # Change to the directory containing your NixOS config repository
