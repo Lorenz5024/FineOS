@@ -12,4 +12,5 @@
   
   # The host, used for scripts
   host = "fineos-laptop";
+  #test
 }
