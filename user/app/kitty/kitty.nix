@@ -10,8 +10,6 @@
     };
 
     shellIntegration.enableZshIntegration = true;
-
-    #theme = "Catppuccin-Mocha";
   };
 
 }

@@ -43,37 +43,37 @@
     #lock {
             margin: 10px;
             border-radius: 20px;
-            background-image: image(url("${userSettings.flakeDir}/user/desktop/wlogout/icons/lock.png"));
+            background-image: image(url("${userSettings.flakeDir}/user/desktop/hyprland/wlogout/icons/lock.png"));
     }
 
     #logout {
             margin: 10px;
             border-radius: 20px;
-            background-image: image(url("${userSettings.flakeDir}/user/desktop/wlogout/icons/logout.png"));
+            background-image: image(url("${userSettings.flakeDir}/user/desktop/hyprland/wlogout/icons/logout.png"));
     }
 
     #suspend {
             margin: 10px;
             border-radius: 20px;
-            background-image: image(url("${userSettings.flakeDir}/user/desktop/wlogout/icons/suspend.png"));
+            background-image: image(url("${userSettings.flakeDir}/user/desktop/hyprland/wlogout/icons/suspend.png"));
     }
 
     #hibernate {
             margin: 10px;
             border-radius: 20px;
-            background-image: image(url("${userSettings.flakeDir}/user/desktop/wlogout/icons/hibernate.png"));
+            background-image: image(url("${userSettings.flakeDir}/user/desktop/hyprland/wlogout/icons/hibernate.png"));
     }
 
     #shutdown {
             margin: 10px;
             border-radius: 20px;
-            background-image: image(url("${userSettings.flakeDir}/user/desktop/wlogout/icons/shutdown.png"));
+            background-image: image(url("${userSettings.flakeDir}/user/desktop/hyprland/wlogout/icons/shutdown.png"));
     }
 
     #reboot {
             margin: 10px;
             border-radius: 20px;
-            background-image: image(url("${userSettings.flakeDir}/user/desktop/wlogout/icons/reboot.png"));
+            background-image: image(url("${userSettings.flakeDir}/user/desktop/hyprland/wlogout/icons/reboot.png"));
     }
 
 
