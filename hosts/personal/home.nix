@@ -8,7 +8,7 @@
 
   wayland.windowManager.hyprland.settings = {
     monitor = [
-      "DP-1, 3440x1440@144, 0x0, 1, vrr, 1, bitdepth, 10"
+      "DP-1, 3440x1440@144, 0x0, 1, vrr, 1"
       #"HDMI-A-1, 3840x2160@60, -642x-2160, 1, bitdepth, 10, vrr, 2"
       "HDMI-A-1, disable"
       ", disable"
