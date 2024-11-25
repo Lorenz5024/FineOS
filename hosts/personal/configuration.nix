@@ -30,11 +30,23 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
+
   # add kernel param for nvidia 
   boot.kernelParams = [ 
     "nvidia_drm.modeset=1"
     "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
   ];
+
+  boot.loader = {
+    timeout = 20;
+    efi.canTouchEfiVariables = true;
+    grub = {
+      enable = true;
+      devices = [ "nodev" ];
+      efiSupport = true;
+      useOSProber = true;
+    };
+  };
 
   # system specific packages
   environment.systemPackages = with pkgs; [
