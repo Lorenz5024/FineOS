@@ -9,7 +9,7 @@
 
     settings = {
       mainBar = {
-        include = "${userSettings.flakeDir}/user/desktop/waybar/modules";
+        include = "${userSettings.flakeDir}/user/desktop/hyprland/waybar/modules";
         layer = "top";
         position = "top";
         spacing = 0;
