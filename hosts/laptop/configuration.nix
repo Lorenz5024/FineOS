@@ -6,6 +6,8 @@
       ./hardware-configuration.nix
 
       ./../personal/common-configuration.nix
+
+      ./../../system/desktop/gnome/desktop.nix
     ];
 
   networking.hostName = "fineos-laptop"; # Define your hostname.
