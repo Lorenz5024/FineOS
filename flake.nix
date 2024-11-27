@@ -24,7 +24,6 @@
 
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
 
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, hyprland, nixos-wsl, ... }:
@@ -49,8 +48,6 @@
 
         modules = [ 
           ./hosts/personal/configuration.nix
-
-          {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
 
           nixvim.nixosModules.nixvim
           stylix.nixosModules.stylix

@@ -64,9 +64,8 @@
     };
 
     exec-once = [
-      "waybar"        # disable if using hyprpanel
-      "swaync"        # disable if using hyprpanel
-      # "hyprpanel"   # disable if using waybar
+      "waybar"        
+      "swaync"        
 
       "hyprpaper"
       # "hypridle"
