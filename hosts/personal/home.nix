@@ -9,6 +9,7 @@
   wayland.windowManager.hyprland.settings = {
     monitor = [
       "DP-1, 3440x1440@144, 0x0, 1, vrr, 1"
+      "DP-1, addreserved, 0, 0, 440, 440"   # for 3440x1440 21:9 monitor
       #"HDMI-A-1, 3840x2160@60, -642x-2160, 1, bitdepth, 10, vrr, 2"
       "HDMI-A-1, disable"
       ", disable"
@@ -32,8 +33,9 @@
     ];
 
     bind = [
-      "$mod_ALT, 1, exec, ${userSettings.flakeDir}/hosts/personal/scripts/monitor-layout-1.sh"
-      "$mod_ALT, 2, exec, ${userSettings.flakeDir}/hosts/personal/scripts/monitor-layout-2.sh"
+      # use for ultrawide monitors: switch between using full screen and only 16:9
+      "$mod_ALT, down, exec, hyprctl keyword monitor \"DP-1, addreserved, 0, 0, 440, 440\""
+      "$mod_ALT, up, exec, hyprctl keyword monitor \"DP-1, addreserved, 0, 0, 0, 0\""
     ];
   };
 }
