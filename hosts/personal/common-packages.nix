@@ -36,6 +36,7 @@
     # jellycli			# cli jellyfin client
     feishin			# gui jellyfin client
     xfce.ristretto              # image viewer
+    spot                        # gtk spotify client
 
     # Shell
     zoxide    # cd with extra features
