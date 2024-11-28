@@ -18,7 +18,6 @@
 
       # open on specific workspaces
       "workspace 4 silent, tag:chat"
-      "workspace 5, tag:music"
       "workspace 6 silent, tag:gaming"
 
       # floating windows
