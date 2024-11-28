@@ -14,6 +14,7 @@
       "tag +utility, class:^(pavucontrol)"
       "tag +utility, class:^(Bitwarden)"
       "tag +utility, class:^(com.nextcloud.desktopclient.nextcloud)$"
+      "tag +utility, class:^( org.pulseaudio.pavucontrol)$"
 
       # open on specific workspaces
       "workspace 4 silent, tag:chat"
