@@ -6,6 +6,7 @@
       # tags  (doesn't work in current version. hyprctl version doesn't work either, so i have no idea what's wrong, considering I have the flake version installed, which should be the newest one unless I am mistaken)
       "tag +chat, class:^(discord)$"
       "tag +music, class:^(feishin)$"
+      # "tag +music, class:^(feishin)$"
       "tag +gaming, class:^(steam)$"
       "tag +gaming, class:^(heroic)$"
       "tag +utility, class:^(org.gnome.World.Iotas)"
