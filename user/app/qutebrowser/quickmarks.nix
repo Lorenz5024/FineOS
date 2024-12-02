@@ -2,7 +2,7 @@
 
 {
   programs.qutebrowser.quickmarks = {
-    nixpkgs = "https://search.nixos.org/packages";
+    nixpkgs = "https://search.nixos.org/packages?channel=unstable";
     homemanager-options = "https://home-manager-options.extranix.com/?query=&release=master";
 
     hyprland = "https://wiki.hyprland.org/";
