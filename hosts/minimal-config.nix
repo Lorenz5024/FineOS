@@ -47,6 +47,7 @@
     bat
 
     (import ./../scripts/fineos-rebuild.nix { inherit pkgs; })
+    (import ./../scripts/fineos-update.nix { inherit pkgs; })
   ];
 
   # Fonts
