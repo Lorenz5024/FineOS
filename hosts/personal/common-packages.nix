@@ -47,6 +47,7 @@
 
     # Other
     bitwarden
+    gnome-disk-utility
 
     # File manager
     yazi				# tui file manager
