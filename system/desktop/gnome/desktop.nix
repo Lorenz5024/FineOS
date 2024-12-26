@@ -11,7 +11,6 @@
     gnome-photos
     gnome-tour
     gedit # text editor
-  ]) ++ (with pkgs.gnome; [
     cheese # webcam tool
     gnome-music
     gnome-terminal
@@ -23,5 +22,6 @@
     iagno # go game
     hitori # sudoku game
     atomix # puzzle game
+  # ]) ++ (with pkgs.gnome; [
   ]);
 }

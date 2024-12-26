@@ -1,11 +1,11 @@
-{ pkgs, config, ... }:
+{ pkgs, config, hostSettings, ... }:
 
 {
   imports = [ 
     ./hardware-configuration.nix
     ./common-configuration.nix
 
-    ./../../system/desktop/hyprland/desktop.nix
+    ./../../system/desktop/${hostSettings.desktop}/desktop.nix
 
     ./../../system/app/gaming/gaming.nix
 
