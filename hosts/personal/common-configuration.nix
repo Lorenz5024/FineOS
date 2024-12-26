@@ -1,4 +1,4 @@
-{ pkgs, lib, hyprland, userSettings, ... }:
+{ pkgs, lib, userSettings, ... }:
 
 {
   imports = [ 
@@ -29,12 +29,6 @@
   # for dual booting
   time.hardwareClockInLocalTime = true;
 
-  # Hyprland
-  programs.hyprland = {
-    enable = true;
-    package = hyprland.packages.${pkgs.system}.hyprland;
-    portalPackage = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-  };
 
   nix.settings = {
     substituters = ["https://hyprland.cachix.org"];

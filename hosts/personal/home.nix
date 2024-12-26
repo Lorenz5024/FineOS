@@ -4,6 +4,8 @@
   imports = [ 
     ./common-home.nix
     ./packages.nix 
+
+    ./../../user/desktop/hyprland/desktop.nix
   ];
 
   wayland.windowManager.hyprland.settings = {

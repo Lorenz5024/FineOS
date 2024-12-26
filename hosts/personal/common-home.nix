@@ -4,9 +4,6 @@
   imports = [ 
     ./common-packages.nix
 
-    ./../../user/desktop/hyprland/desktop.nix
-    #./../../user/desktop/gnome/desktop.nix
-
     ./../../user/app/kitty/kitty.nix 
     ./../../user/app/yazi/yazi.nix
     ./../../user/app/zathura/zathura.nix

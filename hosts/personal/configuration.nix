@@ -5,10 +5,11 @@
     ./hardware-configuration.nix
     ./common-configuration.nix
 
+    ./../../system/desktop/hyprland/desktop.nix
+
     ./../../system/app/gaming/gaming.nix
 
     ./../../system/development/docker.nix
-    # ./../../system/development/mysql.nix
     ./../../system/development/postgresql.nix
     ./../../system/development/java.nix
   ];
