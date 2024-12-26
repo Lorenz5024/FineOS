@@ -34,14 +34,14 @@
     {
       nixosConfigurations."fineos" = 
         let
-          systemSettings = import ./hosts/personal/systemSettings.nix;
+          hostSettings = import ./hosts/personal/hostSettings.nix;
         in
       lib.nixosSystem {
         system = "x86_64-linux";
 
         specialArgs = {
           inherit hyprland;
-          inherit systemSettings;
+          inherit hostSettings;
           inherit userSettings;
           inherit inputs;
         };
@@ -58,7 +58,7 @@
             home-manager.backupFileExtension = "backup";
 
             home-manager.extraSpecialArgs = {
-              inherit systemSettings;
+              inherit hostSettings;
               inherit userSettings;
               inherit inputs;
             };
@@ -70,14 +70,14 @@
         
       nixosConfigurations."fineos-laptop" =
         let
-          systemSettings = import ./hosts/laptop/systemSettings.nix;
+          hostSettings = import ./hosts/laptop/hostSettings.nix;
         in
       lib.nixosSystem {
         system = "x86_64-linux";
 
         specialArgs = {
           inherit hyprland;
-          inherit systemSettings;
+          inherit hostSettings;
           inherit userSettings;
         };
 
@@ -93,7 +93,7 @@
             home-manager.backupFileExtension = "hm-backup";
 
             home-manager.extraSpecialArgs = {
-              inherit systemSettings;
+              inherit hostSettings;
               inherit userSettings;
               inherit inputs;
             };
@@ -106,14 +106,14 @@
       nixosConfigurations."wsl" = 
       let
         userSettings = import ./hosts/personal/userSettings.nix;
-        systemSettings = import ./hosts/personal/systemSettings.nix;
+        hostSettings = import ./hosts/personal/hostSettings.nix;
       in
       lib.nixosSystem {
         system = "x86_64-linux";
 
         specialArgs = {
           inherit userSettings;
-          inherit systemSettings;
+          inherit hostSettings;
         };
 
         modules = [

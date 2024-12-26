@@ -36,7 +36,7 @@ When setting up a new machine you first have to choose the host (which is just a
 
 Next replace the hardware-configuration inside the hosts folder. Write your own or just copy the auto generated one you get after a new installation (this is what I did). 
 
-Then adjust the systemSettings.nix and userSettings.nix files for your chosen host. Not all hosts have those files, in the case of 'laptop' the host uses userSettings.nix from 'personal'.
+Then adjust the hostSettings.nix and userSettings.nix files for your chosen host. Not all hosts have those files, in the case of 'laptop' the host uses userSettings.nix from 'personal'.
 
 You have to enable the (currently) experimental features for nix flakes, after which you can rebuild the systen with the flake.
 

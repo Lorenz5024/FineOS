@@ -1,4 +1,4 @@
-{ pkgs, systemSettings, userSettings, ... }:
+{ pkgs, hostSettings, userSettings, ... }:
 
 {
 
@@ -9,21 +9,21 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = systemSettings.timezone;
+  time.timeZone = hostSettings.timezone;
 
   # Select internationalisation properties.
-  i18n.defaultLocale = systemSettings.locale;
+  i18n.defaultLocale = hostSettings.locale;
 
   i18n.extraLocaleSettings = {
-    LC_ADDRESS = systemSettings.locale;
-    LC_IDENTIFICATION = systemSettings.locale;
-    LC_MEASUREMENT = systemSettings.locale;
-    LC_MONETARY = systemSettings.locale;
-    LC_NAME = systemSettings.locale;
-    LC_NUMERIC = systemSettings.locale;
-    LC_PAPER = systemSettings.locale;
-    LC_TELEPHONE = systemSettings.locale;
-    LC_TIME = systemSettings.locale;
+    LC_ADDRESS = hostSettings.locale;
+    LC_IDENTIFICATION = hostSettings.locale;
+    LC_MEASUREMENT = hostSettings.locale;
+    LC_MONETARY = hostSettings.locale;
+    LC_NAME = hostSettings.locale;
+    LC_NUMERIC = hostSettings.locale;
+    LC_PAPER = hostSettings.locale;
+    LC_TELEPHONE = hostSettings.locale;
+    LC_TIME = hostSettings.locale;
   };
 
   # Configure keymap in X11

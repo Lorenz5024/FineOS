@@ -1,4 +1,4 @@
-{ config, systemSettings, ... }:
+{ config, hostSettings, ... }:
 
 let
   module-border-radius = "8px";
@@ -43,7 +43,7 @@ in
       "hyprland/language"
       "idle_inhibitor"
       "pulseaudio"
-      "${if systemSettings.isLaptop then "battery" else ""}"
+      "${if hostSettings.isLaptop then "battery" else ""}"
     ];
   };
 
