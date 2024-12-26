@@ -1,9 +1,11 @@
-{ userSettings, ... }:
+{ hostSettings, ... }:
 
 {
   imports = [ 
     ./../personal/common-home.nix
     ./packages.nix 
+
+    ./../../user/desktop/${hostSettings.desktop}/desktop.nix
   ];
 
   # Set up monitors for hyprland

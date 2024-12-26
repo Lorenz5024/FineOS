@@ -1,11 +1,11 @@
-{ userSettings, ... }:
+{ hostSettings, ... }:
 
 {
   imports = [ 
     ./common-home.nix
     ./packages.nix 
 
-    ./../../user/desktop/hyprland/desktop.nix
+    ./../../user/desktop/${hostSettings.desktop}/desktop.nix
   ];
 
   wayland.windowManager.hyprland.settings = {
