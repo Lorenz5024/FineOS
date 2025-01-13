@@ -15,6 +15,7 @@
     ./plugins/neo-tree.nix
     ./plugins/which-key.nix
     ./plugins/obsidian.nix
+    ./plugins/csvview.nix
   ];
 
   programs.nixvim = {
