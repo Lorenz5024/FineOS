@@ -39,12 +39,25 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    vim
+    git 
+    unzip
+    gnutar
+    fd
+    cifs-utils
+    ffmpeg
+    ripgrep
+    btop 
+    zoxide
+    tlrc
+    pcre16    # grep with more functionality
     home-manager
     neovim
-    git
     nethogs
     htop
     bat
+    nh
+    p7zip
 
     (import ./../scripts/fineos-rebuild.nix { inherit pkgs; })
     (import ./../scripts/fineos-update.nix { inherit pkgs; })
