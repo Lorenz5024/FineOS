@@ -11,7 +11,6 @@
 
   wsl = {
     defaultUser = userSettings.username;
-    nativeSystemd = true;
   };
 
   # enable zsh
