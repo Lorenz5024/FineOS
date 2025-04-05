@@ -8,6 +8,8 @@
       ./../personal/common-configuration.nix
 
       ./../../system/desktop/gnome/desktop.nix
+
+      ./../../system/services/jellifyn/jellyfin.nix
     ];
 
   networking.hostName = "fineos-laptop"; # Define your hostname.

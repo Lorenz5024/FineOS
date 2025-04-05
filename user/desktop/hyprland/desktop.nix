@@ -22,7 +22,7 @@
     wlogout                         	# logout menu
     networkmanagerapplet            	# network management
     libnotify                       	# send notifications
-    polkit-kde-agent                	# authentication agent
+    kdePackages.polkit-kde-agent-1      # authentication agent
     pyprland				# hyprland plugins
     slurp                               # select region of screen for screenshots
     grim                                # grab image for screenshot
