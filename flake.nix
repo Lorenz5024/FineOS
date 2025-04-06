@@ -30,9 +30,9 @@
     let
       lib = nixpkgs.lib;
       userSettings = import ./hosts/personal/userSettings.nix;
-    in 
+    in
     {
-      nixosConfigurations."fineos" = 
+      nixosConfigurations."fineos" =
         let
           hostSettings = import ./hosts/personal/hostSettings.nix;
         in
@@ -46,7 +46,7 @@
           inherit inputs;
         };
 
-        modules = [ 
+        modules = [
           ./hosts/personal/configuration.nix
 
           nixvim.nixosModules.nixvim
@@ -67,7 +67,7 @@
         ];
 
       };
-        
+
       nixosConfigurations."fineos-laptop" =
         let
           hostSettings = import ./hosts/laptop/hostSettings.nix;
@@ -76,12 +76,12 @@
         system = "x86_64-linux";
 
         specialArgs = {
-          inherit hyprland;
+          inherit inputs;
           inherit hostSettings;
           inherit userSettings;
         };
 
-        modules = [ 
+        modules = [
           ./hosts/laptop/configuration.nix
 
           nixvim.nixosModules.nixvim
@@ -93,9 +93,9 @@
             home-manager.backupFileExtension = "hm-backup";
 
             home-manager.extraSpecialArgs = {
+              inherit inputs;
               inherit hostSettings;
               inherit userSettings;
-              inherit inputs;
             };
           }
 
@@ -103,7 +103,7 @@
 
       };
 
-      nixosConfigurations."wsl" = 
+      nixosConfigurations."wsl" =
       let
         userSettings = import ./hosts/personal/userSettings.nix;
         hostSettings = import ./hosts/personal/hostSettings.nix;

@@ -2,12 +2,12 @@
 
 {
   imports =
-    [ 
+    [
       ./hardware-configuration.nix
 
       ./../personal/common-configuration.nix
 
-      ./../../system/desktop/gnome/desktop.nix
+      ./../../system/desktop/${hostSettings.desktop}/desktop.nix
 
       ./../../system/services/jellifyn/jellyfin.nix
     ];
