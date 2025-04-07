@@ -2,6 +2,8 @@
 
 {
   imports = [
+    inputs.nixvim.nixosModules.nixvim
+
     ./keymaps.nix
 
     ./plugins/telescope.nix
