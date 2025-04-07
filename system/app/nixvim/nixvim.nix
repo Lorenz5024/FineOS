@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, ... }:
 
 {
   imports = [
@@ -35,9 +35,9 @@
 
       conceallevel = 2;
     };
-    
+
     plugins = {
-      # Here only plugins without any extra config are declared.  
+      # Here only plugins without any extra config are declared.
       # All other plugins are in their own file inside the plugins folder.
 
       treesitter.enable = true;

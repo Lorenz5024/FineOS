@@ -1,7 +1,7 @@
 { lib, userSettings, ... }:
 
 {
-  wayland.windowManager.hyprland.settings = 
+  wayland.windowManager.hyprland.settings =
   {
 
     "$mod"          = "SUPER";
@@ -31,9 +31,8 @@
       "$mod_SHIFT_CTRL, K, movecurrentworkspacetomonitor, u"
       "$mod_SHIFT_CTRL, L, movecurrentworkspacetomonitor, r"
 
-      # power 
+      # power
       "$mod, P, exec, wlogout"
-      "$mod, I, exec, wlogout"
 
       # Restart programs
       "$mod_CTRL_ALT, B, exec, pkill waybar; waybar"		# waybar
@@ -46,13 +45,13 @@
       "$mod, M, exec, $musicPlayer"
       "$mod, B, exec, $browser"
 
-      # rofi 
+      # rofi
       "$mod, SPACE, exec, pkill rofi || rofi -show drun"	# App launcher
       "$mod, R, exec, fine-radio"	# Music
       "$mod, V, exec, pkill rofi || cliphist list | rofi -dmenu -window-title Clipboard | cliphist decode | wl-copy" # Text only clipboard
       "$mod, W, exec, fine-wallpaper"
 
-      # clear clipboard 
+      # clear clipboard
       "$mod_CTRL_ALT, V, exec, cliphist wipe"
 
       # take screenshot
@@ -68,7 +67,7 @@
       "$mod_ALT, B, exec, pypr toggle bitwarden"
       "$mod_ALT, M, exec, pypr toggle music"
 
-      # Move focus 
+      # Move focus
       "$mod, H, movefocus, l"
       "$mod, J, movefocus, d"
       "$mod, K, movefocus, u"
