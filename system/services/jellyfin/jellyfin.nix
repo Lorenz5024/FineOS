@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   services.jellyfin = {
@@ -6,6 +6,8 @@
     openFirewall = true;
     user = "lorenz";
   };
+
+  systemd.services.jellyfin.wantedBy = lib.mkForce [];
 
   environment.systemPackages = with pkgs; [
     jellyfin
