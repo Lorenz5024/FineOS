@@ -1,4 +1,4 @@
-{ pkgs, lib, hostSettings, userSettings, ... }:
+{ hostSettings, ... }:
 
 {
   imports =
@@ -23,4 +23,8 @@
   services.logind.extraConfig = ''
     HandlePowerKey=ignore
   '';
+
+  # Keep laptop awake when lid is closed and power is connected
+  # Used for server functionality
+  services.logind.lidSwitchExternalPower = "ignore";
 }
