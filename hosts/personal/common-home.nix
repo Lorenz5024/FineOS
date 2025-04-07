@@ -1,10 +1,10 @@
 { userSettings, ... }:
 
 {
-  imports = [ 
+  imports = [
     ./common-packages.nix
 
-    ./../../user/app/kitty/kitty.nix 
+    ./../../user/app/kitty/kitty.nix
     ./../../user/app/yazi/yazi.nix
     ./../../user/app/zathura/zathura.nix
     ./../../user/app/lazygit/lazygit.nix
@@ -12,8 +12,9 @@
     ./../../user/app/zed-editor/zed-editor.nix
     ./../../user/app/rofi/rofi.nix
     ./../../user/app/qutebrowser/qutebrowser.nix
+    # ./../../user/app/nixvim/nixvim.nix
 
-    ./../../user/shell/zsh/zsh.nix 
+    ./../../user/shell/zsh/zsh.nix
 
     ./../../user/style/stylix.nix
 
@@ -37,7 +38,7 @@
   nixpkgs.config.permittedInsecurePackages = [
     "electron-24.8.6"
     "electron-25.9.0"
-  ]; 
+  ];
 
   home.sessionVariables = {
     EDITOR = userSettings.editor;

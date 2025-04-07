@@ -40,19 +40,18 @@
 
   environment.systemPackages = with pkgs; [
     vim
-    git 
+    git
     unzip
     gnutar
     fd
     cifs-utils
     ffmpeg
     ripgrep
-    btop 
+    btop
     zoxide
     tlrc
     pcre16    # grep with more functionality
     home-manager
-    neovim
     nethogs
     htop
     bat

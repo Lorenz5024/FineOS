@@ -1,7 +1,7 @@
 { pkgs, lib, userSettings, ... }:
 
 {
-  imports = [ 
+  imports = [
     ./../minimal-config.nix
 
     ./../../system/boot.nix
@@ -13,7 +13,7 @@
     ./../../system/style/stylix.nix
     ./../../system/app/thunar.nix
     ./../../system/app/nixvim/nixvim.nix
-    
+
     ./../../system/development/android.nix
     ./../../system/development/rust.nix
   ];
