@@ -84,7 +84,7 @@
         modules = [
           ./hosts/laptop/configuration.nix
 
-          # nixvim.nixosModules.nixvim
+          nixvim.nixosModules.nixvim
           stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {

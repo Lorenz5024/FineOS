@@ -9,7 +9,8 @@
 
       ./../../system/desktop/${hostSettings.desktop}/desktop.nix
 
-      ./../../system/services/jellifyn/jellyfin.nix
+      ./../../system/services/jellyfin/jellyfin.nix
+      ./../../system/services/ssh/ssh.nix
     ];
 
   networking.hostName = "fineos-laptop"; # Define your hostname.
