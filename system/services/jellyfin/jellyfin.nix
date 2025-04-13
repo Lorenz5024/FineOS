@@ -44,8 +44,8 @@
     openFirewall = true;
     settings = {
       "jellyfin" = {
-        "path" = "/mnt/sda1";
-        "browsable" = "yes";
+        path = "/mnt/sda1";
+        browsable = "yes";
         "read only" = "no";
       };
     };
