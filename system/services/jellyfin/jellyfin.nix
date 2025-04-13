@@ -36,4 +36,18 @@
     device = "/dev/sda1";
     fsType = "ext4";
   };
+
+  # open smb share
+  services.samba = {
+    enable = true;
+    securityType = "user";
+    openFirewall = true;
+    settings = {
+      "jellyfin" = {
+        "path" = "/mnt/sda1";
+        "browsable" = "yes";
+        "read only" = "no";
+      };
+    };
+  };
 }
