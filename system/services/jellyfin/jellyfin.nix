@@ -38,16 +38,24 @@
   };
 
   # open smb share
-  services.samba = {
-    enable = true;
-    securityType = "user";
-    openFirewall = true;
-    settings = {
-      "jellyfin" = {
-        path = "/mnt/sda1";
-        browsable = "yes";
-        "read only" = "no";
+  services = {
+    samba = {
+      enable = true;
+      securityType = "user";
+      openFirewall = true;
+      settings = {
+        "jellyfin" = {
+          path = "/mnt/sda1";
+          browsable = "yes";
+          "read only" = "no";
+        };
       };
     };
+    samba-wsdd = {
+      enable = true;
+      openFirewall = true;
+    };
   };
+
+  
 }
