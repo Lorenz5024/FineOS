@@ -12,6 +12,7 @@
       ./../../system/services/jellyfin/jellyfin.nix
       ./../../system/services/ssh/ssh.nix
       ./../../system/services/docker/docker.nix
+      ./../../system/services/actual-server/actual-server.nix
     ];
 
   networking.hostName = "fineos-laptop"; # Define your hostname.
