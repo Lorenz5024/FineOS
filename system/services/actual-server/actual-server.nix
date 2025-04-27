@@ -1,16 +1,9 @@
 { pkgs, ... }:
 
 { 
-  environment.systemPackages = [ pkgs.actual-server ];
-
-  networking.firewall = {
-    enable = true;
-    allowedTCPPortRanges = [
-      { from = 5006; to = 5006; }
-    ];
-    allowedUDPPortRanges = [
-      { from = 5006; to = 5006; }
-    ];
+  services.actual = {
+    enable =  true;
+    settings.port = 5006;
+    openFirewall = true;
   };
-
 }
