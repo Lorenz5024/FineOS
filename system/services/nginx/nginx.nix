@@ -4,7 +4,7 @@
     recommendedProxySettings = true;
     recommendedGzipSettings = true;
 
-    virtualHosts."actual.finecloud.com" = {
+    virtualHosts."actual.fineos-laptop.tailf073f1.ts.net" = {
       enableACME = true;
       forceSSL = true;
       locations."/" = {
