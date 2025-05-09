@@ -80,10 +80,9 @@
     shell = pkgs.zsh;
   };
 
-  # Added for VS Code in Wayland
   environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    FLAKE = userSettings.flakeDir;
+    NIXOS_OZONE_WL = "1";    # Added for VS Code in Wayland
+    NH_FLAKE = userSettings.flakeDir;
   };
 
   # This value determines the NixOS release from which the default

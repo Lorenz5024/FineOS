@@ -12,6 +12,7 @@
       ./../../system/services/jellyfin/jellyfin.nix
       ./../../system/services/ssh/ssh.nix
       ./../../system/services/docker/docker.nix
+      ./../../system/services/nginx/nginx.nix
       ./../../system/services/actual-server/actual-server.nix
       ./../../system/services/tailscale/tailscale.nix
     ];
