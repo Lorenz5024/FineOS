@@ -22,7 +22,8 @@
 
     # Internet
     firefox
-    brave
+    # brave
+    vivaldi
     tor-browser
     discord
     qbittorrent
@@ -34,7 +35,7 @@
     yt-dlp			# cli youtube downloader
     # lollypop			# music player
     # jellycli			# cli jellyfin client
-    feishin			# gui jellyfin client
+    # feishin			# gui jellyfin client
     xfce.ristretto              # image viewer
     spot                        # gtk spotify client
     spotify
