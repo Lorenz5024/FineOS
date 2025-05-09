@@ -13,6 +13,7 @@
       ./../../system/services/ssh/ssh.nix
       ./../../system/services/docker/docker.nix
       ./../../system/services/actual-server/actual-server.nix
+      ./../../system/services/tailscale/tailscale.nix
     ];
 
   networking.hostName = "fineos-laptop"; # Define your hostname.
