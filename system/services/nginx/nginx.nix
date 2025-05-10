@@ -4,17 +4,17 @@
     recommendedProxySettings = true;
     recommendedGzipSettings = true;
 
-    virtualHosts."localhost" = {
+    virtualHosts."fineos-laptop.tailf073f1.ts.net" = {
       enableSSL = true;
-      sslCertificate = "/home/lorenz/.certificates/fineos-laptop.tailf073f1.ts.net.crt";
-      sslCertificateKey = "/home/lorenz/.certificates/fineos-laptop.tailf073f1.ts.net.key";
-      locations."/" = {
-      proxyPass = "http://localhost:5006";
+      sslCertificate = "/etc/ssl/certs/fineos-laptop.tailf073f1.ts.net.crt";
+      sslCertificateKey = "/etc/ssl/certs/fineos-laptop.tailf073f1.ts.net.key";
       extraConfig = ''
-        add_header Cross-Origin-Opener-Policy same-origin;
-        add_header Cross-Origin-Embedder-Policy require-corp;
+        add_header Cross-Origin-Opener-Policy same-origin always;
+        add_header Cross-Origin-Embedder-Policy require-corp always;
       '';
-    };
+      locations."/" = {
+        proxyPass = "http://localhost:5006";
+      };
     };
   };
 }
