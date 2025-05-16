@@ -1,4 +1,4 @@
-{ hostSettings, ... }:
+{ hostSettings, userSettings, ... }:
 
 {
   imports =
@@ -14,6 +14,15 @@
       ./../../system/services/ssh/ssh.nix
       ./../../system/services/docker/docker.nix
     ];
+
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.${userSettings.username} = {
+    isNormalUser = true;
+    description = userSettings.name;
+    extraGroups = [ "networkmanager" "wheel" "input" ];
+    shell = pkgs.zsh;
+    initialHashedPassword = "$y$j9T$vSKWjVc5lnizFNZtUA.f70$xHFMLKZPp47CdoKezuWz69DW41avT9WVlaRwPmF9Mg4";
+  };
 
   networking.hostName = hostSettings.host; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
