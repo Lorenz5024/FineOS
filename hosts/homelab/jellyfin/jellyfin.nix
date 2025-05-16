@@ -7,9 +7,6 @@
     user = "lorenz";
   };
 
-  # disable autostart
-  systemd.services.jellyfin.wantedBy = lib.mkForce [];
-
   environment.systemPackages = with pkgs; [
     jellyfin
     jellyfin-web

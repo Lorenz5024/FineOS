@@ -50,20 +50,20 @@
   };
 
   # Open ports in firewall
-  networking.firewall = {
-    enable = true;
-    allowedTCPPortRanges = [
-      { from = 1714; to = 1764; } # KDE Connect
-      { from = 3306; to = 3306; }
-      { from = 20000; to = 20000; } # University project
-      { from = 10000; to = 10000; } # Summit backend
-    ];
-    allowedUDPPortRanges = [
-      { from = 1714; to = 1764; } # KDE Connect
-      { from = 3306; to = 3306; }
-      { from = 10000; to = 10000; } # Summit backend
-    ];
-  };
+  # networking.firewall = {
+  #   enable = true;
+  #   allowedTCPPortRanges = [
+  #     { from = 1714; to = 1764; } # KDE Connect
+  #     { from = 3306; to = 3306; }
+  #     { from = 20000; to = 20000; } # University project
+  #     { from = 10000; to = 10000; } # Summit backend
+  #   ];
+  #   allowedUDPPortRanges = [
+  #     { from = 1714; to = 1764; } # KDE Connect
+  #     { from = 3306; to = 3306; }
+  #     { from = 10000; to = 10000; } # Summit backend
+  #   ];
+  # };
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;

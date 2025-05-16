@@ -103,6 +103,41 @@
 
       };
 
+      nixosConfigurations."homelab" =
+        let
+          hostSettings = import ./hosts/homelab/hostSettings.nix;
+        in
+      lib.nixosSystem {
+        system = "x86_64-linux";
+
+        specialArgs = {
+          inherit hostSettings;
+          inherit userSettings;
+          inherit inputs;
+        };
+
+        modules = [
+          ./hosts/personal/configuration.nix
+
+          nixvim.nixosModules.nixvim
+          stylix.nixosModules.stylix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useUserPackages = true;
+            home-manager.users.${userSettings.username} = import ./hosts/personal/home.nix;
+            home-manager.backupFileExtension = "backup";
+
+            home-manager.extraSpecialArgs = {
+              inherit hostSettings;
+              inherit userSettings;
+              inherit inputs;
+            };
+          }
+
+        ];
+
+      };
+
       nixosConfigurations."wsl" =
       let
         userSettings = import ./hosts/personal/userSettings.nix;
