@@ -6,7 +6,7 @@
       ./hardware-configuration.nix
 
       ./../minimal-config.nix
-      # ./../../system/boot.nix
+      ./../../system/boot.nix
 
       # ./jellyfin/jellyfin.nix
       # ./nginx/nginx.nix
