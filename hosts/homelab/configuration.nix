@@ -12,7 +12,7 @@
       ./../../system/app/nixvim/nixvim.nix
 
       ./samba/samba.nix
-      # ./jellyfin/jellyfin.nix
+      ./jellyfin/jellyfin.nix
       # ./nginx/nginx.nix
       # ./tailscale/tailscale.nix
 

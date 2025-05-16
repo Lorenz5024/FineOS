@@ -5,6 +5,11 @@
     enable = true;
     openFirewall = true;
     user = "lorenz";
+
+    dataDir = "/mnt/Jellyfin/data";
+    cacheDir = "/mnt/Jellyfin/cache";
+    configDir = "/mnt/Jellyfin/config";
+    logDir = "/mnt/Jellyfin/logs";
   };
 
   environment.systemPackages = with pkgs; [
