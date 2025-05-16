@@ -47,7 +47,8 @@
     bat       # better cat
 
     # Other
-    bitwarden
+    # bitwarden
+    proton-pass
     gnome-disk-utility
 
     # File manager
