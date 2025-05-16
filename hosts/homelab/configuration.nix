@@ -7,6 +7,7 @@
 
       ./../minimal-config.nix
       ./../../system/boot.nix
+      ./../../system/style/stylix.nix
 
       ./../../system/app/nixvim/nixvim.nix
 
