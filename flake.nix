@@ -105,7 +105,6 @@
 
       nixosConfigurations."homelab" =
         let
-          userSettings = import ./hosts/personal/userSettings.nix;
           hostSettings = import ./hosts/homelab/hostSettings.nix;
 
         in
@@ -142,7 +141,6 @@
 
       nixosConfigurations."wsl" =
       let
-        userSettings = import ./hosts/personal/userSettings.nix;
         hostSettings = import ./hosts/personal/hostSettings.nix;
       in
       lib.nixosSystem {
