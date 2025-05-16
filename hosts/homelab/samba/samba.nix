@@ -14,7 +14,11 @@
         "guest ok" = false;
         "read only" = false;
         "valid users" = [ userSettings.username ];
-        "veto files" = [ "lost+found" ];
+        "veto files" = [ 
+          "lost+found" 
+          "Jellyfin/data"
+          "Jellyfin/cache"
+        ];
       };
       storage1 = { 
         path = "/mnt/storage0";
