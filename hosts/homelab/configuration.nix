@@ -1,4 +1,4 @@
-{ hostSettings, userSettings, ... }:
+{ hostSettings, userSettings, pkgs, ... }:
 
 {
   imports =
