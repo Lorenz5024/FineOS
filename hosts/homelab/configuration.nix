@@ -6,7 +6,7 @@
       ./hardware-configuration.nix
 
       ./../minimal-config.nix
-      ./../../system/boot.nix
+      # ./../../system/boot.nix
 
       # ./jellyfin/jellyfin.nix
       # ./nginx/nginx.nix
@@ -40,5 +40,5 @@
   networking.hostName = hostSettings.host; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 }
