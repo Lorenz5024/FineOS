@@ -5,24 +5,24 @@
     initrd.verbose = false;
     consoleLogLevel = 0;
 
-    # loader = {
-    #   systemd-boot = { 
-    #     enable = true;
-    #     configurationLimit = 16;
-    #   };
-    #   efi.canTouchEfiVariables = true;
-    # };
-
     loader = {
       timeout = 20;
       efi.canTouchEfiVariables = true;
-      grub = {
+
+      systemd-boot = { 
         enable = true;
-        devices = [ "nodev" ];
-        efiSupport = true;
-        useOSProber = true;
+        configurationLimit = 16;
       };
+      
+      # grub = {
+      #   enable = true;
+      #   devices = [ "nodev" ];
+      #   efiSupport = true;
+      #   useOSProber = true;
+      # };
+
     };
+
 
     kernelParams = [ 
       "quiet" 

@@ -5,6 +5,8 @@
     ./hardware-configuration.nix
     ./common-configuration.nix
 
+    ./../../system/boot.nix
+
     ./../../system/desktop/${hostSettings.desktop}/desktop.nix
 
     ./../../system/app/gaming/gaming.nix
@@ -37,17 +39,6 @@
     "nvidia_drm.modeset=1"
     "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
   ];
-
-  boot.loader = {
-    timeout = 20;
-    efi.canTouchEfiVariables = true;
-    grub = {
-      enable = true;
-      devices = [ "nodev" ];
-      efiSupport = true;
-      useOSProber = true;
-    };
-  };
 
   # system specific packages
   environment.systemPackages = with pkgs; [
