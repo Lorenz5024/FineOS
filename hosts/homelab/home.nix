@@ -1,24 +1,35 @@
-{ hostSettings, ... }:
+{ userSettings, ... }:
 
 {
   imports = [ 
-    ./../personal/common-home.nix
-    ./packages.nix 
+    ./../../user/app/yazi/yazi.nix
+    ./../../user/app/lazygit/lazygit.nix
 
-    ./../../user/desktop/${hostSettings.desktop}/desktop.nix
+    ./../../user/shell/zsh/zsh.nix
+
+    ./../../user/style/stylix.nix
   ];
 
-  # Set up monitors for hyprland
-  wayland.windowManager.hyprland.settings = {
-    monitor = [
-      # dekstop setup
-      # "DP-4, 2560x1440@75, 0x0, 1"
-      # "DP-2, 2560x1440@60, 2560x0, 1" 
-      # "eDP-1, 2256x1504, 5120x0, 1.333333"
+  home.username = userSettings.username;
+  home.homeDirectory = "/home/"+userSettings.username;
 
-      # just laptop
-      "eDP-1, 2256x1504, 0x0, 1.333333"
-      ", disable"
-    ];
+  programs.git = {
+    enable = true;
+    userName = userSettings.name;
+    userEmail = userSettings.email;
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
   };
+
+  nixpkgs.config.allowUnfree = true;
+
+  home.sessionVariables = {
+    EDITOR = userSettings.editor;
+  };
+
+  programs.home-manager.enable = true;
+
+  # !!! Check the documentation on this before changing !!!
+  home.stateVersion = "24.05";
 }
