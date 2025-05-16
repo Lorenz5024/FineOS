@@ -1,4 +1,4 @@
-{ hostSettings, userSettings, pkgs, ... }:
+{ lib, hostSettings, userSettings, pkgs, ... }:
 
 {
   imports =
@@ -15,6 +15,13 @@
       ./../../system/services/ssh/ssh.nix
       ./../../system/services/docker/docker.nix
     ];
+
+
+  # enable zsh
+  programs.zsh.enable = lib.mkForce true;
+
+  # disable obsidian.nvim 
+  programs.nixvim.plugins.obsidian.enable = lib.mkForce false;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${userSettings.username} = {
