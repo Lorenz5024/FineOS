@@ -1,4 +1,4 @@
-{ ... }:
+{ userSettings, ... }:
 
 {
   services.samba = {
@@ -13,6 +13,7 @@
         writable = true;
         "guest ok" = false;
         "read only" = false;
+        "valid users" = [ userSettings.username ];
       };
       storage1 = { 
         path = "/mnt/storage0";
@@ -20,6 +21,7 @@
         writable = true;
         "guest ok" = false;
         "read only" = false;
+        "valid users" = [ userSettings.username ];
       };
     };
   };
