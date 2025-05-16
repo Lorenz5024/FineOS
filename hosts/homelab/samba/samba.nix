@@ -7,27 +7,13 @@
     securityType = "user";
 
     shares = {
-      storage0 = { 
-        path = "/mnt/storage0";
+      Shows = { 
+        path = "/mnt/storage0/Jellyfin/Shows";
         browsable = true;
         writable = true;
         "guest ok" = false;
         "read only" = false;
         "valid users" = [ userSettings.username ];
-        "veto files" = [ 
-          "lost+found" 
-          "Jellyfin/data"
-          "Jellyfin/cache"
-        ];
-      };
-      storage1 = { 
-        path = "/mnt/storage0";
-        browsable = true;
-        writable = true;
-        "guest ok" = false;
-        "read only" = false;
-        "valid users" = [ userSettings.username ];
-        "veto files" = [ "lost+found" ];
       };
     };
   };
