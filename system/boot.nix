@@ -31,6 +31,6 @@
       "udev.log_level=3"
     ];	
 
-    plymouth.enable = true;   
+    # plymouth.enable = true;   
   };
 }
