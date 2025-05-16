@@ -8,6 +8,8 @@
       ./../minimal-config.nix
       ./../../system/boot.nix
 
+      ./../../system/app/nixvim/nixvim.nix
+
       # ./jellyfin/jellyfin.nix
       # ./nginx/nginx.nix
       # ./tailscale/tailscale.nix
