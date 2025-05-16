@@ -17,4 +17,6 @@
 
   networking.hostName = hostSettings.host; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+
+  system.stateVersion = "23.11"; # Did you read the comment?
 }

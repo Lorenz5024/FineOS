@@ -105,7 +105,9 @@
 
       nixosConfigurations."homelab" =
         let
+          userSettings = import ./hosts/personal/userSettings.nix;
           hostSettings = import ./hosts/homelab/hostSettings.nix;
+
         in
       lib.nixosSystem {
         system = "x86_64-linux";
