@@ -8,12 +8,12 @@
       ./../minimal-config.nix
       ./../../system/boot.nix
 
-      ./jellyfin/jellyfin.nix
-      ./nginx/nginx.nix
-      ./tailscale/tailscale.nix
+      # ./jellyfin/jellyfin.nix
+      # ./nginx/nginx.nix
+      # ./tailscale/tailscale.nix
 
       ./../../system/services/ssh/ssh.nix
-      ./../../system/services/docker/docker.nix
+      # ./../../system/services/docker/docker.nix
     ];
 
 
