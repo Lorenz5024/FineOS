@@ -28,31 +28,4 @@
       intel-media-sdk # QSV up to 11th gen
     ];
   };
-
-  fileSystems."/mnt/sda1" = {
-    device = "/dev/sda1";
-    fsType = "ext4";
-  };
-
-  # open smb share
-  services = {
-    samba = {
-      enable = true;
-      securityType = "user";
-      openFirewall = true;
-      settings = {
-        "jellyfin" = {
-          path = "/mnt/sda1";
-          browsable = "yes";
-          "read only" = "no";
-        };
-      };
-    };
-    samba-wsdd = {
-      enable = true;
-      openFirewall = true;
-    };
-  };
-
-  
 }
