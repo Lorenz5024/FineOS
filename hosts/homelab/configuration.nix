@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
 
       ./../minimal-config.nix
+      ./../../system/boot.nix
 
       ./jellyfin/jellyfin.nix
       ./nginx/nginx.nix
@@ -22,6 +23,11 @@
     extraGroups = [ "networkmanager" "wheel" "input" ];
     shell = pkgs.zsh;
     initialHashedPassword = "$y$j9T$vSKWjVc5lnizFNZtUA.f70$xHFMLKZPp47CdoKezuWz69DW41avT9WVlaRwPmF9Mg4";
+  };
+
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";    # Added for VS Code in Wayland
+    NH_FLAKE = userSettings.flakeDir;
   };
 
   networking.hostName = hostSettings.host; # Define your hostname.
