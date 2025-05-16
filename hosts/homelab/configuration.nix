@@ -18,6 +18,8 @@
       # ./../../system/services/docker/docker.nix
     ];
 
+  # enable auto login
+  services.getty.autologinUser = "lorenz";
 
   # enable zsh
   programs.zsh.enable = lib.mkForce true;
