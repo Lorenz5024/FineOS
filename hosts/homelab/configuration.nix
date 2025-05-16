@@ -5,7 +5,7 @@
     [
       ./hardware-configuration.nix
 
-      ./../personal/common-configuration.nix
+      ./../minimal-config.nix
 
       ./jellyfin/jellyfin.nix
       ./nginx/nginx.nix
