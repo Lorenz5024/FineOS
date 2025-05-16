@@ -122,18 +122,18 @@
 
           nixvim.nixosModules.nixvim
           stylix.nixosModules.stylix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useUserPackages = true;
-            home-manager.users.${userSettings.username} = import ./hosts/homelab/home.nix;
-            home-manager.backupFileExtension = "backup";
-
-            home-manager.extraSpecialArgs = {
-              inherit hostSettings;
-              inherit userSettings;
-              inherit inputs;
-            };
-          }
+          # home-manager.nixosModules.home-manager
+          # {
+          #   home-manager.useUserPackages = true;
+          #   home-manager.users.${userSettings.username} = import ./hosts/homelab/home.nix;
+          #   home-manager.backupFileExtension = "backup";
+          #
+          #   home-manager.extraSpecialArgs = {
+          #     inherit hostSettings;
+          #     inherit userSettings;
+          #     inherit inputs;
+          #   };
+          # }
 
         ];
 
