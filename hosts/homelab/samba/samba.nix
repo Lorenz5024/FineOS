@@ -14,6 +14,7 @@
         "guest ok" = false;
         "read only" = false;
         "valid users" = [ userSettings.username ];
+        "veto files" = [ "lost+found" ];
       };
       storage1 = { 
         path = "/mnt/storage0";
@@ -22,6 +23,7 @@
         "guest ok" = false;
         "read only" = false;
         "valid users" = [ userSettings.username ];
+        "veto files" = [ "lost+found" ];
       };
     };
   };
