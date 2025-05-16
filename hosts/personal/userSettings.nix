@@ -21,7 +21,7 @@ rec {
   editor = "nvim";
 
   # Web browser 
-  browser = "firefox";
+  browser = "vivaldi";
 
   # Terminal
   terminal = "kitty";
