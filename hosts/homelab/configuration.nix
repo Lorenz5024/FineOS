@@ -13,6 +13,7 @@
 
       ./samba/samba.nix
       ./jellyfin/jellyfin.nix
+      ./firefly-iii/firefly-iii.nix
       # ./nginx/nginx.nix
       # ./tailscale/tailscale.nix
 
