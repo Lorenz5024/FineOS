@@ -9,17 +9,17 @@
       timeout = 20;
       efi.canTouchEfiVariables = true;
 
-      systemd-boot = { 
-        enable = true;
-        configurationLimit = 16;
-      };
-      
-      # grub = {
+      # systemd-boot = { 
       #   enable = true;
-      #   devices = [ "nodev" ];
-      #   efiSupport = true;
-      #   useOSProber = true;
+      #   configurationLimit = 16;
       # };
+      
+      grub = {
+        enable = true;
+        devices = [ "nodev" ];
+        efiSupport = true;
+        useOSProber = true;
+      };
 
     };
 

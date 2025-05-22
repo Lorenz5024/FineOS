@@ -39,6 +39,31 @@
     initialHashedPassword = "$y$j9T$vSKWjVc5lnizFNZtUA.f70$xHFMLKZPp47CdoKezuWz69DW41avT9WVlaRwPmF9Mg4";
   };
 
+  boot = {
+    initrd.verbose = false;
+    consoleLogLevel = 0;
+
+    loader = {
+      timeout = 20;
+      efi.canTouchEfiVariables = true;
+
+      systemd-boot = { 
+        enable = true;
+        configurationLimit = 16;
+      };
+
+    };
+
+
+    kernelParams = [ 
+      "quiet" 
+      "splash"
+      "rd.systemd.show_status=false" 
+      "udev.log_level=3"
+    ];	
+
+  };
+
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";    # Added for VS Code in Wayland
     NH_FLAKE = userSettings.flakeDir;
