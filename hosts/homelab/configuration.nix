@@ -54,7 +54,6 @@
 
     };
 
-
     kernelParams = [ 
       "quiet" 
       "splash"
