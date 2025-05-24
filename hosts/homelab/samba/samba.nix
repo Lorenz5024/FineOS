@@ -4,9 +4,9 @@
   services.samba = {
     enable = true;
 
-    securityType = "user";
+    settings = {
+      global.security = "user";
 
-    shares = {
       Shows = { 
         path = "/mnt/storage0/Jellyfin/Shows";
         browsable = true;
@@ -15,6 +15,16 @@
         "read only" = false;
         "valid users" = [ userSettings.username ];
       };
+
+      Music = { 
+        path = "/mnt/storage0/Jellyfin/Music";
+        browsable = true;
+        writable = true;
+        "guest ok" = false;
+        "read only" = false;
+        "valid users" = [ userSettings.username ];
+      };
+
     };
   };
 
