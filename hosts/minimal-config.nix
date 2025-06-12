@@ -50,7 +50,7 @@
     btop
     zoxide
     tlrc
-    pcre16    # grep with more functionality
+    pcre2    # grep with more functionality
     home-manager
     nethogs
     htop
