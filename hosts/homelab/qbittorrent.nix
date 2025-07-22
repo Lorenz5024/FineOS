@@ -26,6 +26,6 @@
     };
   };
 
-  networking.firewall.allowedTCPPorts = [ 8081 ]; # Web UI port
+  networking.firewall.allowedTCPPorts = [ 8080 ]; # Web UI port
 
 }
