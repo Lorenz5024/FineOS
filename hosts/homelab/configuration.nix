@@ -20,6 +20,7 @@
       ./../../system/services/ssh/ssh.nix
       # ./../../system/services/docker/docker.nix
       ./openvpn.nix
+      ./qbittorrent.nix
     ];
 
   # enable auto login
