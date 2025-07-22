@@ -19,6 +19,7 @@
 
       ./../../system/services/ssh/ssh.nix
       # ./../../system/services/docker/docker.nix
+      ./openvpn.nix
     ];
 
   # enable auto login
