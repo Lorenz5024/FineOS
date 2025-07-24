@@ -11,9 +11,9 @@
 
     ./../../system/app/gaming/gaming.nix
 
-    ./../../system/development/docker.nix
-    ./../../system/development/postgresql.nix
-    ./../../system/development/java.nix
+    # ./../../system/development/docker.nix
+    # ./../../system/development/postgresql.nix
+    # ./../../system/development/java.nix
   ];
 
   networking.hostName = "fineos"; # Define your hostname.
