@@ -15,7 +15,7 @@
       #"HDMI-A-1, 3840x2160@60, -642x-2160, 1, bitdepth, 10, vrr, 2"
     ];
 
-    renderer = {
+    render = {
       cm_fs_passthrough = 0;
       cm_auto_hdr = 2;
     };
