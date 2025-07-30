@@ -10,7 +10,6 @@
     ./../../user/app/lazygit/lazygit.nix
     # ./../../user/app/vscode/vscode.nix
     ./../../user/app/zed-editor/zed-editor.nix
-    ./../../user/app/rofi/rofi.nix
     ./../../user/app/qutebrowser/qutebrowser.nix
     # ./../../user/app/nixvim/nixvim.nix
 

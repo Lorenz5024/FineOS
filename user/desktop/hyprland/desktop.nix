@@ -8,6 +8,9 @@
     ./network-manager-applet/network-manager-applet.nix
     ./gtk/gtk.nix
     ./clipboard/clipboard.nix
+    ./rofi/rofi.nix
+
+    ./default.nix
   ];
 
   home.packages = with pkgs; [
