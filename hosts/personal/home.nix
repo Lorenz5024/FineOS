@@ -16,10 +16,10 @@
     ];
 
     general = {
-      renderer = [
-        "cm_fs_passthrough = 0"
-        "cm_auto_hdr = 2"
-      ];
+      renderer = {
+        cm_fs_passthrough = 0;
+        cm_auto_hdr = 2;
+      };
     };
 
     workspace = [
