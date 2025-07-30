@@ -15,6 +15,13 @@
       #"HDMI-A-1, 3840x2160@60, -642x-2160, 1, bitdepth, 10, vrr, 2"
     ];
 
+    general = {
+      renderer = [
+        "cm_fs_passthrough = 0"
+        "cm_auto_hdr = 2"
+      ];
+    };
+
     workspace = [
       "1, monitor:DP-1"
       "2, monitor:DP-1"
