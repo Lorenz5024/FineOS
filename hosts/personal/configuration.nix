@@ -46,4 +46,8 @@
     egl-wayland
     jetbrains-toolbox
   ];
+
+  environment.sessionVariables = {
+    WLR_RENDERER_ALLOW_HDR = "1";
+  };
 }
