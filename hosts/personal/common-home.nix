@@ -11,7 +11,7 @@
     # ./../../user/app/vscode/vscode.nix
     ./../../user/app/zed-editor/zed-editor.nix
     ./../../user/app/qutebrowser/qutebrowser.nix
-    # ./../../user/app/nixvim/nixvim.nix
+    ./../../user/app/spotify-player/spotify-player.nix
 
     ./../../user/shell/zsh/zsh.nix
 
