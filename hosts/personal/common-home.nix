@@ -18,7 +18,8 @@
     ./../../user/style/stylix.nix
 
     ./../../user/config/config.nix
-  ] ++ (if userSettings.useNextcloud then [./../../user/app/nextcloud/nextcloud.nix] else []);
+    ./../../user/app/nextcloud/nextcloud.nix
+  ];
 
   home.username = userSettings.username;
   home.homeDirectory = "/home/"+userSettings.username;
