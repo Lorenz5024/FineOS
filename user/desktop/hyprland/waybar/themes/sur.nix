@@ -185,6 +185,7 @@ in
 
     #workspaces button.active {
       color: @workspaces-active;
+      border-bottom: 2px solid @module-border;
     } 
 
     #window {
