@@ -161,11 +161,11 @@ in
 
     /* Hyprland */
 
-    #workspaces {
-      background: @workspaces-background;
-
-      ${module-border};
-    }
+    # #workspaces {
+    #   background: @workspaces-background;
+    #
+    #   ${module-border};
+    # }
 
     #workspaces button {
       padding-left: 0.5em;
