@@ -10,6 +10,7 @@
     ./../../system/desktop/${hostSettings.desktop}/desktop.nix
 
     ./../../system/app/gaming/gaming.nix
+    ./openvpn.nix
 
     # ./../../system/development/docker.nix
     # ./../../system/development/postgresql.nix

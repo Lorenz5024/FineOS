@@ -173,7 +173,7 @@ in
       padding-right: 0.5em;
       padding-top: 0px;
       padding-bottom: 0px;
-      border-radius: 0;
+      border-radius: 0px;
     }      
 
     #workspaces button.empty {
