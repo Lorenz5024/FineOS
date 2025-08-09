@@ -45,7 +45,6 @@
   environment.systemPackages = with pkgs; [
     nvidia-vaapi-driver
     egl-wayland
-    jetbrains-toolbox
   ];
 
   environment.sessionVariables = {

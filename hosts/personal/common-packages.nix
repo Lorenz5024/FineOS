@@ -18,7 +18,7 @@
     evince
 
     # Development
-    postman
+    # postman
 
     # Internet
     firefox
@@ -27,7 +27,6 @@
     tor-browser
     discord
     qbittorrent
-    protonvpn-gui
 
     # Media
     mpv
@@ -37,7 +36,7 @@
     # jellycli			# cli jellyfin client
     # feishin			# gui jellyfin client
     xfce.ristretto              # image viewer
-    spot                        # gtk spotify client
+    # spot                        # gtk spotify client
     spotify
 
     # Shell
