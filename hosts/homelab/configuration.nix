@@ -6,14 +6,13 @@
       ./hardware-configuration.nix
 
       ./../minimal-config.nix
-      ./../../system/boot.nix
       ./../../system/style/stylix.nix
 
       ./../../system/app/nixvim/nixvim.nix
 
       ./samba/samba.nix
       ./jellyfin/jellyfin.nix
-      ./firefly-iii/firefly-iii.nix
+      # ./firefly-iii/firefly-iii.nix
       # ./nginx/nginx.nix
       # ./tailscale/tailscale.nix
 
