@@ -59,13 +59,9 @@
 
       # scratchpads
       "$mod_ALT, RETURN, exec, hyprctl dispatch togglespecialworkspace terminal"
-      "$mod_ALT, Y, exec, pypr toggle yazi"
-      "$mod_ALT, S, exec, pypr toggle audio"
-      "$mod_ALT, C, exec, pypr toggle calculator"
-      "$mod_ALT, N, exec, pypr toggle notes"
-      "$mod_ALT, T, exec, pypr toggle thunar"
-      "$mod_ALT, B, exec, pypr toggle bitwarden"
-      "$mod_ALT, M, exec, pypr toggle music"
+      "$mod_ALT, N, exec, hyprctl dispatch togglespecialworkspace notes"
+      "$mod_ALT, B, exec, hyprctl dispatch togglespecialworkspace vault"
+      "$mod_ALT, M, exec, hyprctl dispatch togglespecialworkspace music"
 
       # Move focus
       "$mod, H, movefocus, l"

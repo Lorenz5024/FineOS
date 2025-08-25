@@ -42,6 +42,9 @@
 
       # special workspaces
       "workspace special:terminal, class:^(kitty-scratchpad)"
+      "workspace special:notes, class:^(obsidian)"
+      "workspace special:music, class:^(spotify)"
+      "workspace special:vault, class:^(Proton Pass)"
 
     ];
   };

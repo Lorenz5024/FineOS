@@ -78,6 +78,9 @@
 
       # special workspaces
       "kitty --class kitty-scratchpad"
+      "proton-pass"
+      "spotify"
+      "obsidian"
     ];
   };
 
