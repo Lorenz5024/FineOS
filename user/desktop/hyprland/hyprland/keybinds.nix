@@ -58,7 +58,7 @@
       "CTRL_ALT, S, exec, $scriptsDir/screenshot-region.sh"
 
       # scratchpads
-      "$mod_ALT, RETURN, exec, pypr toggle term"
+      "$mod_ALT, RETURN, exec, hyprctl dispatch togglespecialworkspace terminal"
       "$mod_ALT, Y, exec, pypr toggle yazi"
       "$mod_ALT, S, exec, pypr toggle audio"
       "$mod_ALT, C, exec, pypr toggle calculator"

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 
 {
   imports = [
@@ -13,9 +13,9 @@
     ./hypridle.nix
   ];
 
-  home.file = {
-    ".config/hypr/pyprland.toml".source = ./plugins/pyprland.toml;
-  };
+  # home.file = {
+  #   ".config/hypr/pyprland.toml".source = ./plugins/pyprland.toml;
+  # };
 
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
@@ -75,6 +75,9 @@
       "pypr"
       "wl-paste --type text --watch cliphist store"
       "wl-paste --type image --watch cliphist store"
+
+      # special workspaces
+      "kitty --class kitty-scratchpad"
     ];
   };
 

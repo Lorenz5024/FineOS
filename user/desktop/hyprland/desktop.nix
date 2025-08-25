@@ -26,7 +26,7 @@
     networkmanagerapplet            	# network management
     libnotify                       	# send notifications
     kdePackages.polkit-kde-agent-1      # authentication agent
-    pyprland				# hyprland plugins
+    # pyprland				# hyprland plugins
     slurp                               # select region of screen for screenshots
     grim                                # grab image for screenshot
   ];
