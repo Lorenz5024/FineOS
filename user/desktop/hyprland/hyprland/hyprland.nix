@@ -81,6 +81,7 @@
       "proton-pass"
       "spotify"
       "obsidian"
+      "pavucontrol"
     ];
   };
 

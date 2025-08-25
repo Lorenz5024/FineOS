@@ -12,9 +12,8 @@
       "tag +utility, class:^(org.gnome.World.Iotas)"
       "tag +utility, class:^(org.speedcrunch)"
       "tag +utility, class:^(pavucontrol)"
-      "tag +utility, class:^(Bitwarden)"
       "tag +utility, class:^(com.nextcloud.desktopclient.nextcloud)$"
-      "tag +utility, class:^( org.pulseaudio.pavucontrol)$"
+      "tag +utility, class:^(org.pulseaudio.pavucontrol)$"
 
       # open on specific workspaces
       "workspace 4 silent, tag:chat"
@@ -22,20 +21,12 @@
 
       # floating windows
       "float, tag:utility"
-      "float, tag:music"
 
       "float, class:^(com.nextcloud.desktopclient.nextcloud)$"
       "float, class:^(wlogout)$"
       "float, class:^(yazi-scratchpad)$"
       "float, class:^(.blueman-manager-wrapped)$"
       "float, class:^(discord)"
-
-      # centered windows 
-      "center, class:^(yazi)$"
-      "center, class:^(.blueman-manager-wrapped)$"
-
-      # sizes
-      "size 50% 50%, class:^(yazi)$"
 
       # transparency/opacity
       "opacity 1 override 0.85 override, class:^(kitty)$"
@@ -45,7 +36,7 @@
       "workspace special:notes, class:^(obsidian)"
       "workspace special:music, class:^(spotify)"
       "workspace special:vault, class:^(Proton Pass)"
-
+      "workspace special:sound, class:^(org.pulseaudio.pavucontrol)"
     ];
   };
 }
