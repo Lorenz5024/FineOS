@@ -41,7 +41,7 @@
       "opacity 1 override 0.85 override, class:^(kitty)$"
 
       # special workspaces
-      "workspace special:terminal, kitty-scratchpad"
+      "workspace special:terminal, class:^(kitty-scratchpad)"
 
     ];
   };
