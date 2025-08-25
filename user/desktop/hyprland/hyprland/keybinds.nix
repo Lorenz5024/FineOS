@@ -35,7 +35,7 @@
       "$mod, P, exec, wlogout"
 
       # Restart programs
-      "$mod_CTRL_ALT, B, exec, pkill waybar; waybar"		# waybar
+      "$mod_CTRL_ALT, B, exec, pkill waybar || waybar"		# waybar
       "$mod_CTRL_ALT, P, exec, pkill hyprpaper; hyprpaper" 	# hyprpaper
 
       # Launchers
