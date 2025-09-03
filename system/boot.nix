@@ -6,7 +6,7 @@
     consoleLogLevel = 0;
 
     loader = {
-      timeout = 20;
+      timeout = 10;
       efi.canTouchEfiVariables = true;
 
       # systemd-boot = { 
