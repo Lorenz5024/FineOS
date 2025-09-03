@@ -19,6 +19,10 @@
         devices = [ "nodev" ];
         efiSupport = true;
         useOSProber = true;
+        extraConfig = ''
+            GRUB_DEFAULT=saved
+            GRUB_SAVEDEFAULT=true
+          '';
       };
 
     };
