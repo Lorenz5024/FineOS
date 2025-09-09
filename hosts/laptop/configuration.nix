@@ -19,9 +19,9 @@
   boot.kernelParams = [ "module_blacklist=hid_sensor_hub" ];
 
   # Disable short press of power button (does not work)
-  services.logind.extraConfig = ''
-    HandlePowerKey=ignore
-  '';
+  services.logind.settings.Login = {
+    HandlePowerKey = "ignore";
+  };
 
   # Keep laptop awake when lid is closed and power is connected
   # Used for server functionality
