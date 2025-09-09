@@ -23,5 +23,5 @@
 
   # Keep laptop awake when lid is closed and power is connected
   # Used for server functionality
-  services.logind.lidSwitchExternalPower = "ignore";
+  services.logind.settings.Login.HandlelidSwitchExternalPower = "ignore";
 }
