@@ -25,6 +25,24 @@
         "valid users" = [ userSettings.username ];
       };
 
+      Videos = { 
+        path = "/mnt/storage0/Media/Videos";
+        browsable = true;
+        writable = true;
+        "guest ok" = false;
+        "read only" = false;
+        "valid users" = [ userSettings.username ];
+      };
+
+      Pictures = { 
+        path = "/mnt/storage0/Media/Pictures";
+        browsable = true;
+        writable = true;
+        "guest ok" = false;
+        "read only" = false;
+        "valid users" = [ userSettings.username ];
+      };
+
     };
   };
 
