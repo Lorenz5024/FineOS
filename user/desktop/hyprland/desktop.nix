@@ -17,7 +17,7 @@
     # desktop environment
     playerctl				# used for controlling media with keyboard
     waybar				# status bar
-    rofi-wayland
+    rofi
     xdg-desktop-portal-hyprland     	# screensharing and other stuff
     hypridle 			    	# idle daemon
     pavucontrol                     	# audio

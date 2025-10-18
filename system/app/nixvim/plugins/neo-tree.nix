@@ -8,13 +8,15 @@
 
     popupBorderStyle = "rounded";
 
-    window = {
-      position = "float";
-      popup.position = "50%";
+    settings = {
+      window = {
+        position = "float";
+        popup.position = "50%";
 
-      mappings = {
-        h = "close_node";
-        l = "toggle_node";
+        mappings = {
+          h = "close_node";
+          l = "toggle_node";
+        };
       };
     };
 
