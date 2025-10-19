@@ -28,7 +28,7 @@
 
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, hyprland, nixos-wsl, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, hyprland, nixos-wsl, agenix, ... }:
     let
       lib = nixpkgs.lib;
       userSettings = import ./hosts/personal/userSettings.nix;
