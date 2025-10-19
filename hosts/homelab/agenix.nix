@@ -1,7 +1,7 @@
-{ inputs, ... }:
+{ pkgs, ... }:
 
 {
-  environment.systemPackages = [ inputs.agenix.nixosModules.default ];
+  environment.systemPackages = [ pkgs.agenix ];
   programs.ssh.startAgent = true;
 }
 

@@ -125,6 +125,7 @@
           nixvim.nixosModules.nixvim
           stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
+          agenix.nixosModules.default
           {
             home-manager.useUserPackages = true;
             home-manager.users.${userSettings.username} = import ./hosts/homelab/home.nix;
