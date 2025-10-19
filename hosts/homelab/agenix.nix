@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ inputs, hostSettings, ... }:
 
 {
-  environment.systemPackages = [ pkgs.agenix ];
+  environment.systemPackages = [ inputs.agenix.packages."${hostSettings.system}".default ];
   programs.ssh.startAgent = true;
 }
 
