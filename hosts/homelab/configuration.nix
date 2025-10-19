@@ -14,7 +14,8 @@
       ./jellyfin/jellyfin.nix
       # ./firefly-iii/firefly-iii.nix
       # ./nginx/nginx.nix
-      # ./tailscale/tailscale.nix
+      ./tailscale.nix
+      ./agenix.nix
 
       ./../../system/services/ssh/ssh.nix
       # ./../../system/services/docker/docker.nix

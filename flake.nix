@@ -24,6 +24,8 @@
 
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
 
+    agenix.url = "github:ryantm/agenix";
+
   };
 
   outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, hyprland, nixos-wsl, ... }:
