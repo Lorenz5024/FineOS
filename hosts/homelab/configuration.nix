@@ -15,7 +15,7 @@
       # ./firefly-iii/firefly-iii.nix
       # ./nginx/nginx.nix
       ./tailscale.nix
-      ./agenix.nix
+      ./agenix/agenix.nix
 
       ./../../system/services/ssh/ssh.nix
       # ./../../system/services/docker/docker.nix
