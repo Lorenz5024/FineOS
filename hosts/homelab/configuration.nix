@@ -16,6 +16,7 @@
       # ./nginx/nginx.nix
       ./tailscale.nix
       ./agenix/agenix.nix
+      ./nextcloud/nextcloud.nix
 
       ./../../system/services/ssh/ssh.nix
       # ./../../system/services/docker/docker.nix

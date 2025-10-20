@@ -6,7 +6,8 @@
 
   age.secrets.nextcloud-admin-pass = {
     file = ./nextcloud-admin-pass.age;
-    owner = "lorenz";
+    owner = "nextcloud";
+    group = "nextcloud";
   };
 
   age.identityPaths = [ "/root/.ssh/id_ed25519" ];
