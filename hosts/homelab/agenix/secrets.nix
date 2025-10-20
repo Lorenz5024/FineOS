@@ -4,5 +4,5 @@ let
   ];
 in
 {
-  "nextcloud-admin-pass.age".publicKeys = publicKeys;
+  "nextcloud.age".publicKeys = publicKeys;
 }
