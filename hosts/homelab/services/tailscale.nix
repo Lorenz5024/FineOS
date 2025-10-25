@@ -12,7 +12,7 @@ in
   };
 
   # Ensure tailscale package exists in the closure
-  environment.systemPackages = (config.environment.systemPackages or []) ++ [ pkgs.tailscale ];
+  # environment.systemPackages = (config.environment.systemPackages or []) ++ [ pkgs.tailscale ];
 
   # Ensure cert dir exists with safe perms
   systemd.tmpfiles.rules = [
