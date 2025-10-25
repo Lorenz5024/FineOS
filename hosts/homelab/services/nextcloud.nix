@@ -35,8 +35,8 @@
     # extraApps = {
     #   inherit (pkgs.nextcloud32Packages.apps) calendar contacts deck notes;
     # };
-    #
     # extraAppsEnable = true;
+
   };
 
   networking.firewall.allowedTCPPorts = [ 80 443 ];
