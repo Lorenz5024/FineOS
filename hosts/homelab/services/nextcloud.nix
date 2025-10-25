@@ -15,7 +15,7 @@
     package = pkgs.nextcloud32;
     hostName = "homelab.tailf073f1.ts.net";
     datadir = "/mnt/storage1/nextcloud/data";
-    https = true;
+    https = false;
     database.createLocally = true;
     maxUploadSize = "8G";
 
