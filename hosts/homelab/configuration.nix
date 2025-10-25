@@ -14,7 +14,7 @@
       ./services/jellyfin.nix
       # ./firefly-iii/firefly-iii.nix
       # ./nginx/nginx.nix
-      ./services/tailscale.nix
+      # ./services/tailscale.nix
       ./services/agenix/agenix.nix
       ./services/nextcloud.nix
       ./services/openvpn.nix
