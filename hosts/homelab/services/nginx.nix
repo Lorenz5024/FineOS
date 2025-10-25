@@ -13,6 +13,8 @@ in
     recommendedGzipSettings = true;
 
     virtualHosts = {
+      root = "/var/lib/nextcloud";
+      enableACME = false;
       "${host}" = {
         enable = true;
         forceSSL = true;
@@ -22,9 +24,5 @@ in
     };
   };
 
-  security.acme = {
-    acceptTerms = true;
-    defaults.email = config.age.secrets.email.path;
-  };
 }
 
