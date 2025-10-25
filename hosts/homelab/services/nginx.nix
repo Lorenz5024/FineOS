@@ -15,7 +15,7 @@ in
     virtualHosts = {
       "${host}" = {
         enable = true;
-        root = "/var/lib/nextcloud";
+        # root = "/var/lib/nextcloud";
         enableACME = false;
 
         forceSSL = true;
