@@ -10,18 +10,18 @@
 
       ./../../system/app/nixvim/nixvim.nix
 
-      ./samba/samba.nix
-      ./jellyfin/jellyfin.nix
+      ./services/samba.nix
+      ./services/jellyfin.nix
       # ./firefly-iii/firefly-iii.nix
       # ./nginx/nginx.nix
-      ./tailscale.nix
-      ./agenix/agenix.nix
-      ./nextcloud/nextcloud.nix
+      ./services/tailscale.nix
+      ./services/agenix/agenix.nix
+      ./services/nextcloud.nix
+      ./services/openvpn.nix
 
       ./../../system/services/ssh/ssh.nix
       # ./../../system/services/docker/docker.nix
       ./../../system/services/actual-server/actual-server.nix
-      ./openvpn.nix
       ./qbittorrent.nix
     ];
 
