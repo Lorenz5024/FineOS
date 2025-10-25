@@ -5,4 +5,5 @@ let
 in
 {
   "nextcloud.age".publicKeys = publicKeys;
+  "email.age".publicKeys = publicKeys;
 }

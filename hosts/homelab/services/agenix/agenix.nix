@@ -10,6 +10,11 @@
     group = "nextcloud";
   };
 
+  age.secrets.email = {
+    file = ./email.age;
+    owner = "lorenz";
+  };
+
   age.identityPaths = [ "/root/.ssh/id_ed25519" ];
 }
 
