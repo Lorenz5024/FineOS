@@ -25,12 +25,24 @@
       dbtype = "pgsql";
     };
 
-    appstoreEnable = true;
+    settings = {
+      trusted_domains = [
+        "homelab.tailf073f1.ts.net"
+        "nextcloud.homelab.com"
+      ];
+    };
+
+    # extraApps = {
+    #   inherit (pkgs.nextcloud32Packages.apps) calendar contacts deck notes;
+    # };
+    #
+    # extraAppsEnable = true;
   };
 
   networking.firewall.allowedTCPPorts = [ 80 443 ];
 
-  systemd.tmpfiles.rules = [
-    "d /mnt/storage1/nextcloud/data 0750 nextcloud nextcloud -"
-  ];
+  # systemd.tmpfiles.rules = [
+  #   "d /mnt/storage1/nextcloud/data 0750 nextcloud nextcloud -"
+  # ];
+
 }
