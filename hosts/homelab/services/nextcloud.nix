@@ -24,6 +24,8 @@
       adminuser = "admin";
       dbtype = "pgsql";
     };
+
+    appstoreEnable = true;
   };
 
   networking.firewall.allowedTCPPorts = [ 80 443 ];
