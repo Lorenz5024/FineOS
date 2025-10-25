@@ -32,6 +32,9 @@
       ];
     };
 
+    extraAppsEnable = true;
+    appstoreEnable = true;
+
   };
 
   systemd.tmpfiles.rules = [
