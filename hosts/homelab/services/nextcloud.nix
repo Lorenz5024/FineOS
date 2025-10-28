@@ -5,6 +5,7 @@
     isSystemUser = true;
     description = "Nextcloud service user";
     group = "nextcloud";
+    home = "/var/lib/nextcloud";
   };
 
   users.groups.nextcloud = { };
@@ -14,7 +15,6 @@
     package = pkgs.nextcloud32;
     hostName = "homelab.tailf073f1.ts.net";
     datadir = "/mnt/storage1/nextcloud/data";
-    home = "/var/lib/nextcloud/";
     https = false;
     database.createLocally = true;
     maxUploadSize = "8G";
@@ -30,6 +30,7 @@
         "homelab.tailf073f1.ts.net"
         "nextcloud.homelab.com"
       ];
+      apps_directory = "/var/lib/nextcloud/apps";
     };
 
     # extraAppsEnable = true;
