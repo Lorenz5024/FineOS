@@ -32,7 +32,7 @@
       ];
     };
 
-    extraAppsEnable = true;
+    # extraAppsEnable = true;
     appstoreEnable = true;
 
   };
