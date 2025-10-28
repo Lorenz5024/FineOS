@@ -30,7 +30,7 @@
         "homelab.tailf073f1.ts.net"
         "nextcloud.homelab.com"
       ];
-      appsdirectory = "/var/lib/nextcloud/apps";
+      thisishumbug = "/var/lib/nextcloud/apps";
     };
 
     # extraAppsEnable = true;
