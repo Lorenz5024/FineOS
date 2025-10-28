@@ -33,7 +33,7 @@
     };
 
     # extraAppsEnable = true;
-    appstoreEnable = true;
+    appstoreEnable = false;
 
   };
 
