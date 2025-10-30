@@ -41,14 +41,14 @@
 
   };
 
-  # systemd.tmpfiles.rules = [
-  #   "d /var/lib/nextcloud 0750 nextcloud nextcloud -"
-  #   "d /var/lib/nextcloud/apps 0750 nextcloud nextcloud -"
-  #   "d /var/lib/nextcloud/config 0750 nextcloud nextcloud -"
-  #   "d /var/lib/nextcloud/data 0750 nextcloud nextcloud -"
-  #   "d /var/lib/nextcloud/extra-apps 0750 nextcloud nextcloud -"
-  #   "d /mnt/storage1/nextcloud/data 0750 nextcloud nextcloud -"
-  # ];
+  systemd.tmpfiles.rules = [
+    "d /var/lib/nextcloud 0750 root root -"
+    "d /var/lib/nextcloud/apps 0750 nextcloud nextcloud -"
+    "d /var/lib/nextcloud/config 0750 nextcloud nextcloud -"
+    "d /var/lib/nextcloud/data 0750 nextcloud nextcloud -"
+    "d /var/lib/nextcloud/extra-apps 0750 nextcloud nextcloud -"
+    "d /mnt/storage1/nextcloud/data 0750 nextcloud nextcloud -"
+  ];
 
   networking.firewall.allowedTCPPorts = [ 80 443 ];
 }
