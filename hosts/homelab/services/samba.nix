@@ -47,8 +47,8 @@
   };
 
   systemd.tmpfiles.rules = [
-    "d /mnt/storage0 0775 lorenz users -"
-    "d /mnt/storage1 0775 lorenz users -"
+    "d /mnt/storage0 0775 root users -"
+    "d /mnt/storage1 0775 root users -"
   ];
 
   networking.firewall.allowedTCPPorts = [ 139 445];

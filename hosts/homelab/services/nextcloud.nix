@@ -11,7 +11,7 @@
   users.groups.nextcloud = { };
 
   services.nextcloud = {
-    enable = false; 
+    enable = true; 
     package = pkgs.nextcloud32;
     hostName = "homelab.tailf073f1.ts.net";
     datadir = "/mnt/storage1/nextcloud";
@@ -56,11 +56,12 @@
 
   };
 
-  # systemd.tmpfiles.rules = [
-  #   "d /var/lib/nextcloud 0750 nextcloud nextcloud -"
-  #   "d /mnt/storage1/nextcloud 0750 nextcloud nextcloud -"
-  #   "d /mnt/storage1/nextcloud/config 0750 nextcloud nextcloud -"
-  # ];
+  systemd.tmpfiles.rules = [
+    # "d /var/lib/nextcloud 0750 nextcloud nextcloud -"
+    "d /mnt/storage1/nextcloud 0750 nextcloud nextcloud -"
+    "d /mnt/storage1/nextcloud/config 0750 nextcloud nextcloud -"
+    # "d /mnt/storage1 0750 root root -"
+  ];
 
   networking.firewall.allowedTCPPorts = [ 80 443 ];
 }
