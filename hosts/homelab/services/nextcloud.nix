@@ -5,7 +5,7 @@
     isSystemUser = true;
     description = "Nextcloud service user";
     group = "nextcloud";
-    # home = "/mnt/storage1/nextcloud/data";
+    home = "/var/lib/nextcloud";
   };
 
   users.groups.nextcloud = { };
@@ -30,6 +30,7 @@
         "homelab.tailf073f1.ts.net"
         "nextcloud.homelab.com"
       ];
+      "apps_directory" = "/var/lib/nextcloud/apps";
     };
 
     # extraAppsEnable = true;
