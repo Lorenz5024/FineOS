@@ -33,7 +33,7 @@
       # apps_directory = "/var/lib/nextcloud/apps";
     };
 
-    extraAppsEnable = false;
+    # extraAppsEnable = false;
     # extraApps = {
     #   inherit (config.services.nextcloud.package.packages.apps) news contacts calendar;
     # };
