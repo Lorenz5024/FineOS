@@ -26,8 +26,8 @@
       workspace_swipe_use_r = true;
     };
 
-    gesture = [
-      "3, horizontal, workspace"
-    ];
+    # gesture = [
+    #   "3, horizontal, workspace"
+    # ];
   };
 }
