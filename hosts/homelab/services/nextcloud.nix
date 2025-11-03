@@ -13,7 +13,7 @@
   services.nextcloud = {
     enable = true; 
     package = pkgs.nextcloud32;
-    hostName = "homelab.tailf073f1.ts.net";
+    hostName = "nextcloud.homelab.com";
     datadir = "/mnt/storage1/nextcloud";
     https = false;
     database.createLocally = true;

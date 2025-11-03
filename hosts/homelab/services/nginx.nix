@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 let 
-  host = "homelab.tailf073f1.ts.net";
+  host = "nextcloud.homelab.com";
   certPath = "/var/lib/tailscale/${host}.crt";
   keyPath = "/var/lib/tailscale/${host}.key";
 in
