@@ -11,7 +11,7 @@
   users.groups.nextcloud = { };
 
   services.nextcloud = {
-    enable = true; 
+    enable = false; 
     package = pkgs.nextcloud32;
     hostName = "homelab.tailf073f1.ts.net";
     datadir = "/mnt/storage1/nextcloud";
