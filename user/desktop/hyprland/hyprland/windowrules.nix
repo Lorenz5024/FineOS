@@ -29,7 +29,7 @@
       "float, class:^(discord)"
 
       # transparency/opacity
-      # "opacity 1 override 0.85 override, class:^(kitty)$"
+      "opacity 1 override 0.85 override, class:^(kitty)$"
 
       # special workspaces
       "workspace special:terminal, class:^(kitty-scratchpad)"
