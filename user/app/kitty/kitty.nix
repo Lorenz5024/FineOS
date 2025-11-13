@@ -6,7 +6,7 @@
 
     settings = {
       confirm_os_window_close = 0;
-      background_opacity = lib.mkForce "0.98";
+      background_opacity = lib.mkForce "0.97";
       cursor_trail = 1;
       cursor_trail_start_threshold = 1;
       window_padding_width = 4;
