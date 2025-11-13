@@ -39,6 +39,7 @@ in
     ];
 
     modules-right = [
+      "network#speed"
       "tray"
       "hyprland/language"
       "idle_inhibitor"
