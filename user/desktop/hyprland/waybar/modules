@@ -165,9 +165,9 @@
   "modules": [
     "temperature",
     "network#speed",
-    "cpu",
-    "memory",
     "disk",
+    "memory",
+    "cpu",
   ],
 },
   
