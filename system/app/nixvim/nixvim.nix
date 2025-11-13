@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ ... }:
 
 {
   imports = [
@@ -16,6 +16,7 @@
     ./plugins/which-key.nix
     # ./plugins/obsidian.nix
     ./plugins/csvview.nix
+    ./plugins/treesitter.nix
   ];
 
   programs.nixvim = {
@@ -40,7 +41,6 @@
       # Here only plugins without any extra config are declared.
       # All other plugins are in their own file inside the plugins folder.
 
-      treesitter.enable = true;
       comment.enable = true;
       luasnip.enable = true;
       markdown-preview.enable = true;
