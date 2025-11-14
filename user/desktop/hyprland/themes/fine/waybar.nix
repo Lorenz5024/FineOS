@@ -110,7 +110,7 @@ in
     }
 
     #cpu {
-      "min-length": 20
+      min-width: 20;
     }
 
     #clock {
