@@ -67,7 +67,7 @@ in
     @define-color idle_inhibitor          #FFFFFF;
     @define-color battery                 #FFFFFF;
     @define-color hover                   #FFFFFF;
-    @define-color trayindicator           #FFFFFF;
+    @define-color groupindicator          #FFFFFF;
 
     * {
 	font-family: "JetBrainsMono Nerd Font";
@@ -85,14 +85,14 @@ in
       padding: 0.3em;
     }
 
-    #custom-trayindicator {
+    #custom-groupindicator {
       ${module-margin}
-      color: @trayindicator;
+      color: @groupindicator;
       padding-left: 0.5em;
       padding-right: 0.5em;
     }
 
-    #custom-trayindicator:hover {
+    #custom-groupindicator:hover {
       ${module-hover}
     }
 
