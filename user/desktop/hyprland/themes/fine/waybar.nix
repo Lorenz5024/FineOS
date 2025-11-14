@@ -110,7 +110,8 @@ in
     }
 
     #cpu {
-      min-width: 200px;
+      min-width: 50px;
+      text-align: right;
     }
 
     #clock {
