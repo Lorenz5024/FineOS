@@ -111,7 +111,6 @@ in
 
     #cpu {
       min-width: 50px;
-      justify: right;
     }
 
     #clock {
