@@ -251,6 +251,18 @@
     "max-length": 50,
     "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
 },
+
+"group/hiddennetwork": {
+    "orientation": "inherit",
+    "drawer": {
+	"transition-duration": 200,
+	"transition-left-to-right": false,
+    },
+    "modules": [ 
+	"custom/groupindicator",
+	"network#speed",
+    ],
+},
   
 "network#speed": {
     "interval": 1,
@@ -324,12 +336,12 @@
 	"transition-left-to-right": false,
     },
     "modules": [ 
-	"custom/trayindicator",
+	"custom/groupindicator",
 	"tray",
     ],
 },
 
-"custom/trayindicator": {
+"custom/groupindicator": {
     "format": "",
     "tooltip": false,
 },

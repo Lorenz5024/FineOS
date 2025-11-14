@@ -39,7 +39,8 @@ in
     ];
 
     modules-right = [
-      "group/system"
+      "group/hiddennetwork"
+      "temperature"
       "tray"
       "hyprland/language"
       "idle_inhibitor"
