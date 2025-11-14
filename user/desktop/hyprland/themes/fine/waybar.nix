@@ -41,6 +41,8 @@ in
     modules-right = [
       "group/hiddennetwork"
       "temperature"
+      "cpu"
+      "memory"
       "tray"
       "hyprland/language"
       "idle_inhibitor"
