@@ -109,6 +109,10 @@ in
       padding-right: 4px;
     }
 
+    #cpu {
+      min-length: 20;
+    }
+
     #clock {
       color: @clock;
       padding-left: 8px;
