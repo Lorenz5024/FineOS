@@ -13,6 +13,7 @@
       markdown
       hyprlang
       css
+      ledger
     ];
   };
 }
