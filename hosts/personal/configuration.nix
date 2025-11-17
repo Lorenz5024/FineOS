@@ -12,7 +12,7 @@
     ./../../system/app/gaming/gaming.nix
     ./openvpn.nix
     ./../../system/services/tailscale.nix
-    ./../../system/app/hledger.nix
+    ./../../system/app/hledger/hledger.nix
 
     # ./../../system/development/docker.nix
     # ./../../system/development/postgresql.nix
