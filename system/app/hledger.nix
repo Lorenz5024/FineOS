@@ -3,7 +3,7 @@
 {
   environment.systemPackages = [ pkgs.hledger ];
 
-  environment.variables = {
+  environment.sessionVariables = {
     LEDGER_FILE = "~/Finance/2025.journal";
   };
 }
