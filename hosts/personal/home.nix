@@ -18,6 +18,10 @@
         vrr = 3;
         addreserved = "0, 0, 440, 440";
         sdr_min_luminance = 0.005;
+
+        cm = "hdr";
+        sdrbrightness = 1.3;
+        sdrsaturation = 1;
       }
 
       {
