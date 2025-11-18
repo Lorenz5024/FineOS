@@ -13,7 +13,7 @@
       # "DP-1, 3440x1440@144.00, 0x0, 1, vrr, 3, bitdepth, 10"
       # "DP-1, addreserved, 0, 0, 440, 440"   # for 3440x1440 21:9 monitor
       #"HDMI-A-1, 3840x2160@60, -642x-2160, 1, bitdepth, 10, vrr, 2"
-      "HDMI-A-1, disabled"
+      # "HDMI-A-1, disabled"
     ];
 
     monitorv2 = [
@@ -24,6 +24,11 @@
         scale = 1;
         vrr = 3;
         addreserved = "0, 0, 440, 440";
+      }
+
+      {
+        output = "HDMI-A-1";
+        disabled = true;
       }
     ];
 
