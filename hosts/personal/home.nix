@@ -23,6 +23,7 @@
         position = "0x0";
         scale = 1;
         vrr = 3;
+        addreserved = "0, 0, 440, 440";
       }
     ];
 
