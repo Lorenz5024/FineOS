@@ -28,7 +28,7 @@
     enable = true;
     settings = {
       user = {
-        name = userSettings.name;
+        name = userSettings.gitUsername;
         email = userSettings.email;
       };
       init.defaultBranch = "main";
