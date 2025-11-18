@@ -16,26 +16,26 @@
       "HDMI-A-1, disabled"
     ];
 
-    monitorv2 = [
-      # {
-      #   output = "DP-1";
-      #   mode = "3440x1440@144";
-      #   position = "0x0";
-      #   scale = 1;
-      #   vrr = 3;
-      #   addreserved = "0, 0, 440, 440";
-      #
-      #   cm = "hdr";
-      #   sdr_min_luminance = 0.005;
-      #   sdrbrightness = 1.3;
-      #   sdrsaturation = 1;
-      # }
-
-      {
-        output = "HDMI-A-1";
-        disabled = true;
-      }
-    ];
+    # monitorv2 = [
+    #   # {
+    #   #   output = "DP-1";
+    #   #   mode = "3440x1440@144";
+    #   #   position = "0x0";
+    #   #   scale = 1;
+    #   #   vrr = 3;
+    #   #   addreserved = "0, 0, 440, 440";
+    #   #
+    #   #   cm = "hdr";
+    #   #   sdr_min_luminance = 0.005;
+    #   #   sdrbrightness = 1.3;
+    #   #   sdrsaturation = 1;
+    #   # }
+    #
+    #   {
+    #     output = "HDMI-A-1";
+    #     disabled = true;
+    #   }
+    # ];
 
     render = {
       cm_fs_passthrough = 0;
