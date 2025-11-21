@@ -24,13 +24,14 @@ in
     LEDGER_FILE = "~/Finance/2025.journal";
   };
 
-    systemd.services.ledgerBackup = {
+  systemd.services.ledgerBackup = {
     description = "Backup hledger files to GitHub";
     serviceConfig = {
       Type = "oneshot";
       User = userSettings.username;
       ExecStart = ledgerBackupScript;
-      Environment = "SSH_AUTH_SOCK=/run/user/1000/keyring/ssh";
+      #Environment = "SSH_AUTH_SOCK=/run/user/1000/keyring/ssh";
+      Environment = "PATH=${pkgs.git}/bin:${pkgs.coreutils}/bin:${pkgs.bash}/bin";
     };
     after = [ "network-online.target" ];
     wants = [ "network-online.target" ];
