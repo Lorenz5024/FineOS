@@ -30,7 +30,6 @@ in
       Type = "oneshot";
       User = userSettings.username;
       ExecStart = ledgerBackupScript;
-      #Environment = "SSH_AUTH_SOCK=/run/user/1000/keyring/ssh";
       Environment = "PATH=${pkgs.git}/bin:${pkgs.coreutils}/bin:${pkgs.bash}/bin:${pkgs.openssh}/bin";
     };
     after = [ "network-online.target" ];
