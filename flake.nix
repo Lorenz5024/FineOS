@@ -100,6 +100,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.${userSettings.username} = import ./hosts/laptop/home.nix;
             home-manager.backupFileExtension = "hm-backup";
+            home-manager.sharedModules = [ inputs.plasma-manager.homeModules.plasma-manager ];
 
             home-manager.extraSpecialArgs = {
               inherit inputs;

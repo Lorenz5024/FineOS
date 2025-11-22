@@ -7,9 +7,11 @@
 
       ./../personal/common-configuration.nix
 
-      ./../../system/desktop/${hostSettings.desktop}/desktop.nix
+      ./../../system/desktop/hyprland/desktop.nix
+      ./../../system/desktop/kde/desktop.nix
 
       ./../../system/services/ssh/ssh.nix
+      ./../../system/services/tailscale.nix
     ];
 
   networking.hostName = "fineos-laptop"; # Define your hostname.
