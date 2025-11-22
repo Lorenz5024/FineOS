@@ -16,5 +16,10 @@
     kdePackages.kpat # KPatience offers a selection of solitaire card games
     kdePackages.ksudoku # KSudoku is a logic-based symbol placement puzzle
     kdePackages.ktorrent # Powerful BitTorrent client
+    kdePackages.dolphin
+    kdePackages.kate
+    kdePackages.kwrited
+    kdePackages.konsole
+    kdePackages.gwenview
   ];
 }

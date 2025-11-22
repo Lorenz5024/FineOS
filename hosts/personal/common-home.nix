@@ -1,4 +1,4 @@
-{ userSettings, ... }:
+{ userSettings, lib, ... }:
 
 {
   imports = [
@@ -62,5 +62,7 @@
     "x-scheme-handler/about" = "${userSettings.browser}.desktop";
     "x-scheme-handler/unknown" = "${userSettings.browser}.desktop";
   };
+
+  home.file."/home/${userSettings.username}/.gtkrc-2.0".force = lib.mkForce true;
 
 }
