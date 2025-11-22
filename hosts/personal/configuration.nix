@@ -7,7 +7,7 @@
 
     ./../../system/boot.nix
 
-    ./../../system/desktop/${hostSettings.desktop}/desktop.nix
+    ./../../system/desktop/hyprland/desktop.nix
     ./../../system/desktop/kde/desktop.nix
 
     ./../../system/app/gaming/gaming.nix

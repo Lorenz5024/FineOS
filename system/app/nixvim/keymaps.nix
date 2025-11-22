@@ -14,14 +14,6 @@
 	action = "<C-u>zz";
       }
 
-      # CTRL-commands
-      {
-        key = "<C-a>";
-        mode = "n";
-        action = "gg<S-v>G";
-        options.desc = "select all";
-      }
-
       # Window management (or however this section should be called)
       {
 	key = "<C-h>";			# Move to window left, down, up, right

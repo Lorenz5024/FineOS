@@ -5,7 +5,7 @@
     ./common-home.nix
     ./packages.nix 
 
-    ./../../user/desktop/${hostSettings.desktop}/desktop.nix
+    ./../../user/desktop/hyprland/desktop.nix
     ./../../user/desktop/kde/desktop.nix
   ];
 
