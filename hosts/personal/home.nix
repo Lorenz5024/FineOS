@@ -6,6 +6,7 @@
     ./packages.nix 
 
     ./../../user/desktop/${hostSettings.desktop}/desktop.nix
+    ./../../user/desktop/kde/desktop.nix
   ];
 
   wayland.windowManager.hyprland.settings = {

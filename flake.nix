@@ -26,9 +26,15 @@
 
     agenix.url = "github:ryantm/agenix";
 
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, hyprland, nixos-wsl, agenix, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, hyprland, nixos-wsl, agenix, plasma-manager, ... }:
     let
       lib = nixpkgs.lib;
       userSettings = import ./hosts/personal/userSettings.nix;
@@ -58,6 +64,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.${userSettings.username} = import ./hosts/personal/home.nix;
             home-manager.backupFileExtension = "hm-backup";
+            home-manager.sharedModules = [ inputs.plasma-manager.homeModules.plasma-manager ];
 
             home-manager.extraSpecialArgs = {
               inherit hostSettings;
