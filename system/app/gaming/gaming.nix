@@ -24,7 +24,6 @@
   environment.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/${userSettings.username}/.steam/root/compatibilitytools.d";
   };
-  environment.variables.XWAYLAND_NO_GLAMOR = "1";
 
 
   programs.gamemode.enable = true;
