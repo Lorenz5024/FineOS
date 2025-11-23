@@ -3,6 +3,7 @@
 {
   imports = [ 
     ./bluetooth.nix
+    ./sound.nix
   ];
 
   # Hyprland

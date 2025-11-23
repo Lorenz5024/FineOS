@@ -15,9 +15,6 @@
     enableCompletion = true;
     syntaxHighlighting.enable = true;
 
-    plugins = [
-    ];
-
     shellAliases = {
       c = "clear";
       v = "nvim";
@@ -25,7 +22,7 @@
       # Aliases which replace standard tool with something else 
       ls = "eza --group-directories-first";
 
-      config = "cd ${userSettings.flakeDir} && nvim";
+      config = "cd ${userSettings.flakeDir} && git pull && nvim";
     };
 
   };
