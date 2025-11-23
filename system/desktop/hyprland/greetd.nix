@@ -1,7 +1,7 @@
 { pkgs, userSettings, hostSettings, ... }:
 
 let 
-  desktop = hostSettings.desktop;
+  desktop = builtins.head hostSettings.desktops;
 in
 {
   # Login manager 

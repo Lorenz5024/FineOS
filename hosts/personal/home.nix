@@ -4,10 +4,7 @@
   imports = [ 
     ./common-home.nix
     ./packages.nix 
-
-    ./../../user/desktop/hyprland/desktop.nix
-    ./../../user/desktop/kde/desktop.nix
-  ];
+  ] ++ map (e: ./. + "/../../user/desktop/${e}/desktop.nix") hostSettings.desktops;
 
   wayland.windowManager.hyprland.settings = {
     monitor = [
