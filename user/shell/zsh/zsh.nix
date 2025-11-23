@@ -1,4 +1,4 @@
-{ ... }:
+{ userSettings, ... }:
 
 {
   imports = [ 
@@ -24,6 +24,8 @@
 
       # Aliases which replace standard tool with something else 
       ls = "eza --group-directories-first";
+
+      config = "nvim ${userSettings.flakeDir}";
     };
 
   };
