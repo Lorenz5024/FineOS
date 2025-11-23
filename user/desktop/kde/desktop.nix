@@ -46,6 +46,11 @@
               ];
             };
           }
+          {
+            panelSpacer = {
+              expanding = true;
+            };
+          }
         ];
       }
 
