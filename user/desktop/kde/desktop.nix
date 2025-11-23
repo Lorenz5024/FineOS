@@ -34,6 +34,11 @@
         location = "bottom";
         widgets = [
           {
+            panelSpacer = {
+              expanding = true;
+            };
+          }
+          {
             kickoff = {
               sortAlphabetically = true;
               icon = "nix-snowflake-white";
