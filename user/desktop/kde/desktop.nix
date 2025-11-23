@@ -47,7 +47,7 @@
           {
             iconTasks = {
               launchers = [
-                "vivaldi-stable.desktop"
+                "applications:vivaldi-stable.desktop"
               ];
             };
           }
