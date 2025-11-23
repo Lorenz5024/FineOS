@@ -34,6 +34,7 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
+  hardware.bluetooth.enable = true;
 
   # add kernel param for nvidia 
   boot.kernelParams = [ 
