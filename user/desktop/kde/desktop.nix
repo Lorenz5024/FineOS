@@ -48,11 +48,7 @@
             };
           }
           {
-            iconTasks = {
-              launchers = [
-                "applications:vivaldi-stable.desktop"
-              ];
-            };
+            iconTasks = {};
           }
           {
             panelSpacer = {
