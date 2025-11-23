@@ -2,7 +2,7 @@
 
 pkgs.writeShellScriptBin "fineos-update" ''
   # Change to the directory containing your NixOS config repository
-  cd ~/FineOS/ || { echo "Failed to change directory"; exit 1; }
+  cd ~/.fine/FineOS || { echo "Failed to change directory"; exit 1; }
 
   # Stage new and modified files
   git add .
