@@ -14,7 +14,6 @@
     ./../../system/app/nixvim/nixvim.nix
 
     ./../../system/development/android.nix
-    ./../../system/development/rust.nix
   ];
 
   # Garbage collection
