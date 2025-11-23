@@ -1,4 +1,4 @@
-{ ... }:
+{ userSettings, ... }:
 
 {
   programs.plasma = {
@@ -8,17 +8,17 @@
       "launch-terminal" = {
         name = "Launch Terminal";
         key = "Meta+Return";
-        command = "\"\\$TERMINAL\"";
+        command = userSettings.terminal;
       };
       "launch-browser" = {
         name = "Launch Browser";
         key = "Meta+B";
-        command = "\"\\$BROWSER\"";
+        command = userSettings.browser;
       };
       "launch-filemanager" = {
         name = "Launch Filemanager";
         key = "Meta+T";
-        command = "\"\\$FILEMANAGER\"";
+        command = userSettings.fileManager;
       };
     };
 
