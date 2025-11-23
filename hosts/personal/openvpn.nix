@@ -1,8 +1,10 @@
+{ pkgs, ... }:
+
 {
-  services.openvpn.servers = {
-    piaVPN = { 
-      config = '' config /home/lorenz/.openvpn/austria-aes-128-cbc-udp-dns.ovpn ''; 
-      autoStart = true;
-    };
+  networking.networkmanager = {
+    enable = true;
+    plugins = with pkgs; [
+      networkmanager-openvpn
+    ];
   };
 }
