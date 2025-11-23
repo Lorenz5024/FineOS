@@ -34,6 +34,9 @@
         location = "bottom";
         widgets = [
           {
+            pager = {};
+          }
+          {
             panelSpacer = {
               expanding = true;
             };
