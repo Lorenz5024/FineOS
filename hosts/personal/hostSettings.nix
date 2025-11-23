@@ -7,8 +7,8 @@
   timezone = "Europe/Vienna";
   locale = "en_US.UTF-8";
 
-  # The desktop environments to install
-  desktops = [ "hyprland" "kde" ]; # example: [ "hyprland" "kde" ]
+  # The desktop environments to install. The first one is auto selected during login
+  desktops = [ "kde" ]; # example: [ "hyprland" "kde" ]
 
   # Set to true/false depending on if the host is a laptop
   isLaptop = false;

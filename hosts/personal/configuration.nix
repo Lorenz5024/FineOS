@@ -7,9 +7,6 @@
 
     ./../../system/boot.nix
 
-    ./../../system/desktop/hyprland/desktop.nix
-    ./../../system/desktop/kde/desktop.nix
-
     ./../../system/app/gaming/gaming.nix
     ./openvpn.nix
     ./../../system/services/tailscale.nix
@@ -18,7 +15,7 @@
     # ./../../system/development/docker.nix
     # ./../../system/development/postgresql.nix
     # ./../../system/development/java.nix
-  ];
+  ] ++ map (e: ./. + "/../../system/desktop/${e}/desktop.nix") hostSettings.desktops;
 
   networking.hostName = "fineos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

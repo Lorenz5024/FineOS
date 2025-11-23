@@ -5,8 +5,8 @@
     ./../minimal-config.nix
 
     ./../../system/boot.nix
+    ./../../system/greetd.nix
     ./../../system/keyring.nix
-    ./../../system/bluetooth.nix
     ./../../system/sound.nix
 
     ./../../system/packages.nix

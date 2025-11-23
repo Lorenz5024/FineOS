@@ -1,7 +1,9 @@
 { inputs, pkgs, ... }:
 
 {
-  imports = [ ./greetd.nix ];
+  imports = [ 
+    ./bluetooth.nix
+  ];
 
   # Hyprland
   programs.hyprland = {
