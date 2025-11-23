@@ -29,5 +29,27 @@
       "Kill Window" = "Meta+Q";
     };
 
+    panels = [
+      {
+        location = "bottom";
+        widgets = [
+          {
+            kickoff = {
+              sortAlphabetically = true;
+              icon = "nix-snowflake-white";
+            };
+          }
+          {
+            iconTasks = {
+              launchers = [
+                "applications:vivaldi"
+              ];
+            };
+          }
+        ];
+      }
+
+    ];
+
   };
 }
