@@ -8,17 +8,17 @@
       "launch-terminal" = {
         name = "Launch Terminal";
         key = "Meta+Return";
-        command = userSettings.terminal;
+        command = "${userSettings.terminal}";
       };
       "launch-browser" = {
         name = "Launch Browser";
         key = "Meta+B";
-        command = userSettings.browser;
+        command = "${userSettings.browser}";
       };
       "launch-filemanager" = {
         name = "Launch Filemanager";
         key = "Meta+T";
-        command = userSettings.fileManager;
+        command = "${userSettings.fileManager}";
       };
     };
 
