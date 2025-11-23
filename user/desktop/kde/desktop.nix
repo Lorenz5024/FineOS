@@ -10,16 +10,16 @@
         key = "Meta+Return";
         command = "\"\\\\$TERMINAL\"";
       };
-      # "launch-browser" = {
-      #   name = "Launch Browser";
-      #   key = "Meta+B";
-      #   command = "'$BROWSER'";
-      # };
-      # "launch-filemanager" = {
-      #   name = "Launch Filemanager";
-      #   key = "Meta+T";
-      #   command = "'$FILEMANAGER'";
-      # };
+      "launch-browser" = {
+        name = "Launch Browser";
+        key = "Meta+B";
+        command = "\"\\\\$BROWSER\"";
+      };
+      "launch-filemanager" = {
+        name = "Launch Filemanager";
+        key = "Meta+T";
+        command = "\"\\\\$FILEMANAGER\"";
+      };
     };
 
     shortcuts.kwin = {
