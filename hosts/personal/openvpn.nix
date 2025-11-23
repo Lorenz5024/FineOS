@@ -7,4 +7,5 @@
       networkmanager-openvpn
     ];
   };
+  networking.firewall.allowedUDPPorts = [ 1198 ];
 }
