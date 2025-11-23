@@ -56,6 +56,11 @@
               expanding = true;
             };
           }
+          {
+            systemTray = {
+              
+            };
+          }
         ];
       }
 
