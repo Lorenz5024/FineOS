@@ -45,6 +45,8 @@
   home.sessionVariables = {
     EDITOR = userSettings.editor;
     BROWSER = userSettings.browser;
+    FILEMANAGER = userSettings.fileManager;
+    TERMINAL = userSettings.terminal;
   };
 
 

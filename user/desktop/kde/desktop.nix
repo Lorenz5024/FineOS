@@ -5,11 +5,21 @@
     enable = true;
 
     hotkeys.commands = {
-      "launch-kitty" = {
-        name = "Launch Kitty";
+      "launch-terminal" = {
+        name = "Launch Terminal";
         key = "Meta+Return";
-        command = "kitty";
+        command = "\"\\\\$TERMINAL\"";
       };
+      # "launch-browser" = {
+      #   name = "Launch Browser";
+      #   key = "Meta+B";
+      #   command = "'$BROWSER'";
+      # };
+      # "launch-filemanager" = {
+      #   name = "Launch Filemanager";
+      #   key = "Meta+T";
+      #   command = "'$FILEMANAGER'";
+      # };
     };
 
     shortcuts.kwin = {
