@@ -9,7 +9,6 @@
     ./../../system/keyring.nix
     ./../../system/sound.nix
 
-    ./../../system/packages.nix
     ./../../system/style/stylix.nix
     ./../../system/app/thunar.nix
     ./../../system/app/nixvim/nixvim.nix
