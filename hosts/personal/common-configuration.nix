@@ -7,7 +7,7 @@
     ./../../system/boot.nix
     ./../../system/greetd.nix
     ./../../system/keyring.nix
-    ./../../system/sound.nix
+    # ./../../system/sound.nix
 
     ./../../system/style/stylix.nix
     ./../../system/app/thunar.nix
