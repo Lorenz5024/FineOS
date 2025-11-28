@@ -30,6 +30,8 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
+  services.flatpak.enable = true;
+
   hardware.bluetooth.enable = true;
 
   # add kernel param for nvidia 
