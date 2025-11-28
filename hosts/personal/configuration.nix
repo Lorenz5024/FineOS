@@ -11,10 +11,6 @@
     ./openvpn.nix
     ./../../system/services/tailscale.nix
     ./../../system/app/hledger/hledger.nix
-
-    # ./../../system/development/docker.nix
-    # ./../../system/development/postgresql.nix
-    # ./../../system/development/java.nix
   ] ++ map (e: ./. + "/../../system/desktop/${e}/desktop.nix") hostSettings.desktops;
 
   networking.hostName = "fineos"; # Define your hostname.

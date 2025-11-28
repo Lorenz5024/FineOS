@@ -7,12 +7,9 @@
 
       ./../personal/common-configuration.nix
 
-      ./../../system/desktop/hyprland/desktop.nix
-      ./../../system/desktop/kde/desktop.nix
-
       ./../../system/services/ssh/ssh.nix
       ./../../system/services/tailscale.nix
-    ];
+    ] ++ map (e: ./. + "/../../system/desktop/${e}/desktop.nix") hostSettings.desktops;
 
   networking.hostName = "fineos-laptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
