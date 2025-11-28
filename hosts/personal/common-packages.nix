@@ -25,7 +25,7 @@
     # brave
     vivaldi
     tor-browser
-    discord
+    # discord
     qbittorrent
 
     # Media
