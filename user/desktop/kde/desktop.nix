@@ -39,6 +39,14 @@
       "Kill Window" = "Meta+Q";
     };
 
+    input.mice = [
+      {
+        name = "Logitech USB Receiver";
+        vendorId = "046d";
+        productId = "4068";
+      }
+    ];
+
     panels = [
       {
         location = "bottom";
