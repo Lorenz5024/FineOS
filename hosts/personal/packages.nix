@@ -9,6 +9,8 @@
     streamcontroller
     # modrinth-app
     calibre
+    koboldcpp
+    sillytavern
   ];
 
 }
