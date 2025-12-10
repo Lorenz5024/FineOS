@@ -11,6 +11,7 @@
     calibre
     koboldcpp
     sillytavern
+    veracrypt
   ];
 
 }
