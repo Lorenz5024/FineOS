@@ -1,7 +1,7 @@
 {  ... }:
 
 {
-  security.pam.services.kwallet = {
+  security.pam.services.greetd = {
     name = "kwallet";
     enableKwallet = true;
   };
