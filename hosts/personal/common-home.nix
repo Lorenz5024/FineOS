@@ -1,5 +1,9 @@
 { userSettings, lib, ... }:
 
+let 
+  browser = if userSettings.browser == "vivaldi" then "vivaldi-stable"
+            else userSettings.browser;
+in
 {
   imports = [
     ./common-packages.nix
@@ -55,12 +59,14 @@
   home.stateVersion = "23.11";
 
   # default applications
-  xdg.mimeApps.enable = true;
-  xdg.mimeApps.defaultApplications = {
-    "x-scheme-handler/http" = "${userSettings.browser}.desktop";
-    "x-scheme-handler/https" = "${userSettings.browser}.desktop";
-    "x-scheme-handler/about" = "${userSettings.browser}.desktop";
-    "x-scheme-handler/unknown" = "${userSettings.browser}.desktop";
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "x-scheme-handler/http" = "${browser}.desktop";
+      "x-scheme-handler/https" = "${browser}.desktop";
+      "x-scheme-handler/about" = "${browser}.desktop";
+      "x-scheme-handler/unknown" = "${browser}.desktop";
+    };
   };
 
   # prevent home-manager backup collisions 
