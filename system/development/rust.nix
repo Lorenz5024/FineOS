@@ -9,7 +9,6 @@
     rustfmt 
     gcc
     clippy
-    diesel-cli
     libiconv
   ];
 }

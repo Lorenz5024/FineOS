@@ -4,13 +4,17 @@
   imports = [ 
     ./hardware-configuration.nix
     ./common-configuration.nix
+    ./openvpn.nix
 
     ./../../system/boot.nix
 
     ./../../system/app/gaming/gaming.nix
-    ./openvpn.nix
-    ./../../system/services/tailscale.nix
     ./../../system/app/hledger/hledger.nix
+
+    ./../../system/services/tailscale.nix
+
+    ./../../system/development/rust.nix
+
   ] ++ map (e: ./. + "/../../system/desktop/${e}/desktop.nix") hostSettings.desktops;
 
   networking.hostName = "fineos"; # Define your hostname.
