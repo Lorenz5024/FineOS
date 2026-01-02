@@ -1,4 +1,4 @@
-{ pkgs,  userSettings, ... }:
+{ pkgs, userSettings, ... }:
 
 {
   environment.systemPackages = [
@@ -15,7 +15,7 @@
           echo "Build successful. Committing changes..."
 
           # Commit and push the changes
-          git commit -m "Auto commit during rebuild"
+          git commit -m "Auto commit updated flake"
           git push
 
           echo "Changes pushed to repository."

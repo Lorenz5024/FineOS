@@ -3,6 +3,7 @@
 {
   
   imports = [
+    ./../scripts/fineos-rebuild.nix
     ./../scripts/fineos-update.nix
   ];
 
