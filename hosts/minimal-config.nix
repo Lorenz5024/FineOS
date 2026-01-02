@@ -61,8 +61,6 @@
     bat
     nh
     p7zip
-
-    (import ./../scripts/fineos-rebuild.nix { inherit pkgs; })
   ];
 
   # Fonts

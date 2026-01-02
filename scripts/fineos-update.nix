@@ -5,7 +5,7 @@
 
     (pkgs.writeShellScriptBin "fineos-update" ''
       # Change to the directory containing your NixOS config repository
-      cd ~/.fine/FineOS || { echo "Failed to change directory"; exit 1; }
+      cd ${userSettings.flakeDir} || { echo "Failed to change directory"; exit 1; }
 
       # Pull remote changes
       git pull
