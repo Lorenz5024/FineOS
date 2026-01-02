@@ -1,6 +1,10 @@
 { pkgs, hostSettings, userSettings, ... }:
 
 {
+  
+  imports = [
+    ./../scripts/fineos-update.nix
+  ];
 
   # Enable experimental features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -59,7 +63,6 @@
     p7zip
 
     (import ./../scripts/fineos-rebuild.nix { inherit pkgs; })
-    (import ./../scripts/fineos-update.nix { inherit pkgs; })
   ];
 
   # Fonts
