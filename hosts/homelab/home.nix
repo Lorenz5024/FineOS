@@ -1,4 +1,4 @@
-{ userSettings, ... }:
+{ lib, userSettings, ... }:
 
 {
   imports = [ 
@@ -22,6 +22,7 @@
       init.defaultBranch = "main";
     };
   };
+  programs.zellij.enableZshIntegration = lib.mkForce false;
 
   nixpkgs.config.allowUnfree = true;
 
