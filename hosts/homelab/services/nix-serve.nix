@@ -22,7 +22,7 @@
       Type = "oneshot";
       User = "${userSettings.username}";
       ExecStart = "${pkgs.writeShellScript "prefetch-store.sh" ''
-        # set -xeuf -o pipefail
+        set -xeuf -o pipefail
         PATH="$PATH:${pkgs.gitMinimal}/bin:${pkgs.nix}/bin"
         export PATH
 
@@ -30,6 +30,7 @@
 
         git pull
         nix flake update
+        git add -A
         git commit -m "Auto update from homelab"
         git push
 
