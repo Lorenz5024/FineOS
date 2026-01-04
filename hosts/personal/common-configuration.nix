@@ -28,8 +28,18 @@
 
 
   nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    substituters = [
+      "http://192.168.8.102:5000"
+      "https://hyprland.cachix.org"
+      "https://cache.nixos.org"
+    ];
+    trusted-public-keys = [
+      "homelab:Cpgf9J3KRmiwWySrMQ27Dj0ENYvPGuO84TntCFCyWTw=%"
+      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+    ];
+
+    # In case homelab is not reachable
+    connect-timeout = 5;
   };
 
   # Added because steam could not set new storage locations
