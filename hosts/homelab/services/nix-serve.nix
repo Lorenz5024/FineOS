@@ -22,7 +22,7 @@
       Type = "oneshot";
       workingDirectory = "${userSettings.flakeDir}";
       ExecStart = ''
-        /bin/sh -c '
+        /sh -c '
           # update flake, commit and push changes
           git pull
           nix flake update 
