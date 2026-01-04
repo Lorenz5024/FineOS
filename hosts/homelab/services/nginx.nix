@@ -1,10 +1,10 @@
-{ config, pkgs, lib, ... }:
+{ ... }:
 
-let 
-  host = "homelab.tailf073f1.ts.net";
-  certPath = "/var/lib/tailscale/${host}.crt";
-  keyPath = "/var/lib/tailscale/${host}.key";
-in
+# let 
+#   host = "homelab.tailf073f1.ts.net";
+#   certPath = "/var/lib/tailscale/${host}.crt";
+#   keyPath = "/var/lib/tailscale/${host}.key";
+# in
 {
 
   services.nginx = {
