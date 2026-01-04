@@ -3,7 +3,6 @@
 {
   imports = [ 
     ./quickmarks.nix
-    ./theme.nix
   ];
 
   programs.qutebrowser = {

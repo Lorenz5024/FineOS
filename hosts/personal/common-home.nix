@@ -12,7 +12,6 @@ in
     ./../../user/app/yazi/yazi.nix
     ./../../user/app/zathura/zathura.nix
     ./../../user/app/lazygit/lazygit.nix
-    ./../../user/app/qutebrowser/qutebrowser.nix
     ./../../user/app/spotify-player/spotify-player.nix
 
     ./../../user/shell/zsh/zsh.nix
