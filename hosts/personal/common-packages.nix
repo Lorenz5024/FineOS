@@ -22,11 +22,10 @@
 
     # Internet
     firefox
-    # brave
     vivaldi
     tor-browser
-    # discord
     qbittorrent
+    nextcloud-client
 
     # Media
     mpv
