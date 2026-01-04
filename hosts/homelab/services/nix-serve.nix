@@ -20,17 +20,21 @@
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
       Type = "oneshot";
-      workingDirectory = "${userSettings.flakeDir}";
-      ExecStart = ''
-        ${pkgs.bash} -c '
-          git pull;
-          nix flake update ;
-          git commit -m "Auto update from homelab";
-          git push;
+      User = "${userSettings.username}";
+      ExecStart = "${pkgs.writeShellScript "prefetch-store.sh" ''
+        # set -xeuf -o pipefail
+        PATH="$PATH:${pkgs.gitMinimal}/bin:${pkgs.nix}/bin"
+        export PATH
 
-          nix build .\#nixosConfigurations.fineos.config.system.build.toplevel --no-link;
-        '
-      '';
+        cd ${userSettings.flakeDir}
+
+        git pull
+        nix flake update
+        git commit -m "Auto update from homelab"
+        git push
+
+        nix build .\#nixosConfigurations.fineos.config.system.build.toplevel --no-link
+      ''}";
     };
   };
 
