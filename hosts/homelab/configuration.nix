@@ -12,12 +12,12 @@
 
       ./services/samba.nix
       ./services/jellyfin.nix
-      # ./firefly-iii/firefly-iii.nix
-      # ./nginx/nginx.nix
+      ./services/nginx.nix
       ./services/tailscale.nix
       ./services/agenix/agenix.nix
       ./services/nextcloud.nix
       ./services/openvpn.nix
+      ./services/nix-serve.nix
 
       ./../../system/services/ssh/ssh.nix
       # ./../../system/services/docker/docker.nix

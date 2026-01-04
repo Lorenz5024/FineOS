@@ -19,7 +19,6 @@ in
     ./../../user/style/stylix.nix
 
     ./../../user/config/config.nix
-    ./../../user/app/nextcloud/nextcloud.nix
   ];
 
   home.username = userSettings.username;
@@ -66,6 +65,11 @@ in
       "x-scheme-handler/about" = "${browser}.desktop";
       "x-scheme-handler/unknown" = "${browser}.desktop";
     };
+  };
+
+  services.nextcloud-client = {
+    enable = true;
+    startInBackground = true;
   };
 
   # prevent home-manager backup collisions 

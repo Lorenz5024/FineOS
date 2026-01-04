@@ -14,7 +14,6 @@ in
 
     virtualHosts = {
       "${host}" = {
-        enable = true;
         # root = "/var/lib/nextcloud";
         enableACME = false;
 
@@ -25,11 +24,6 @@ in
         locations."/" = {
           proxyPass = "http://127.0.0.1:8080"; # Nextcloud internal server
           proxyWebsockets = true;
-          proxyHeaders = {
-            "Host" = "$host";
-            "X-Forwarded-For" = "$remote_addr";
-            "X-Forwarded-Proto" = "https";
-          };
         };
       };
 
