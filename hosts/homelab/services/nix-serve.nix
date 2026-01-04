@@ -22,15 +22,13 @@
       Type = "oneshot";
       workingDirectory = "${userSettings.flakeDir}";
       ExecStart = ''
-        /sh -c '
-          # update flake, commit and push changes
-          git pull
-          nix flake update 
-          git commit -m "Auto update from homelab"
-          git push
+        ${pkgs.bash} -c '
+          git pull;
+          nix flake update ;
+          git commit -m "Auto update from homelab";
+          git push;
 
-          # download new store paths
-          nix build .\#nixosConfigurations.fineos.config.system.build.toplevel --no-link
+          nix build .\#nixosConfigurations.fineos.config.system.build.toplevel --no-link;
         '
       '';
     };
