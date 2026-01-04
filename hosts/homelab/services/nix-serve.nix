@@ -9,7 +9,7 @@
     secretKeyFile = "/var/lib/nix-serve/cache-priv-key.pem";
   };
 
-  networking.firewall.allowedUDPPorts = [ 5000 ];
+  networking.firewall.allowedTCPPorts = [ 5000 ];
 
   nix.settings.trusted-users = [ "root" ];
 
