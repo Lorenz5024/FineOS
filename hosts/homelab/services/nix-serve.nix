@@ -60,8 +60,8 @@
   };
 
 
-  systemd.timers.update-flake = {
-    description = "Run update-flake service nightly";
+  systemd.timers.update-store = {
+    description = "Run update-store service nightly";
     wantedBy = [ "timers.target" ];
     timerConfig = {
       OnCalendar = "*-*-* 03:00:00"; # Every day at 03:00
