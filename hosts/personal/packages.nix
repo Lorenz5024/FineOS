@@ -12,6 +12,8 @@
     koboldcpp
     sillytavern
     veracrypt
+
+    chromium
   ];
 
 }
