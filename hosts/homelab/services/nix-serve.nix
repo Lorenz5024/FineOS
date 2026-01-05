@@ -46,7 +46,7 @@
     after = [ "update-flake.service" ];
     serviceConfig = {
       Type = "oneshot";
-      User = "root";
+      User = "lorenz";
       ExecStart = "${pkgs.writeShellScript "update-flake.sh" ''
         set -xeuf -o pipefail
         PATH="$PATH:${pkgs.nix}/bin:"
@@ -54,7 +54,7 @@
 
         cd ${userSettings.flakeDir}
 
-        nix build .\#nixosConfigurations.fineos.config.system.build.toplevel --out-link /var/lib/nix/prefetch-roots/fineos
+        nix build .\#nixosConfigurations.fineos.config.system.build.toplevel --out-link /home/lorenz/store/fineos
       ''}";
     };
   };
