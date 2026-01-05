@@ -13,15 +13,16 @@
 
   nix.settings.trusted-users = [ "root" ];
 
-  # Keep store up to date
-  systemd.services.prefetch-store = {
-    description = "Prefetch all store paths for FineOS Personal";
+
+  # Keep flake up to date
+  systemd.services.update-flake = {
+    description = "Update flake and push to repository";
     after = [ "network.target" ];
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
       Type = "oneshot";
-      User = "${userSettings.username}";
-      ExecStart = "${pkgs.writeShellScript "prefetch-store.sh" ''
+      User = "lorenz";
+      ExecStart = "${pkgs.writeShellScript "update-flake.sh" ''
         set -xeuf -o pipefail
         PATH="$PATH:${pkgs.git}/bin:${pkgs.nix}/bin:${pkgs.openssh}/bin"
         export PATH
@@ -33,14 +34,34 @@
         git add -A
         git commit -m "Auto update from homelab"
         git push
+      ''}";
+    };
+  };
+
+  # Keep store up to date
+  systemd.services.update-store = {
+    description = "Prefetch all store paths for FineOS Personal";
+    wantedBy = [ "multi-user.target" ];
+    requires = [ "update-flake.service" ];
+    after = [ "update-flake.service" ];
+    serviceConfig = {
+      Type = "oneshot";
+      User = "root";
+      ExecStart = "${pkgs.writeShellScript "update-flake.sh" ''
+        set -xeuf -o pipefail
+        PATH="$PATH:${pkgs.nix}/bin:"
+        export PATH
+
+        cd ${userSettings.flakeDir}
 
         nix build .\#nixosConfigurations.fineos.config.system.build.toplevel --out-link /var/lib/nix/prefetch-roots/fineos
       ''}";
     };
   };
 
-  systemd.timers.prefetch-store = {
-    description = "Run prefetch-store service nightly";
+
+  systemd.timers.update-flake = {
+    description = "Run update-flake service nightly";
     wantedBy = [ "timers.target" ];
     timerConfig = {
       OnCalendar = "*-*-* 03:00:00"; # Every day at 03:00
