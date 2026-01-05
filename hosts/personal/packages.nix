@@ -14,6 +14,7 @@
     veracrypt
 
     chromium
+    krita
   ];
 
 }
