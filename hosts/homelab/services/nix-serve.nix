@@ -23,7 +23,7 @@
       User = "${userSettings.username}";
       ExecStart = "${pkgs.writeShellScript "prefetch-store.sh" ''
         set -xeuf -o pipefail
-        PATH="$PATH:${pkgs.gitMinimal}/bin:${pkgs.nix}/bin"
+        PATH="$PATH:${pkgs.git}/bin:${pkgs.nix}/bin:${pkgs.openssh}/bin"
         export PATH
 
         cd ${userSettings.flakeDir}
@@ -34,7 +34,7 @@
         git commit -m "Auto update from homelab"
         git push
 
-        nix build .\#nixosConfigurations.fineos.config.system.build.toplevel --no-link
+        nix build .\#nixosConfigurations.fineos.config.system.build.toplevel --out-link /var/lib/nix/prefetch-roots/fineos
       ''}";
     };
   };
