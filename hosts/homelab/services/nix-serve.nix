@@ -42,6 +42,7 @@
   systemd.services.update-store = {
     description = "Prefetch all store paths for FineOS Personal";
     wantedBy = [ "multi-user.target" ];
+    requires = [ "update-flake.service" ];
     after = [ "update-flake.service" ];
     serviceConfig = {
       Type = "oneshot";
