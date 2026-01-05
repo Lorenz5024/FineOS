@@ -11,7 +11,7 @@
 
   networking.firewall.allowedTCPPorts = [ 5000 ];
 
-  nix.settings.trusted-users = [ "root" ];
+  nix.settings.trusted-users = [ "root" "lorenz" ];
 
 
   # Keep flake up to date
