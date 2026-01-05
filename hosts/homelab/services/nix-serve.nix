@@ -17,7 +17,7 @@
   # Keep flake up to date
   systemd.services.update-flake = {
     description = "Update flake and push to repository";
-    after = [ "network.target" ];
+    requires = [ "network.target" ];
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
       Type = "oneshot";
