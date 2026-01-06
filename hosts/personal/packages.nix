@@ -14,7 +14,7 @@
     veracrypt
 
     blender 
-    kritat 
+    krita
     chromium
   ];
 
