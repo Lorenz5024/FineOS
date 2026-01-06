@@ -12,10 +12,6 @@
     koboldcpp
     sillytavern
     veracrypt
-
-    blender 
-    krita
-    chromium
   ];
 
 }
