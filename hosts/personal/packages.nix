@@ -12,6 +12,10 @@
     koboldcpp
     sillytavern
     veracrypt
+
+    blender 
+    kritat 
+    chromium
   ];
 
 }
