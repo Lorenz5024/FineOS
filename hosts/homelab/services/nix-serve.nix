@@ -42,8 +42,6 @@
   systemd.services.update-store = {
     description = "Prefetch all store paths for FineOS Personal";
     wantedBy = [ "multi-user.target" ];
-    requires = [ "update-flake.service" ];
-    after = [ "update-flake.service" ];
     serviceConfig = {
       Type = "oneshot";
       User = "lorenz";
@@ -59,6 +57,14 @@
     };
   };
 
+  systemd.timers.update-flake = {
+    description = "Run update-flake service nightly";
+    wantedBy = [ "timers.target" ];
+    timerConfig = {
+      OnCalendar = "*-*-* 02:30:00"; # Every day at 03:00
+      Persistent = true;
+    };
+  };
 
   systemd.timers.update-store = {
     description = "Run update-store service nightly";
