@@ -54,7 +54,7 @@
 
         cd ${userSettings.flakeDir}
 
-        nix build .\#nixosConfigurations.fineos.config.system.build.toplevel --out-link /home/lorenz/store/fineos
+        nix build .\#nixosConfigurations.fineos.config.system.build.toplevel
       ''}";
     };
   };
