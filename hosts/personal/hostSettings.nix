@@ -8,7 +8,7 @@
   locale = "en_US.UTF-8";
 
   # The desktop environments to install. The first one is auto selected during login
-  desktops = [ "kde" "cosmic" ]; # example: [ "hyprland" "kde" ]
+  desktops = [ "cosmic" "kde" ]; # example: [ "hyprland" "kde" ]
 
   # Set to true/false depending on if the host is a laptop
   isLaptop = false;

@@ -61,4 +61,7 @@
   environment.sessionVariables = {
     WLR_RENDERER_ALLOW_HDR = "1";
   };
+
+  # For Sillytavern
+  networking.firewall.allowedUDPPorts = [ 8000 ];
 }
