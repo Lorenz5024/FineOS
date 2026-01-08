@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ./common-configuration.nix
     ./openvpn.nix
+    ./ai-roleplay.nix
 
     ./../../system/boot.nix
 
@@ -14,7 +15,6 @@
     ./../../system/services/tailscale.nix
 
     ./../../system/development/rust.nix
-
   ] ++ map (e: ./. + "/../../system/desktop/${e}/desktop.nix") hostSettings.desktops;
 
   networking.hostName = "fineos"; # Define your hostname.
@@ -61,8 +61,4 @@
   environment.sessionVariables = {
     WLR_RENDERER_ALLOW_HDR = "1";
   };
-
-  # For Sillytavern
-  networking.firewall.allowedTCPPorts = [ 8000 ];
-  networking.firewall.allowedUDPPorts = [ 8000 ];
 }
