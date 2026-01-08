@@ -64,4 +64,5 @@
 
   # For Sillytavern
   networking.firewall.allowedTCPPorts = [ 8000 ];
+  networking.firewall.allowedUDPPorts = [ 8000 ];
 }
