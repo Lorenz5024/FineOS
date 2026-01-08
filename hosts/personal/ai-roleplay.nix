@@ -3,10 +3,10 @@
 {
   environment.systemPackages = with pkgs; [
     koboldcpp
+    sillytavern
   ];
 
   services.sillytavern = {
-    enable = true;
     listen = true;
   };
 
