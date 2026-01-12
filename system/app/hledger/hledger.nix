@@ -21,7 +21,7 @@ in
   environment.systemPackages = [ pkgs.hledger ];
 
   environment.sessionVariables = {
-    LEDGER_FILE = "~/Finance/2025.journal";
+    LEDGER_FILE = "~/Finance/main.journal";
   };
 
   systemd.services.ledgerBackup = {
