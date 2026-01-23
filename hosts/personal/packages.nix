@@ -13,7 +13,7 @@
     sillytavern
     veracrypt
     xivlauncher   # Final Fantasy 14 launcher
-    solaar        # configure logitech mice
+    piper
   ];
 
 }
