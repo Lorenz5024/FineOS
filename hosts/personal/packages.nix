@@ -13,7 +13,6 @@
     sillytavern
     veracrypt
     xivlauncher   # Final Fantasy 14 launcher
-    piper
   ];
 
 }
