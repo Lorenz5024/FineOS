@@ -12,6 +12,7 @@
 
     # System
     brightnessctl			# brightness for laptop displays
+    jdk
 
   ];
 
