@@ -13,8 +13,6 @@
     ./../../system/app/hledger/hledger.nix
 
     ./../../system/services/tailscale.nix
-
-    ./../../system/development/rust.nix
   ] ++ map (e: ./. + "/../../system/desktop/${e}/desktop.nix") hostSettings.desktops;
 
   networking.hostName = "fineos"; # Define your hostname.
