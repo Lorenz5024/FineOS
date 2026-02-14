@@ -8,7 +8,7 @@
   locale = "en_US.UTF-8";
 
   # The desktop environment configuration to use 
-  desktops = [ "cosmic" "kde" ]; # example: [ "hyprland" "kde" ]
+  desktops = [ "cosmic" ]; # example: [ "hyprland" "kde" ]
 
   # Set to true/false depending on if the host is a laptop
   isLaptop = true;
