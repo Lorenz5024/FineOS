@@ -81,7 +81,7 @@
         action = "<cmd>b#<CR>";
       }
 
-      # For moving in insert mode
+      # During insert mode
       {
 	key = "<C-h>";			# Move cursor left, down, up, right
 	action = "<Left>";
@@ -111,6 +111,11 @@
 	key = "<C-a>";
 	action = "<ESC>^i";
 	mode = "i";
+      }
+      {
+        key = "<C-bs>";
+        action = "<C-w>";
+        mode = "i";
       }
 
       # neo-tree 
