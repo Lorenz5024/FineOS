@@ -12,7 +12,6 @@
     koboldcpp
     sillytavern
     veracrypt
-    qbittorrent
   ];
 
 }
