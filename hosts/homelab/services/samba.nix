@@ -55,6 +55,11 @@
   networking.firewall.allowedUDPPorts = [ 137 138];
 
   # make smb share discoverable
+  services.samba-wsdd = {
+    enable = true;
+    openFirewall = true;
+  };
+
   services.avahi = {
     enable = true;
 
