@@ -23,7 +23,6 @@
       Type = "oneshot";
       User = "lorenz";
       ExecStart = "${pkgs.writeShellScript "update-flake.sh" ''
-        set -xeuf -o pipefail
         PATH="$PATH:${pkgs.git}/bin:${pkgs.nix}/bin:${pkgs.openssh}/bin"
         export PATH
 
@@ -46,7 +45,6 @@
       Type = "oneshot";
       User = "lorenz";
       ExecStart = "${pkgs.writeShellScript "update-flake.sh" ''
-        set -xeuf -o pipefail
         PATH="$PATH:${pkgs.nix}/bin:"
         export PATH
 
