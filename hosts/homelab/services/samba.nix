@@ -53,4 +53,15 @@
 
   networking.firewall.allowedTCPPorts = [ 139 445];
   networking.firewall.allowedUDPPorts = [ 137 138];
+
+  # make smb share discoverable
+  services.avahi = {
+    enable = true;
+
+    publish.enable = true;
+    publish.userServices = true;
+
+    nssmdns4 = true;
+    openFirewall = true;
+  };
 }
