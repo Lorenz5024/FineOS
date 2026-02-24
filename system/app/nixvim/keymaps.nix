@@ -14,6 +14,13 @@
 	action = "<C-u>zz";
       }
 
+      # Copy to system clipboard
+      {
+        key = "<C-c>";
+        mode = "n";
+        action = ''"+y'';
+      }
+
       # Window management (or however this section should be called)
       {
 	key = "<C-h>";			# Move to window left, down, up, right
