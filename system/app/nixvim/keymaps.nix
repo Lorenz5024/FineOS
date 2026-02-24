@@ -141,13 +141,13 @@
         options.desc = "open lazygit";
       }
 
-      # # LSP
-      # {
-      #   key = "<leader>e";
-      #   mode = "n";
-      #   action = ":lua vim.diagnostic.open_float(0, {scope=\"line\"})<CR>";
-      #   options.desc = "show lsp error message";
-      # }
+      # Diagnostic
+      {
+        key = "<leader>e";
+        mode = "n";
+        action = ":lua vim.diagnostic.open_float(0, {scope=\"line\"})<CR>";
+        options.desc = "show lsp error message";
+      }
 
       # Obsidian
       {
