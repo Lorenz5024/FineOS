@@ -17,7 +17,7 @@
       # Copy to system clipboard
       {
         key = "<C-c>";
-        mode = "n";
+        mode = "v";
         action = ''"+y'';
       }
 
