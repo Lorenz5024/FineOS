@@ -29,14 +29,9 @@
       nixd.enable = true;
     };
 
-    # keymaps = [
-    #   {
-    #     key = "gd";
-    #     lspBufAction = "definition";
-    #   }
-    # ];
-
-    keymaps."gd".lspBufAction = "definition";
+    keymaps.lspBuf = {
+      "<leader>ca" = "code_action";
+    };
 
   };
 }
