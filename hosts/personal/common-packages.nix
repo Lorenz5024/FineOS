@@ -51,5 +51,7 @@
     # File manager
     yazi				# tui file manager
     xfce.thunar				# gui file manager
+
+    maptool
   ];
 }
