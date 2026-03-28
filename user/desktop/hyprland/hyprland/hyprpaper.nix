@@ -6,7 +6,7 @@
 
     settings = {
       ipc = "on";
-      splash = "false";
+      # splash = "false";
 
       preload = [ "${userSettings.flakeDir}/themes/wallpaper" ];
 

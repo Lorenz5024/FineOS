@@ -17,9 +17,6 @@
     speedcrunch     # calculator
     evince
 
-    # Development
-    # postman
-
     # Internet
     firefox
     vivaldi
@@ -31,11 +28,7 @@
     mpv
     picard			# audio tagger
     yt-dlp			# cli youtube downloader
-    # lollypop			# music player
-    # jellycli			# cli jellyfin client
-    # feishin			# gui jellyfin client
-    xfce.ristretto              # image viewer
-    # spot                        # gtk spotify client
+    ristretto              # image viewer
     spotify
 
     # Shell
@@ -44,13 +37,12 @@
     bat       # better cat
 
     # Other
-    # bitwarden
     proton-pass
     gnome-disk-utility
 
     # File manager
     yazi				# tui file manager
-    xfce.thunar				# gui file manager
+    thunar				# gui file manager
 
     maptool
   ];

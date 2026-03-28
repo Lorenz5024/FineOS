@@ -35,6 +35,8 @@
   xdg.userDirs = {
     enable = true;
 
+    setSessionVariables = false;
+
     documents = "/home/${userSettings.username}/Documents";
     download = "/home/${userSettings.username}/Downloads";
     music = "/home/${userSettings.username}/Music";

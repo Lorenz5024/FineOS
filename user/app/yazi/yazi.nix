@@ -10,6 +10,8 @@
   programs.yazi = {
     enable = true;
 
+    shellWrapperName = "y";
+
     settings =  {
       manager = {
         ratio          = [ 1 4 3 ];
