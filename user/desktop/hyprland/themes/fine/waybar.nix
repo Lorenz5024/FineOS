@@ -23,7 +23,7 @@ in
 
   wayland.windowManager.hyprland.settings = {
     layerrule = [
-      "blur, waybar"
+      "blur on, waybar"
     ];
   };
 
