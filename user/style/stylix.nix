@@ -5,5 +5,6 @@
     waybar.enable = false;
     hyprland.enable = false;
     hyprlock.enable = false;
+    zellij.enable = true;
   };
 }

@@ -1,7 +1,7 @@
 { pkgs, userSettings, ... }:
 
 let 
-  themePath = "./../../themes/"+userSettings.theme+".yaml";
+  themePath = "./../../themes/" + userSettings.theme + ".yaml";
 in
 {
   stylix = {
