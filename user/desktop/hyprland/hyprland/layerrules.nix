@@ -7,7 +7,7 @@
       "blur on, match:namespace logout_dialog"
 
       # rofi
-      "animation slide, rofi"
+      "animation slide, match:namespace rofi"
       "blur on, match:namespace rofi"
     ];
   };
