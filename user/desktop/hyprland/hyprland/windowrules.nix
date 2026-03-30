@@ -16,17 +16,17 @@
       "tag +utility, match:class org.pulseaudio.pavucontrol"
 
       # open on specific workspaces
-      "workspace 4 silent, tag:chat"
-      "workspace 6 silent, tag:gaming"
+      "workspace 4 silent, match:tag chat"
+      "workspace 6 silent, match:tag gaming"
 
       # floating windows
-      "float, tag:utility"
+      "float on, match:tag utility"
 
-      "float, match:class com.nextcloud.desktopclient.nextcloud"
-      "float, match:class wlogout"
-      "float, match:class yazi-scratchpad"
-      "float, match:class .blueman-manager-wrapped"
-      "float, match:class discor"
+      "float on, match:class com.nextcloud.desktopclient.nextcloud"
+      "float on, match:class wlogout"
+      "float on, match:class yazi-scratchpad"
+      "float on, match:class .blueman-manager-wrapped"
+      "float on, match:class discor"
 
       # transparency/opacity
       "opacity 1 override 0.95 override, class:^(kitty)$"
