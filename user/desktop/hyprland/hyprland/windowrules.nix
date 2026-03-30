@@ -29,14 +29,14 @@
       "float on, match:class discor"
 
       # transparency/opacity
-      "opacity 1 override 0.95 override, class:^(kitty)$"
+      "opacity 1 override 0.95 override, match:class kitty"
 
       # special workspaces
-      "workspace special:terminal, class kitty-scratchpad"
-      "workspace special:notes, class obsidian"
-      "workspace special:music, class spotify"
-      "workspace special:vault, class Proton Pass"
-      "workspace special:sound, class org.pulseaudio.pavucontrol"
+      "workspace special:terminal, match:class kitty-scratchpad"
+      "workspace special:notes, match:class obsidian"
+      "workspace special:music, match:class spotify"
+      "workspace special:vault, match:class Proton Pass"
+      "workspace special:sound, match:class org.pulseaudio.pavucontrol"
     ];
   };
 }
