@@ -4,11 +4,11 @@
   wayland.windowManager.hyprland.settings = {
     layerrule = [
       # wlogout
-      "blur on, logout_dialog"
+      "blur on, match:namespace logout_dialog"
 
       # rofi
       "animation slide, rofi"
-      "blur on, rofi"
+      "blur on, match:namespace rofi"
     ];
   };
 }
