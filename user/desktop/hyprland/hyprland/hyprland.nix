@@ -75,13 +75,6 @@
       "pypr"
       "wl-paste --type text --watch cliphist store"
       "wl-paste --type image --watch cliphist store"
-
-      # special workspaces
-      "kitty --class kitty-scratchpad"
-      "proton-pass"
-      "spotify"
-      "obsidian"
-      "pavucontrol"
     ];
   };
 
