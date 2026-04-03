@@ -6,7 +6,7 @@
 
     ./../extras/eza/eza.nix
     ./../extras/fzf/fzf.nix
-    # ./../extras/zellij/zellij.nix
+    ./../extras/zellij/zellij.nix
   ];
 
   programs.zsh = {
