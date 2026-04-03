@@ -6,6 +6,6 @@
     hyprland.enable = false;
     hyprlock.enable = false;
 
-    zellij.colors.enable = true;
+    zellij.enable = false;
   };
 }
