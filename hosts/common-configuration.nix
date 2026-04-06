@@ -4,14 +4,14 @@
   imports = [
     ./minimal-config.nix
 
-    ./../../system/boot.nix
-    ./../../system/greetd.nix
-    ./../../system/keyring.nix
-    # ./../../system/sound.nix
+    ./../system/boot.nix
+    ./../system/greetd.nix
+    ./../system/keyring.nix
+    # ./../system/sound.nix
 
-    ./../../system/style/stylix.nix
-    ./../../system/app/thunar.nix
-    ./../../system/app/nixvim/nixvim.nix
+    ./../system/style/stylix.nix
+    ./../system/app/thunar.nix
+    ./../system/app/nixvim/nixvim.nix
   ];
 
   # Garbage collection

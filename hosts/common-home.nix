@@ -8,17 +8,17 @@ in
   imports = [
     ./common-packages.nix
 
-    ./../../user/app/kitty/kitty.nix
-    ./../../user/app/yazi/yazi.nix
-    ./../../user/app/zathura/zathura.nix
-    ./../../user/app/lazygit/lazygit.nix
-    ./../../user/app/spotify-player/spotify-player.nix
+    ./../user/app/kitty/kitty.nix
+    ./../user/app/yazi/yazi.nix
+    ./../user/app/zathura/zathura.nix
+    ./../user/app/lazygit/lazygit.nix
+    ./../user/app/spotify-player/spotify-player.nix
 
-    ./../../user/shell/zsh/zsh.nix
+    ./../user/shell/zsh/zsh.nix
 
-    ./../../user/style/stylix.nix
+    ./../user/style/stylix.nix
 
-    ./../../user/config/config.nix
+    ./../user/config/config.nix
   ];
 
   home.username = userSettings.username;
