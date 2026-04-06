@@ -9,7 +9,7 @@
     streamcontroller
     calibre
     veracrypt
-    # r2modman  # mod manager
+    r2modman  # mod manager
   ];
 
 }
