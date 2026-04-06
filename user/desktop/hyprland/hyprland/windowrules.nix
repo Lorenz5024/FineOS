@@ -4,7 +4,7 @@
   wayland.windowManager.hyprland.settings = {
     windowrule = [
       # tags  (doesn't work in current version. hyprctl version doesn't work either, so i have no idea what's wrong, considering I have the flake version installed, which should be the newest one unless I am mistaken)
-      "tag +chat, match:class discord"
+      "tag +chat, match:class com.discordapp.Discord"
       "tag +music, match:class feishin"
       "tag +music, match:class spotify"
       "tag +gaming, match:class steam"
@@ -19,7 +19,7 @@
       # open on specific workspaces
       "workspace 2, match:tag browser"
       "workspace 4 silent, match:tag chat"
-      "workspace 6 silent, match:tag gaming"
+      "workspace 5 silent, match:tag gaming"
 
       # floating windows
       "float on, match:tag utility"
