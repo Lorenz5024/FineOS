@@ -2,7 +2,7 @@
 
 {
   imports = [ 
-    ./../personal/common-home.nix
+    ./../common-home.nix
     ./packages.nix 
   ] ++ map (e: ./. + "/../../user/desktop/${e}/desktop.nix") hostSettings.desktops;
 

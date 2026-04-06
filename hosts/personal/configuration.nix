@@ -3,7 +3,7 @@
 {
   imports = [ 
     ./hardware-configuration.nix
-    ./common-configuration.nix
+    ./../common-configuration.nix
     ./openvpn.nix
     ./ai-roleplay.nix
 

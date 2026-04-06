@@ -7,11 +7,9 @@
 {
   home.packages = with pkgs; [
     streamcontroller
-    # modrinth-app
     calibre
-    koboldcpp
-    sillytavern
     veracrypt
+    r2modman  # mod manager
   ];
 
 }

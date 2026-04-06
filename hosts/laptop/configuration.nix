@@ -5,7 +5,7 @@
     [
       ./hardware-configuration.nix
 
-      ./../personal/common-configuration.nix
+      ./../common-configuration.nix
 
       ./../../system/services/ssh/ssh.nix
       ./../../system/services/tailscale.nix

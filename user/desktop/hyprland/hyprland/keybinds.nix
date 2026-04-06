@@ -1,4 +1,4 @@
-{ lib, userSettings, ... }:
+{ userSettings, ... }:
 
 {
   wayland.windowManager.hyprland.settings =
@@ -14,13 +14,11 @@
     "$scriptsDir"   = userSettings.flakeDir + "/user/desktop/hyprland/scripts";
 
     bind = [
-      # Edit dotfiles
-      "$mod_CTRL, SPACE, exec, $terminal -d ${userSettings.flakeDir} -e $editor"
-
       # Compositor commands
       "$mod_CTRL_ALT, F4, exec, pkill Hyprland"
       "$mod, Q, killactive"
-      "$mod, F, fullscreen"
+      "$mod, F, fullscreen, 0"
+      "$mod, M, fullscreen, 1"
       "$mod_CTRL, F, togglefloating"
       "$mod, G, togglegroup"
       "$mod_CTRL, G, changegroupactive, f"

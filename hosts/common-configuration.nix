@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./../minimal-config.nix
+    ./minimal-config.nix
 
     ./../../system/boot.nix
     ./../../system/greetd.nix

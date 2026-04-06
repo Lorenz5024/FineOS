@@ -14,8 +14,10 @@
       "tag +utility, match:class pavucontro"
       "tag +utility, match:class com.nextcloud.desktopclient.nextcloud"
       "tag +utility, match:class org.pulseaudio.pavucontrol"
+      "tag +browser, match:class vivaldi-stable"
 
       # open on specific workspaces
+      "workspace 2, match:tag browser"
       "workspace 4 silent, match:tag chat"
       "workspace 6 silent, match:tag gaming"
 
