@@ -61,6 +61,7 @@
       "$mod_ALT, B, exec, hyprctl dispatch togglespecialworkspace vault"
       "$mod_ALT, M, exec, hyprctl dispatch togglespecialworkspace music"
       "$mod_ALT, S, exec, hyprctl dispatch togglespecialworkspace sound"
+      "$mod_ALT, T, exec, hyprctl dispatch togglespecialworkspace thunar"
 
       # Move focus
       "$mod, H, movefocus, l"
