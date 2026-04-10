@@ -9,7 +9,7 @@
       "tag +music, match:class spotify"
       "tag +gamelauncher, match:class steam"
       "tag +gamelauncher, match:class heroic"
-      "tag +game, match: class steam_app_\\d+$"
+      "tag +game, match:class steam_app_\\d+$"
       "tag +utility, match:class org.gnome.World.Iota"
       "tag +utility, match:class org.speedcrunc"
       "tag +utility, match:class pavucontro"
