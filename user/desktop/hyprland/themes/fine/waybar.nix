@@ -10,6 +10,7 @@ let
   module-hover = ''
     border-radius: 8px;
     background: @hover;
+    color: @main;
     '';
   module-margin = ''
     margin: 0.3em;
