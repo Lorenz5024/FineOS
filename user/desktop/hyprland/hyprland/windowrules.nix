@@ -9,6 +9,7 @@
       "tag +music, match:class spotify"
       "tag +gaming, match:class steam"
       "tag +gaming, match:class heroic"
+      "tag +game, match: class steam_app\\d+$"
       "tag +utility, match:class org.gnome.World.Iota"
       "tag +utility, match:class org.speedcrunc"
       "tag +utility, match:class pavucontro"
