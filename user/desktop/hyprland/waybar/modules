@@ -226,7 +226,7 @@
     },
     "tooltip-format-activated": "Idle-inhibitor: activated",
     "tooltip-format-deactivated": "Idle-inhibitor: deactivated",
-    "start-activated": true,
+    "start-activated": false,
 },
     
 "memory": {
