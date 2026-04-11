@@ -7,6 +7,7 @@
     ./windowrules.nix
     ./layerrules.nix
     ./input.nix
+    ./startup.nix
 
     ./hyprpaper.nix
     ./hyprlock.nix
