@@ -33,7 +33,6 @@ in
       # "custom/icon"
       "hyprland/workspaces#numbers"
       "hyprland/window"
-      "custom/separator_pipe"
       "custom/fine_radio"
       "mpris"
     ];
