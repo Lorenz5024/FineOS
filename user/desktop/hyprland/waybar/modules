@@ -48,7 +48,8 @@
     "offscreen-css-text": "(inactive)",
     "rewrite": {
       "firefox - (.*)": "󰈹 Firefox",
-      "kitty - (.*)": "> $1",
+      "kitty - (.*)": "> Kitty",
+      "vivaldi(.*)": " Vivaldi",
     },
 },
 
