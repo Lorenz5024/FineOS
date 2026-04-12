@@ -15,6 +15,9 @@
         name = "fine-radio";
 
         text = ''
+          # tmp file to store radio status
+          STATE_FILE="/tmp/fine_radio_status"
+
           # add more args here according to preference
           ARGS="--volume=60"
 
@@ -40,20 +43,19 @@
                           1)
                                   notification "Lofi Girl";
                       URL="https://play.streamafrica.net/lofiradio"
-                      FINE_RADIO_STATION="Lofi Girl"
+                      STATION="Lofi Girl"
                                   ;;
                           2)
                                   notification "Soundportal";
                       URL="https://radioosterreich24.at/radios-soundportal-267"
-                      FINE_RADIO_STATION="Soundportal"
+                      STATION="Soundportal"
                                   ;;
                   esac
               # run mpv with args and selected url
               # added title arg to make sure the pkill command kills only this instance of mpv
               mpv $ARGS --title="radio-mpv" "$URL"
 
-              # set environment variable
-              export FINE_RADIO_STATION
+              echo "$STATION" > "$STATE_FILE"
           }
 
           # Check if rofi is already running
@@ -63,7 +65,7 @@
           fi
 
           if pkill -f radio-mpv; then 
-            export FINE_RADIO_STATION="stopped"
+            rm -f "$STATE_FILE"
           else 
             main 
           fi
