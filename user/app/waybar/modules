@@ -445,7 +445,3 @@
     "exec-if": "ping wttr.in -c1",
     "tooltip" : true,
 },
-  
-}
-  
-  
