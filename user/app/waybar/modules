@@ -50,7 +50,7 @@
       "firefox - (.*)": "󰈹 Firefox",
       "kitty - (.*)": "> Kitty",
       "vivaldi(.*)": " Vivaldi",
-      "com.discordapp.Discord(.*)": " Discord",
+      "com.discordapp.Discord(.*)": "  Discord",
     },
 },
 
