@@ -195,13 +195,9 @@ in
       color: @workspaces-empty;
     }
 
-    #workspaces button.visible {
-      color: @workspaces-visible;
-    }
-
     #workspaces button.active {
       color: @workspaces-active;
-      border-bottom: 2px solid @module-border;
+      border-bottom: 2px solid @workspaces-active;
     } 
 
     #window {
