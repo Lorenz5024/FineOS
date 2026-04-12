@@ -26,11 +26,7 @@
 
           menu(){
                   printf "1. Lofi Girl\n"
-                  printf "2. Chillhop\n"
-                  printf "3. Box Lofi\n"
-                  printf "4. The Bootleg Boy\n"
-                  printf "5. Radio Spinner\n"
-                  printf "6. SmoothChill"
+                  printf "2. Soundportal\n"
           }
 
           main() {
@@ -38,28 +34,12 @@
 
                   case $choice in
                           1)
-                                  notification "Lofi Girl ☕️🎶";
+                                  notification "Lofi Girl";
                       URL="https://play.streamafrica.net/lofiradio"
                                   ;;
                           2)
-                                  notification "Chillhop ☕️🎶";
-                      URL="http://stream.zeno.fm/fyn8eh3h5f8uv"
-                                  ;;
-                          3)
-                                  notification "Box Lofi ☕️🎶";
-                      URL="http://stream.zeno.fm/f3wvbbqmdg8uv"
-                                  ;;
-                          4)
-                                  notification "The Bootleg Boy ☕️🎶";
-                      URL="http://stream.zeno.fm/0r0xa792kwzuv"
-                                  ;;
-                          5)
-                                  notification "Radio Spinner ☕️🎶";
-                      URL="https://live.radiospinner.com/lofi-hip-hop-64"
-                                  ;;
-                          6)
-                                  notification "SmoothChill ☕️🎶";
-                      URL="https://media-ssl.musicradio.com/SmoothChill"
+                                  notification "Soundportal";
+                      URL="https://radioosterreich24.at/radios-soundportal-267"
                                   ;;
                   esac
               # run mpv with args and selected url
