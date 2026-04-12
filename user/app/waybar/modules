@@ -23,7 +23,7 @@
 },
 
 "hyprland/workspaces#numbers": {
-    "show-special": false,
+    "show-special": true,
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
