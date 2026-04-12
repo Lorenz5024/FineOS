@@ -8,6 +8,9 @@
 
       # no border when single window 
       "w[1]s[false], border:false"
+
+      # no border and gaps when maximized
+      "f[1]s[false], border:false, gapsout:0"
     ];
   };
 }
