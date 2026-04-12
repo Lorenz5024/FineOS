@@ -16,8 +16,8 @@ let
     margin: 0.3em;
     '';
   module-padding-lr = ''
-    padding-left: 0.3em;
-    padding-right: 0.3em;
+    padding-left: 1em;
+    padding-right: 1em;
     '';
 in
 {
@@ -229,6 +229,11 @@ in
     #idle_inhibitor:hover {
       ${module-margin}
       ${module-hover}
+    }
+
+    #mpris {
+      ${module-margin}
+      ${module-padding-lr}
     }
   '';
 }
