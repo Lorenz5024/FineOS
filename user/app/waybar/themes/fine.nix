@@ -101,6 +101,8 @@ in
 
     #custom-fine_radio {
       ${module-margin}
+      padding-left: 1em;
+      paddin-right: 1em;
     }
 
     #group-hardware {
