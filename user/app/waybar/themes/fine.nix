@@ -78,7 +78,7 @@ in
     @define-color module-border           #FFFFFF;
     @define-color workspaces-background   #FFFFFF;
     @define-color workspaces-active       #FF0000;
-    @define-color workspaces-empty        ${color5};
+    @define-color workspaces-empty        #${color5};
     @define-color workspaces-visible      #0000FF;
     @define-color window-text             #FFFFFF;
     @define-color language                #FFFFFF;
