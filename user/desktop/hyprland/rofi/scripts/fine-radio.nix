@@ -51,11 +51,14 @@
                       STATION="Soundportal"
                                   ;;
                   esac
+
+              # save station in temp file
+              echo "$STATION" > "$STATE_FILE"
+
               # run mpv with args and selected url
               # added title arg to make sure the pkill command kills only this instance of mpv
               mpv $ARGS --title="radio-mpv" "$URL"
 
-              echo "$STATION" > "$STATE_FILE"
           }
 
           # Check if rofi is already running
