@@ -2,7 +2,7 @@
 
 {
 
-  imports = [ (./.. + "/waybar/themes" + ( "/" + userSettings.waybarStyle) + ".nix") ];
+  imports = [ (./. + "/themes" + ( "/" + userSettings.waybarStyle) + ".nix") ];
 
   programs.waybar = {
     enable = true;
