@@ -5,6 +5,10 @@
     pkgs.fine-radio
   ];
 
+  home.sessionVariables = {
+    FINE_RADIO = "stopped";
+  };
+
   nixpkgs.overlays = [
     (self: super: {
       fine-radio = pkgs.writeShellApplication {
@@ -36,15 +40,20 @@
                           1)
                                   notification "Lofi Girl";
                       URL="https://play.streamafrica.net/lofiradio"
+                      STATION="Lofi Girl"
                                   ;;
                           2)
                                   notification "Soundportal";
                       URL="https://radioosterreich24.at/radios-soundportal-267"
+                      STATION="Soundportal"
                                   ;;
                   esac
               # run mpv with args and selected url
               # added title arg to make sure the pkill command kills only this instance of mpv
               mpv $ARGS --title="radio-mpv" "$URL"
+
+              # set environment variable
+              export STATION
           }
 
           # Check if rofi is already running
@@ -53,7 +62,9 @@
             exit 0
           fi
 
-          pkill -f radio-mpv || main
+          STATION="stopped"
+
+          (pkill -f radio-mpv && export STATION) || main
         '';
 
       };

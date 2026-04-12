@@ -65,6 +65,11 @@
   "on-click": "pkill rofi || rofi -show drun"
 },
 
+// SEPARATOR
+"custom/separator_pipe": {
+  "format": "|",
+}
+
 // POWER MENU 
 "custom/power": {
     "format": "⏻ ",

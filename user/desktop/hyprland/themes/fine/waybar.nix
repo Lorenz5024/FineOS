@@ -30,9 +30,10 @@ in
 
   programs.waybar.settings.mainBar = {
     modules-left = [
-      "custom/icon"
+      # "custom/icon"
       "hyprland/workspaces#numbers"
       "hyprland/window"
+      "custom/separator_pipe"
     ];
 
     modules-center = [
