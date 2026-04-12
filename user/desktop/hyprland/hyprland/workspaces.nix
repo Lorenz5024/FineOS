@@ -14,7 +14,7 @@
 
       # keep special workspaces alive always
       "music, persistent:true"
-      "terminal, persistent:true, on-created-empty:kitty"
+      "terminal, on-created-empty:kitty"
       "notes, persistent:true"
       "vault, persistent:true"
       "files, persistent:true"
