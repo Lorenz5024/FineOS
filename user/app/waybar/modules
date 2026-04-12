@@ -72,7 +72,7 @@
 
 // RADIO
 "custom/fine_radio": {
-  format: "fine-radio-status",
+  "exec": "fine-radio-status",
   "interval": 2,
 },
 
