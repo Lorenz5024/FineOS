@@ -60,7 +60,7 @@ in
     @define-color text                    #FFFFFF;
     @define-color module-border           #FFFFFF;
     @define-color workspaces-background   #FFFFFF;
-    @define-color workspaces-active       #FFFFFF;
+    @define-color workspaces-active       #FF0000;
     @define-color workspaces-empty        #FFFFFF;
     @define-color workspaces-visible      #FFFFFF;
     @define-color window-text             #FFFFFF;
