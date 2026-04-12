@@ -42,6 +42,7 @@
       "$mod, Y, exec, $terminal --class yazi -e yazi "
       "$mod, M, exec, $musicPlayer"
       "$mod, B, exec, $browser"
+      "$mod, S, exec, pavucontrol"
 
       # rofi
       "$mod, SPACE, exec, pkill rofi || rofi -show drun"	# App launcher
