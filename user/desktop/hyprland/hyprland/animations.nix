@@ -12,7 +12,7 @@
       "windows, 1, 4, overshot, slide"
       "windowsMove, 1, 4, default"
 
-      "specialWorkspace, 1, 4, default, fade"
+      "specialWorkspace, 1, 8, default, fade"
     ];
   };
 }
