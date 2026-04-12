@@ -20,9 +20,6 @@
     "persistent-workspaces": {
       "*": [ 1, 2, 3, 4, 5 ],
     },
-    "ignore-workspaces": [
-      "*scratch*",
-    ],
 },
 
 "hyprland/workspaces#numbers": {
@@ -34,10 +31,6 @@
     "sort-by-number": true,
     "persistent-workspaces": {
       "*": [ 1, 2, 3, 4, 5 ],
-    },
-    "ignore-workspaces": [
-      "*scratch*",
-    ],
 },
 
 "hyprland/window": {
@@ -73,7 +66,7 @@
 
 // RADIO
 "custom/fine_radio": {
-  "format": "Radio: $1",
+  "format": "Radio: {}",
   "exec": "fine-radio-status",
   "interval": 2,
 },
