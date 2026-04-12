@@ -32,7 +32,7 @@ in
     modules-left = [
       # "custom/icon"
       "hyprland/workspaces#numbers"
-      "hyprland/window"
+      # "hyprland/window"
       "custom/fine_radio"
       "mpris"
     ];

@@ -95,7 +95,7 @@
 "mpris": {
 	"interval": 1,
 	"format": "  |  {player_icon}  {title} - {artist}",
-	"format-paused": "{status_icon}  {title} - {artist}",
+	"format-paused": "  |  {status_icon}  {title} - {artist}",
 	"on-click-middle": "playerctl play-pause",
 	"on-click": "playerctl previous",
 	"on-click-right": "playerctl next",
