@@ -40,32 +40,26 @@
                           1)
                                   notification "Lofi Girl ☕️🎶";
                       URL="https://play.streamafrica.net/lofiradio"
-                                  return
                                   ;;
                           2)
                                   notification "Chillhop ☕️🎶";
                       URL="http://stream.zeno.fm/fyn8eh3h5f8uv"
-                                  return
                                   ;;
                           3)
                                   notification "Box Lofi ☕️🎶";
                       URL="http://stream.zeno.fm/f3wvbbqmdg8uv"
-                                  return
                                   ;;
                           4)
                                   notification "The Bootleg Boy ☕️🎶";
                       URL="http://stream.zeno.fm/0r0xa792kwzuv"
-                                  return
                                   ;;
                           5)
                                   notification "Radio Spinner ☕️🎶";
                       URL="https://live.radiospinner.com/lofi-hip-hop-64"
-                                  return
                                   ;;
                           6)
                                   notification "SmoothChill ☕️🎶";
                       URL="https://media-ssl.musicradio.com/SmoothChill"
-                                  return
                                   ;;
                   esac
               # run mpv with args and selected url
