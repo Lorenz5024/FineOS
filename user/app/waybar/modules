@@ -70,6 +70,12 @@
   "format": "|",
 },
 
+// RADIO
+"custom/fine_radio": {
+  format: "fine-radio-status",
+  "interval": 2,
+},
+
 // POWER MENU 
 "custom/power": {
     "format": "⏻ ",

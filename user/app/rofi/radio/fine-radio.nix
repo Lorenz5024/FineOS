@@ -3,13 +3,11 @@
 {
   home.packages = [
     pkgs.fine-radio
+    pkgs.fine-radio-status
   ];
 
-  home.sessionVariables = {
-    FINE_RADIO = "stopped";
-  };
-
   nixpkgs.overlays = [
+    # radio
     (self: super: {
       fine-radio = pkgs.writeShellApplication {
         name = "fine-radio";
@@ -72,6 +70,25 @@
           else 
             main 
           fi
+        '';
+
+      };
+    })
+
+    # radio status
+    (self: super: {
+      fine-radio-status = pkgs.writeShellApplication {
+        name = "fine-radio-status";
+
+        text = ''
+	  STATE_FILE="/tmp/fine_radio_status"
+
+	  if [ -f "$STATE_FILE" ]; then 
+	    station=$(cat "$STATE_FILE")
+	    echo "$station"
+	  else
+	    echo ""
+	  fi
         '';
 
       };
