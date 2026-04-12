@@ -61,8 +61,8 @@ in
     @define-color module-border           #FFFFFF;
     @define-color workspaces-background   #FFFFFF;
     @define-color workspaces-active       #FF0000;
-    @define-color workspaces-empty        #FFFFFF;
-    @define-color workspaces-visible      #FFFFFF;
+    @define-color workspaces-empty        #00FF00;
+    @define-color workspaces-visible      #0000FF;
     @define-color window-text             #FFFFFF;
     @define-color language                #FFFFFF;
     @define-color pulseaudio              #FFFFFF;
