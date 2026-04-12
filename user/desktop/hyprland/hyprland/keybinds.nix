@@ -76,7 +76,7 @@
       "$mod_SHIFT, L, movewindow, r"
 
       # Toggle split direction in dwindle layout
-      "$mod, S, togglesplit"
+      "$mod, O, layoutmsg, togglesplit"
 
       # Media control
       ", xf86audiomute, exec, amixer set Master toggle"
