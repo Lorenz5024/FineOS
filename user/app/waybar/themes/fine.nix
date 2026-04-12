@@ -99,6 +99,10 @@ in
       ${module-hover}
     }
 
+    #custom-fine_radio {
+      ${module-margin}
+    }
+
     #group-hardware {
       ${module-border}
     }

@@ -85,7 +85,7 @@
 
 	  if [ -f "$STATE_FILE" ]; then 
 	    station=$(cat "$STATE_FILE")
-	    echo "$station"
+	    echo "Now playing: $station"
 	  else
 	    echo ""
 	  fi
