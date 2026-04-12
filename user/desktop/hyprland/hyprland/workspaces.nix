@@ -4,7 +4,7 @@
   wayland.windowManager.hyprland.settings = {
     workspace = [
       # extra gaps on special workspaces
-      "s[true], gapsout:256"
+      "s[true], gapsout:200, animations:fade"
     ];
   };
 }
