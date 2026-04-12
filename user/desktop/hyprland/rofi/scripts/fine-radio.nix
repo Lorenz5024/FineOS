@@ -40,12 +40,12 @@
                           1)
                                   notification "Lofi Girl";
                       URL="https://play.streamafrica.net/lofiradio"
-                      STATION="Lofi Girl"
+                      FINE_RADIO_STATION="Lofi Girl"
                                   ;;
                           2)
                                   notification "Soundportal";
                       URL="https://radioosterreich24.at/radios-soundportal-267"
-                      STATION="Soundportal"
+                      FINE_RADIO_STATION="Soundportal"
                                   ;;
                   esac
               # run mpv with args and selected url
@@ -53,7 +53,7 @@
               mpv $ARGS --title="radio-mpv" "$URL"
 
               # set environment variable
-              export STATION
+              export FINE_RADIO_STATION
           }
 
           # Check if rofi is already running
@@ -62,9 +62,11 @@
             exit 0
           fi
 
-          STATION="stopped"
-
-          (pkill -f radio-mpv && export STATION) || main
+          if pkill -f radio-mpv; then 
+            export FINE_RADIO_STATION="stopped"
+          else 
+            main 
+          fi
         '';
 
       };
