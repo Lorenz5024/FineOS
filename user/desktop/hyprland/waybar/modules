@@ -68,7 +68,7 @@
 // SEPARATOR
 "custom/separator_pipe": {
   "format": "|",
-}
+},
 
 // POWER MENU 
 "custom/power": {
