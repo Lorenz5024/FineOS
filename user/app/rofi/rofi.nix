@@ -5,7 +5,7 @@
     ./themes/theme-main.nix
     ./themes/theme-wallpaperpicker.nix
 
-    ./scripts/fine-radio.nix
+    ./radio/fine-radio.nix
     ./scripts/fine-wallpaper.nix
   ];
 
