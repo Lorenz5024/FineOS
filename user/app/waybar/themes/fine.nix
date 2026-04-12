@@ -101,8 +101,6 @@ in
 
     #custom-fine_radio {
       ${module-margin}
-      padding-left: 1em;
-      padding-right: 1em;
     }
 
     #group-hardware {
@@ -232,7 +230,6 @@ in
 
     #mpris {
       ${module-margin}
-      ${module-padding-lr}
     }
   '';
 }
