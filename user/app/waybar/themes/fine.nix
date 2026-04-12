@@ -1,4 +1,4 @@
-{  hostSettings, ... }:
+{  config, hostSettings, ... }:
 
 let
   module-border-radius = "8px";
@@ -19,6 +19,23 @@ let
     padding-left: 1em;
     padding-right: 1em;
     '';
+
+  color0 = "rgb(${config.lib.stylix.colors.base00})";
+  color1 = "rgb(${config.lib.stylix.colors.base01})";
+  color2 = "rgb(${config.lib.stylix.colors.base02})";
+  color3 = "rgb(${config.lib.stylix.colors.base03})";
+  color4 = "rgb(${config.lib.stylix.colors.base04})";
+  color5 = "rgb(${config.lib.stylix.colors.base05})";
+  color6 = "rgb(${config.lib.stylix.colors.base06})";
+  color7 = "rgb(${config.lib.stylix.colors.base07})";
+  color8 = "rgb(${config.lib.stylix.colors.base08})";
+  color9 = "rgb(${config.lib.stylix.colors.base09})";
+  color10 = "rgb(${config.lib.stylix.colors.base0A})";
+  color11 = "rgb(${config.lib.stylix.colors.base0B})";
+  color12 = "rgb(${config.lib.stylix.colors.base0C})";
+  color13 = "rgb(${config.lib.stylix.colors.base0D})";
+  color14 = "rgb(${config.lib.stylix.colors.base0E})";
+  color15 = "rgb(${config.lib.stylix.colors.base0F})";
 in
 {
 
@@ -61,7 +78,7 @@ in
     @define-color module-border           #FFFFFF;
     @define-color workspaces-background   #FFFFFF;
     @define-color workspaces-active       #FF0000;
-    @define-color workspaces-empty        #00FF00;
+    @define-color workspaces-empty        ${color5};
     @define-color workspaces-visible      #0000FF;
     @define-color window-text             #FFFFFF;
     @define-color language                #FFFFFF;
