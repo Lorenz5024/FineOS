@@ -35,6 +35,7 @@ in
       "hyprland/window"
       "custom/separator_pipe"
       "custom/fine_radio"
+      "mpris"
     ];
 
     modules-center = [
