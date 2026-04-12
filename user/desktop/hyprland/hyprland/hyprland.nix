@@ -8,6 +8,7 @@
     ./layerrules.nix
     ./input.nix
     ./startup.nix
+    ./workspaces.nix
 
     ./hyprpaper.nix
     ./hyprlock.nix
