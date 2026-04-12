@@ -39,7 +39,9 @@
       "workspace special:notes, match:class obsidian"
       "workspace special:music, match:class spotify"
       "workspace special:vault, match:class Proton Pass"
-      "size 400 400, match:class org.pulseaudio.pavucontrol"
+
+      # sizes
+      "size 800 800, match:class org.pulseaudio.pavucontrol"
 
       # games
       "tag +game, match:class Slay the Spire 2"
