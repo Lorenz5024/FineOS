@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports = [
@@ -13,10 +13,6 @@
     ./hyprlock.nix
     ./hypridle.nix
   ];
-
-  # home.file = {
-  #   ".config/hypr/pyprland.toml".source = ./plugins/pyprland.toml;
-  # };
 
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
@@ -64,20 +60,9 @@
       initial_workspace_tracking = 2;
     };
 
-    exec-once = [
-      "waybar"        
-      "swaync"        
-
-      "hyprpaper"
-      # "hypridle"
-      "thunar --daemon"
-      "nm-applet"
-      "blueman-applet"
-      "pypr"
-      "wl-paste --type text --watch cliphist store"
-      "wl-paste --type image --watch cliphist store"
-    ];
   };
+
+  home.packages = [ pkgs.hyprshutdown ];
 
 
 }
