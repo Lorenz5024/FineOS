@@ -60,7 +60,7 @@
       "$mod_ALT, N, exec, hyprctl dispatch togglespecialworkspace notes"
       "$mod_ALT, B, exec, hyprctl dispatch togglespecialworkspace vault"
       "$mod_ALT, M, exec, hyprctl dispatch togglespecialworkspace music"
-      "$mod_ALT, T, exec, hyprctl dispatch togglespecialworkspace files"
+      "$mod_ALT, F, exec, hyprctl dispatch togglespecialworkspace files"
 
       # Move focus
       "$mod, H, movefocus, l"
