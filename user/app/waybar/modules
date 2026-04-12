@@ -49,8 +49,8 @@
     "rewrite": {
       "firefox - (.*)": "󰈹 Firefox",
       "kitty - (.*)": "> Kitty",
-      "vivaldi(.*)": " Vivaldi",
-      "org.discordapp.Discord(.*)": " Discord",
+      "vivaldi(.*)": " Vivaldi",
+      "com.discordapp.Discord(.*)": " Discord",
     },
 },
 
