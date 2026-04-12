@@ -41,7 +41,7 @@
       "workspace special:vault, match:class Proton Pass"
 
       # sizes
-      "size 800 800, match:class org.pulseaudio.pavucontrol"
+      "size 800 600, match:class org.pulseaudio.pavucontrol"
 
       # games
       "tag +game, match:class Slay the Spire 2"
