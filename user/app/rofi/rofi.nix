@@ -6,7 +6,7 @@
     ./themes/theme-wallpaperpicker.nix
 
     ./radio/fine-radio.nix
-    ./scripts/fine-wallpaper.nix
+    ./hyprland_wallpaper/hyprland-wallpaper.nix
   ];
 
   home.file = {
