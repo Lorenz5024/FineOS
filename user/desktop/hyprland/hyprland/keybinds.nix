@@ -90,7 +90,7 @@
       ", xf86AudioPrev, exec, playerctl previous"
       "CTRL, xf86AudioNext, exec, playerctl position 10+"
       "CTRL, xf86AudioPrev, exec, playerctl position 10-"
-      "$mod_CTRL, V, exec, fine-cycle-audio"
+      "$mod_CTRL, V, exec, fine-cycle-audio"  # taken from windows, but I'm already used to it'
 
       # Switch workspaces with mod + [0-9]
       "$mod, 1, workspace, 1"
