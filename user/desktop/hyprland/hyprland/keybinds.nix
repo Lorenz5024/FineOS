@@ -103,6 +103,11 @@
       "$mod, 9, workspace, 9"
       "$mod, 0, workspace, 10"
 
+      "$mod, rightarrow, workspace, +1"
+      "$mod, leftarrow, workspace, -1"
+
+
+
       # Move active window to a workspace with mod + SHIFT + [0-9]
       "$mod SHIFT, 1, movetoworkspace, 1"
       "$mod SHIFT, 2, movetoworkspace, 2"
