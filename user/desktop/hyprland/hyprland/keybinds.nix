@@ -103,8 +103,8 @@
       "$mod, 9, workspace, 9"
       "$mod, 0, workspace, 10"
 
-      "$mod, rightarrow, workspace, +1"
-      "$mod, leftarrow, workspace, -1"
+      "$mod, right, workspace, +1"
+      "$mod, left, workspace, -1"
 
 
 
