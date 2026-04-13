@@ -19,7 +19,7 @@
       # open on specific workspaces
       "workspace 2, match:tag browser"
       "workspace 4 silent, match:tag chat"
-      "workspace 5 silent, match:tag gamelauncher"
+      "workspace 5, match:tag gamelauncher"
       "workspace 6, match:tag game"
 
       # floating windows
