@@ -19,6 +19,8 @@
       next_index=$(( (i + 1) % ''${#sinks[@]} ))
 
       pactl set-default-sink "''${sinks[$next_index]}"
+      
+      notify-send "''${sinks[$next_index]}"
 
       for input in $(pactl list short sink-inputs | awk '{print $1}'); do 
         pactl move-sink-input "$input" "''${sinks[$next_index]}"
