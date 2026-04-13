@@ -11,12 +11,13 @@
         name = "fine-cycle-audio";
 
         text = ''
-  mapfile -t sinks < <(pactl list short sinks | awk '{print $1}')
+  mapfile -t sinks < <(pactl list short sinks | awk '{print $2}')
   current=$(pactl get-default-sink)
 
   for i in "''${!sinks[@]}"; do
     if [[ "''${sinks[$i]}" == "$current" ]]; then
       next_index=$(( (i + 1) % ''${#sinks[@]} ))
+
       pactl set-default-sink "''${sinks[$next_index]}"
 
       for input in $(pactl list short sink-inputs | awk '{print $1}'); do 
