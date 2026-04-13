@@ -11,6 +11,8 @@
     ./../../app/rofi/rofi.nix
     ./../../app/waybar/waybar.nix
 
+    ./scripts/cycle-audio.nix
+
     ./default.nix
   ];
 
