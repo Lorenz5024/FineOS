@@ -39,9 +39,8 @@
             #picture=$(echo "$PICS" | grep "$choice")
 
             if [[ -f $choice ]]; then
-              hyprctl hyprpaper preload "$choice"
-              hyprctl hyprpaper wallpaper ",$choice"
-              cp "$choice" /home/lorenz/FineOS/themes/wallpaper
+              cp "$choice" ${userSettings.flakeDir}/themes/wallpaper
+              hyprctl hyprpaper wallpaper ",${userSettings.flakeDir}/themes/wallpaper"
             else
               echo "Image not found."
               exit 1
