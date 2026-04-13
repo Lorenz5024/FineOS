@@ -24,10 +24,10 @@
       "$mod_CTRL, G, changegroupactive, f"
 
       # Move workspaces between monitors
-      "$mod_SHIFT_CTRL, H, movecurrentworkspacetomonitor, l"
-      "$mod_SHIFT_CTRL, J, movecurrentworkspacetomonitor, d"
-      "$mod_SHIFT_CTRL, K, movecurrentworkspacetomonitor, u"
-      "$mod_SHIFT_CTRL, L, movecurrentworkspacetomonitor, r"
+      # "$mod_SHIFT_CTRL, H, movecurrentworkspacetomonitor, l"
+      # "$mod_SHIFT_CTRL, J, movecurrentworkspacetomonitor, d"
+      # "$mod_SHIFT_CTRL, K, movecurrentworkspacetomonitor, u"
+      # "$mod_SHIFT_CTRL, L, movecurrentworkspacetomonitor, r"
 
       # power
       "$mod, P, exec, wlogout"
@@ -74,6 +74,9 @@
       "$mod_SHIFT, J, movewindow, d"
       "$mod_SHIFT, K, movewindow, u"
       "$mod_SHIFT, L, movewindow, r"
+
+      "$mod_CTRL_SHIFT, H, movetoworkspace, -1"
+      "$mod_CTRL_SHIFT, L, movetoworkspace, +1"
 
       # Toggle split direction in dwindle layout
       "$mod, O, layoutmsg, togglesplit"
