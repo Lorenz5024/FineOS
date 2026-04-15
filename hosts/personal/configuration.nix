@@ -60,6 +60,5 @@
 
   environment.sessionVariables = {
     WLR_RENDERER_ALLOW_HDR = "1";
-    ENABLE_HDR_WSI = "1";
   };
 }
