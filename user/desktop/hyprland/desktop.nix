@@ -7,6 +7,7 @@
     ./network-manager-applet/network-manager-applet.nix
     ./gtk/gtk.nix
     ./clipboard/clipboard.nix
+    ./swayosd/swayosd.nix
 
     ./../../app/rofi/rofi.nix
     ./../../app/waybar/waybar.nix
