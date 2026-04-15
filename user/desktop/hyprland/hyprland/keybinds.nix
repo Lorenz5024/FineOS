@@ -141,8 +141,12 @@
 
     binde = [
       # Media control
-      ", xf86audioraisevolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
-      ", xf86audiolowervolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
+      # swayosd
+      ", xf86audioraisevolume, exec, swayosd-client --output-volume raise"
+      ", xf86audiolowervolume, exec, swayosd-client --output-volume lower"
+      # default
+      # ", xf86audioraisevolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
+      # ", xf86audiolowervolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
 
       # Laptop brightness
       ", xf86MonBrightnessDown, exec, brightnessctl set 5%-"
