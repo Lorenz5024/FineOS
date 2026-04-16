@@ -47,7 +47,7 @@
   # add kernel param for nvidia 
   boot.kernelParams = [ 
     "nvidia_drm.modeset=1"
-    "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
+    # "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
   ];
 
   # system specific packages
