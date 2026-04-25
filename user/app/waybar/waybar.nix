@@ -2,14 +2,14 @@
 
 {
 
-  imports = [ (./.. + "/themes" + ( "/" + userSettings.waybarStyle) + "/waybar.nix") ];
+  imports = [ (./. + "/themes" + ( "/" + userSettings.waybarStyle) + ".nix") ];
 
   programs.waybar = {
     enable = true;
 
     settings = {
       mainBar = {
-        include = "${userSettings.flakeDir}/user/desktop/hyprland/waybar/modules";
+        include = "${userSettings.flakeDir}/user/app/waybar/modules";
         layer = "top";
         position = "top";
         spacing = 0;

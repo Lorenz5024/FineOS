@@ -3,12 +3,16 @@
 {
   imports = [ 
     ./hyprland/hyprland.nix
-    ./waybar/waybar.nix
     ./wlogout/wlogout.nix
     ./network-manager-applet/network-manager-applet.nix
     ./gtk/gtk.nix
     ./clipboard/clipboard.nix
-    ./rofi/rofi.nix
+    ./swayosd/swayosd.nix
+
+    ./../../app/rofi/rofi.nix
+    ./../../app/waybar/waybar.nix
+
+    ./scripts/cycle-audio.nix
 
     ./default.nix
   ];

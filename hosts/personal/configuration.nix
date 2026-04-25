@@ -47,7 +47,7 @@
   # add kernel param for nvidia 
   boot.kernelParams = [ 
     "nvidia_drm.modeset=1"
-    "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
+    # "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
   ];
 
   # system specific packages
@@ -60,6 +60,5 @@
 
   environment.sessionVariables = {
     WLR_RENDERER_ALLOW_HDR = "1";
-    ENABLE_HDR_WSI = "1";
   };
 }

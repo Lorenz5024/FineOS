@@ -19,7 +19,7 @@
       # open on specific workspaces
       "workspace 2, match:tag browser"
       "workspace 4 silent, match:tag chat"
-      "workspace 5 silent, match:tag gamelauncher"
+      "workspace 5, match:tag gamelauncher"
       "workspace 6, match:tag game"
 
       # floating windows
@@ -39,7 +39,9 @@
       "workspace special:notes, match:class obsidian"
       "workspace special:music, match:class spotify"
       "workspace special:vault, match:class Proton Pass"
-      "workspace special:sound, match:class org.pulseaudio.pavucontrol"
+
+      # sizes
+      "size 800 600, match:class org.pulseaudio.pavucontrol"
 
       # games
       "tag +game, match:class Slay the Spire 2"

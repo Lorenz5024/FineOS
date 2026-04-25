@@ -22,7 +22,6 @@
 
   environment.systemPackages = with pkgs; [
     protonup-ng
-    mangohud
     heroic
   ];
 

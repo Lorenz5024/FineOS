@@ -3,6 +3,24 @@
 {
   programs.yazi.keymap = {
 
+    manager.prepend_keymap = [
+	# Goto
+	{ on = [ "g" "h" ];       run = "cd ~";                             desc = "Go to the home directory"; }
+	{ on = [ "g" "c" ];       run = "cd ~/.config";                     desc = "Go to the config directory"; }
+	{ on = [ "g" "d" ];       run = "cd ~/Downloads";                   desc = "Go to the downloads directory"; }
+	{ on = [ "g" "<Space>" ]; run = "cd --interactive";                 desc = "Go to a directory interactively"; }
+        { 
+          on = [ "g" "<Space>" ]; 
+          run = "cd --interactive";                 
+          desc = "Go to a directory interactively"; 
+        }
+        { 
+          on = [ "g" "p" ];
+          run = "cd /home/lorenz/Pathfinder/Kampagnen/Unter_Piraten/Dokumente";
+          desc = "Go to Pathfinder Campaign"; 
+        }
+    ];
+
     manager.keymap = [
 	{ on = "<Esc>"; run = "escape";             desc = "Exit visual mode, clear selected, or cancel search"; }
 	{ on = "<C-[>"; run = "escape";             desc = "Exit visual mode, clear selected, or cancel search"; }
@@ -117,13 +135,6 @@
 	{ on = [ ";" "S" ]; run = [ "sort size --reverse" "linemode size" ];         desc = "Sort by size (reverse)"; }
 	{ on = [ ";" "r" ]; run = "sort random --reverse=no";                         desc = "Sort randomly"; }
 
-	# Goto
-	{ on = [ "g" "h" ];       run = "cd ~";                             desc = "Go to the home directory"; }
-	{ on = [ "g" "c" ];       run = "cd ~/.config";                     desc = "Go to the config directory"; }
-	{ on = [ "g" "d" ];       run = "cd ~/Downloads";                   desc = "Go to the downloads directory"; }
-	{ on = [ "g" "<Space>" ]; run = "cd --interactive";                 desc = "Go to a directory interactively"; }
-        { on = [ "g" "u" ];       run = "cd ~/Documents/University/2024W";  desc = "Go to university directory"; }
-        { on = [ "g" "p"];        run = "cd ~/Pictures/screenshot";         desc = "Go to screenshots"; }
 
 	# Tabs
 	{ on = "t"; run = "tab_create --current"; desc = "Create a new tab with CWD"; }

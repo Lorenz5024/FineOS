@@ -20,13 +20,10 @@
     "persistent-workspaces": {
       "*": [ 1, 2, 3, 4, 5 ],
     },
-    "ignore-workspaces": [
-      "*scratch*",
-    ],
 },
 
 "hyprland/workspaces#numbers": {
-    "show-special": false,
+    "show-special": true,
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
@@ -35,9 +32,6 @@
     "persistent-workspaces": {
       "*": [ 1, 2, 3, 4, 5 ],
     },
-    "ignore-workspaces": [
-      "*scratch*",
-    ],
 },
 
 "hyprland/window": {
@@ -48,7 +42,9 @@
     "offscreen-css-text": "(inactive)",
     "rewrite": {
       "firefox - (.*)": "󰈹 Firefox",
-      "kitty - (.*)": "> $1",
+      "kitty - (.*)": "> Kitty",
+      "vivaldi(.*)": " Vivaldi",
+      "com.discordapp.Discord(.*)": "  Discord",
     },
 },
 
@@ -62,6 +58,18 @@
 "custom/icon": {
   "format": " ",
   "on-click": "pkill rofi || rofi -show drun"
+},
+
+// SEPARATOR
+"custom/separator_pipe": {
+  "format": "|",
+},
+
+// RADIO
+"custom/fine_radio": {
+  "format": "  |  Radio: {}",
+  "exec": "fine-radio-status",
+  "interval": 2,
 },
 
 // POWER MENU 
@@ -86,8 +94,8 @@
 // MEDIA PLAYER
 "mpris": {
 	"interval": 1,
-	"format": "{player_icon}  {title} - {artist}",
-	"format-paused": "{status_icon}  {title} - {artist}",
+	"format": "  |  {player_icon}  {title} - {artist}",
+	"format-paused": "  |  {status_icon}  {title} - {artist}",
 	"on-click-middle": "playerctl play-pause",
 	"on-click": "playerctl previous",
 	"on-click-right": "playerctl next",
@@ -295,7 +303,7 @@
     "ignored-sinks": ["Easy Effects Sink"],
     },
     "scroll-step": 5.0,
-    "on-click": "pypr toggle audio",
+    "on-click": "fine-cycle-audio",
     "tooltip-format": "{icon} {desc} | {volume}%",
     "smooth-scrolling-threshold": 1,
 },

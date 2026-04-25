@@ -1,4 +1,4 @@
-{  hostSettings, ... }:
+{  config, hostSettings, ... }:
 
 let
   module-border-radius = "8px";
@@ -16,8 +16,8 @@ let
     margin: 0.3em;
     '';
   module-padding-lr = ''
-    padding-left: 0.3em;
-    padding-right: 0.3em;
+    padding-left: 1em;
+    padding-right: 1em;
     '';
 in
 {
@@ -30,9 +30,11 @@ in
 
   programs.waybar.settings.mainBar = {
     modules-left = [
-      "custom/icon"
+      # "custom/icon"
       "hyprland/workspaces#numbers"
-      "hyprland/window"
+      # "hyprland/window"
+      "custom/fine_radio"
+      "mpris"
     ];
 
     modules-center = [
@@ -40,10 +42,10 @@ in
     ];
 
     modules-right = [
-      "group/hiddennetwork"
-      "temperature"
-      "cpu"
-      "memory"
+      # "group/hiddennetwork"
+      # "temperature"
+      # "cpu"
+      # "memory"
       "tray"
       "hyprland/language"
       "idle_inhibitor"
@@ -58,9 +60,9 @@ in
     @define-color text                    #FFFFFF;
     @define-color module-border           #FFFFFF;
     @define-color workspaces-background   #FFFFFF;
-    @define-color workspaces-active       #FFFFFF;
-    @define-color workspaces-empty        #FFFFFF;
-    @define-color workspaces-visible      #FFFFFF;
+    @define-color workspaces-active       #${config.lib.stylix.colors.base0E};
+    @define-color workspaces-empty        #${config.lib.stylix.colors.base02};
+    @define-color workspaces-visible      #0000FF;
     @define-color window-text             #FFFFFF;
     @define-color language                #FFFFFF;
     @define-color pulseaudio              #FFFFFF;
@@ -95,6 +97,10 @@ in
 
     #custom-groupindicator:hover {
       ${module-hover}
+    }
+
+    #custom-fine_radio {
+      ${module-margin}
     }
 
     #group-hardware {
@@ -189,13 +195,9 @@ in
       color: @workspaces-empty;
     }
 
-    #workspaces button.visible {
-      color: @workspaces-visible;
-    }
-
     #workspaces button.active {
       color: @workspaces-active;
-      border-bottom: 2px solid @module-border;
+      border-bottom: 2px solid @workspaces-active;
     } 
 
     #window {
@@ -220,6 +222,10 @@ in
     #idle_inhibitor:hover {
       ${module-margin}
       ${module-hover}
+    }
+
+    #mpris {
+      ${module-margin}
     }
   '';
 }

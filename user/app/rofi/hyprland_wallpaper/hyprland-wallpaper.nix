@@ -18,12 +18,12 @@
           PICS=$(find "''${wallDIR}" -type f \( -iname \*.jpg -o -iname \*.png \))
 
           # Rofi command
-          rofi_command="rofi -i -show -dmenu -config ${userSettings.flakeDir}/user/app/rofi/config-wallpaper.rasi -window-title Wallpaper:"
+          rofi_command="rofi -i -show -dmenu -show-icons -config ${userSettings.flakeDir}/user/app/rofi/config-wallpaper.rasi -window-title Wallpaper:"
 
           # Sorting Wallpapers
           menu() {
             for pic_path in $PICS; do
-              printf "%s\n" "$pic_path"
+              printf "%s\x00icon\x1f%s\n" "$pic_path" "$pic_path"
             done
           }
 
@@ -39,9 +39,8 @@
             #picture=$(echo "$PICS" | grep "$choice")
 
             if [[ -f $choice ]]; then
-              hyprctl hyprpaper preload "$choice"
-              hyprctl hyprpaper wallpaper ",$choice"
-              cp "$choice" /home/lorenz/FineOS/themes/wallpaper
+              cp "$choice" ${userSettings.flakeDir}/themes/wallpaper
+              hyprctl hyprpaper wallpaper ",${userSettings.flakeDir}/themes/wallpaper"
             else
               echo "Image not found."
               exit 1

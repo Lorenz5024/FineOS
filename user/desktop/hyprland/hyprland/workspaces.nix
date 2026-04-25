@@ -3,16 +3,14 @@
 {
   wayland.windowManager.hyprland.settings = {
     workspace = [
-      "1, monitor:DP-2, default:true"
-      "2, monitor:DP-2"
-      "3, monitor:DP-2"
-      "4, monitor:DP-2"
-      "5, monitor:DP-2"
-      "6, monitor:DP-2"
-      "7, monitor:DP-2"
-      "8, monitor:DP-2"
-      "9, monitor:DP-4"
-      "0, monitor:eDP-1"
+      # extra gaps on special workspaces
+      "s[true], gapsout:128, animation:specialWorkspace"
+
+      # no border when single window 
+      "w[1]s[false], border:false"
+
+      # no border, rounding and gaps when maximized
+      "f[1]s[false], border:false, rounding:false, gapsout:0"
     ];
   };
 }

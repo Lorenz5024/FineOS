@@ -21,13 +21,12 @@
       "$mod, M, fullscreen, 1"
       "$mod_CTRL, F, togglefloating"
       "$mod, G, togglegroup"
-      "$mod_CTRL, G, changegroupactive, f"
 
       # Move workspaces between monitors
-      "$mod_SHIFT_CTRL, H, movecurrentworkspacetomonitor, l"
-      "$mod_SHIFT_CTRL, J, movecurrentworkspacetomonitor, d"
-      "$mod_SHIFT_CTRL, K, movecurrentworkspacetomonitor, u"
-      "$mod_SHIFT_CTRL, L, movecurrentworkspacetomonitor, r"
+      # "$mod_SHIFT_CTRL, H, movecurrentworkspacetomonitor, l"
+      # "$mod_SHIFT_CTRL, J, movecurrentworkspacetomonitor, d"
+      # "$mod_SHIFT_CTRL, K, movecurrentworkspacetomonitor, u"
+      # "$mod_SHIFT_CTRL, L, movecurrentworkspacetomonitor, r"
 
       # power
       "$mod, P, exec, wlogout"
@@ -42,6 +41,7 @@
       "$mod, Y, exec, $terminal --class yazi -e yazi "
       "$mod, M, exec, $musicPlayer"
       "$mod, B, exec, $browser"
+      "$mod, S, exec, pavucontrol"
 
       # rofi
       "$mod, SPACE, exec, pkill rofi || rofi -show drun"	# App launcher
@@ -60,8 +60,7 @@
       "$mod_ALT, N, exec, hyprctl dispatch togglespecialworkspace notes"
       "$mod_ALT, B, exec, hyprctl dispatch togglespecialworkspace vault"
       "$mod_ALT, M, exec, hyprctl dispatch togglespecialworkspace music"
-      "$mod_ALT, S, exec, hyprctl dispatch togglespecialworkspace sound"
-      "$mod_ALT, T, exec, hyprctl dispatch togglespecialworkspace thunar"
+      "$mod_ALT, F, exec, hyprctl dispatch togglespecialworkspace files"
 
       # Move focus
       "$mod, H, movefocus, l"
@@ -75,8 +74,16 @@
       "$mod_SHIFT, K, movewindow, u"
       "$mod_SHIFT, L, movewindow, r"
 
+      # Change group active 
+      "$mod_CTRL_ALT, H, changegroupactive, b"
+      "$mod_CTRL_ALT, L, changegroupactive, f"
+
+      # Move window in group
+      "$mod_CTRL_ALT_SHIFT, H, movegroupwindow, b"
+      "$mod_CTRL_ALT_SHIFT, L, movegroupwindow, f"
+
       # Toggle split direction in dwindle layout
-      "$mod, S, togglesplit"
+      "$mod, O, layoutmsg, togglesplit"
 
       # Media control
       ", xf86audiomute, exec, amixer set Master toggle"
@@ -87,6 +94,7 @@
       ", xf86AudioPrev, exec, playerctl previous"
       "CTRL, xf86AudioNext, exec, playerctl position 10+"
       "CTRL, xf86AudioPrev, exec, playerctl position 10-"
+      "$mod_CTRL, V, exec, fine-cycle-audio"  # taken from windows, but I'm already used to it'
 
       # Switch workspaces with mod + [0-9]
       "$mod, 1, workspace, 1"
@@ -100,7 +108,10 @@
       "$mod, 9, workspace, 9"
       "$mod, 0, workspace, 10"
 
-      # Move active window to a workspace with mod + SHIFT + [0-9]
+      "$mod, right, workspace, +1"
+      "$mod, left, workspace, -1"
+
+      # Move active window to a workspace 
       "$mod SHIFT, 1, movetoworkspace, 1"
       "$mod SHIFT, 2, movetoworkspace, 2"
       "$mod SHIFT, 3, movetoworkspace, 3"
@@ -111,6 +122,9 @@
       "$mod SHIFT, 8, movetoworkspace, 8"
       "$mod SHIFT, 9, movetoworkspace, 9"
       "$mod SHIFT, 0, movetoworkspace, 10"
+
+      "$mod_CTRL_SHIFT, H, movetoworkspace, -1"
+      "$mod_CTRL_SHIFT, L, movetoworkspace, +1"
     ];
 
 
@@ -132,8 +146,12 @@
 
     binde = [
       # Media control
-      ", xf86audioraisevolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
-      ", xf86audiolowervolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
+      # swayosd
+      ", xf86audioraisevolume, exec, swayosd-client --output-volume raise"
+      ", xf86audiolowervolume, exec, swayosd-client --output-volume lower"
+      # default
+      # ", xf86audioraisevolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
+      # ", xf86audiolowervolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
 
       # Laptop brightness
       ", xf86MonBrightnessDown, exec, brightnessctl set 5%-"

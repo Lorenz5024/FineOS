@@ -1,0 +1,97 @@
+{ pkgs, ... }:
+
+{
+  home.packages = [
+    pkgs.fine-radio
+    pkgs.fine-radio-status
+  ];
+
+  nixpkgs.overlays = [
+    # radio
+    (self: super: {
+      fine-radio = pkgs.writeShellApplication {
+        name = "fine-radio";
+
+        text = ''
+          # tmp file to store radio status
+          STATE_FILE="/tmp/fine_radio_status"
+
+          # add more args here according to preference
+          ARGS="--volume=60"
+
+          notification(){
+          # change the icon to whatever you want. Make sure your notification server 
+          # supports it and already configured.
+
+          # Now it will receive argument so the user can rename the radio title
+          # to whatever they want
+
+                  notify-send "Playing now: " "$@" --icon=media-tape
+          }
+
+          menu(){
+                  printf "1. Lofi Girl\n"
+                  printf "2. Soundportal\n"
+          }
+
+          main() {
+                  choice=$(menu | rofi -dmenu -p "Music" | cut -d. -f1)
+
+                  case $choice in
+                          1)
+                                  notification "Lofi Girl";
+                      URL="https://play.streamafrica.net/lofiradio"
+                      STATION="Lofi Girl"
+                                  ;;
+                          2)
+                                  notification "Soundportal";
+                      URL="https://radioosterreich24.at/radios-soundportal-267"
+                      STATION="Soundportal"
+                                  ;;
+                  esac
+
+              # save station in temp file
+              echo "$STATION" > "$STATE_FILE"
+
+              # run mpv with args and selected url
+              # added title arg to make sure the pkill command kills only this instance of mpv
+              mpv $ARGS --title="radio-mpv" "$URL"
+
+          }
+
+          # Check if rofi is already running
+          if pidof rofi > /dev/null; then
+            pkill rofi
+            exit 0
+          fi
+
+          if pkill -f radio-mpv; then 
+            rm -f "$STATE_FILE"
+          else 
+            main 
+          fi
+        '';
+
+      };
+    })
+
+    # radio status
+    (self: super: {
+      fine-radio-status = pkgs.writeShellApplication {
+        name = "fine-radio-status";
+
+        text = ''
+	  STATE_FILE="/tmp/fine_radio_status"
+
+	  if [ -f "$STATE_FILE" ]; then 
+	    station=$(cat "$STATE_FILE")
+	    echo "$station"
+	  else
+	    echo ""
+	  fi
+        '';
+
+      };
+    })
+  ];
+}

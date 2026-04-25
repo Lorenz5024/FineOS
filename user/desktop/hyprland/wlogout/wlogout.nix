@@ -9,13 +9,13 @@
     layout = [
       {
         label = "shutdown";
-        action = "systemctl poweroff";
+        action = "hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'";
         text = "Shutdown (s)";
         keybind = "s";
       }
       {
         label = "reboot";
-        action = "systemctl reboot";
+        action = "hyprshutdown -t 'Restarting...' --post-cmd 'reboot'";
         text = "Reboot (r)";
         keybind = "r";
       }
