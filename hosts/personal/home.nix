@@ -63,7 +63,7 @@
       "$mod_SHIFT_CTRL_ALT, F1, exec, hyprctl keyword monitor \"DP-1, 3440x1440@144.00, 3840x0, 1, vrr, 3, bitdepth, 10\" && hyprctl keyword monitor \"HDMI-A-1, disable\""
       "$mod_SHIFT_CTRL_ALT, F2, exec, hyprctl keyword monitor \"DP-1, 3440x1440@144.00, 0x0, 1, bitdepth, 10, vrr, 3, cm, hdr, sdrbrightness, 1.3, sdrsaturation, 1\""
       "$mod_SHIFT_CTRL_ALT, F6, exec, hyprctl keyword monitor \"HDMI-A-1, 3840x2160@120.00, 3440x0, 1, vrr, 3\" && hyprctl keyword monitor \"DP-1, disable\""
-      "$mod_SHIFT_CTRL_ALT, F6, exec, hyprctl keyword monitor \"HDMI-A-1, 3840x2160@120.00, 3440x0, 2, vrr, 3\" && hyprctl keyword monitor \"DP-1, disable\""
+      "$mod_SHIFT_CTRL_ALT, F7, exec, hyprctl keyword monitor \"HDMI-A-1, 3840x2160@120.00, 3440x0, 2, vrr, 3\" && hyprctl keyword monitor \"DP-1, disable\""
       #"HDMI-A-1, 3840x2160@60, -642x-2160, 1, bitdepth, 10, vrr, 2"
     ];
   };
