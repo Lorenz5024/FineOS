@@ -68,18 +68,19 @@
       "$mod, K, movefocus, u"
       "$mod, L, movefocus, r"
 
-      # Change group active 
-      "$mod_CTRL_ALT, H, changegroupactive, b"
-      "$mod_CTRL_ALT, L, changegroupactive, f"
-
       # Move windows
       "$mod_SHIFT, H, movewindow, l"
       "$mod_SHIFT, J, movewindow, d"
       "$mod_SHIFT, K, movewindow, u"
       "$mod_SHIFT, L, movewindow, r"
 
-      "$mod_CTRL_SHIFT, H, movetoworkspace, -1"
-      "$mod_CTRL_SHIFT, L, movetoworkspace, +1"
+      # Change group active 
+      "$mod_CTRL_ALT, H, changegroupactive, b"
+      "$mod_CTRL_ALT, L, changegroupactive, f"
+
+      # Move window in group
+      "$mod_CTRL_ALT_SHIFT, H, movegroupwindow, b"
+      "$mod_CTRL_ALT_SHIFT, L, movegroupwindow, f"
 
       # Toggle split direction in dwindle layout
       "$mod, O, layoutmsg, togglesplit"
@@ -110,9 +111,7 @@
       "$mod, right, workspace, +1"
       "$mod, left, workspace, -1"
 
-
-
-      # Move active window to a workspace with mod + SHIFT + [0-9]
+      # Move active window to a workspace 
       "$mod SHIFT, 1, movetoworkspace, 1"
       "$mod SHIFT, 2, movetoworkspace, 2"
       "$mod SHIFT, 3, movetoworkspace, 3"
@@ -123,6 +122,9 @@
       "$mod SHIFT, 8, movetoworkspace, 8"
       "$mod SHIFT, 9, movetoworkspace, 9"
       "$mod SHIFT, 0, movetoworkspace, 10"
+
+      "$mod_CTRL_SHIFT, H, movetoworkspace, -1"
+      "$mod_CTRL_SHIFT, L, movetoworkspace, +1"
     ];
 
 
