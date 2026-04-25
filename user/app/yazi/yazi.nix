@@ -39,7 +39,7 @@
 
       opener = {
         view_pdf = [
-          { run = "evince \"$@\""; orphan = true; }
+          { run = "zathura \"$@\""; orphan = true; }
         ];
         edit = [
                 { run = "\${EDITOR:=vi} \"$@\""; desc = "$EDITOR"; block = true; for = "unix"; }
