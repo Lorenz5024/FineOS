@@ -16,7 +16,7 @@
         }
         { 
           on = [ "g" "p" ];
-          run = "cd ~/Pathfinder/Kampagnen/Unter_Piraten/Dokumente";
+          run = "cd /home/lorenz/Pathfinder/Kampagnen/Unter_Piraten/Dokumente";
           desc = "Go to Pathfinder Campaign"; 
         }
     ];
