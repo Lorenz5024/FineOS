@@ -3,6 +3,14 @@
 {
   programs.yazi.keymap = {
 
+    manager.prepend_keymap = [
+      { 
+        on = [ "g" "p" "p"];
+        run = "cd ~/Pathfinder/Kampagnen/Unter_Piraten/Dokumente";
+        desc = "Go to Unter Piraten Campaign"; 
+      }
+    ];
+
     manager.keymap = [
 	{ on = "<Esc>"; run = "escape";             desc = "Exit visual mode, clear selected, or cancel search"; }
 	{ on = "<C-[>"; run = "escape";             desc = "Exit visual mode, clear selected, or cancel search"; }
@@ -30,12 +38,6 @@
 
 	{ on = [ "g" "g" ]; run = "arrow -99999999"; desc = "Move cursor to the top"; }
 	{ on = "G";          run = "arrow 99999999";  desc = "Move cursor to the bottom"; }
-
-        { 
-          on = [ "g" "p" "p"];
-          run = "cd ~/Pathfinder/Kampagnen/Unter_Piraten/Dokumente";
-          desc = "Go to Unter Piraten Campaign"; 
-        }
 
 	# Navigation
 	{ on = "h"; run = "leave"; desc = "Go back to the parent directory"; }
