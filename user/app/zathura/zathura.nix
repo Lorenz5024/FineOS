@@ -11,6 +11,8 @@
       set statusbar-bg "#${config.lib.stylix.colors.base00}"
 
       set window-title-basename true
+
+      set selection-clipboard clipboard
     '';
   };
 }
