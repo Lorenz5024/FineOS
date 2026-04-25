@@ -21,7 +21,6 @@
       "$mod, M, fullscreen, 1"
       "$mod_CTRL, F, togglefloating"
       "$mod, G, togglegroup"
-      "$mod_CTRL, G, changegroupactive, f"
 
       # Move workspaces between monitors
       # "$mod_SHIFT_CTRL, H, movecurrentworkspacetomonitor, l"
@@ -68,6 +67,10 @@
       "$mod, J, movefocus, d"
       "$mod, K, movefocus, u"
       "$mod, L, movefocus, r"
+
+      # Change group active 
+      "$mod_CTRL_ALT, H, changegroupactive, b"
+      "$mod_CTRL_ALT, L, changegroupactive, f"
 
       # Move windows
       "$mod_SHIFT, H, movewindow, l"
