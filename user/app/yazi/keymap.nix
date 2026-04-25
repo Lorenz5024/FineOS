@@ -127,7 +127,7 @@
 	{ on = [ "g" "<Space>" ]; run = "cd --interactive";                 desc = "Go to a directory interactively"; }
         { on = [ "g" "u" ];       run = "cd ~/Documents/University/2024W";  desc = "Go to university directory"; }
         { 
-          on = [ "g" "p" "p"];
+          on = [ "g" "p"];
           run = "cd ~/Pathfinder/Kampagnen/Unter_Piraten/Dokumente";
           desc = "Go to Pathfinder Campaign"; 
         }
