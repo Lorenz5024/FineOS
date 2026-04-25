@@ -57,10 +57,9 @@
 
       open = {
         rules = [
-          { name = "*.pdf"; use = [ "view_pdf" ]; }
-
           { name = "*/"; use = [ "edit" "open" "reveal" ]; }
 
+          { mime = "application/pdf"; use = [ "view_pdf" ]; }
           { mime = "text/*";  use = [ "edit" "reveal" ]; }
           { mime = "image/*"; use = [ "open" "reveal" ]; }
           { mime = "video/*"; use = [ "play" "reveal" ]; }
