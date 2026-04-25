@@ -4,11 +4,6 @@
   programs.yazi.keymap = {
 
     manager.prepend_keymap = [
-      { 
-        on = [ "g" "p" "p"];
-        run = "cd ~/Pathfinder/Kampagnen/Unter_Piraten/Dokumente";
-        desc = "Go to Unter Piraten Campaign"; 
-      }
     ];
 
     manager.keymap = [
@@ -131,7 +126,11 @@
 	{ on = [ "g" "d" ];       run = "cd ~/Downloads";                   desc = "Go to the downloads directory"; }
 	{ on = [ "g" "<Space>" ]; run = "cd --interactive";                 desc = "Go to a directory interactively"; }
         { on = [ "g" "u" ];       run = "cd ~/Documents/University/2024W";  desc = "Go to university directory"; }
-        { on = [ "g" "p"];        run = "cd ~/Pictures/screenshot";         desc = "Go to screenshots"; }
+        { 
+          on = [ "g" "p" "p"];
+          run = "cd ~/Pathfinder/Kampagnen/Unter_Piraten/Dokumente";
+          desc = "Go to Pathfinder Campaign"; 
+        }
 
 	# Tabs
 	{ on = "t"; run = "tab_create --current"; desc = "Create a new tab with CWD"; }
