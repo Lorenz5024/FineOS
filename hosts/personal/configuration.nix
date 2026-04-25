@@ -44,6 +44,16 @@
 
   hardware.bluetooth.enable = true;
 
+  networking.firewall = {
+    enable = true;
+    allowedTCPPortRanges = [
+      { from = 51234; to = 51234; } # KDE Connect
+    ];
+    allowedUDPPortRanges = [
+      { from = 51234; to = 51234; } # KDE Connect
+    ];
+  };
+
   # add kernel param for nvidia 
   boot.kernelParams = [ 
     "nvidia_drm.modeset=1"
