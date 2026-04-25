@@ -31,6 +31,12 @@
 	{ on = [ "g" "g" ]; run = "arrow -99999999"; desc = "Move cursor to the top"; }
 	{ on = "G";          run = "arrow 99999999";  desc = "Move cursor to the bottom"; }
 
+        { 
+          on = [ "g" "p" "p"];
+          run = "cd ~/Pathfinder/Kampagnen/Unter_Piraten/Dokumente";
+          desc = "Go to Unter Piraten Campaign"; 
+        }
+
 	# Navigation
 	{ on = "h"; run = "leave"; desc = "Go back to the parent directory"; }
 	{ on = "l"; run = "enter"; desc = "Enter the child directory"; }
