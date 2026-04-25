@@ -9,6 +9,7 @@
     ./input.nix
     ./startup.nix
     ./workspaces.nix
+    ./group.nix
 
     ./hyprpaper.nix
     ./hyprlock.nix
