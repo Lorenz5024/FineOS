@@ -8,6 +8,6 @@
       font_size = 16;
     };
 
-    col.border_active = "0x66${config.lib.stylix.colors.base0D}";
+    "col.border_active" = "0x66${config.lib.stylix.colors.base0D}";
   };
 }
