@@ -8,7 +8,11 @@
       set font "JetBrainsMono Nerd Font 13"
 
       set statusbar-fg "#${config.lib.stylix.colors.base05}"
-      set statusbar-bg "#${config.lib.stylix.colors.base06}"
+      set statusbar-bg "#${config.lib.stylix.colors.base00}"
+
+      set window-title-basename true
+
+      set selection-clipboard clipboard
     '';
   };
 }
