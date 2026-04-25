@@ -36,7 +36,6 @@
 
       # special workspaces
       "workspace special:terminal, match:class kitty-scratchpad"
-      "workspace special:notes, match:class obsidian"
       "workspace special:music, match:class spotify"
       "workspace special:vault, match:class Proton Pass"
 
