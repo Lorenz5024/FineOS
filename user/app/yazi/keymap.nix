@@ -6,7 +6,7 @@
     manager.prepend_keymap = [
 	# Goto
 	{ on = [ "g" "h" ];       run = "cd ~";                             desc = "Go to the home directory"; }
-	{ on = [ "g" "c" ];       run = "cd ~/.config";                     desc = "Go to the config directory"; }
+	{ run = "cd ~/.config";   on = [ "g" "c" ];                         desc = "Go to the config directory"; }
 	{ on = [ "g" "d" ];       run = "cd ~/Downloads/test";                   desc = "Go to the downloads directory"; }
 	{ on = [ "g" "<Space>" ]; run = "cd --interactive";                 desc = "Go to a directory interactively"; }
         { 
