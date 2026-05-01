@@ -5,7 +5,7 @@
     ./keymap.nix
   ];
 
-  programs.yazi.enableZshIntegration = true;
+  # programs.yazi.enableZshIntegration = true;
 
   programs.yazi = {
     enable = true;
