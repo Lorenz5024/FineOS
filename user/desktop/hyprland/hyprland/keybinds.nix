@@ -149,8 +149,10 @@
       # ", xf86audiolowervolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
 
       # Laptop brightness
-      ", xf86MonBrightnessDown, exec, brightnessctl set 5%-"
-      ", xf86MonBrightnessUp, exec, brightnessctl set +5%"
+      ", xf86MonBrightnessDown, exec, swayosd-client --brightness lower"
+      ", xf86MonBrightnessUp, exec, swayosd-client --brightness raise"
+      # ", xf86MonBrightnessDown, exec, brightnessctl set 5%-"
+      # ", xf86MonBrightnessUp, exec, brightnessctl set +5%"
 
       # Resize windows
       "$mod_CTRL, H, resizeactive, -30 0"
