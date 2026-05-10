@@ -3,7 +3,7 @@
 {
   programs.yazi.keymap = {
 
-    manager.prepend_keymap = [
+    mgr.prepend_keymap = [
 	# Goto
 	{ on = [ "g" "h" ];       run = "cd ~";                             desc = "Go to the home directory"; }
 	{ run = "cd ~/.config";   on = [ "g" "c" ];                         desc = "Go to the config directory"; }
@@ -21,7 +21,7 @@
         }
     ];
 
-    manager.keymap = [
+    mgr.keymap = [
 	{ on = "<Esc>"; run = "escape";             desc = "Exit visual mode, clear selected, or cancel search"; }
 	{ on = "<C-[>"; run = "escape";             desc = "Exit visual mode, clear selected, or cancel search"; }
 	{ on = "q";     run = "quit";               desc = "Exit the process"; }

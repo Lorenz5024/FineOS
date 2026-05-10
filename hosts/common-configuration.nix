@@ -27,7 +27,7 @@
 
   nix.settings = {
     substituters = [
-      "http://192.168.8.102:5000"
+      "http://192.168.1.101:5000"
       "https://hyprland.cachix.org"
       "https://cache.nixos.org"
     ];
