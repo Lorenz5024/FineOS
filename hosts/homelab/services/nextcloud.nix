@@ -5,7 +5,6 @@
     isSystemUser = true;
     description = "Nextcloud service user";
     group = "nextcloud";
-    # home = "/mnt/storage1/nextcloud";
   };
 
   users.groups.nextcloud = { };
@@ -30,29 +29,10 @@
         "homelab.tailf073f1.ts.net"
         "nextcloud.homelab.com"
       ];
-      # apps_directory = "/var/lib/nextcloud/apps";
     };
 
-    # extraAppsEnable = false;
-    # extraApps = {
-    #   inherit (config.services.nextcloud.package.packages.apps) news contacts calendar;
-    # };
     appstoreEnable = true;
 
-    # extraOptions = {
-    #   apps_path = [
-    #     {
-    #       path = "/var/lib/nextcloud/apps";
-    #       url = "/apps";
-    #       writable = true;
-    #     }
-    #     {
-    #       path = "${config.services.nextcloud.package}/apps";
-    #       url = "/core-apps";
-    #       writable = false;
-    #     }
-    #   ];
-    # };
 
   };
 
