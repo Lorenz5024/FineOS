@@ -51,6 +51,9 @@
     options = "--delete-older-than 30d";
   };
 
+  # Disable systemd-ask-password messages when connected with ssh 
+  systemd.settings.Manager.EnableWallMessages = false;
+
   boot = {
     initrd.verbose = false;
     consoleLogLevel = 0;
