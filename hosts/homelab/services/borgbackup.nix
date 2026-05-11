@@ -4,6 +4,11 @@
   services.borgbackup.jobs.nextcloud = {
     paths = hostSettings.nextcloud_storage;
 
+    exclude = [ 
+      "${hostSettings.nextcloud_storage}/data/*/cache/*"
+      "${hostSettings.nextcloud_storage}/data/appdata_*"
+    ];
+
     encryption = {
       mode = "repokey-blake2";
       passCommand = "cat /run/secrets/nextcloud/borg-passphrase";
