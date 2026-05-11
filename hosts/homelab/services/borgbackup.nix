@@ -7,7 +7,7 @@
 
     encryption = {
       mode = "repokey-blake2";
-      passCommand = "cat /run/secrets/borg-passphrase";
+      passCommand = "cat /run/secrets/nextcloud/borg-passphrase";
     };
 
     environment.BORG_RSH = "ssh -i /home/lorenz/.ssh/id_ed25519";
