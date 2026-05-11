@@ -2,7 +2,6 @@
 
 {
   services.borgbackup.jobs.nextcloud = {
-    user = "lorenz";
     paths = hostSettings.nextcloud_storage;
 
     encryption = {
