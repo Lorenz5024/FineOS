@@ -18,6 +18,7 @@
       ./services/nextcloud.nix
       ./services/openvpn.nix
       ./services/nix-serve.nix
+      ./services/borgbackup.nix
 
       ./../../system/services/ssh/ssh.nix
       # ./../../system/services/docker/docker.nix
