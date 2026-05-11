@@ -1,7 +1,7 @@
 { hostSettings, ... }:
 
 {
-  services.borgbackup.jobs.borgbackup-nextcloud = {
+  services.borgbackup.jobs.nextcloud = {
     user = "lorenz";
     paths = hostSettings.nextcloud_storage;
 
