@@ -10,7 +10,7 @@
     ./../../system/boot.nix
 
     ./../../system/app/gaming/gaming.nix
-    ./../../system/app/hledger/hledger.nix
+    ./../../system/app/finance/finance.nix
 
     ./../../system/services/tailscale.nix
   ] ++ map (e: ./. + "/../../system/desktop/${e}/desktop.nix") hostSettings.desktops;
