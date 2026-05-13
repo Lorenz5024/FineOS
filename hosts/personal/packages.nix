@@ -11,6 +11,7 @@
     veracrypt
     r2modman  # mod manager
     qemu
+    virt-manager
+    quickemu
   ];
-
 }
