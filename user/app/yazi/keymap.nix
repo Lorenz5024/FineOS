@@ -73,7 +73,8 @@
 	# Operation
 	{ on = "o";         run = "open";                        desc = "Open selected files"; }
 	{ on = "O";         run = "open --interactive";          desc = "Open selected files interactively"; }
-	{ on = "<Enter>";   run = "open";                        desc = "Open selected files"; }
+	# { on = "<Enter>";   run = "open";                        desc = "Open selected files"; }
+	{ on = "<Enter>";   run = "plugin smart-enter";                        desc = "Enter the child directory, or open the file"; }
 	{ on = "<S-Enter>"; run = "open --interactive";          desc = "Open selected files interactively"; }
 	{ on = "y";         run = "yank";                        desc = "Yank selected files (copy)"; }
 	{ on = "x";         run = "yank --cut";                  desc = "Yank selected files (cut)"; }
