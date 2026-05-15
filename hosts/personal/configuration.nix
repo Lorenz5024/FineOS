@@ -11,6 +11,7 @@
 
     ./../../system/app/gaming/gaming.nix
     ./../../system/app/finance/finance.nix
+    ./../../system/app/virtualization.nix
 
     ./../../system/services/tailscale.nix
   ] ++ map (e: ./. + "/../../system/desktop/${e}/desktop.nix") hostSettings.desktops;

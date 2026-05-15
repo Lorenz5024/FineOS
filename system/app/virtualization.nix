@@ -15,12 +15,5 @@
     spiceUSBRedirection.enable = true;
   };
 
-  dconf.settings = {
-    "org/virt-manager/virt_manager/connections" = {
-      autoconnect = ["qemu:///system"];
-      uris = ["qemu:///system"];
-    };
-  };
-
-  users.users.${userSettings.username}.extragroups = [ "libvirtd" ];
+  users.users.${userSettings.username}.extraGroups = [ "libvirtd" ];
 }
