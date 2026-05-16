@@ -1,11 +1,10 @@
-{ pkgs, config, ... }:
+{ pkgs, config, hostSettings, ... }:
 
 {
   users.users.nextcloud = {
     isSystemUser = true;
     description = "Nextcloud service user";
     group = "nextcloud";
-    # home = "/mnt/storage1/nextcloud";
   };
 
   users.groups.nextcloud = { };
@@ -14,7 +13,7 @@
     enable = true; 
     package = pkgs.nextcloud32;
     hostName = "homelab.tailf073f1.ts.net";
-    datadir = "/mnt/storage1/nextcloud";
+    datadir = hostSettings.nextcloud_storage;
     https = false;
     database.createLocally = true;
     maxUploadSize = "8G";
@@ -30,36 +29,17 @@
         "homelab.tailf073f1.ts.net"
         "nextcloud.homelab.com"
       ];
-      # apps_directory = "/var/lib/nextcloud/apps";
     };
 
-    # extraAppsEnable = false;
-    # extraApps = {
-    #   inherit (config.services.nextcloud.package.packages.apps) news contacts calendar;
-    # };
     appstoreEnable = true;
 
-    # extraOptions = {
-    #   apps_path = [
-    #     {
-    #       path = "/var/lib/nextcloud/apps";
-    #       url = "/apps";
-    #       writable = true;
-    #     }
-    #     {
-    #       path = "${config.services.nextcloud.package}/apps";
-    #       url = "/core-apps";
-    #       writable = false;
-    #     }
-    #   ];
-    # };
 
   };
 
   systemd.tmpfiles.rules = [
     # "d /var/lib/nextcloud 0750 nextcloud nextcloud -"
-    "d /mnt/storage1/nextcloud 0750 nextcloud nextcloud -"
-    "d /mnt/storage1/nextcloud/config 0750 nextcloud nextcloud -"
+    "d ${hostSettings.nextcloud_storage} 0750 nextcloud nextcloud -"
+    "d ${hostSettings.nextcloud_storage}/config 0750 nextcloud nextcloud -"
     # "d /mnt/storage1 0750 root root -"
   ];
 

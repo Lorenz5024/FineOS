@@ -3,7 +3,7 @@
 {
   programs.yazi.keymap = {
 
-    manager.prepend_keymap = [
+    mgr.prepend_keymap = [
 	# Goto
 	{ on = [ "g" "h" ];       run = "cd ~";                             desc = "Go to the home directory"; }
 	{ run = "cd ~/.config";   on = [ "g" "c" ];                         desc = "Go to the config directory"; }
@@ -14,14 +14,12 @@
           run = "cd --interactive";                 
           desc = "Go to a directory interactively"; 
         }
-        { 
-          on = [ "g" "p" ];
-          run = "cd /home/lorenz/Pathfinder/Kampagnen/Unter_Piraten/Dokumente";
-          desc = "Go to Pathfinder Campaign"; 
-        }
+        { on = [ "g" "p" "p" ]; run = "cd /home/lorenz/Pathfinder/Kampagnen/Unter_Piraten/Dokumente"; desc = "Go to Pathfinder Campaign"; }
+        { on = [ "g" "p" "d" ]; run = "cd /home/lorenz/Pathfinder/Documents"; desc = "Go to Pathfinder Documents"; }
+	{ on = "<Enter>";   run = "plugin smart-enter";                        desc = "Enter the child directory, or open the file"; }
     ];
 
-    manager.keymap = [
+    mgr.keymap = [
 	{ on = "<Esc>"; run = "escape";             desc = "Exit visual mode, clear selected, or cancel search"; }
 	{ on = "<C-[>"; run = "escape";             desc = "Exit visual mode, clear selected, or cancel search"; }
 	{ on = "q";     run = "quit";               desc = "Exit the process"; }

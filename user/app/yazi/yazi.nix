@@ -1,11 +1,17 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
     ./keymap.nix
   ];
 
-  # programs.yazi.enableZshIntegration = true;
+  # plugin to enter directories when enter is pressed,
+  # instead of opening them in editor
+  home.packages = [
+    pkgs.yaziPlugins.smart-enter
+  ];
+
+  programs.yazi.enableZshIntegration = true;
 
   programs.yazi = {
     enable = true;

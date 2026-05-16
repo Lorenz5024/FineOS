@@ -5,8 +5,11 @@ rec {
   username = "lorenz";
   name = "Lorenz Feiner";
   email = "lorenzfeiner@proton.me";
+
+  # Default directories
   flakeDir = "/home/${username}/.fine/FineOS";       # the directory where the flake and configs are stored
   wallpaperDir = "/home/${username}/Pictures/wallpapers";
+  screenshotDir = "/home/${username}/Pictures/screenshot";
 
   gitUsername = "Lorenz5024";
 

@@ -15,4 +15,6 @@
   
   # The host, used for scripts
   host = "homelab";
+  
+  nextcloud_storage = "/mnt/storage1/nextcloud";
 }

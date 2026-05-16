@@ -18,6 +18,7 @@
       ./services/nextcloud.nix
       ./services/openvpn.nix
       ./services/nix-serve.nix
+      ./services/borgbackup.nix
 
       ./../../system/services/ssh/ssh.nix
       # ./../../system/services/docker/docker.nix
@@ -33,6 +34,9 @@
   # disable obsidian.nvim 
   programs.nixvim.plugins.obsidian.enable = lib.mkForce false;
 
+  # trusted users 
+  nix.settings.trusted-users = [ "root" "nix-serve"];
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${userSettings.username} = {
     isNormalUser = true;
@@ -47,6 +51,9 @@
     automatic = true;
     options = "--delete-older-than 30d";
   };
+
+  # Disable systemd-ask-password messages when connected with ssh 
+  systemd.settings.Manager.EnableWallMessages = false;
 
   boot = {
     initrd.verbose = false;
