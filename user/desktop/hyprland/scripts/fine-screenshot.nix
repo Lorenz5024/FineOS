@@ -22,7 +22,7 @@ in
 
 	  # take screenshot
 	  grim -g "$(slurp)" ${screenshot_directory}/"$(date +'%s_grim.png')"
-	  # grim -g "$(slurp)" - | wl-copy
+	  grim -g "$(slurp)" - | wl-copy
 
           notify-send "Screenshot created at ${screenshot_directory}"
         '';
