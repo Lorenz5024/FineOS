@@ -14,11 +14,9 @@
           run = "cd --interactive";                 
           desc = "Go to a directory interactively"; 
         }
-        { 
-          on = [ "g" "p" ];
-          run = "cd /home/lorenz/Pathfinder/Kampagnen/Unter_Piraten/Dokumente";
-          desc = "Go to Pathfinder Campaign"; 
-        }
+        { on = [ "g" "p" "p" ]; run = "cd /home/lorenz/Pathfinder/Kampagnen/Unter_Piraten/Dokumente"; desc = "Go to Pathfinder Campaign"; }
+        { on = [ "g" "p" "d" ]; run = "cd /home/lorenz/Pathfinder/Documents"; desc = "Go to Pathfinder Documents"; }
+	{ on = "<Enter>";   run = "plugin smart-enter";                        desc = "Enter the child directory, or open the file"; }
     ];
 
     mgr.keymap = [
@@ -73,8 +71,7 @@
 	# Operation
 	{ on = "o";         run = "open";                        desc = "Open selected files"; }
 	{ on = "O";         run = "open --interactive";          desc = "Open selected files interactively"; }
-	# { on = "<Enter>";   run = "open";                        desc = "Open selected files"; }
-	{ on = "<Enter>";   run = "plugin smart-enter";                        desc = "Enter the child directory, or open the file"; }
+	{ on = "<Enter>";   run = "open";                        desc = "Open selected files"; }
 	{ on = "<S-Enter>"; run = "open --interactive";          desc = "Open selected files interactively"; }
 	{ on = "y";         run = "yank";                        desc = "Yank selected files (copy)"; }
 	{ on = "x";         run = "yank --cut";                  desc = "Yank selected files (cut)"; }
