@@ -10,5 +10,6 @@
     calibre
     veracrypt
     r2modman  # mod manager
+    gimp
   ];
 }
