@@ -13,6 +13,7 @@
     ./../../app/waybar/waybar.nix
 
     ./scripts/cycle-audio.nix
+    ./scripts/fine-screenshot.nix
 
     ./default.nix
   ];

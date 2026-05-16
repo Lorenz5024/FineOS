@@ -53,7 +53,7 @@
       "$mod_CTRL_ALT, V, exec, cliphist wipe"
 
       # take screenshot
-      "CTRL_ALT, S, exec, $scriptsDir/screenshot-region.sh"
+      "$mod_SHIFT, S, exec, fine-screenshot"
 
       # scratchpads
       "$mod_ALT, RETURN, exec, hyprctl dispatch togglespecialworkspace terminal"
