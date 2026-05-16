@@ -75,8 +75,8 @@
       "$mod_SHIFT, L, movewindow, r"
 
       # Change group active 
-      "$mod, TAB, changegroupactive, b"
-      "$mod_SHIFT, TAB, changegroupactive, f"
+      "$mod, TAB, changegroupactive, f"
+      "$mod_SHIFT, TAB, changegroupactive, b"
 
       # Move window in group
       "$mod_CTRL_ALT_SHIFT, H, movegroupwindow, b"
