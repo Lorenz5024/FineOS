@@ -35,7 +35,6 @@
     # ];
 
     render = {
-      cm_fs_passthrough = 0;
       cm_auto_hdr = 2;
     };
 
