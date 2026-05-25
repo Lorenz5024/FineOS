@@ -4,8 +4,21 @@
   services.samba = {
     enable = true;
 
+    nmbd.enbale = true;
+
     settings = {
-      global.security = "user";
+      global = {
+        security = "user";
+
+        workgroup = "WORKGROUP";
+        "server string" = "homelab Samba Server";
+
+        "netbios name" = "HOMELAB";
+
+        "name resolve order" = "bcast host";
+
+        "map to guest" = "Bad User";
+      };
 
       Shows = { 
         path = "/mnt/storage0/Jellyfin/Shows";
