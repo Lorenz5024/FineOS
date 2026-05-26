@@ -1,5 +1,4 @@
 { config, ... }:
-    #@define-color workspaces-active       #${config.lib.stylix.colors.base0E};
 
 {
   wayland.windowManager.hyprland.settings.group = {
