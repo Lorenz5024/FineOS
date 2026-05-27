@@ -30,7 +30,8 @@
       disabled = true,
     })
 
-    hl.bind("SUPER + ALT + DOWN", 
+    -- set reserved area
+    hl.bind("SUPER + ALT + DOWN", hl.dsp.exec_command("
       hl.monitor({
         output = "DP-1",
         mode = "3440x1440@144",
@@ -41,8 +42,7 @@
           left = 440,
         }
       })
-    )
-
+    "))
   '';
 
   #   bind = [
