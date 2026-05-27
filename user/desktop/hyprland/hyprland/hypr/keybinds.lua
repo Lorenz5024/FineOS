@@ -2,6 +2,13 @@
 -- Keybinds
 -- =====================================================
 
+
+
+
+
+
+
+
 -- Replace these with your actual applications or environment variables.
 -- Since these previously came from Nix variables, they now need concrete values.
 local terminal = "kitty"
