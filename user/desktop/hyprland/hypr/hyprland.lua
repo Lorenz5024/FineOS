@@ -46,7 +46,6 @@ hl.config({
         gaps_in = 4,
         gaps_out = 8,
 
-        -- Replace with your desired colors
         col = {
             active_border = "rgb(cba6f7)",
         },
