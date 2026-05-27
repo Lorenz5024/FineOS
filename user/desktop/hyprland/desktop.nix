@@ -2,8 +2,8 @@
 
 {
   imports = [ 
-    # ./hyprland/hyprland.nix
-    ./hyprland/hypr.nix
+    ./hyprland/hyprland.nix
+    # ./hyprland/hypr.nix
     ./wlogout/wlogout.nix
     ./network-manager-applet/network-manager-applet.nix
     ./gtk/gtk.nix

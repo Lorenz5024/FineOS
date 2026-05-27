@@ -1,70 +1,23 @@
-{ config, lib, pkgs, ... }:
+{ userSettings, config, pkgs, ... }:
 
+let 
+  configPath = "${userSettings.flakeDir}/user/desktop/hyprland/hyprland";
+in
 {
   imports = [
-    ./keybinds.nix
-    ./animations.nix
-    ./windowrules.nix
-    ./layerrules.nix
-    ./input.nix
-    ./startup.nix
-    ./workspaces.nix
-    ./group.nix
-
     ./hyprpaper.nix
     ./hyprlock.nix
     ./hypridle.nix
   ];
 
-  wayland.windowManager.hyprland.enable = true;
-  wayland.windowManager.hyprland.settings = {
-    general = {
-      layout = "dwindle";
-
-      border_size = 2;
-      gaps_in = 4;
-      gaps_out = 8;
-
-      "col.active_border" =  lib.mkForce "rgb(${config.lib.stylix.colors.base0E})";
-
-    };
-
-    cursor = {
-      inactive_timeout = 5;
-      no_hardware_cursors = true;   # added to fix cursor stuttering. may be removed in future updates
-    };
-
-    decoration = {
-      rounding = 8;
-
-      blur = {
-        enabled = true;
-        size = 4;
-        passes = 3;
-
-        ignore_opacity = true;
-      };
-    };
-
-    master = {
-      new_on_top = false;
-    };
-
-    dwindle = {
-      force_split = 2;      # 0 -> split follows mouse, 1 -> split to left, 2 -> split to right
-      preserve_split = true;
-    };
-
-    misc = {
-      animate_manual_resizes = true;
-      disable_splash_rendering = true;
-      disable_hyprland_logo = true;
-      initial_workspace_tracking = 2;
-    };
-
-  };
-
   home.packages = [ pkgs.hyprshutdown ];
 
+  xdg.configFile."hypr/hyprland.lua".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/hyprland.lua";
+  xdg.configFile."hypr/animations.lua".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/animations.lua";
+  xdg.configFile."hypr/startup.lua".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/startup.lua";
+  xdg.configFile."hypr/keybinds.lua".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/keybinds.lua";
+  xdg.configFile."hypr/windowrules.lua".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/windowrules.lua";
+  xdg.configFile."hypr/layerrules.lua".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/layerrules.lua";
+  xdg.configFile."hypr/gestures.lua".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/gestures.lua";
 
 }
