@@ -5,7 +5,32 @@
 
 
 
+-- set reserved area
+hl.bind("SUPER + ALT + DOWN", hl.dsp.exec_cmd([[
+  hyprctl eval 'hl.monitor({
+    output = "DP-1",
+    mode = "3440x1440@144",
+    position = "0x0",
+    scale = 1,
+    reserved_area = {
+      right = 440,
+      left = 440,
+    }
+  })'
+]]))
 
+hl.bind("SUPER + ALT + UP", hl.dsp.exec_cmd([[
+  hyprctl eval 'hl.monitor({
+    output = "DP-1",
+    mode = "3440x1440@144",
+    position = "0x0",
+    scale = 1,
+    reserved_area = {
+      right = 0,
+      left = 0,
+    }
+  })'
+]]))
 
 
 
