@@ -1,7 +1,7 @@
 { userSettings, config, pkgs, ... }:
 
 let 
-  configPath = "${userSettings.flakeDir}/user/desktop/hyprland/hyprland";
+  configPath = "${userSettings.flakeDir}/user/desktop/hyprland/hyprland/hypr";
 in
 {
   imports = [
@@ -19,5 +19,6 @@ in
   xdg.configFile."hypr/windowrules.lua".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/windowrules.lua";
   xdg.configFile."hypr/layerrules.lua".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/layerrules.lua";
   xdg.configFile."hypr/gestures.lua".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/gestures.lua";
+  xdg.configFile."hypr/workspacerules.lua".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/workspacerules.lua";
 
 }
