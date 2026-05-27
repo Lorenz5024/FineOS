@@ -14,7 +14,7 @@ hl.animation({
 hl.animation({ 
   leaf = "windows",
   enabled = true,
-  speed = 4,
+  speed = 2,
   bezier = "overshot",
   style = "slide",
 })
@@ -22,14 +22,14 @@ hl.animation({
 hl.animation({ 
   leaf = "windowsMove",
   enabled = true,
-  speed = 4,
+  speed = 2,
   bezier = "default",
 })
 
 hl.animation({ 
   leaf = "specialWorkspace",
   enabled = true,
-  speed = 8,
+  speed = 1,
   bezier = "default",
   style = "fade",
 })

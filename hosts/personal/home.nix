@@ -6,6 +6,31 @@
     ./packages.nix 
   ] ++ map (e: ./. + "/../../user/desktop/${e}/desktop.nix") hostSettings.desktops;
 
+  xdg.configFile."hypr/hardware.lua".text = ''
+    hl.env("LIBVA_DRIVER_NAME", "nvidia")
+    hl.env("XDG_SESSION_TYPE", "wayland")
+    hl.env("GBM_BACKEND", "nvidia-drm")
+    hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
+    hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
+    hl.env("NVD_BACKEND", "direct")
+
+    hl.monitor({
+      output = "DP-1",
+      mode = "3440x1440@144",
+      position = "0x0",
+      scale = 1,
+      reserved_area = {
+        right = 440,
+        left = 440,
+      }
+    })
+
+    hl.monitor({
+      output = "HDMI-A-1",
+      disabled = true,
+    })
+  '';
+
   # wayland.windowManager.hyprland.settings = {
   #   monitor = [
   #     "DP-1, 3440x1440@144.00, 0x0, 1, vrr, 3, bitdepth, 10"
