@@ -6,6 +6,7 @@
     ./packages.nix 
   ] ++ map (e: ./. + "/../../user/desktop/${e}/desktop.nix") hostSettings.desktops;
 
+  # set host specific hyprland config
   xdg.configFile."hypr/hardware.lua".text = ''
     hl.env("LIBVA_DRIVER_NAME", "nvidia")
     hl.env("XDG_SESSION_TYPE", "wayland")
@@ -31,18 +32,6 @@
     })
 
     -- set reserved area
-    hl.bind("SUPER + ALT + DOWN", hl.dsp.exec_command("
-      hl.monitor({
-        output = "DP-1",
-        mode = "3440x1440@144",
-        position = "0x0",
-        scale = 1,
-        reserved_area = {
-          right = 440,
-          left = 440,
-        }
-      })
-    "))
   '';
 
   #   bind = [
