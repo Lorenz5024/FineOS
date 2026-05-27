@@ -35,6 +35,7 @@
     # pyprland				# hyprland plugins
     slurp                               # select region of screen for screenshots
     grim                                # grab image for screenshot
+    hyprpaper
   ];
 
   # create home directories

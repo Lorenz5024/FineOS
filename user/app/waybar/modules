@@ -24,9 +24,8 @@
 
 "hyprland/workspaces#numbers": {
     "show-special": true,
-    "on-click": "activate",
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"+1\" })'",
+    "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"-1\" })'",
     "all-outputs": true,
     "sort-by-number": true,
     "persistent-workspaces": {
