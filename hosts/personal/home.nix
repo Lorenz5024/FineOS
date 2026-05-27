@@ -29,57 +29,22 @@
       output = "HDMI-A-1",
       disabled = true,
     })
+
+    hl.bind("SUPER + ALT + DOWN", 
+      hl.monitor({
+        output = "DP-1",
+        mode = "3440x1440@144",
+        position = "0x0",
+        scale = 1,
+        reserved_area = {
+          right = 440,
+          left = 440,
+        }
+      })
+    )
+
   '';
 
-  # wayland.windowManager.hyprland.settings = {
-  #   monitor = [
-  #     "DP-1, 3440x1440@144.00, 0x0, 1, vrr, 3, bitdepth, 10"
-  #     "DP-1, addreserved, 0, 0, 440, 440"   # for 3440x1440 21:9 monitor
-  #     "HDMI-A-1, disabled"
-  #   ];
-  #
-  #   # monitorv2 = [
-  #   #   # {
-  #   #   #   output = "DP-1";
-  #   #   #   mode = "3440x1440@144";
-  #   #   #   position = "0x0";
-  #   #   #   scale = 1;
-  #   #   #   vrr = 3;
-  #   #   #   addreserved = "0, 0, 440, 440";
-  #   #   #
-  #   #   #   cm = "hdr";
-  #   #   #   sdr_min_luminance = 0.005;
-  #   #   #   sdrbrightness = 1.3;
-  #   #   #   sdrsaturation = 1;
-  #   #   # }
-  #   #
-  #   #   {
-  #   #     output = "HDMI-A-1";
-  #   #     disabled = true;
-  #   #   }
-  #   # ];
-  #
-  #   render = {
-  #     cm_auto_hdr = 2;
-  #   };
-  #
-  #   workspace = [
-  #     "1, monitor:DP-1"
-  #     "2, monitor:DP-1"
-  #     "3, monitor:DP-1"
-  #     "4, monitor:DP-2"
-  #     "5, monitor:DP-2"
-  #   ];
-  #
-  #   env = [
-  #     "LIBVA_DRIVER_NAME,nvidia"
-  #     "XDG_SESSION_TYPE,wayland"
-  #     "GBM_BACKEND,nvidia-drm"
-  #     "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-  #     "ELECTRON_OZONE_PLATFORM_HINT,auto"
-  #     "NVD_BACKEND,direct"
-  #   ];
-  #
   #   bind = [
   #     # use for ultrawide monitors: switch between using full screen and only 16:9
   #     "$mod_ALT, down, exec, hyprctl keyword monitor \"DP-1, addreserved, 0, 0, 440, 440\""
