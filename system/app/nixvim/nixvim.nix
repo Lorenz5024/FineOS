@@ -46,7 +46,7 @@
       markdown-preview.enable = true;
       nix.enable = true;
       lazygit.enable = true;
-      auto-save.enable = true;
+      # auto-save.enable = true;
       autoclose.enable = true;
       web-devicons.enable = true;
       # leap.enable = true;

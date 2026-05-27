@@ -6,19 +6,33 @@
 -- Variables
 -- =====================================================
 
-local mod = "SUPER"
-
 -- Replace these with your actual applications or environment variables.
 -- Since these previously came from Nix variables, they now need concrete values.
 local terminal = "kitty"
 local editor = "nvim"
 local fileManager = "thunar"
 local musicPlayer = "spotify"
-local browser = "vivaldi-stable"
+local browser = "vivaldi"
 
 -- Update these paths to match your setup
-local rofiScripts = os.getenv("HOME") .. "/.config/rofi/scripts"
-local scriptsDir = os.getenv("HOME") .. "/.config/hypr/scripts"
+-- local rofiScripts = os.getenv("HOME") .. "/.config/rofi/scripts"
+-- local scriptsDir = os.getenv("HOME") .. "/.config/hypr/scripts"
+
+-- =====================================================
+-- Monitors
+-- =====================================================
+
+hl.monitor({
+  output = "DP-1",
+  mode = "3440x1440@144",
+  position = "0x0",
+  scale = 1,
+})
+
+hl.monitor({
+  output = "HDMI-1-A",
+  disabled = true,
+})
 
 -- =====================================================
 -- Main Configuration
@@ -112,264 +126,206 @@ hl.config({
 -- Animations
 -- =====================================================
 
-hl.animation.bezier("overshot", 0.05, 0.9, 0.1, 1.03)
+hl.curve("overshot", { type = "bezier", points = { {0.05, 0.9}, {0.1, 1.03} } } )
 
-hl.animation.add("global", {
-    enabled = true,
-    speed = 4,
-    curve = "default",
+hl.animation({ 
+  leaf = "global",
+  enabled = true,
+  speed = 4,
+  bezier = "default",
 })
 
-hl.animation.add("windows", {
-    enabled = true,
-    speed = 4,
-    curve = "overshot",
-    style = "slide",
+hl.animation({ 
+  leaf = "windows",
+  enabled = true,
+  speed = 4,
+  bezier = "overshot",
+  style = "slide",
 })
 
-hl.animation.add("windowsMove", {
-    enabled = true,
-    speed = 4,
-    curve = "default",
+hl.animation({ 
+  leaf = "windowsMove",
+  enabled = true,
+  speed = 4,
+  bezier = "default",
 })
 
-hl.animation.add("specialWorkspace", {
-    enabled = true,
-    speed = 8,
-    curve = "default",
-    style = "fade",
+hl.animation({ 
+  leaf = "specialWorkspace",
+  enabled = true,
+  speed = 8,
+  bezier = "default",
+  style = "fade",
 })
 
 -- =====================================================
 -- Gestures
 -- =====================================================
 
-hl.gesture.add({
-    fingers = 3,
-    direction = "horizontal",
-    action = "workspace",
-})
+-- hl.gesture.add({
+--     fingers = 3,
+--     direction = "horizontal",
+--     action = "workspace",
+-- })
 
 -- =====================================================
 -- Exec Once
 -- =====================================================
 
-hl.exec_once("waybar")
-hl.exec_once("swaync")
-hl.exec_once("hyprpaper")
-hl.exec_once("thunar --daemon")
-hl.exec_once("nm-applet")
-hl.exec_once("blueman-applet")
-hl.exec_once("wl-paste --type text --watch cliphist store")
-hl.exec_once("wl-paste --type image --watch cliphist store")
+hl.on("hyprland.start", function()
+  hl.exec_cmd("waybar")
+  hl.exec_cmd("swaync")
+  hl.exec_cmd("hyprpaper")
+  hl.exec_cmd("thunar --daemon")
+  hl.exec_cmd("nm-applet")
+  hl.exec_cmd("blueman-applet")
+  hl.exec_cmd("wl-paste --type text --watch cliphist store")
+  hl.exec_cmd("wl-paste --type image --watch cliphist store")
+end)
+
 
 -- =====================================================
 -- Keybinds
 -- =====================================================
 
-local binds = {
-    -- Compositor commands
-    { mods = mod .. "_CTRL_ALT", key = "F4", action = "exec", args = "pkill Hyprland" },
-    { mods = mod, key = "Q", action = "killactive" },
-    { mods = mod, key = "F", action = "fullscreen", args = "0" },
-    { mods = mod, key = "M", action = "fullscreen", args = "1" },
-    { mods = mod .. "_CTRL", key = "F", action = "togglefloating" },
-    { mods = mod, key = "G", action = "togglegroup" },
+-- Compositor commands
+hl.bind("SUPER + CTRL + ALT + F4", hl.dsp.exec_cmd("pkill Hyprland"))
 
-    -- Power
-    { mods = mod, key = "P", action = "exec", args = "wlogout" },
+-- Window management
+hl.bind("SUPER + Q", hl.dsp.window.close())
+hl.bind("SUPER + SHIFT + Q", hl.dsp.window.kill())
 
-    -- Restart programs
-    { mods = mod .. "_CTRL_ALT", key = "B", action = "exec", args = "pkill waybar || waybar" },
-    { mods = mod .. "_CTRL_ALT", key = "P", action = "exec", args = "pkill hyprpaper; hyprpaper" },
+hl.bind("SUPER + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
+hl.bind("SUPER + M", hl.dsp.window.fullscreen({ mode = "maximized" }))
 
-    -- Launchers
-    { mods = mod, key = "RETURN", action = "exec", args = terminal },
-    { mods = mod, key = "T", action = "exec", args = fileManager },
-    { mods = mod, key = "Y", action = "exec", args = terminal .. " --class yazi -e yazi" },
-    { mods = mod, key = "M", action = "exec", args = musicPlayer },
-    { mods = mod, key = "B", action = "exec", args = browser },
-    { mods = mod, key = "S", action = "exec", args = "pavucontrol" },
+hl.bind("SUPER + CTRL + F", hl.dsp.window.float({ action = "toggle" }))
+hl.bind("SUPER + G", hl.dsp.group.toggle())
 
-    -- Rofi
-    { mods = mod, key = "SPACE", action = "exec", args = "pkill rofi || rofi -show drun" },
-    { mods = mod, key = "R", action = "exec", args = "fine-radio" },
-    { mods = mod, key = "V", action = "exec", args = "pkill rofi || cliphist list | rofi -dmenu -window-title Clipboard | cliphist decode | wl-copy" },
-    { mods = mod, key = "W", action = "exec", args = "fine-wallpaper" },
+-- Power
+hl.bind("SUPER + P", hl.dsp.exec_cmd("wlogout"))
 
-    -- Clipboard
-    { mods = mod .. "_CTRL_ALT", key = "V", action = "exec", args = "cliphist wipe" },
+-- Restart programs
+hl.bind("SUPER + CTRL + ALT + B", hl.dsp.exec_cmd("pkill waybar || waybar"))
+hl.bind("SUPER + CTRL + ALT + P", hl.dsp.exec_cmd("pkill hyprpaper; hyprpaper"))
 
-    -- Screenshot
-    { mods = mod .. "_SHIFT", key = "S", action = "exec", args = "fine-screenshot" },
+-- Launchers
+hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal))
+hl.bind("SUPER + T", hl.dsp.exec_cmd(fileManager))
+hl.bind("SUPER + Y", hl.dsp.exec_cmd(terminal .. " --class yazi -e yazi"))
+-- hl.bind("SUPER + M", hl.dsp.exec_cmd(musicPlayer))
+hl.bind("SUPER + B", hl.dsp.exec_cmd(browser))
+hl.bind("SUPER + S", hl.dsp.exec_cmd("pavucontrol"))
 
-    -- Scratchpads
-    { mods = mod .. "_ALT", key = "RETURN", action = "exec", args = "hyprctl dispatch togglespecialworkspace terminal" },
-    { mods = mod .. "_ALT", key = "N", action = "exec", args = "hyprctl dispatch togglespecialworkspace notes" },
-    { mods = mod .. "_ALT", key = "B", action = "exec", args = "hyprctl dispatch togglespecialworkspace vault" },
-    { mods = mod .. "_ALT", key = "M", action = "exec", args = "hyprctl dispatch togglespecialworkspace music" },
-    { mods = mod .. "_ALT", key = "F", action = "exec", args = "hyprctl dispatch togglespecialworkspace files" },
+-- Rofi / tools
+hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("pkill rofi || rofi -show drun"))
+hl.bind("SUPER + R", hl.dsp.exec_cmd("fine-radio"))
+hl.bind("SUPER + V", hl.dsp.exec_cmd(
+    "pkill rofi || cliphist list | rofi -dmenu -window-title Clipboard | cliphist decode | wl-copy"
+))
+hl.bind("SUPER + W", hl.dsp.exec_cmd("fine-wallpaper"))
 
-    -- Focus
-    { mods = mod, key = "H", action = "movefocus", args = "l" },
-    { mods = mod, key = "J", action = "movefocus", args = "d" },
-    { mods = mod, key = "K", action = "movefocus", args = "u" },
-    { mods = mod, key = "L", action = "movefocus", args = "r" },
+-- Clipboard
+hl.bind("SUPER + CTRL + ALT + V", hl.dsp.exec_cmd("cliphist wipe"))
 
-    -- Move windows
-    { mods = mod .. "_SHIFT", key = "H", action = "movewindow", args = "l" },
-    { mods = mod .. "_SHIFT", key = "J", action = "movewindow", args = "d" },
-    { mods = mod .. "_SHIFT", key = "K", action = "movewindow", args = "u" },
-    { mods = mod .. "_SHIFT", key = "L", action = "movewindow", args = "r" },
+-- Screenshot
+hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("fine-screenshot"))
 
-    -- Groups
-    { mods = mod, key = "TAB", action = "changegroupactive", args = "f" },
-    { mods = mod .. "_SHIFT", key = "TAB", action = "changegroupactive", args = "b" },
+-- Scratchpads
+hl.bind("SUPER + ALT + RETURN", hl.dsp.workspace.toggle_special("terminal"))
+hl.bind("SUPER + ALT + N", hl.dsp.workspace.toggle_special("notes"))
+hl.bind("SUPER + ALT + B", hl.dsp.workspace.toggle_special("vault"))
+hl.bind("SUPER + ALT + M", hl.dsp.workspace.toggle_special("music"))
+hl.bind("SUPER + ALT + F", hl.dsp.workspace.toggle_special("files"))
 
-    { mods = mod .. "_CTRL_ALT_SHIFT", key = "H", action = "movegroupwindow", args = "b" },
-    { mods = mod .. "_CTRL_ALT_SHIFT", key = "L", action = "movegroupwindow", args = "f" },
+-- Focus (correct dispatcher: focus)
+hl.bind("SUPER + H", hl.dsp.focus({ direction = "l" }))
+hl.bind("SUPER + J", hl.dsp.focus({ direction = "d" }))
+hl.bind("SUPER + K", hl.dsp.focus({ direction = "u" }))
+hl.bind("SUPER + L", hl.dsp.focus({ direction = "r" }))
 
-    -- Layout
-    { mods = mod, key = "O", action = "layoutmsg", args = "togglesplit" },
+-- Move windows
+hl.bind("SUPER + SHIFT + H", hl.dsp.window.move({ direction = "l" }))
+hl.bind("SUPER + SHIFT + J", hl.dsp.window.move({ direction = "d" }))
+hl.bind("SUPER + SHIFT + K", hl.dsp.window.move({ direction = "u" }))
+hl.bind("SUPER + SHIFT + L", hl.dsp.window.move({ direction = "r" }))
 
-    -- Media
-    { mods = "", key = "xf86audiomute", action = "exec", args = "amixer set Master toggle" },
-    { mods = "", key = "xf86AudioPlayPause", action = "exec", args = "playerctl play-pause" },
-    { mods = "", key = "xf86AudioPlay", action = "exec", args = "playerctl play-pause" },
-    { mods = "", key = "xf86AudioPause", action = "exec", args = "playerctl play-pause" },
-    { mods = "", key = "xf86AudioNext", action = "exec", args = "playerctl next" },
-    { mods = "", key = "xf86AudioPrev", action = "exec", args = "playerctl previous" },
+-- Groups (correct API)
+hl.bind("SUPER + TAB", hl.dsp.group.next({ window = "activewindow" }))
+hl.bind("SUPER + SHIFT + TAB", hl.dsp.group.prev({ window = "activewindow" }))
 
-    -- Workspace switching
-    { mods = mod, key = "1", action = "workspace", args = "1" },
-    { mods = mod, key = "2", action = "workspace", args = "2" },
-    { mods = mod, key = "3", action = "workspace", args = "3" },
-    { mods = mod, key = "4", action = "workspace", args = "4" },
-    { mods = mod, key = "5", action = "workspace", args = "5" },
-    { mods = mod, key = "6", action = "workspace", args = "6" },
-    { mods = mod, key = "7", action = "workspace", args = "7" },
-    { mods = mod, key = "8", action = "workspace", args = "8" },
-    { mods = mod, key = "9", action = "workspace", args = "9" },
-    { mods = mod, key = "0", action = "workspace", args = "10" },
+-- Layout
+hl.bind("SUPER + O", hl.dsp.layout("togglesplit"))
 
-    { mods = mod, key = "right", action = "workspace", args = "+1" },
-    { mods = mod, key = "left", action = "workspace", args = "-1" },
-}
+-- Workspaces
+hl.bind("SUPER + 1", hl.dsp.focus({ workspace = 1 }))
+hl.bind("SUPER + 2", hl.dsp.focus({ workspace = 2 }))
+hl.bind("SUPER + 3", hl.dsp.focus({ workspace = 3 }))
+hl.bind("SUPER + 4", hl.dsp.focus({ workspace = 4 }))
+hl.bind("SUPER + 5", hl.dsp.focus({ workspace = 5 }))
+hl.bind("SUPER + 6", hl.dsp.focus({ workspace = 6 }))
+hl.bind("SUPER + 7", hl.dsp.focus({ workspace = 7 }))
+hl.bind("SUPER + 8", hl.dsp.focus({ workspace = 8 }))
+hl.bind("SUPER + 9", hl.dsp.focus({ workspace = 9 }))
+hl.bind("SUPER + 0", hl.dsp.focus({ workspace = 10 }))
 
-for _, bind in ipairs(binds) do
-    hl.bind(bind)
-end
+hl.bind("SUPER + RIGHT", hl.dsp.focus({ workspace = "+1" }))
+hl.bind("SUPER + LEFT", hl.dsp.focus({ workspace = "-1" }))
+
+
 
 -- =====================================================
--- Mouse binds
+-- Volume and Brightness
 -- =====================================================
 
-hl.bindm({
-    mods = mod,
-    key = "mouse:272",
-    action = "movewindow",
-})
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("swayosd-client --output-volume raise"))
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("swayosd-client --output-volume lower"))
 
-hl.bindm({
-    mods = mod,
-    key = "mouse:273",
-    action = "resizewindow",
-})
-
--- =====================================================
--- Repeat binds
--- =====================================================
-
-local repeatBinds = {
-    { mods = "", key = "xf86audioraisevolume", action = "exec", args = "swayosd-client --output-volume raise" },
-    { mods = "", key = "xf86audiolowervolume", action = "exec", args = "swayosd-client --output-volume lower" },
-
-    { mods = "", key = "xf86MonBrightnessDown", action = "exec", args = "swayosd-client --brightness lower" },
-    { mods = "", key = "xf86MonBrightnessUp", action = "exec", args = "swayosd-client --brightness raise" },
-
-    { mods = mod .. "_CTRL", key = "H", action = "resizeactive", args = "-30 0" },
-    { mods = mod .. "_CTRL", key = "L", action = "resizeactive", args = "30 0" },
-    { mods = mod .. "_CTRL", key = "K", action = "resizeactive", args = "0 -30" },
-    { mods = mod .. "_CTRL", key = "J", action = "resizeactive", args = "0 30" },
-
-    { mods = mod .. "_ALT_SHIFT", key = "H", action = "movetoworkspace", args = "m-1" },
-    { mods = mod .. "_ALT_SHIFT", key = "L", action = "movetoworkspace", args = "m+1" },
-}
-
-for _, bind in ipairs(repeatBinds) do
-    hl.binde(bind)
-end
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("swayosd-client --brightness raise"))
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("swayosd-client --brightness lower"))
 
 -- =====================================================
 -- Layer Rules
 -- =====================================================
 
-hl.layerrule({
-    rule = "blur",
-    value = true,
-    match = "namespace logout_dialog",
+hl.layer_rule({
+  match = { namespace = "logout_dialog" },
+  blur = true,
 })
 
-hl.layerrule({
-    rule = "animation",
-    value = "slide",
-    match = "namespace rofi",
+hl.layer_rule({
+  match = { namespace = "rofi" },
+  animation = "slide",
+  blur = true,
 })
 
-hl.layerrule({
-    rule = "blur",
-    value = true,
-    match = "namespace rofi",
-})
+
 
 -- =====================================================
 -- Window Rules
 -- =====================================================
 
-local windowrules = {
-    "tag +chat, match:class com.discordapp.Discord",
-    "tag +music, match:class feishin",
-    "tag +music, match:class spotify",
-    "tag +gamelauncher, match:class steam",
-    "tag +gamelauncher, match:class heroic",
-    "tag +game, match:class steam_app_\\d+$",
-    "tag +utility, match:class org.gnome.World.Iota",
-    "tag +utility, match:class org.speedcrunch.",
-    "tag +utility, match:class com.nextcloud.desktopclient.nextcloud",
-    "tag +utility, match:class org.pulseaudio.pavucontrol",
-    "tag +browser, match:class vivaldi-stable",
+-- set tags
+hl.window_rule({ match = { class = "discord" }, tag = "+chat" })
+hl.window_rule({ match = { class = "Spotify" }, tag = "+music" })
+hl.window_rule({ match = { class = "steam" }, tag = "+gamelauncher" })
+hl.window_rule({ match = { class = "heroic" }, tag = "+gamelauncher" })
+hl.window_rule({ match = { class = "steam_app_\\d+$" }, tag = "+game" })
+hl.window_rule({ match = { class = "org.gnome.World.Iota" }, tag = "+utility" })
+hl.window_rule({ match = { class = "org.speedcrunch." }, tag = "+utility" })
+hl.window_rule({ match = { class = "com.nextcloud.desktopclient.nextcloud" }, tag = "+utility" })
+hl.window_rule({ match = { class = "org.pulseaudio.pavucontrol" }, tag = "+utility" })
+hl.window_rule({ match = { class = "vivaldi-stable" }, tag = "+browser" })
+hl.window_rule({ match = { class = "kitty" }, tag = "+terminal" })
 
-    "workspace 2, match:tag browser",
-    "workspace 4 silent, match:tag chat",
-    "workspace 5, match:tag gamelauncher",
-    "workspace 6, match:tag game",
+hl.window_rule({ name = "workspace-browser", 		match = { tag = "browser" }, workspace = "2", })
+hl.window_rule({ name = "workspace-chat", 		match = { tag = "chat" }, workspace = "4 silent", })
+hl.window_rule({ name = "workspace-gamelauncher", 	match = { tag = "gamelauncher" }, workspace = "5", })
+hl.window_rule({ name = "workspace-game", 		match = { tag = "game" }, workspace = "6", })
 
-    "float on, match:tag utility",
+hl.window_rule({ name = "float-utility", match = { tag = "utility" }, float = true, })
 
-    "float on, match:class com.nextcloud.desktopclient.nextcloud",
-    "float on, match:class wlogout",
-    "float on, match:class yazi-scratchpad",
-    "float on, match:class .blueman-manager-wrapped",
-    "float on, match:class discor",
+hl.window_rule({ name = "transparent-terminal", match = { tag = "terminal" }, opacity = "1 0.95", })
 
-    "opacity 1 override 0.95 override, match:class kitty",
+hl.window_rule({ name = "special-workspace-music", match = { tag = "music" }, workspace = "special:music", })
 
-    "workspace special:terminal, match:class kitty-scratchpad",
-    "workspace special:music, match:class spotify",
-    "workspace special:vault, match:class Proton Pass",
 
-    "size 800 600, match:class org.pulseaudio.pavucontrol",
-
-    "tag +game, match:class Slay the Spire 2",
-}
-
-for _, rule in ipairs(windowrules) do
-    hl.windowrule(rule)
-end
-
--- =====================================================
--- Workspace Rules
--- =====================================================
-
-hl.workspace.rule("s[true], gapsout:128, animation:specialWorkspace")
-hl.workspace.rule("f[1]s[false], border:false, rounding:false, gapsout:0")

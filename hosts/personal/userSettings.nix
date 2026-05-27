@@ -7,7 +7,7 @@ rec {
   email = "lorenzfeiner@proton.me";
 
   # Default directories
-  flakeDir = "/home/${username}/.fine/FineOS";       # the directory where the flake and configs are stored
+  flakeDir = "/home/${username}/.config/FineOS";       # the directory where the flake and configs are stored
   wallpaperDir = "/home/${username}/Pictures/wallpapers";
   screenshotDir = "/home/${username}/Pictures/screenshot";
 

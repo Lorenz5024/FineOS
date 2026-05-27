@@ -6,64 +6,64 @@
     ./packages.nix 
   ] ++ map (e: ./. + "/../../user/desktop/${e}/desktop.nix") hostSettings.desktops;
 
-  wayland.windowManager.hyprland.settings = {
-    monitor = [
-      "DP-1, 3440x1440@144.00, 0x0, 1, vrr, 3, bitdepth, 10"
-      "DP-1, addreserved, 0, 0, 440, 440"   # for 3440x1440 21:9 monitor
-      "HDMI-A-1, disabled"
-    ];
-
-    # monitorv2 = [
-    #   # {
-    #   #   output = "DP-1";
-    #   #   mode = "3440x1440@144";
-    #   #   position = "0x0";
-    #   #   scale = 1;
-    #   #   vrr = 3;
-    #   #   addreserved = "0, 0, 440, 440";
-    #   #
-    #   #   cm = "hdr";
-    #   #   sdr_min_luminance = 0.005;
-    #   #   sdrbrightness = 1.3;
-    #   #   sdrsaturation = 1;
-    #   # }
-    #
-    #   {
-    #     output = "HDMI-A-1";
-    #     disabled = true;
-    #   }
-    # ];
-
-    render = {
-      cm_auto_hdr = 2;
-    };
-
-    workspace = [
-      "1, monitor:DP-1"
-      "2, monitor:DP-1"
-      "3, monitor:DP-1"
-      "4, monitor:DP-2"
-      "5, monitor:DP-2"
-    ];
-
-    env = [
-      "LIBVA_DRIVER_NAME,nvidia"
-      "XDG_SESSION_TYPE,wayland"
-      "GBM_BACKEND,nvidia-drm"
-      "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-      "ELECTRON_OZONE_PLATFORM_HINT,auto"
-      "NVD_BACKEND,direct"
-    ];
-
-    bind = [
-      # use for ultrawide monitors: switch between using full screen and only 16:9
-      "$mod_ALT, down, exec, hyprctl keyword monitor \"DP-1, addreserved, 0, 0, 440, 440\""
-      "$mod_ALT, up, exec, hyprctl keyword monitor \"DP-1, addreserved, 0, 0, 0, 0\""
-      "$mod_SHIFT_CTRL_ALT, F1, exec, hyprctl keyword monitor \"DP-1, 3440x1440@144.00, 3840x0, 1, vrr, 3, bitdepth, 10\" && hyprctl keyword monitor \"HDMI-A-1, disable\""
-      "$mod_SHIFT_CTRL_ALT, F2, exec, hyprctl keyword monitor \"DP-1, 3440x1440@144.00, 0x0, 1, bitdepth, 10, vrr, 3, cm, hdr, sdrbrightness, 1.3, sdrsaturation, 1\""
-      "$mod_SHIFT_CTRL_ALT, F6, exec, hyprctl keyword monitor \"HDMI-A-1, 3840x2160@120.00, 3440x0, 1, vrr, 3\" && hyprctl keyword monitor \"DP-1, disable\""
-      "$mod_SHIFT_CTRL_ALT, F7, exec, hyprctl keyword monitor \"HDMI-A-1, 3840x2160@120.00, 3440x0, 2, vrr, 3\" && hyprctl keyword monitor \"DP-1, disable\""
-      #"HDMI-A-1, 3840x2160@60, -642x-2160, 1, bitdepth, 10, vrr, 2"
-    ];
-  };
+  # wayland.windowManager.hyprland.settings = {
+  #   monitor = [
+  #     "DP-1, 3440x1440@144.00, 0x0, 1, vrr, 3, bitdepth, 10"
+  #     "DP-1, addreserved, 0, 0, 440, 440"   # for 3440x1440 21:9 monitor
+  #     "HDMI-A-1, disabled"
+  #   ];
+  #
+  #   # monitorv2 = [
+  #   #   # {
+  #   #   #   output = "DP-1";
+  #   #   #   mode = "3440x1440@144";
+  #   #   #   position = "0x0";
+  #   #   #   scale = 1;
+  #   #   #   vrr = 3;
+  #   #   #   addreserved = "0, 0, 440, 440";
+  #   #   #
+  #   #   #   cm = "hdr";
+  #   #   #   sdr_min_luminance = 0.005;
+  #   #   #   sdrbrightness = 1.3;
+  #   #   #   sdrsaturation = 1;
+  #   #   # }
+  #   #
+  #   #   {
+  #   #     output = "HDMI-A-1";
+  #   #     disabled = true;
+  #   #   }
+  #   # ];
+  #
+  #   render = {
+  #     cm_auto_hdr = 2;
+  #   };
+  #
+  #   workspace = [
+  #     "1, monitor:DP-1"
+  #     "2, monitor:DP-1"
+  #     "3, monitor:DP-1"
+  #     "4, monitor:DP-2"
+  #     "5, monitor:DP-2"
+  #   ];
+  #
+  #   env = [
+  #     "LIBVA_DRIVER_NAME,nvidia"
+  #     "XDG_SESSION_TYPE,wayland"
+  #     "GBM_BACKEND,nvidia-drm"
+  #     "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+  #     "ELECTRON_OZONE_PLATFORM_HINT,auto"
+  #     "NVD_BACKEND,direct"
+  #   ];
+  #
+  #   bind = [
+  #     # use for ultrawide monitors: switch between using full screen and only 16:9
+  #     "$mod_ALT, down, exec, hyprctl keyword monitor \"DP-1, addreserved, 0, 0, 440, 440\""
+  #     "$mod_ALT, up, exec, hyprctl keyword monitor \"DP-1, addreserved, 0, 0, 0, 0\""
+  #     "$mod_SHIFT_CTRL_ALT, F1, exec, hyprctl keyword monitor \"DP-1, 3440x1440@144.00, 3840x0, 1, vrr, 3, bitdepth, 10\" && hyprctl keyword monitor \"HDMI-A-1, disable\""
+  #     "$mod_SHIFT_CTRL_ALT, F2, exec, hyprctl keyword monitor \"DP-1, 3440x1440@144.00, 0x0, 1, bitdepth, 10, vrr, 3, cm, hdr, sdrbrightness, 1.3, sdrsaturation, 1\""
+  #     "$mod_SHIFT_CTRL_ALT, F6, exec, hyprctl keyword monitor \"HDMI-A-1, 3840x2160@120.00, 3440x0, 1, vrr, 3\" && hyprctl keyword monitor \"DP-1, disable\""
+  #     "$mod_SHIFT_CTRL_ALT, F7, exec, hyprctl keyword monitor \"HDMI-A-1, 3840x2160@120.00, 3440x0, 2, vrr, 3\" && hyprctl keyword monitor \"DP-1, disable\""
+  #     #"HDMI-A-1, 3840x2160@60, -642x-2160, 1, bitdepth, 10, vrr, 2"
+  #   ];
+  # };
 }
