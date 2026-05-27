@@ -22,11 +22,11 @@ let
 in
 {
 
-  wayland.windowManager.hyprland.settings = {
-    layerrule = [
-      "blur on, match:namespace waybar"
-    ];
-  };
+  # wayland.windowManager.hyprland.settings = {
+  #   layerrule = [
+  #     "blur on, match:namespace waybar"
+  #   ];
+  # };
 
   programs.waybar.settings.mainBar = {
     modules-left = [
