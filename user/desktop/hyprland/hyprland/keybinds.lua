@@ -93,7 +93,20 @@ hl.bind("SUPER + 0", hl.dsp.focus({ workspace = 10 }))
 hl.bind("SUPER + RIGHT", hl.dsp.focus({ workspace = "+1" }))
 hl.bind("SUPER + LEFT", hl.dsp.focus({ workspace = "-1" }))
 
+-- Move windows between workspaces 
+hl.bind("SUPER + SHIFT + 1", hl.dsp.window.move({ workspace = 1 }))
+hl.bind("SUPER + SHIFT + 2", hl.dsp.window.move({ workspace = 2 }))
+hl.bind("SUPER + SHIFT + 3", hl.dsp.window.move({ workspace = 3 }))
+hl.bind("SUPER + SHIFT + 4", hl.dsp.window.move({ workspace = 4 }))
+hl.bind("SUPER + SHIFT + 5", hl.dsp.window.move({ workspace = 5 }))
+hl.bind("SUPER + SHIFT + 6", hl.dsp.window.move({ workspace = 6 }))
+hl.bind("SUPER + SHIFT + 7", hl.dsp.window.move({ workspace = 7 }))
+hl.bind("SUPER + SHIFT + 8", hl.dsp.window.move({ workspace = 8 }))
+hl.bind("SUPER + SHIFT + 9", hl.dsp.window.move({ workspace = 9 }))
+hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
 
+hl.bind("SUPER + SHIFT + RIGHT", hl.dsp.window.move({ workspace = "+1" }))
+hl.bind("SUPER + SHIFT + LEFT", hl.dsp.window.move({ workspace = "-1" }))
 
 -- Volume and Brightness
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("swayosd-client --output-volume raise"))
