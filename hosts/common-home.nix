@@ -19,6 +19,8 @@ in
     ./../user/style/stylix.nix
 
     ./../user/config/config.nix
+
+    ./../user/themes/themes.nix
   ];
 
   home.username = userSettings.username;
