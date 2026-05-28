@@ -7,8 +7,3 @@ hl.layer_rule({
   blur = true,
 })
 
-hl.layer_rule({
-  match = { namespace = "rofi" },
-  animation = "slide",
-  blur = true,
-})

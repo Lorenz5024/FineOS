@@ -13,4 +13,5 @@
   # };
 
   xdg.configFile."rofi/config.rasi".source = config.lib.file.mkOutOfStoreSymlink "${userSettings.flakeDir}/user/app/rofi/config.rasi";
+  xdg.configFile."rofi/scripts/powermenu.sh".source = config.lib.file.mkOutOfStoreSymlink "${userSettings.flakeDir}/user/app/rofi/scripts/powermenu.sh";
 }

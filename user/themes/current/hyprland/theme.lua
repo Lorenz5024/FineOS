@@ -44,8 +44,18 @@ hl.config({
     },
 })
 
+hl.layer_rule({
+  match = { namespace = "rofi" },
+  animation = "fade",
+  blur = true,
+})
 
-
+hl.animation({ 
+  leaf = "layers",
+  enabled = true,
+  speed = 1,
+  bezier = "default",
+})
 
 
 

@@ -4,6 +4,8 @@
   text:               #cdd6f4;
   entry-background:   #313244;
 
+  main-border: 	      #cba6f7;
+
   prompt-background:  #89b4fa;
   selected-element:   #f38ba8;
 
@@ -20,11 +22,15 @@
 window {
     background-color: @background;
 
-    height: 100%;
-    width: 18em;
+    border: 2px;
+    border-color: @main-border;
+    border-radius: 8px;
 
-    location: west;
-    anchor: west;
+    height: 24em;
+    width: 36em;
+
+    location: center;
+    anchor: center;
 }
 
 inputbar {

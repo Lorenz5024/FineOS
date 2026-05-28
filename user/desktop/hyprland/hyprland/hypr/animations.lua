@@ -2,7 +2,8 @@
 -- Animations
 -- =====================================================
 
-hl.curve("overshot", { type = "bezier", points = { {0.05, 0.9}, {0.1, 1.03} } } )
+hl.curve("overshoot", { type = "bezier", points = { {0.05, 0.9}, {0.1, 1.03} } } )
+hl.curve("test", { type = "bezier", points = { { 1, -1 }, { 0, 2} } } )
 
 hl.animation({ 
   leaf = "global",

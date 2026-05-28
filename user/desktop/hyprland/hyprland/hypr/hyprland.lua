@@ -10,6 +10,7 @@ require("layerrules")
 require("gestures")
 require("workspacerules")
 require("hardware")
+require("theme")
 
 -- =====================================================
 -- Monitors
@@ -28,30 +29,11 @@ hl.monitor({
 hl.config({
     general = {
         layout = "dwindle",
-
-        border_size = 2,
-        gaps_in = 4,
-        gaps_out = 8,
-
-        col = {
-            active_border = "rgb(cba6f7)",
-        },
     },
 
     cursor = {
         inactive_timeout = 5,
         no_hardware_cursors = true,
-    },
-
-    decoration = {
-        rounding = 8,
-
-        blur = {
-            enabled = true,
-            size = 4,
-            passes = 3,
-            ignore_opacity = true,
-        },
     },
 
     master = {
@@ -89,23 +71,6 @@ hl.config({
         workspace_swipe_use_r = true,
     },
 
-    group = {
-        groupbar = {
-            enabled = true,
-            font_size = 16,
-
-            col = {
-                active = "0xff89b4fa",
-                inactive = "0xff313244",
-            },
-
-            text_color = "0xffcdd6f4",
-        },
-
-        col = {
-            border_active = "0xff89b4fa",
-        },
-    },
 })
 
 
