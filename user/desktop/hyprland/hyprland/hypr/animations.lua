@@ -16,7 +16,7 @@ hl.animation({
   leaf = "windows",
   enabled = true,
   speed = 2,
-  bezier = "overshot",
+  bezier = "overshoot",
   style = "slide",
 })
 

@@ -24,7 +24,7 @@ hl.bind("SUPER + CTRL + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind("SUPER + G", hl.dsp.group.toggle())
 
 -- Power
-hl.bind("SUPER + P", hl.dsp.exec_cmd("wlogout"))
+hl.bind("SUPER + P", hl.dsp.exec_cmd("pkill rofi || ~/.config/rofi/scripts/powermenu.sh"))
 
 -- Restart programs
 hl.bind("SUPER + CTRL + ALT + B", hl.dsp.exec_cmd("pkill waybar || waybar"))

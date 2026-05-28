@@ -1,6 +1,6 @@
 #!/bin/sh
 
-choice=$(printf "Shutdown\nReboot\nHibernate\nLogout\nSuspend\nLock" | rofi -dmenu -i -p "Power")
+choice=$(printf "Lock\nReboot\nHibernate\nLogout\nSuspend\nShutdown" | rofi -dmenu -i -p "Power")
 
 case "$choice" in
   Shutdown)
