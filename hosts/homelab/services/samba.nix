@@ -56,6 +56,15 @@
         "valid users" = [ userSettings.username ];
       };
 
+      Shared-Storage = { 
+        path = "/mnt/storage1/Shared";
+        browsable = true;
+        writable = true;
+        "guest ok" = true;
+        "read only" = false;
+        "valid users" = [ userSettings.username ];
+      };
+
     };
   };
 
