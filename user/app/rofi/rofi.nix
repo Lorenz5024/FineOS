@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, userSettings, ... }:
 
 {
   imports = [
@@ -12,5 +12,5 @@
   #   ".config/rofi/config.rasi".source = ./config.rasi;
   # };
 
-  xdg.configFile."rofi/config.rasi".source = config.lib.file.mkOutOfStoreSymlink ./. + "config.rasi";
+  xdg.configFile."rofi/config.rasi".source = config.lib.file.mkOutOfStoreSymlink "${userSettings.flakeDir}/user/app/rofi/config.rasi";
 }

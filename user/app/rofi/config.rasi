@@ -8,4 +8,4 @@ configuration{
     display-drun: "Apps:";
 }
 
-@theme "theme-main.rasi"
+@theme "theme-launcher.rasi"
