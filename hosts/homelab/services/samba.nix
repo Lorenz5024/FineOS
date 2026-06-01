@@ -20,8 +20,8 @@
         "map to guest" = "Bad User";
       };
 
-      Shows = { 
-        path = "/mnt/storage0/Jellyfin/Shows";
+      Jellifyn-Media = { 
+        path = "/mnt/storage0/Jellyfin/media";
         browsable = true;
         writable = true;
         "guest ok" = false;
@@ -29,14 +29,6 @@
         "valid users" = [ userSettings.username ];
       };
 
-      Music = { 
-        path = "/mnt/storage0/Jellyfin/Music";
-        browsable = true;
-        writable = true;
-        "guest ok" = false;
-        "read only" = false;
-        "valid users" = [ userSettings.username ];
-      };
 
       Videos = { 
         path = "/mnt/storage0/Media/Videos";
