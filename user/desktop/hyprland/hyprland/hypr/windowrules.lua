@@ -26,4 +26,6 @@ hl.window_rule({ name = "transparent-terminal", match = { tag = "terminal" }, op
 
 hl.window_rule({ name = "special-workspace-music", match = { tag = "music" }, workspace = "special:music", })
 
+-- all windows on special workspaces 
+-- hl.window_rule({ name = "special-workspace-all", match = { workspace = "special"}, float = true; })
 
