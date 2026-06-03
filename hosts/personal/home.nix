@@ -20,10 +20,6 @@
       mode = "3440x1440@144",
       position = "0x0",
       scale = 1,
-      reserved_area = {
-        right = 440,
-        left = 440,
-      }
     })
 
     hl.monitor({

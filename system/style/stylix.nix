@@ -16,5 +16,9 @@ in
       name = "Bibata-Modern-Ice";
       size = 20;
     };
+
+    targets = {
+      kmscon.colors.enable = false;
+    };
   };
 }

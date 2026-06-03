@@ -3,7 +3,7 @@
 -- =====================================================
 
 -- set tags
-hl.window_rule({ match = { class = "discord" }, tag = "+chat" })
+hl.window_rule({ match = { class = "com.discordapp.Discord" }, tag = "+chat" })
 hl.window_rule({ match = { class = "Spotify" }, tag = "+music" })
 hl.window_rule({ match = { class = "steam" }, tag = "+gamelauncher" })
 hl.window_rule({ match = { class = "heroic" }, tag = "+gamelauncher" })
@@ -26,6 +26,4 @@ hl.window_rule({ name = "transparent-terminal", match = { tag = "terminal" }, op
 
 hl.window_rule({ name = "special-workspace-music", match = { tag = "music" }, workspace = "special:music", })
 
--- all windows on special workspaces 
--- hl.window_rule({ name = "special-workspace-all", match = { workspace = "special"}, float = true; })
 

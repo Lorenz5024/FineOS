@@ -16,13 +16,14 @@
       # inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix.url = "github:danth/stylix";
+    # stylix.url = "github:danth/stylix";
+    stylix.url = "github:nix-community/stylix/pull/2337/head";
 
     # ags.url = "github:Aylur/ags";
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
-    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+    # nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
 
     agenix.url = "github:ryantm/agenix";
 
@@ -34,7 +35,7 @@
 
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, hyprland, nixos-wsl, agenix, plasma-manager, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, hyprland, agenix, plasma-manager, ... }:
     let
       lib = nixpkgs.lib;
       userSettings = import ./hosts/personal/userSettings.nix;
@@ -150,39 +151,39 @@
 
       };
 
-      nixosConfigurations."wsl" =
-      let
-        hostSettings = import ./hosts/personal/hostSettings.nix;
-      in
-      lib.nixosSystem {
-        system = "x86_64-linux";
-
-        specialArgs = {
-          inherit userSettings;
-          inherit hostSettings;
-        };
-
-        modules = [
-          ./hosts/wsl/configuration.nix
-
-          nixos-wsl.nixosModules.default {
-            system.stateVersion = "24.05";
-            wsl.enable = true;
-          }
-
-          nixvim.nixosModules.nixvim
-          stylix.nixosModules.stylix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useUserPackages = true;
-            home-manager.users.${userSettings.username} = import ./hosts/wsl/home.nix;
-            home-manager.backupFileExtension = "backup";
-
-            home-manager.extraSpecialArgs = {
-              inherit userSettings;
-            };
-          }
-        ];
-      };
+      # nixosConfigurations."wsl" =
+      # let
+      #   hostSettings = import ./hosts/personal/hostSettings.nix;
+      # in
+      # lib.nixosSystem {
+      #   system = "x86_64-linux";
+      #
+      #   specialArgs = {
+      #     inherit userSettings;
+      #     inherit hostSettings;
+      #   };
+      #
+      #   modules = [
+      #     ./hosts/wsl/configuration.nix
+      #
+      #     nixos-wsl.nixosModules.default {
+      #       system.stateVersion = "24.05";
+      #       wsl.enable = true;
+      #     }
+      #
+      #     nixvim.nixosModules.nixvim
+      #     stylix.nixosModules.stylix
+      #     home-manager.nixosModules.home-manager
+      #     {
+      #       home-manager.useUserPackages = true;
+      #       home-manager.users.${userSettings.username} = import ./hosts/wsl/home.nix;
+      #       home-manager.backupFileExtension = "backup";
+      #
+      #       home-manager.extraSpecialArgs = {
+      #         inherit userSettings;
+      #       };
+      #     }
+      #   ];
+      # };
     };
 }

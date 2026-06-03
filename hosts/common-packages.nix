@@ -12,7 +12,6 @@
     gnome-calendar
     
     # Office
-    libreoffice-qt
     obsidian
     speedcrunch     # calculator
     evince

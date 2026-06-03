@@ -10,7 +10,10 @@ in
     ./hypridle.nix
   ];
 
-  home.packages = [ pkgs.hyprshutdown ];
+  home.packages = with pkgs; [ 
+    hyprshutdown 
+    hyprpicker
+  ];
 
   xdg.configFile."hypr/hyprland.lua".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/hyprland.lua";
   xdg.configFile."hypr/animations.lua".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/animations.lua";
