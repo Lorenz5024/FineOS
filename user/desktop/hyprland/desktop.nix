@@ -12,6 +12,7 @@
 
     ./../../app/rofi/rofi.nix
     ./../../app/waybar/waybar.nix
+    ./../../app/ashell/ashell.nix
 
     ./scripts/cycle-audio.nix
     ./scripts/fine-screenshot.nix
