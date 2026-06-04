@@ -14,17 +14,17 @@ in
   programs.waybar = {
     enable = true;
 
-    settings = {
-      mainBar = {
+    # settings = {
+      # mainBar = {
         # include = "${userSettings.flakeDir}/user/app/waybar/modules.jsonc";
         # layer = "top";
         # position = "top";
         # spacing = 0;
 	# reload_style_on_change = true;
 
-      };
+      # };
 
-    };
+    # };
 
   };
 
