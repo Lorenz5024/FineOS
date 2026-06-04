@@ -1,6 +1,11 @@
-{ userSettings, ... }:
+{ config, userSettings, ... }:
 
+let 
+  themePath = "${userSettings.flakeDir}/user/themes/current/waybar";
+in
 {
+
+  xdg.configFile."waybar/style.css".source = config.lib.file.mkOutOfStoreSymlink "${themePath}/style.css";
 
   imports = [ (./. + "/themes" + ( "/" + userSettings.waybarStyle) + ".nix") ];
 
