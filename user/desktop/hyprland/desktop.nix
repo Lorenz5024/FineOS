@@ -11,7 +11,6 @@
     ./swayosd/swayosd.nix
 
     ./../../app/rofi/rofi.nix
-    ./../../app/waybar/waybar.nix
     ./../../app/ashell/ashell.nix
 
     ./scripts/cycle-audio.nix
@@ -21,7 +20,7 @@
   ];
 
   home.packages = with pkgs; [
-    # desktop environment
+    waybar
     playerctl				# used for controlling media with keyboard
     waybar				# status bar
     rofi
@@ -33,7 +32,6 @@
     networkmanagerapplet            	# network management
     libnotify                       	# send notifications
     kdePackages.polkit-kde-agent-1      # authentication agent
-    # pyprland				# hyprland plugins
     slurp                               # select region of screen for screenshots
     grim                                # grab image for screenshot
     hyprpaper
