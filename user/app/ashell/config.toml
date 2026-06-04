@@ -1,0 +1,9 @@
+position = "Top"
+
+[appearance]
+scale_factor = 1
+style = "Solid"
+
+background_color = "#aee2ff"
+primary_color = "#ddaed3"
+text_color = "#0000FF"

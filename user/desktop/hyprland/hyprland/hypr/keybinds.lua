@@ -27,7 +27,8 @@ hl.bind("SUPER + G", hl.dsp.group.toggle())
 hl.bind("SUPER + P", hl.dsp.exec_cmd("pkill rofi || ~/.config/rofi/scripts/powermenu.sh"))
 
 -- Restart programs
-hl.bind("SUPER + CTRL + ALT + B", hl.dsp.exec_cmd("pkill waybar || waybar"))
+-- hl.bind("SUPER + CTRL + ALT + B", hl.dsp.exec_cmd("pkill waybar || waybar"))
+hl.bind("SUPER + CTRL + ALT + B", hl.dsp.exec_cmd("pkill ashell; ashell"))
 hl.bind("SUPER + CTRL + ALT + P", hl.dsp.exec_cmd("pkill hyprpaper; hyprpaper"))
 
 -- Launchers
@@ -36,6 +37,7 @@ hl.bind("SUPER + T", hl.dsp.exec_cmd(fileManager))
 hl.bind("SUPER + Y", hl.dsp.exec_cmd(terminal .. " --class yazi -e yazi"))
 hl.bind("SUPER + B", hl.dsp.exec_cmd(browser))
 hl.bind("SUPER + S", hl.dsp.exec_cmd("pavucontrol"))
+hl.bind("SUPER + C", hl.dsp.exec_cmd("hyprpicker -a"))
 
 
 -- Rofi / tools
