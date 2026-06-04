@@ -1,0 +1,18 @@
+{
+  "modules-left": [
+    "hyprland/workspaces#numbers",
+    "custom/fine_radio",
+    "mpris"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "tray",
+    "hyprland/language",
+    "idle_inhibitor",
+    "pulseaudio"
+  ]
+}
