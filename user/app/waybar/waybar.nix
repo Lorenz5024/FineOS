@@ -7,6 +7,7 @@ in
 
   xdg.configFile."waybar/style.css".source = config.lib.file.mkOutOfStoreSymlink "${themePath}/style.css";
   xdg.configFile."waybar/layout.jsonc".source = config.lib.file.mkOutOfStoreSymlink "${themePath}/layout.jsonc";
+  xdg.configFile."waybar/config.jsonc".source = config.lib.file.mkOutOfStoreSymlink "${themePath}/config.jsonc";
 
   # imports = [ (./. + "/themes" + ( "/" + userSettings.waybarStyle) + ".nix") ];
 
@@ -15,7 +16,7 @@ in
 
     settings = {
       mainBar = {
-        include = "${userSettings.flakeDir}/user/app/waybar/modules.jsonc";
+        # include = "${userSettings.flakeDir}/user/app/waybar/modules.jsonc";
         # layer = "top";
         # position = "top";
         # spacing = 0;
