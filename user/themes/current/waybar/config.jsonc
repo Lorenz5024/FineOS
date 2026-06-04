@@ -1,6 +1,7 @@
 {
   "include": [
-    "~/.config/waybar/layout.jsonc"
+    "~/.config/waybar/layout.jsonc",
+    "~/.config/waybar/modules.jsonc"
   ],
 
   "layer": "top",
