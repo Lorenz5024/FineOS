@@ -1,0 +1,181 @@
+@define-color main                    #000000;
+@define-color text                    #FFFFFF;
+@define-color module-border           #FFFFFF;
+@define-color workspaces-background   #FFFFFF;
+@define-color workspaces-active       #cba6f7;
+@define-color workspaces-empty        #313244;
+@define-color workspaces-visible      #0000FF;
+@define-color window-text             #FFFFFF;
+@define-color language                #FFFFFF;
+@define-color pulseaudio              #FFFFFF;
+@define-color clock                   #FFFFFF;
+@define-color idle_inhibitor          #FFFFFF;
+@define-color battery                 #FFFFFF;
+@define-color hover                   #FFFFFF;
+@define-color groupindicator          #FFFFFF;
+
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    font-weight: bold;
+  } 
+
+window#waybar {
+  background: rgba(30, 30, 46, 0.7);
+}
+
+#custom-icon {
+  font-size: 22px;
+  color: #89b4fa;
+  padding: 0.3em;
+}
+
+#custom-groupindicator {
+  margin: 0.3em;
+  color: @groupindicator;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+#custom-groupindicator:hover {
+  border-radius: 8px;
+  background: @hover;
+  color: @main;
+}
+
+#custom-fine_radio {
+  margin: 0.3em;
+}
+
+#group-hardware {
+  border: 2px solid @module-border; 
+  border-radius: 8px;
+  margin: 0.3em;
+}
+
+#temperature,
+#network,
+#cpu,
+#memory,
+#disk {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#cpu {
+  min-width: 50px;
+}
+
+#clock {
+  color: @clock;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 0.3em;
+}
+
+#clock:hover {
+  margin: 0.3em;
+  border-radius: 8px;
+  background: @hover;
+  color: @main;
+}
+
+#backlight {
+  margin: 0.3em;
+  color: @text;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#battery {
+  margin: 0.3em;
+  color: @battery;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#pulseaudio {
+  margin: 0.3em;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: @pulseaudio;
+}
+
+#pulseaudio:hover {
+  margin: 0.3em;
+  border-radius: 8px;
+  background: @hover;
+  color: @main;
+}
+
+#tray {
+  border-radius: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 0.3em;
+}
+
+#custom-power {
+  padding-left: 4px;
+  padding-right: 4px;
+  color: @text;
+}
+
+/* Hyprland */
+
+/*
+#workspaces {
+  background: @workspaces-background;
+
+}
+*/
+
+#workspaces button {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-radius: 0px;
+}      
+
+#workspaces button.empty {
+  color: @workspaces-empty;
+}
+
+#workspaces button.active {
+  color: @workspaces-active;
+  border-bottom: 2px solid @workspaces-active;
+} 
+
+#window {
+  color: @window-text;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#language {
+  margin: 0.3em;
+  color: @language;
+  padding: 0em 0.5em 0em 0.5em;
+}
+
+#idle_inhibitor {
+  margin: 0.3em;
+  color: @idle_inhibitor;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#idle_inhibitor:hover {
+  margin: 0.3em;
+  border-radius: 8px;
+  background: @hover;
+  color: @main;
+}
+
+#mpris {
+  margin: 0.3em;
+}
