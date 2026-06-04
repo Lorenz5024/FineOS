@@ -3,6 +3,7 @@
 {
   home.packages = [
     pkgs.fine-cycle-audio
+    pkgs.pulseaudio
   ];
 
   nixpkgs.overlays = [

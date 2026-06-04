@@ -12,3 +12,4 @@ hl.workspace_rule({ workspace = "f[1]s[false]", no_border = true, no_rounding = 
 -- special workspaces 
 hl.workspace_rule({ workspace = "special:terminal", on_created_empty = "[float]  kitty" })
 hl.workspace_rule({ workspace = "special:music", on_created_empty = "[float] spotify" })
+hl.workspace_rule({ workspace = "special:files", on_created_empty = "[float] thunar" })

@@ -27,8 +27,8 @@ hl.bind("SUPER + G", hl.dsp.group.toggle())
 hl.bind("SUPER + P", hl.dsp.exec_cmd("pkill rofi || ~/.config/rofi/scripts/powermenu.sh"))
 
 -- Restart programs
--- hl.bind("SUPER + CTRL + ALT + B", hl.dsp.exec_cmd("pkill waybar || waybar"))
-hl.bind("SUPER + CTRL + ALT + B", hl.dsp.exec_cmd("pkill ashell; ashell"))
+hl.bind("SUPER + CTRL + ALT + B", hl.dsp.exec_cmd("pkill waybar || waybar"))
+-- hl.bind("SUPER + CTRL + ALT + B", hl.dsp.exec_cmd("pkill ashell; ashell"))
 hl.bind("SUPER + CTRL + ALT + P", hl.dsp.exec_cmd("pkill hyprpaper; hyprpaper"))
 
 -- Launchers
@@ -57,7 +57,6 @@ hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("fine-screenshot"))
 -- Scratchpads
 hl.bind("SUPER + ALT + RETURN", hl.dsp.workspace.toggle_special("terminal"))
 hl.bind("SUPER + ALT + N", hl.dsp.workspace.toggle_special("notes"))
-hl.bind("SUPER + ALT + B", hl.dsp.workspace.toggle_special("vault"))
 hl.bind("SUPER + ALT + M", hl.dsp.workspace.toggle_special("music"))
 hl.bind("SUPER + ALT + F", hl.dsp.workspace.toggle_special("files"))
 
@@ -113,11 +112,13 @@ hl.bind("SUPER + SHIFT + LEFT", hl.dsp.window.move({ workspace = "-1" }))
 -- Volume and Brightness
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"), { repeating = true })
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"), { repeating = true })
-
 -- hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("swayosd-client --output-volume raise"))
 -- hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("swayosd-client --output-volume lower"))
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("swayosd-client --brightness raise"))
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("swayosd-client --brightness lower"))
+
+-- Cycle audio sources
+hl.bind("SUPER + CTRL + V", hl.dsp.exec_cmd("fine-cycle-audio"))
 
 -- Media
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"))
