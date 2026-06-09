@@ -7,6 +7,7 @@
       hyprland.enable = false;
       hyprlock.enable = false;
       zathura.enable = false;
+      qt.enable = false;
     };
 
     cursor = {
