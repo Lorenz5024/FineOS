@@ -26,8 +26,8 @@ window {
     border-color: @main-border;
     border-radius: 8px;
 
-    height: 24em;
-    width: 36em;
+    height: 16em;
+    width: 24em;
 
     location: center;
     anchor: center;
