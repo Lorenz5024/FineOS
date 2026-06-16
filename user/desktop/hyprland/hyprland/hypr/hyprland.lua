@@ -49,7 +49,7 @@ hl.config({
         animate_manual_resizes = true,
         disable_splash_rendering = true,
         disable_hyprland_logo = true,
-        initial_workspace_tracking = 2,
+        initial_workspace_tracking = 0,
     },
 
     input = {
