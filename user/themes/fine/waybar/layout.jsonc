@@ -13,6 +13,7 @@
     "tray",
     "hyprland/language",
     "idle_inhibitor",
-    "pulseaudio"
+    "pulseaudio",
+    "battery"
   ]
 }
