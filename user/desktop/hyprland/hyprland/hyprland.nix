@@ -7,12 +7,12 @@ in
   imports = [
     ./hyprpaper.nix
     ./hyprlock.nix
-    ./hypridle.nix
   ];
 
   home.packages = with pkgs; [ 
     hyprshutdown 
     hyprpicker
+    hypridle
   ];
 
   xdg.configFile."hypr/hyprland.lua".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/hyprland.lua";
@@ -23,5 +23,6 @@ in
   xdg.configFile."hypr/layerrules.lua".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/layerrules.lua";
   xdg.configFile."hypr/gestures.lua".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/gestures.lua";
   xdg.configFile."hypr/workspacerules.lua".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/workspacerules.lua";
+  xdg.configFile."hypr/hypridle.conf".source = config.lib.file.mkOutOfStoreSymlink "${configPath}/hypridle.conf";
 
 }
