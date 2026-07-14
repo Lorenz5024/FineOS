@@ -1,4 +1,4 @@
-{ lib, hostSettings, userSettings, pkgs, ... }:
+{ lib, hostSettings, userSettings, pkgs, hostName, ... }:
 
 {
   imports =
@@ -84,7 +84,7 @@
     NH_FLAKE = userSettings.flakeDir;
   };
 
-  networking.hostName = hostSettings.host; # Define your hostname.
+  networking.hostName = hostName; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   system.stateVersion = "24.11"; # Did you read the comment?

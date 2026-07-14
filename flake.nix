@@ -34,20 +34,22 @@
 
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, hyprland, agenix, plasma-manager, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, nixvim, stylix, hyprland, agenix, ... }:
     let
       lib = nixpkgs.lib;
-      userSettings = import ./hosts/personal/userSettings.nix;
+      userSettings = import ./hosts/desktop/userSettings.nix;
     in
     {
-      nixosConfigurations."fineos" =
+      nixosConfigurations."fineos-desktop" =
         let
-          hostSettings = import ./hosts/personal/hostSettings.nix;
+          hostSettings = import ./hosts/desktop/hostSettings.nix;
         in
       lib.nixosSystem {
         system = "x86_64-linux";
 
         specialArgs = {
+          hostName = "fineos-desktop";
+
           inherit hyprland;
           inherit hostSettings;
           inherit userSettings;
@@ -55,14 +57,14 @@
         };
 
         modules = [
-          ./hosts/personal/configuration.nix
+          ./hosts/desktop/configuration.nix
 
           nixvim.nixosModules.nixvim
           stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
             home-manager.useUserPackages = true;
-            home-manager.users.${userSettings.username} = import ./hosts/personal/home.nix;
+            home-manager.users.${userSettings.username} = import ./hosts/desktop/home.nix;
             home-manager.backupFileExtension = "hm-backup";
             home-manager.sharedModules = [ inputs.plasma-manager.homeModules.plasma-manager ];
 
@@ -85,6 +87,8 @@
         system = "x86_64-linux";
 
         specialArgs = {
+          hostName = "fineos-laptop";
+
           inherit inputs;
           inherit hostSettings;
           inherit userSettings;
@@ -122,6 +126,8 @@
         system = "x86_64-linux";
 
         specialArgs = {
+          hostName = "homelab";
+
           inherit hostSettings;
           inherit userSettings;
           inherit inputs;
@@ -152,7 +158,7 @@
 
       # nixosConfigurations."wsl" =
       # let
-      #   hostSettings = import ./hosts/personal/hostSettings.nix;
+      #   hostSettings = import ./hosts/desktop/hostSettings.nix;
       # in
       # lib.nixosSystem {
       #   system = "x86_64-linux";

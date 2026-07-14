@@ -6,7 +6,7 @@ This is my nixos configuration for my personal machine and laptop. This project 
 
 A quick overview of the different hosts configured in this repo.
 
-## Personal
+## Desktop
 
 The system I use for work and personal use. At some point I might split it up in work and personal, if there start to appear a lot of applications I use only for one.
 

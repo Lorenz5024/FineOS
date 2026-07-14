@@ -11,6 +11,10 @@
       show_startup_tips = false;
 
       ui.pane_frames.rounded_corners = true;
+
+      keybinds.unbind = {
+        _args = ["Ctrl q"];
+      };
     };
   };
 }

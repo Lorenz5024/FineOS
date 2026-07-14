@@ -1,4 +1,4 @@
-{ hostSettings, ... }:
+{ hostSettings, hostName, ... }:
 
 {
   imports =
@@ -11,7 +11,7 @@
       ./../../system/services/tailscale.nix
     ] ++ map (e: ./. + "/../../system/desktop/${e}/desktop.nix") hostSettings.desktops;
 
-  networking.hostName = "fineos-laptop"; # Define your hostname.
+  networking.hostName = hostName; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Additional kernel parameter required for brightness keys to work on framework laptop

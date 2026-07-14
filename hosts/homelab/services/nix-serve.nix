@@ -39,7 +39,7 @@
 
   # Keep store up to date
   systemd.services.update-store = {
-    description = "Prefetch all store paths for FineOS Personal";
+    description = "Prefetch all store paths for FineOS Desktop";
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
       Type = "oneshot";
@@ -50,7 +50,7 @@
 
         cd ${userSettings.flakeDir}
 
-        nix build .\#nixosConfigurations.fineos.config.system.build.toplevel
+        nix build .\#nixosConfigurations.fineos-desktop.config.system.build.toplevel
       ''}";
     };
   };

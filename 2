@@ -6,7 +6,7 @@ general {
 
 
 listener {
-    timeout = 300                                                                                  # in seconds
+    timeout = 10                                                                                  # in seconds
     on-timeout = hyprctl dispatch 'hl.dsp.dpms({ action = "disable" })'                            # screen off when timeout has passed
     on-resume = hyprctl dispatch 'hl.dsp.dpms({ action = "enable" })' && brightnessctl -r          # screen on when activity is detected after timeout has fired.
 }

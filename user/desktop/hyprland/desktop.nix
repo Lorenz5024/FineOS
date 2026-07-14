@@ -15,6 +15,7 @@
 
     ./scripts/cycle-audio.nix
     ./scripts/fine-screenshot.nix
+    ./scripts/display_switcher.nix
 
     ./default.nix
   ];

@@ -1,4 +1,4 @@
-{ pkgs, config, hostSettings, ... }:
+{ pkgs, config, hostSettings, hostName, ... }:
 
 {
   imports = [ 
@@ -16,7 +16,7 @@
     ./../../system/services/tailscale.nix
   ] ++ map (e: ./. + "/../../system/desktop/${e}/desktop.nix") hostSettings.desktops;
 
-  networking.hostName = "fineos"; # Define your hostname.
+  networking.hostName = hostName; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # enable proprietary nvidia drivers
