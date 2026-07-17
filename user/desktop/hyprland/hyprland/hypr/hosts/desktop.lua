@@ -11,6 +11,10 @@ hl.monitor({
   position = "0x0",
   scale = 1,
   vrr = 3,
+  reserved_area = {
+    right = 440,
+    left = 440,
+  }
 })
 
 hl.monitor({
@@ -59,7 +63,7 @@ hl.bind("SUPER + ALT + CTRL + SHIFT + F2", hl.dsp.exec_cmd([[
     bitdepth = 10,
     cm = "hdr",
     sdrbrightness = 1.2,
-    sdrsaturation = 1.2,
+    sdrsaturation = 0.98,
     sdr_min_luminance = 0,
   })'
 ]]))
@@ -72,6 +76,6 @@ hl.bind("SUPER + ALT + CTRL + SHIFT + F1", hl.dsp.exec_cmd([[
     position = "0x0",
     scale = 1,
     vrr = 3,
-    cm = "auto",
+    cm = "srgb",
   })'
 ]]))
