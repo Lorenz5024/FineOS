@@ -63,7 +63,7 @@ hl.bind("SUPER + ALT + F", hl.dsp.workspace.toggle_special("files"))
 -- If yazi is minimized -> get yazi 
 -- If yazi is not minimized -> minimiz it 
 -- Else start yazi
-hl.bind("SUPER + Y", function ()
+hl.bind("SUPER + ALT + Y", function ()
     if hl.get_workspace("special:yazi") then
         hl.dispatch(hl.dsp.window.move({ workspace = hl.get_active_workspace(), window = "tag:minimized" }))
         hl.dispatch(hl.dsp.window.clear_tags({ window = "tag:minimized" }))
@@ -74,6 +74,7 @@ hl.bind("SUPER + Y", function ()
 	hl.dispatch(hl.dsp.exec_cmd(terminal .. " --class yazi -e yazi"))
     end
 end)
+
 
 -- Focus (correct dispatcher: focus)
 hl.bind("SUPER + H", hl.dsp.focus({ direction = "l" }))

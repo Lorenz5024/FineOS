@@ -79,3 +79,37 @@ hl.bind("SUPER + ALT + CTRL + SHIFT + F1", hl.dsp.exec_cmd([[
     cm = "srgb",
   })'
 ]]))
+
+-- TV with scaling 1
+hl.bind("SUPER + ALT + CTRL + SHIFT + F6", hl.dsp.exec_cmd([[
+  hyprctl eval 'hl.monitor({
+    output = "HDMI-A-1",
+    mode = "3840x2160@120",
+    position = "0x0",
+    scale = 1,
+    vrr = 3,
+    disabled = false,
+    bitdepth = 10,
+    -- cm = "hdr",
+    -- sdrbrightness = 1.2,
+    -- sdrsaturation = 0.98,
+    -- sdr_min_luminance = 0,
+  })'
+]]))
+
+-- TV with scaling 2
+hl.bind("SUPER + ALT + CTRL + SHIFT + F7", hl.dsp.exec_cmd([[
+  hyprctl eval 'hl.monitor({
+    output = "HDMI-A-1",
+    mode = "3840x2160@120",
+    position = "0x0",
+    scale = 2,
+    vrr = 3,
+    disabled = false,
+    bitdepth = 10,
+    -- cm = "hdr",
+    -- sdrbrightness = 1.2,
+    -- sdrsaturation = 0.98,
+    -- sdr_min_luminance = 0,
+  })'
+]]))
