@@ -1,14 +1,11 @@
 { pkgs, userSettings, config, ... }:
 
 {
-  # imports = [
-  #   ./keymap.nix
-  # ];
-
-  # plugin to enter directories when enter is pressed,
-  # instead of opening them in editor
   home.packages = [
     pkgs.yazi
+
+    # plugin to enter directories when enter is pressed,
+    # instead of opening them in editor
     pkgs.yaziPlugins.smart-enter
   ];
 

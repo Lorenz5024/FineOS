@@ -34,7 +34,7 @@ hl.bind("SUPER + CTRL + ALT + P", hl.dsp.exec_cmd("pkill hyprpaper; hyprpaper"))
 -- Launchers
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + T", hl.dsp.exec_cmd(fileManager))
-hl.bind("SUPER + Y", hl.dsp.exec_cmd(terminal .. " --class yazi -e yazi"))
+-- hl.bind("SUPER + Y", hl.dsp.exec_cmd(terminal .. " --class yazi -e yazi"))
 hl.bind("SUPER + B", hl.dsp.exec_cmd(browser))
 hl.bind("SUPER + S", hl.dsp.exec_cmd("pavucontrol"))
 hl.bind("SUPER + C", hl.dsp.exec_cmd("hyprpicker -a"))
@@ -59,6 +59,21 @@ hl.bind("SUPER + ALT + RETURN", hl.dsp.workspace.toggle_special("terminal"))
 hl.bind("SUPER + ALT + N", hl.dsp.workspace.toggle_special("notes"))
 hl.bind("SUPER + ALT + M", hl.dsp.workspace.toggle_special("music"))
 hl.bind("SUPER + ALT + F", hl.dsp.workspace.toggle_special("files"))
+
+-- If yazi is minimized -> get yazi 
+-- If yazi is not minimized -> minimiz it 
+-- Else start yazi
+hl.bind("SUPER + Y", function ()
+    if hl.get_workspace("special:yazi") then
+        hl.dispatch(hl.dsp.window.move({ workspace = hl.get_active_workspace(), window = "tag:minimized" }))
+        hl.dispatch(hl.dsp.window.clear_tags({ window = "tag:minimized" }))
+    elseif hl.get_window("class:yazi") then
+        hl.dispatch(hl.dsp.window.tag({ tag = "minimized", window = hl.get_window("class:yazi") }))
+        hl.dispatch(hl.dsp.window.move({ workspace = "special:yazi", window = hl.get_window("class:yazi"), follow = false }))
+    else 
+	hl.dispatch(hl.dsp.exec_cmd(terminal .. " --class yazi -e yazi"))
+    end
+end)
 
 -- Focus (correct dispatcher: focus)
 hl.bind("SUPER + H", hl.dsp.focus({ direction = "l" }))
