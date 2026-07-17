@@ -15,15 +15,19 @@ hl.window_rule({ match = { class = "org.pulseaudio.pavucontrol" }, tag = "+utili
 hl.window_rule({ match = { class = "vivaldi-stable" }, tag = "+browser" })
 hl.window_rule({ match = { class = "kitty" }, tag = "+terminal" })
 
+-- fixed workspaces
 hl.window_rule({ name = "workspace-browser", 		match = { tag = "browser" }, workspace = "2", })
 hl.window_rule({ name = "workspace-chat", 		match = { tag = "chat" }, workspace = "4 silent", })
 hl.window_rule({ name = "workspace-gamelauncher", 	match = { tag = "gamelauncher" }, workspace = "5", })
 hl.window_rule({ name = "workspace-game", 		match = { tag = "game" }, workspace = "6", })
 
+-- float
 hl.window_rule({ name = "float-utility", match = { tag = "utility" }, float = true, })
 
+-- transparency
 hl.window_rule({ name = "transparent-terminal", match = { tag = "terminal" }, opacity = "1 0.95", })
 
-hl.window_rule({ name = "special-workspace-music", match = { tag = "music" }, workspace = "special:music", })
+-- group
+hl.window_rule({ name = "group-zathura", match = { class = "org.pwmt.zathura" }, group = "set always lock always invade" })
 
 
