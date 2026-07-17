@@ -39,7 +39,7 @@ play = [
 
 [open]
 rules = [
-  { name = "*/", use = [ "edit", "open", "reveal" ] },
+  { mime = "inode/directory", use = [ "edit", "open", "reveal" ] },
 
   { mime = "application/pdf", use = [ "view_pdf" ] },
   { mime = "text/*",          use = [ "edit", "reveal" ] },
