@@ -54,12 +54,14 @@ hl.bind("SUPER + CTRL + ALT + V", hl.dsp.exec_cmd("cliphist wipe"))
 -- Screenshot
 hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("fine-screenshot"))
 
--- Scratchpads
+-- Scratchpads general
 hl.bind("SUPER + ALT + RETURN", hl.dsp.workspace.toggle_special("terminal"))
 hl.bind("SUPER + ALT + N", hl.dsp.workspace.toggle_special("notes"))
 hl.bind("SUPER + ALT + M", hl.dsp.workspace.toggle_special("music"))
 hl.bind("SUPER + ALT + F", hl.dsp.workspace.toggle_special("files"))
-hl.bind("SUPER + ALT + Z", hl.dsp.workspace.toggle_special("zathura"))
+
+-- kind of scratchpads, for specific programs
+hl.bind("SUPER + Z", hl.dsp.workspace.toggle_special("zathura"))
 
 -- If yazi is minimized -> get yazi 
 -- If yazi is not minimized -> minimiz it 
