@@ -59,11 +59,12 @@ hl.bind("SUPER + ALT + RETURN", hl.dsp.workspace.toggle_special("terminal"))
 hl.bind("SUPER + ALT + N", hl.dsp.workspace.toggle_special("notes"))
 hl.bind("SUPER + ALT + M", hl.dsp.workspace.toggle_special("music"))
 hl.bind("SUPER + ALT + F", hl.dsp.workspace.toggle_special("files"))
+hl.bind("SUPER + ALT + Z", hl.dsp.workspace.toggle_special("zathura"))
 
 -- If yazi is minimized -> get yazi 
 -- If yazi is not minimized -> minimiz it 
 -- Else start yazi
-hl.bind("SUPER + ALT + Y", function ()
+hl.bind("SUPER + Y", function ()
     if hl.get_workspace("special:yazi") then
         hl.dispatch(hl.dsp.window.move({ workspace = hl.get_active_workspace(), window = "tag:minimized" }))
         hl.dispatch(hl.dsp.window.clear_tags({ window = "tag:minimized" }))

@@ -29,6 +29,7 @@ hl.monitor({
 hl.config({
     general = {
         layout = "dwindle",
+	no_focus_fallback = true,
     },
 
     cursor = {
@@ -43,6 +44,10 @@ hl.config({
     dwindle = {
         force_split = 2,
         preserve_split = true,
+    },
+
+    scrolling = {
+      column_width = 0.5,
     },
 
     misc = {

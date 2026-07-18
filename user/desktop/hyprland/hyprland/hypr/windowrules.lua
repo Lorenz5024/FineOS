@@ -15,11 +15,13 @@ hl.window_rule({ match = { class = "org.pulseaudio.pavucontrol" }, tag = "+utili
 hl.window_rule({ match = { class = "vivaldi-stable" }, tag = "+browser" })
 hl.window_rule({ match = { class = "kitty" }, tag = "+terminal" })
 
--- fixed workspaces
+-- assign workspaces
 hl.window_rule({ name = "workspace-browser", 		match = { tag = "browser" }, workspace = "2", })
 hl.window_rule({ name = "workspace-chat", 		match = { tag = "chat" }, workspace = "4 silent", })
 hl.window_rule({ name = "workspace-gamelauncher", 	match = { tag = "gamelauncher" }, workspace = "5", })
 hl.window_rule({ name = "workspace-game", 		match = { tag = "game" }, workspace = "6", })
+hl.window_rule({ name = "special-workspace-music", match = { tag = "music" }, workspace = "special:music", })
+hl.window_rule({ name = "special-workspace-zathura", match = { class = "org.pwmt.zathura" }, workspace = "special:zathura silent", group = "set always"})
 
 -- float
 hl.window_rule({ name = "float-utility", match = { tag = "utility" }, float = true, })
@@ -27,7 +29,5 @@ hl.window_rule({ name = "float-utility", match = { tag = "utility" }, float = tr
 -- transparency
 hl.window_rule({ name = "transparent-terminal", match = { tag = "terminal" }, opacity = "1 0.95", })
 
--- group
-hl.window_rule({ name = "group-zathura", match = { class = "org.pwmt.zathura" }, group = "set always lock always invade" })
-
-
+-- terminal size 
+hl.window_rule({ name = "terminal-float-size", match = { tag = "terminal" }, size = {"(monitor_w*0.7)", "(monitor_h*0.7)"}, })
