@@ -22,8 +22,6 @@
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
-    # nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
-
     agenix.url = "github:ryantm/agenix";
 
     plasma-manager = {
@@ -156,39 +154,5 @@
 
       };
 
-      # nixosConfigurations."wsl" =
-      # let
-      #   hostSettings = import ./hosts/desktop/hostSettings.nix;
-      # in
-      # lib.nixosSystem {
-      #   system = "x86_64-linux";
-      #
-      #   specialArgs = {
-      #     inherit userSettings;
-      #     inherit hostSettings;
-      #   };
-      #
-      #   modules = [
-      #     ./hosts/wsl/configuration.nix
-      #
-      #     nixos-wsl.nixosModules.default {
-      #       system.stateVersion = "24.05";
-      #       wsl.enable = true;
-      #     }
-      #
-      #     nixvim.nixosModules.nixvim
-      #     stylix.nixosModules.stylix
-      #     home-manager.nixosModules.home-manager
-      #     {
-      #       home-manager.useUserPackages = true;
-      #       home-manager.users.${userSettings.username} = import ./hosts/wsl/home.nix;
-      #       home-manager.backupFileExtension = "backup";
-      #
-      #       home-manager.extraSpecialArgs = {
-      #         inherit userSettings;
-      #       };
-      #     }
-      #   ];
-      # };
     };
 }

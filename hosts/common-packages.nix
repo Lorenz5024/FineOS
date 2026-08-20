@@ -28,7 +28,7 @@
     picard			# audio tagger
     yt-dlp			# cli youtube downloader
     ristretto              # image viewer
-    spotify
+    # spotify
 
     # Shell
     zoxide    # cd with extra features

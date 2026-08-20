@@ -26,11 +26,19 @@
 
 
   nix.settings = {
+
     substituters = [
       "http://192.168.1.101:5000"
       "https://hyprland.cachix.org"
       "https://cache.nixos.org"
     ];
+
+    trusted-substituters = [
+      "http://192.168.1.101:5000"
+    ];
+
+    trusted-users = [ "root" "@wheel" ];
+
     trusted-public-keys = [
       "homelab:Cpgf9J3KRmiwWySrMQ27Dj0ENYvPGuO84TntCFCyWTw=%"
       "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
