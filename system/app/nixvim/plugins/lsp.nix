@@ -16,11 +16,11 @@
       # lua-ls.enable = true;
 
       # rust
-      rust_analyzer = {
-        enable = true;
-        installCargo = true;
-        installRustc = true;
-      };
+      # rust_analyzer = {
+      #   enable = true;
+      #   installCargo = true;
+      #   installRustc = true;
+      # };
 
       # css
       cssls.enable = true;
