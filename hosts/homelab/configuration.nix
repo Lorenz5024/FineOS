@@ -16,7 +16,7 @@
       ./services/tailscale.nix
       ./services/agenix/agenix.nix
       ./services/nextcloud.nix
-      ./services/openvpn.nix
+      # ./services/openvpn.nix
       ./services/nix-serve.nix
       ./services/borgbackup.nix
 
