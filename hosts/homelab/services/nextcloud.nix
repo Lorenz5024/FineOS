@@ -11,7 +11,7 @@
 
   services.nextcloud = {
     enable = true; 
-    package = pkgs.nextcloud33;
+    package = pkgs.nextcloud34;
     hostName = "homelab.tailf073f1.ts.net";
     datadir = hostSettings.nextcloud_storage;
     https = false;
