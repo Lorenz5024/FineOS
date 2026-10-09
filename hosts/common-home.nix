@@ -12,6 +12,7 @@ in
     ./../user/app/yazi/yazi.nix
     ./../user/app/zathura/zathura.nix
     ./../user/app/lazygit/lazygit.nix
+    ./../user/app/coding/coding.nix
 
     ./../user/shell/zsh/zsh.nix
 
