@@ -25,6 +25,8 @@ in
   home.username = userSettings.username;
   home.homeDirectory = "/home/"+userSettings.username;
 
+  home.pointerCursor.enable = true;
+
   programs.git = {
     enable = true;
     signing.format = null;
