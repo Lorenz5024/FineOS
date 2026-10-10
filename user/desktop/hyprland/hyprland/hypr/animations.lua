@@ -30,7 +30,9 @@ hl.animation({
 hl.animation({ 
   leaf = "specialWorkspace",
   enabled = true,
-  speed = 1,
+  speed = 0.1,
   bezier = "default",
   style = "fade",
 })
+
+

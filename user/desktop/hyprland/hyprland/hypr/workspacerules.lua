@@ -3,7 +3,7 @@
 -- =====================================================
 
 -- animation for special workspaces
-hl.workspace_rule({ workspace = "s[true]", animation = "specialWorkspace" })
+-- hl.workspace_rule({ workspace = "s[true]", animation = "specialWorkspace" })
 
 -- no border, rounding and gaps when maximized
 hl.workspace_rule({ workspace = "f[1]s[false]", no_border = true, no_rounding = true, gaps_out = 0 })
