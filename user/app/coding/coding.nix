@@ -5,6 +5,8 @@
     # AI coding
     opencode
 
+    gcc
+
     # Rust
     cargo
     rustc
